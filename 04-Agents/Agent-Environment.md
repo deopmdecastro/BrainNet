@@ -51,3 +51,5 @@ Uma instalação nova requer `npm install -g opencode-ai@1.19.3` e `ollama pull 
 Documentação consultada: [providers OpenCode](https://opencode.ai/docs/providers/), [configuração](https://opencode.ai/docs/config/), [permissões](https://opencode.ai/docs/permissions/) e [modelo Ollama](https://ollama.com/library/deepseek-r1:8b).
 
 [[Maestri-Team|Equipa Maestri]] · [[DeepSeek-Analyst|Papel de Sonda]] · [[../03-Projects/DC-Simu/Project-Brief|DC-Simu]].
+
+Outros clientes de IA: [[AI-Terminals|terminais Copilot, Gemini, Gemma e Llama]]. Gemma local substitui a opção Mistral após o pedido do utilizador.

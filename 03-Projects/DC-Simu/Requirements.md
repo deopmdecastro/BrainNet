@@ -19,6 +19,10 @@ Base inicial derivada do [README do produto](../../../dc-simu/dc-simu/README.md)
 | DC-05 | Média | Preservar a sincronização 2D/3D/Ladder | Alterações de componentes, cabos e estado propagam-se entre vistas; casos dos motores e cenários existentes passam |
 | DC-06 | Média | Preservar projetos e permissões | Guardar/reabrir mantém os dados; conflitos de revisão e acessos não autorizados são tratados nos modos aplicáveis |
 | DC-07 | Média | Documentar as condições de operação | Distinguir persistência local e API; verificar o destino n8n a partir do ambiente Docker utilizado |
+| AI-R01 | Alta | Preparar o contexto de programação assistida | Copilot encontra arquitetura, comandos e critérios em instruções do repositório; autenticação é validada separadamente |
+| AI-R02 | Alta | Avaliar o custo adicional de IA | Matriz com fontes e data; plano gratuito distinguido de subscrição e API; custo existente separado do novo |
+| AI-R03 | Alta | Manter aceitação verificável | Código sugerido passa pelos checks aplicáveis; não aceitar respostas de IA como evidência de execução |
+| AI-R04 | Média | Medir o piloto antes de contratar | Três tarefas com critérios comuns, tempo, correções e consumo registados; decisão do responsável documentada |
 
 ## Questões abertas
 - Qual é o próximo incremento funcional após estabilizar a integração n8n?
@@ -28,3 +32,5 @@ Base inicial derivada do [README do produto](../../../dc-simu/dc-simu/README.md)
 Responsável do projeto: Deogracia de Castro. Prazo e responsáveis por tarefa ainda não atribuídos. A execução destas correções não faz parte do registo documental no BrainNet.
 
 [[Project-Brief|Briefing]] · [[Testing-Plan|Validação]] · [[Decision-Log|Decisões]].
+
+Implementação e acompanhamento: [[AI-Tooling-Assessment|Avaliação de IA]] · [[Backlog]].

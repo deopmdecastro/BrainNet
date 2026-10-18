@@ -37,10 +37,17 @@ O produto existente sincroniza esquema 2D, visualização 3D e programação Lad
 ## Entregáveis e aceitação
 [[Requirements|Requisitos e prioridades]] · [[Testing-Plan|Plano de validação]] · [[Decision-Log|Decisões]].
 
+## Assistência de IA e orçamento
+A [[AI-Tooling-Assessment|avaliação de ferramentas e custos]] recomenda reutilizar Codex, experimentar Copilot Free quando elegível e usar Sonda/DeepSeek local para análise contextual. Objetivo inicial: zero novas subscrições; custo dos planos já existentes, energia e manutenção por confirmar. Plus, APIs e benefícios de mantenedor não são presumidos como gratuitos.
+
+O repositório tem instruções Copilot e recomendações do editor preparadas. Instalação, autenticação e acesso da conta ao Copilot ainda requerem confirmação. O DeepSeek local não executa testes neste perfil. O Copilot não é o alojamento de produção; a presença de configuração Vercel/Docker não confirma uma versão publicada.
+
+Necessidades, critérios e pendências ficam em [[Backlog]]. O pacote está pronto para avaliação pela coordenação; nenhum coordenador foi contactado nesta sessão.
+
 O resultado esperado é um simulador utilizável, com persistência verificável e automações que comuniquem corretamente falhas e execuções. Baselines, metas de desempenho e critérios comerciais ficam por definir.
 
 ## Próxima ação
-Tratar primeiro a chave n8n exposta e as permissões do proxy; depois alinhar o webhook GRAFCET e os resultados de sucesso/erro. A revisão é evidência histórica: confirmar o estado do código e dos serviços antes de executar correções ou dar problemas como resolvidos.
+Tratar primeiro a chave n8n exposta e as permissões do proxy; depois alinhar o webhook GRAFCET e os resultados de sucesso/erro. A revisão é evidência histórica: confirmar o estado do código e dos serviços antes de executar correções ou dar problemas como resolvidos. Para o piloto de IA, restaurar o baseline de dependências e validar o acesso Copilot da conta antes de comparar ferramentas; ver ENV-01 e AI-03 no [[Backlog]].
 
 ## Evidências e acompanhamento
 - [Revisão local DC-Simu/n8n de 2026-10-18](../../../dc-simu/n8n-integration-review.md).
