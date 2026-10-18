@@ -36,7 +36,9 @@ function Find-MaestriWorkspace {
         throw "O workspace '$Name' ja existe noutra pasta. Nenhum workspace foi alterado. Confira workspace list."
     }
     $suffix = $listedPathAndMarker.Substring($expected.Length).Trim()
-    $markerPattern = '^[' + [char]0x2190 + [char]0x2192 + '*<>\s-]*\(you are here\)$'
+    # O CLI tambem usa ponto medio/bullet antes do marcador atual.
+    # Aceitar apenas separadores conhecidos: o resto do sufixo continua a falhar.
+    $markerPattern = '^[' + [char]0x2190 + [char]0x2192 + [char]0x00B7 + [char]0x2022 + '*<>.\s-]*\(you are here\)$'
     if ($suffix -and $suffix -notmatch $markerPattern) {
         throw "A pasta ou o formato da listagem de '$Name' difere do esperado. Nenhum workspace foi alterado."
     }

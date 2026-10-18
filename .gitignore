@@ -8,6 +8,7 @@ runtime/
 .obsidian/cache/
 .obsidian/plugins/
 .qodo/
+.maestri/
 *.pem
 *.key
 credentials*.json

@@ -10,6 +10,7 @@ tags: [brainet, projects]
 | Projeto | ID | Estado | Próxima ação |
 | --- | --- | --- | --- |
 | [[../03-Projects/BraiNet-Website/Project-Brief|Website BraiNet]] | BN-WEBSITE-001 | DISCOVERY | Confirmar público, oferta prioritária e identidade |
+| [[../03-Projects/DC-Simu/Project-Brief|DC-Simu]] | BN-DCSIMU-001 | DEVELOPMENT | Rever segurança do proxy n8n, alinhar webhook GRAFCET e corrigir falsos sucessos |
 | Fundação BraiNet OS | BN-OS-001 | QA | Rever entrega local; ativação das integrações separada |
 
 Estados e transições: [[../06-SOPs/Project-States|Project-States]]. Este dashboard é manual; não existem consultas Dataview nem sincronização automática.

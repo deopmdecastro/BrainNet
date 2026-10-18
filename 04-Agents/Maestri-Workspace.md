@@ -7,6 +7,10 @@ tags: [brainet, maestri, workspace]
 ---
 # Workspace Maestri
 
+## Equipa BrainNet e DC-Simu
+
+A configuracao de quatro papeis e terminais esta preparada em [[Maestri-Team]]. Executar scripts/Configure-MaestriTeam.ps1 num terminal do workspace BraiNet OS com Maestro Mode ativo. A preparacao foi testada com CLI simulado; a ativacao real continua por confirmar nesta sessao sem MAESTRI_PIPE.
+
 ## Workspace confirmado
 
 - Nome: **BraiNet OS**.

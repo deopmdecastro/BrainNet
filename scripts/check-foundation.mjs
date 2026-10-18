@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const ignored = new Set(['.git', '.obsidian', '.qodo', '.agents', '.codex', 'node_modules', 'runtime']);
+const ignored = new Set(['.git', '.obsidian', '.qodo', '.agents', '.codex', '.maestri', 'node_modules', 'runtime']);
 const errors = [];
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });

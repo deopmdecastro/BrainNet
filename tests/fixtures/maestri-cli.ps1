@@ -10,12 +10,15 @@ if ($action -eq 'workspace list') {
     Write-Output 'Sidebar (top to bottom, as the user sees it):'
     Write-Output 'Root:'
     $hasCreated = Test-Path -LiteralPath $env:BRAINET_TEST_STATE
-    if ($env:BRAINET_TEST_CASE -in @('same', 'current', 'different', 'prefix') -or $hasCreated) {
+    if ($env:BRAINET_TEST_CASE -in @('same', 'current', 'current-middle-dot', 'current-bullet', 'current-ascii-dot', 'different', 'prefix', 'prefix-current') -or $hasCreated) {
         $directory = $env:BRAINET_TEST_PROJECT
         if ($env:BRAINET_TEST_CASE -eq 'different') { $directory = 'C:\OtherProject' }
-        if ($env:BRAINET_TEST_CASE -eq 'prefix') { $directory += ' Other' }
+        if ($env:BRAINET_TEST_CASE -in @('prefix', 'prefix-current')) { $directory += ' Other' }
         $marker = ''
         if ($env:BRAINET_TEST_CASE -in @('current', 'prefix')) { $marker = '  ' + [char]0x2190 + ' (you are here)' }
+        if ($env:BRAINET_TEST_CASE -in @('current-middle-dot', 'prefix-current')) { $marker = '  ' + [char]0x00B7 + ' (you are here)' }
+        if ($env:BRAINET_TEST_CASE -eq 'current-bullet') { $marker = '  ' + [char]0x2022 + ' (you are here)' }
+        if ($env:BRAINET_TEST_CASE -eq 'current-ascii-dot') { $marker = '  . (you are here)' }
         Write-Output ('  "BraiNet OS" [folder] ' + $directory + $marker)
     }
     exit 0

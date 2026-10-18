@@ -16,9 +16,9 @@ async function runFixture(scenario, verify) {
     }
     await copyFile(new URL('./fixtures/maestri-cli.ps1', import.meta.url), path.join(root, 'mock-cli.ps1'));
     const cli = path.join(root, 'mock-cli.cmd');
-    await writeFile(cli, '@echo off\r\npowershell -NoProfile -File "%~dp0mock-cli.ps1" %*\r\nexit /b %ERRORLEVEL%\r\n');
+    await writeFile(cli, '@echo off\r\npowershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0mock-cli.ps1" %*\r\nexit /b %ERRORLEVEL%\r\n');
     const callsFile = path.join(root, 'calls.txt');
-    const result = spawnSync('powershell', ['-NoProfile', '-File', path.join(root, 'scripts/Create-MaestriWorkspace.ps1')], {
+    const result = spawnSync('powershell', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', path.join(root, 'scripts/Create-MaestriWorkspace.ps1')], {
       encoding: 'utf8', timeout: 20000,
       env: { ...process.env, MAESTRI_CLI: cli, MAESTRI_PIPE: 'synthetic-no-real-connection', BRAINET_TEST_CASE: scenario, BRAINET_TEST_PROJECT: root, BRAINET_TEST_CALLS: callsFile, BRAINET_TEST_STATE: path.join(root, 'mock-state') },
     });
@@ -29,14 +29,14 @@ async function runFixture(scenario, verify) {
   } finally { await rm(root, { recursive: true, force: true }); }
 }
 
-for (const scenario of ['same', 'current']) {
+for (const scenario of ['same', 'current', 'current-middle-dot', 'current-bullet', 'current-ascii-dot']) {
   test(`Maestri reutiliza workspace existente (${scenario}) sem criar`, { skip: process.platform !== 'win32' }, () => runFixture(scenario, async ({ result, calls, receipt }) => {
     assert.equal(result.status, 0, result.stderr + result.stdout);
     assert.deepEqual(calls, ['workspace list']);
     assert.equal(JSON.parse(await readFile(receipt, 'utf8')).reused_existing, true);
   }));
 }
-for (const scenario of ['different', 'prefix', 'list-error']) {
+for (const scenario of ['different', 'prefix', 'prefix-current', 'list-error']) {
   test(`Maestri interrompe ${scenario} sem criar nem escrever recibo`, { skip: process.platform !== 'win32' }, () => runFixture(scenario, async ({ result, calls, receipt }) => {
     assert.notEqual(result.status, 0);
     assert.deepEqual(calls, ['workspace list']);

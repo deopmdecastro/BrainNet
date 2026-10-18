@@ -12,6 +12,7 @@ O centro de operações da BraiNet: conhecimento em Markdown, contexto para agen
 | Entrada | Utilização |
 | --- | --- |
 | [[Projects-Dashboard]] | Projetos, estado e próxima decisão |
+| [[../03-Projects/DC-Simu/Project-Brief|DC-Simu]] | Simulador industrial: briefing, prioridades e código |
 | [[Automation-Dashboard]] | Workflows implementados e dependências |
 | [[Architecture]] | Componentes e limites das integrações |
 | [[Implementation-Plan]] | Fases e critérios de conclusão |
