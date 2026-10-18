@@ -3,6 +3,7 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+. (Join-Path $PSScriptRoot 'MaestriWorkspace.Helpers.ps1')
 $projectDirectory = [System.IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
 
 if (-not (Test-Path -LiteralPath (Join-Path $projectDirectory '00-Dashboard\Home.md') -PathType Leaf)) {
@@ -31,36 +32,40 @@ if (-not $env:MAESTRI_PIPE) {
 }
 
 Write-Output 'A verificar os workspaces existentes antes de criar...'
-$workspaceList = & $cliPath workspace list 2>&1
-$listExitCode = $LASTEXITCODE
-$workspaceList | Write-Output
-if ($listExitCode -ne 0) {
+$listing = Invoke-MaestriCli -CliPath $cliPath -CliArguments @('workspace', 'list')
+$listing.Lines | Write-Output
+if ($listing.ExitCode -ne 0) {
     throw 'Nao foi possivel listar workspaces. Confirme que Maestro Mode esta ativo neste terminal; nenhuma criacao foi tentada.'
 }
 
-# A lista e apenas informativa. O CLI e responsavel por recusar nomes em uso;
-# nao interpretar formato textual da sidebar como uma API JSON inexistente.
-Write-Output "A criar '$WorkspaceName' em '$projectDirectory'..."
-$creationOutput = & $cliPath workspace create $WorkspaceName --dir $projectDirectory 2>&1
-$creationExitCode = $LASTEXITCODE
-$creationOutput | Write-Output
-if ($creationExitCode -ne 0) {
-    throw 'O Maestri nao confirmou a criacao. Se o nome ja existir, confirme na lista a pasta desse workspace e reutilize-o. O script nao substitui nem remove workspaces.'
-}
+$reused = Find-MaestriWorkspace -Lines $listing.Lines -Name $WorkspaceName -Directory $projectDirectory
+if ($reused) {
+    Write-Output "Workspace '$WorkspaceName' ja existe na pasta correta; a reutilizar sem criar outro."
+} else {
+    Write-Output "A criar '$WorkspaceName' em '$projectDirectory'..."
+    $creation = Invoke-MaestriCli -CliPath $cliPath -CliArguments @('workspace', 'create', $WorkspaceName, '--dir', $projectDirectory)
+    $creation.Lines | Write-Output
 
-Write-Output 'Criacao confirmada pelo CLI. A verificar a sidebar...'
-& $cliPath workspace list
-if ($LASTEXITCODE -ne 0) { throw 'A criacao foi confirmada, mas a listagem final falhou. Verifique a sidebar antes de repetir.' }
+    # Voltar a listar mesmo em erro: outro terminal pode ter criado o workspace.
+    $verification = Invoke-MaestriCli -CliPath $cliPath -CliArguments @('workspace', 'list')
+    $verification.Lines | Write-Output
+    if ($verification.ExitCode -ne 0) { throw 'Nao foi possivel verificar a sidebar. Confira-a antes de repetir o script.' }
+    if (-not (Find-MaestriWorkspace -Lines $verification.Lines -Name $WorkspaceName -Directory $projectDirectory)) {
+        throw "O Maestri nao confirmou '$WorkspaceName' na pasta esperada (exit da criacao: $($creation.ExitCode))."
+    }
+    $reused = $creation.ExitCode -ne 0
+}
 
 $evidenceDirectory = Join-Path $projectDirectory 'runtime\maestri'
 New-Item -ItemType Directory -Force -Path $evidenceDirectory | Out-Null
 $receipt = [ordered]@{
     workspace_name = $WorkspaceName
     directory = $projectDirectory
-    created_at_utc = [DateTime]::UtcNow.ToString('o')
-    creation_confirmed_by_cli = $true
+    verified_at_utc = [DateTime]::UtcNow.ToString('o')
+    workspace_confirmed_by_cli = $true
+    reused_existing = $reused
     agents_recruited = $false
 }
-$receiptPath = Join-Path $evidenceDirectory 'workspace-created.json'
+$receiptPath = Join-Path $evidenceDirectory 'workspace-verified.json'
 [System.IO.File]::WriteAllText($receiptPath, ($receipt | ConvertTo-Json), [System.Text.UTF8Encoding]::new($false))
-Write-Output "Workspace criado. Recibo local: $receiptPath"
+Write-Output "Workspace pronto. Recibo de verificacao local: $receiptPath"

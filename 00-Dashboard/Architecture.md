@@ -36,7 +36,7 @@ flowchart LR
 | JSON → CLI → rascunho | Contrato v1 e ficheiros locais | Implementado/testado |
 | n8n → rascunho | Output do Code node | Implementado/testado |
 | Rascunho → Obsidian | Revisão e promoção manual | Procedimento definido |
-| Obsidian ↔ Maestri | Ficheiros por caminho e entregáveis | CLI localizado; sessão sem contexto de terminal Maestri. Ver [[../04-Agents/Maestri-Workspace|configuração do workspace]] |
+| Obsidian ↔ Maestri | Ficheiros por caminho e entregáveis | Workspace confirmado na imagem do utilizador; sessão atual sem contexto de terminal Maestri. Ver [[../04-Agents/Maestri-Workspace|configuração do workspace]] |
 | Serviços → n8n | Adaptadores autenticados por origem | Planeado |
 | n8n → produção | Aprovação ligada a commit/ambiente | Não implementado |
 

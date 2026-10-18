@@ -1,21 +1,23 @@
 ---
 type: workspace-setup
-status: BLOCKED
+status: CONFIGURED
 created: 2026-10-18
 updated: 2026-10-18
 tags: [brainet, maestri, workspace]
 ---
 # Workspace Maestri
 
-## Configuracao preparada
+## Workspace confirmado
 
 - Nome: **BraiNet OS**.
 - Diretorio: a raiz deste projeto BrainNet, derivada automaticamente da localizacao do script.
-- Canvas inicial: vazio, conforme `workspace create` sem template.
+- Workspace visivel na sidebar do Maestri na imagem fornecida pelo utilizador.
 - Agentes: papeis disponiveis em `04-Agents/`; nenhum processo e iniciado pelo script.
-- Estado real: **criacao pendente de execucao num terminal Maestri**.
+- Estado real: **BraiNet OS ja existe e esta ligado a pasta correta**, conforme a listagem do CLI visivel na imagem. A imagem tambem mostra outro workspace, `BrainNet`, na mesma pasta; nao foi removido nem renomeado.
 
-## Executar no Maestri
+Selecione **BraiNet OS** na barra lateral para trabalhar nele. Nao e necessario criar novamente o workspace. O erro mostrado ocorreu porque a versao anterior do script listava os workspaces mas ainda tentava criar um nome ja existente.
+
+## Verificar ou criar no Maestri
 
 Abra um terminal num workspace existente do Maestri e ative **Maestro Mode** nesse terminal. Execute:
 
@@ -23,9 +25,9 @@ Abra um terminal num workspace existente do Maestri e ative **Maestro Mode** nes
 powershell -NoProfile -File "C:\Users\Deogracia de Castro\Documents\Projetos\BrainNet\scripts\Create-MaestriWorkspace.ps1"
 ```
 
-O script lista workspaces, pede ao CLI que crie `BraiNet OS` ligado a esta pasta e lista novamente para verificacao. Se o nome estiver ocupado, o CLI recusa a criacao; o script nao substitui nem remove o existente. A criacao e silenciosa: o novo workspace aparece na sidebar sem mudar a vista atual.
+O script lista workspaces e compara o nome e o caminho completos. Se `BraiNet OS` ja estiver ligado a esta pasta, reutiliza-o sem chamar `workspace create`. Se o nome estiver associado a outra pasta ou a listagem for ambigua, interrompe sem alterar workspaces. So tenta criar quando o nome nao aparece; depois volta a listar para verificar o resultado, incluindo o caso em que outro terminal o criou entretanto.
 
-Depois de confirmacao, o recibo local fica em `runtime/maestri/workspace-created.json`. O recibo so e escrito apos sucesso do comando e da verificacao final; a ausencia de recibo nao prova que um comando interrompido nao criou o workspace. Confira sempre a sidebar antes de repetir.
+Depois de confirmacao pelo CLI, o recibo local fica em `runtime/maestri/workspace-verified.json`, com timestamp de verificacao e indicacao de reutilizacao. O recibo nao atribui uma data de criacao a um workspace existente. A evidencia atual de existencia e a imagem do utilizador; nao foi gerado um recibo de CLI nesta conversa sem acesso ao contexto Maestri.
 
 ## Limite encontrado nesta sessao
 
@@ -39,6 +41,8 @@ O skill [maestri-workspace](<C:/Users/Deogracia de Castro/.agents/skills/maestri
 
 ## Validacao efetuada
 
-Sintaxe PowerShell analisada e comportamento sem contexto Maestri verificado: falha antes de tentar listar/criar. A criacao efetiva e a verificacao na sidebar continuam pendentes de execucao no contexto suportado.
+Sete testes de regressao no Windows, com CLI simulado e projetos temporarios: reutilizacao por nome/pasta, marcador de workspace atual, pasta diferente, caminho com prefixo semelhante, erro de listagem, criacao inicial e criacao concorrente. Nenhum teste se liga ao Maestri real. Sintaxe e bloqueio sem contexto Maestri tambem foram verificados.
 
-Depois de criado, seguir [[Collaboration-Contract]] para reutilizar papeis e configurar agentes conforme a necessidade do trabalho.
+Os testes fazem parte de `node --test tests/*.test.mjs`; em sistemas sem Windows, os sete casos PowerShell sao assinalados como skipped.
+
+Seguir [[Collaboration-Contract]] para reutilizar papeis e configurar agentes conforme a necessidade do trabalho.
