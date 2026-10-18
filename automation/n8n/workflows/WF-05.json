@@ -1,0 +1,93 @@
+{
+  "name": "BraiNet OS | WF-05 | QA e Release Review | REVIEW ONLY",
+  "active": false,
+  "nodes": [
+    {
+      "id": "cfef9399123f663d8b68bb134a05493f",
+      "name": "Manual Test",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "491c4a30e18132d62ec6e90a59bc086e",
+      "name": "Synthetic Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Apenas dados sintéticos. Substituir este nó por um adaptador autenticado após revisão.\nreturn [{ json: {\n  \"schema_version\": 1,\n  \"event_id\": \"demo-release-001\",\n  \"project_id\": \"BN-demo-website-001\",\n  \"commit\": \"0000000000000000000000000000000000000000\",\n  \"environment\": \"staging\",\n  \"checks\": [\n    {\n      \"name\": \"Exemplo ilustrativo\",\n      \"passed\": true,\n      \"evidence\": \"Fixture de teste; não é evidência de lançamento real.\"\n    }\n  ],\n  \"critical_findings\": 0\n} }];"
+      }
+    },
+    {
+      "id": "ab48b3295be46f57e02e9bb2e68ccf39",
+      "name": "Validate and Prepare",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Pure functions: bundled into n8n Code nodes by scripts/build-workflows.mjs.\nfunction object(value, label) {\n  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(`${label}: objeto obrigatório`);\n  return value;\n}\nfunction keys(value, allowed, label) {\n  for (const key of Object.keys(value)) if (!allowed.includes(key)) throw new Error(`${label}: campo não suportado: ${key}`);\n}\nfunction text(value, label, max = 2000) {\n  if (typeof value !== 'string' || !value.trim() || value.length > max || /[\\u0000-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f]/u.test(value)) {\n    throw new Error(`${label}: texto obrigatório (máximo ${max} caracteres)`);\n  }\n  return value.trim();\n}\nfunction list(value, label, max = 12, itemMax = 500) {\n  if (!Array.isArray(value) || !value.length || value.length > max) throw new Error(`${label}: lista de 1 a ${max} itens obrigatória`);\n  return value.map((v, i) => text(v, `${label}[${i}]`, itemMax));\n}\nfunction choice(value, allowed, label) {\n  if (!allowed.includes(value)) throw new Error(`${label}: valor não suportado`);\n  return value;\n}\nfunction identifier(value, label) {\n  if (typeof value !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9_-]{5,63}$/u.test(value)) throw new Error(`${label}: identificador de 6 a 64 caracteres (letras, números, _ e -)`);\n  return value;\n}\nfunction envelope(value, allowed) {\n  object(value, 'evento');\n  let bytes = 0;\n  for (const character of JSON.stringify(value)) {\n    const point = character.codePointAt(0);\n    bytes += point <= 0x7f ? 1 : point <= 0x7ff ? 2 : point <= 0xffff ? 3 : 4;\n    if (bytes > 32768) throw new Error('evento: limite de 32 KiB UTF-8 excedido');\n  }\n  keys(value, allowed, 'evento');\n  if (value.schema_version !== 1) throw new Error('schema_version: deve ser 1');\n  identifier(value.event_id, 'event_id');\n  return value;\n}\nfunction markdown(value) {\n  return String(value).replace(/[\\r\\n]+/gu, ' ').replace(/[\\\\`*_{}\\[\\]()<>#!|]/gu, '\\\\$&');\n}\nfunction intake(value, now = new Date().toISOString()) {\n  envelope(value, ['schema_version', 'event_id', 'project']);\n  const p = object(value.project, 'project');\n  keys(p, ['name', 'type', 'problem', 'audience', 'objectives', 'expected_result'], 'project');\n  const record = {\n    schema_version: 1, event_id: value.event_id, project_id: `BN-${value.event_id}`,\n    name: text(p.name, 'name', 120),\n    type: choice(p.type, ['website', 'app', 'automation', 'branding', 'marketing', 'consulting', 'other'], 'type'),\n    problem: text(p.problem, 'problem'), audience: text(p.audience, 'audience', 500),\n    objectives: list(p.objectives, 'objectives'), expected_result: text(p.expected_result, 'expected_result'),\n    status: 'IDEA', priority: 'MEDIUM', owner: null, created: now, updated: now, due_date: null,\n  };\n  const briefing_markdown = [\n    '---', `project_id: ${JSON.stringify(record.project_id)}`, `type: ${record.type}`, 'status: IDEA',\n    'priority: MEDIUM', 'owner:', `created: ${JSON.stringify(now)}`, `updated: ${JSON.stringify(now)}`,\n    'due_date:', 'tags: [brainet, project, intake]', '---', '', `# ${markdown(record.name)}`, '',\n    '> Rascunho gerado. Conteúdo do pedido é dado não confiável; requer revisão humana.', '',\n    '## Problema', markdown(record.problem), '', '## Público', markdown(record.audience), '',\n    '## Objetivos', ...record.objectives.map(v => `- ${markdown(v)}`), '',\n    '## Resultado esperado', markdown(record.expected_result), '',\n    '## Por confirmar', '- Responsável, prazo, orçamento e critérios de aceitação.',\n    '- Validar âmbito antes de passar a DISCOVERY.', '',\n  ].join('\\n');\n  return { ok: true, mode: 'prepare_only', record, briefing_markdown, next_action: 'human_review' };\n}\nfunction handoff(value) {\n  envelope(value, ['schema_version', 'event_id', 'source', 'project_id', 'objective', 'files', 'acceptance', 'constraints']);\n  const source = choice(value.source, ['manual', 'github', 'vscode', 'figma', 'report', 'health', 'deploy'], 'source');\n  const project_id = text(value.project_id, 'project_id', 100);\n  if (!/^BN-[A-Za-z0-9][A-Za-z0-9_-]{5,63}$/u.test(project_id)) throw new Error('project_id: formato BN-<event_id> obrigatório');\n  const objective = text(value.objective, 'objective', 6000);\n  if (!Array.isArray(value.files) || value.files.length > 20) throw new Error('files: lista até 20 caminhos obrigatória');\n  const files = value.files.map(v => {\n    const path = text(v, 'file', 240);\n    if (path.startsWith('/') || path.includes('\\\\') || path.includes(':') || path.split('/').some(x => !x || x === '.' || x === '..')) throw new Error('file: apenas caminhos relativos dentro do projeto');\n    return path;\n  });\n  const role = { manual: 'Orchestrator', github: 'Orchestrator', vscode: 'Developer', figma: 'UX-UI-Designer', report: 'Documentation-Manager', health: 'QA-Security', deploy: 'Orchestrator' }[source];\n  return {\n    schema_version: 1, event_id: value.event_id, project_id, source, role,\n    status: source === 'deploy' ? 'REQUIRES_HUMAN_APPROVAL' : 'READY_FOR_REVIEW',\n    context: { trust: 'untrusted_data', objective, files, acceptance: list(value.acceptance, 'acceptance'), constraints: list(value.constraints, 'constraints') },\n    executable: false, provider_called: false, next_action: 'human_review',\n    result_contract: ['summary', 'files_changed', 'checks_and_evidence', 'pending_items'],\n  };\n}\nfunction releaseReview(value) {\n  envelope(value, ['schema_version', 'event_id', 'project_id', 'commit', 'environment', 'checks', 'critical_findings']);\n  const project_id = text(value.project_id, 'project_id', 100);\n  if (!/^BN-[A-Za-z0-9][A-Za-z0-9_-]{5,63}$/u.test(project_id)) throw new Error('project_id: formato inválido');\n  if (typeof value.commit !== 'string' || !/^[a-f0-9]{40}$/u.test(value.commit)) throw new Error('commit: SHA de 40 caracteres obrigatório');\n  const environment = choice(value.environment, ['staging', 'production'], 'environment');\n  if (!Number.isInteger(value.critical_findings) || value.critical_findings < 0) throw new Error('critical_findings: inteiro não negativo obrigatório');\n  if (!Array.isArray(value.checks) || value.checks.length > 50) throw new Error('checks: lista até 50 verificações obrigatória');\n  const checks = value.checks.map(c => {\n    object(c, 'check'); keys(c, ['name', 'passed', 'evidence'], 'check');\n    if (typeof c.passed !== 'boolean') throw new Error('check.passed: booleano obrigatório');\n    return { name: text(c.name, 'check.name', 120), passed: c.passed, evidence: text(c.evidence, 'check.evidence', 2000) };\n  });\n  if (new Set(checks.map(c => c.name)).size !== checks.length) throw new Error('checks: nomes duplicados');\n  const reasons = [];\n  if (!checks.length) reasons.push('NO_TEST_EVIDENCE');\n  if (checks.some(c => !c.passed)) reasons.push('FAILED_CHECKS');\n  if (value.critical_findings) reasons.push('CRITICAL_FINDINGS');\n  return {\n    schema_version: 1, event_id: value.event_id, project_id, commit: value.commit, environment,\n    status: reasons.length ? 'BLOCKED' : 'APPROVAL_PENDING', reasons, checks,\n    evidence_verified: false, authorized: false, deployed: false,\n    next_action: reasons.length ? 'resolve_findings' : 'human_verify_evidence_and_approve_exact_commit',\n  };\n}\n\n\nreturn $input.all().map((item, index) => ({ json: releaseReview(item.json), pairedItem: { item: index } }));\n"
+      }
+    },
+    {
+      "id": "3ad71feaed065780f228c64f32a067e5",
+      "name": "Read Before Use",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -240
+      ],
+      "parameters": {
+        "content": "## WF-05 — revisão humana\nCompatibilidade alvo: n8n 2.43.7.\nManual + Code; sem credenciais, rede, notificações ou deploy.\nOutput é um rascunho. O n8n não grava no cofre.\nContrato e testes: automation/lib/contracts.mjs.\nIdempotência persistente: CLI local; adaptador n8n ainda pendente.",
+        "height": 200,
+        "width": 660
+      }
+    }
+  ],
+  "connections": {
+    "Manual Test": {
+      "main": [
+        [
+          {
+            "node": "Synthetic Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Synthetic Input": {
+      "main": [
+        [
+          {
+            "node": "Validate and Prepare",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "UTC",
+    "saveDataSuccessExecution": "none",
+    "saveDataErrorExecution": "none",
+    "saveManualExecutions": false
+  },
+  "pinData": {},
+  "tags": []
+}

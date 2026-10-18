@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"home","type":"file","file":"00-Dashboard/Home.md","x":0,"y":0,"width":320,"height":200,"color":"4"},
+		{"id":"intake","type":"file","file":"05-Workflows/WF-01-Project-Intake.md","x":400,"y":-160,"width":320,"height":200},
+		{"id":"knowledge","type":"file","file":"03-Projects/Project-Template.md","x":800,"y":-160,"width":320,"height":200,"color":"4"},
+		{"id":"agents","type":"file","file":"04-Agents/Collaboration-Contract.md","x":800,"y":160,"width":320,"height":200,"color":"5"},
+		{"id":"handoff","type":"file","file":"05-Workflows/WF-03-Agent-Handoff.md","x":400,"y":160,"width":320,"height":200},
+		{"id":"qa","type":"file","file":"05-Workflows/WF-05-QA-Approval.md","x":1200,"y":0,"width":320,"height":200,"color":"3"},
+		{"id":"approval","type":"file","file":"06-SOPs/Release-Process.md","x":1600,"y":0,"width":320,"height":200,"color":"1"},
+		{"id":"limits","type":"text","text":"## Estado real\n3 fluxos manuais testados no n8n isolado.\nPersistência local por CLI.\nSem deploy, chamadas IA ou mensagens.\nAtivação em ferramentas requer configuração própria.","x":0,"y":300,"width":320,"height":240}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"home","fromSide":"right","toNode":"intake","toSide":"left","label":"pedido"},
+		{"id":"e2","fromNode":"intake","fromSide":"right","toNode":"knowledge","toSide":"left","label":"rascunho → revisão"},
+		{"id":"e3","fromNode":"home","fromSide":"right","toNode":"handoff","toSide":"left"},
+		{"id":"e4","fromNode":"handoff","fromSide":"right","toNode":"agents","toSide":"left","label":"pacote manual"},
+		{"id":"e5","fromNode":"knowledge","fromSide":"right","toNode":"qa","toSide":"left"},
+		{"id":"e6","fromNode":"agents","fromSide":"right","toNode":"qa","toSide":"left","label":"entrega + evidências"},
+		{"id":"e7","fromNode":"qa","fromSide":"right","toNode":"approval","toSide":"left","label":"revisão humana"}
+	]
+}

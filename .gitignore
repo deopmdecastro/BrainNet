@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+node_modules/
+runtime/
+*.log
+.obsidian/workspace*.json
+.obsidian/cache/
+.obsidian/plugins/
+.qodo/
+*.pem
+*.key
+credentials*.json
+*credentials*.json
+automation/n8n/exports-private/

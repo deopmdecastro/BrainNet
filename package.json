@@ -1,0 +1,14 @@
+{
+  "name": "brainet-os",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Fundação local do BraiNet OS: conhecimento, contratos e automações para revisão humana.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build:workflows": "node scripts/build-workflows.mjs",
+    "check": "node scripts/check-foundation.mjs",
+    "demo": "node scripts/intake.mjs --input examples/project-intake.json"
+  }
+}

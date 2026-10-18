@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "event_id": "demo-release-001",
+  "project_id": "BN-demo-website-001",
+  "commit": "0000000000000000000000000000000000000000",
+  "environment": "staging",
+  "checks": [{"name": "Exemplo ilustrativo", "passed": true, "evidence": "Fixture de teste; não é evidência de lançamento real."}],
+  "critical_findings": 0
+}
