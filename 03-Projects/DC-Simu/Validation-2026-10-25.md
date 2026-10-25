@@ -52,4 +52,20 @@ Numa tentativa anterior nesta sessão, com heap de 4 GiB, o Vite transformou 126
 
 Os motores, persistência/API local e quatro percursos de interface exercitados estão operacionais no runtime suportado. A validação de artefacto de produção permanece pendente exclusivamente por limite de recursos do sandbox; as pendências n8n de segurança e de serviço real permanecem independentes desta execução.
 
+## Atualização — sessão de 2026-10-25 (clone limpo, Node v22.22.2)
+
+Ambiente: sandbox com 1 vCPU e ~4 GB de RAM, clone novo do `dc-simu` no commit `44bda35`, `npm ci`.
+
+| Área | Resultado |
+| --- | --- |
+| `tsc -b` | PASS |
+| Smoke de núcleo, Ladder (compare, math, rename, integration), GRAFCET (signals, sync, word, links, dialogs), FluidSIM, nomes, estilo, interactables, motion | PASS (15 scripts) |
+| `server-e2e` | PASS — 111 verificações, 0 falhas |
+| `vite build` com `--max-old-space-size=3072` | PASS em 33,6 s; PWA com 77 entradas em precache; aviso de chunks > 500 kB |
+| Percursos UI (Playwright) | **Não executados**: este sandbox não tem browsers Playwright e o download não está permitido na rede |
+
+O limite de memória anterior (ENV-01) não se reproduziu com 3 GiB de heap; o build de produção passa a ter evidência neste ambiente. Continua por registar o build no runner de produção e a repetição dos quatro percursos UI.
+
+Incremento novo (`84494d6`): `scripts/diagnostics-smoke.ts` (`npm run test:diagnostics`) cobre os diagnósticos adicionados ao Ladder e ao GRAFCET e confirma que nenhum dos 11 modelos incluídos gera falsos positivos.
+
 [[Testing-Plan|Plano de validação]] · [[Backlog|Backlog]] · [[Decision-Log|Decisões]] · [[Project-Brief|Briefing]]

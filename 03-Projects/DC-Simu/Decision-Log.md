@@ -25,6 +25,7 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-012 | 2026-10-25 | Ligar `dc-simu/` como submódulo do repositório da aplicação | Pedido de clone/pull no DC-Simu e commit/push nos dois repositórios; cópia anterior e checkout exterior preservados; BrainNet fixa o commit da aplicação |
 | DC-ADR-013 | 2026-10-25 | Normalizar novas interfaces e cenários Siemens/LOGO! para endereços `I0.0`/`Q0.0` e manter compatibilidade de leitura/migração para aliases legados | Smoke de núcleo e percursos UI aprovados; a migração preserva IDs e cabos de projetos guardados; ver [[Validation-2026-10-25]] |
 | DC-ADR-014 | 2026-10-25 | Não classificar o build de produção como aprovado apenas a partir do sandbox atual | Vite excede a memória disponível neste host; repetir num runner dimensionado antes de declarar release; ver [[Validation-2026-10-25]] |
+| DC-ADR-015 | 2026-10-25 | Acrescentar diagnósticos estáticos ao Ladder e ao GRAFCET antes de novas funcionalidades de motor | Baixo risco: só geram avisos, sem alterar a simulação; cobertos por `test:diagnostics` e sem falsos positivos nos 11 modelos; ver [[Validation-2026-10-25]] |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
