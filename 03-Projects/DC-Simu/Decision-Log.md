@@ -31,3 +31,4 @@ tags: [brainet, dc-simu, decisions]
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[../../00-Dashboard/Projects-Dashboard|Projetos]].
+| DC-ADR-013 | 2026-10-25 | Centralizar elementos comuns das barras de ferramentas em `src/ui/toolbarKit.tsx` e reutilizá-los em Esquema/3D, GRAFCET, Ladder e editor de componentes 3D | Pedido direto do utilizador; commit `e28db97`; ações específicas de cada editor mantêm-se nas respetivas barras |

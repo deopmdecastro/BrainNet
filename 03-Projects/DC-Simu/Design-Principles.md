@@ -20,6 +20,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Usar azul para seleção e ações principais, tons neutros para superfícies e separadores, e verde para estados ativos em execução. A cor deve acompanhar rótulo ou forma, não ser a única indicação.
 - Preservar os componentes, espaçamentos, tipografia e estados existentes. Tornar ações importantes reconhecíveis sem aumentar desnecessariamente a densidade da barra.
 - Usar uma hierarquia clara entre modo atual, ferramenta ativa, objeto selecionado e estado da simulação. Manter endereços e valores técnicos legíveis e alinhados.
+- Barras de ferramentas: usar os elementos de `src/ui/toolbarKit.tsx` (histórico, malha/ímã/zoom, botão com atalho, separador, atalhos) em todos os editores; só as ações próprias de cada editor ficam fora do kit.
 - Adaptar painéis e controlos a ecrãs pequenos sem esconder a ação principal ou perder o contexto do objeto selecionado.
 
 ## Interação e segurança do trabalho
