@@ -81,4 +81,29 @@ Incremento `146972f` centraliza o contrato visual em `EDITOR_THEME`: fundo `#f7f
 
 A grelha espacial do cenário 3D permanece uma ajuda de profundidade, distinta da textura de edição sobre a chapa; esta última passou a obedecer à preferência comum de pontos/linhas.
 
+## Atualização — bornes recuados e identificação por face (2026-10-25)
+
+Foi concluído o incremento local que estava por terminar sobre `6c15b0c`. Os bornes medidos voltam a usar o centro do encaixe e o recuo físico, mantendo a conversão correta de Y. A fábrica e o editor partilham agora `realTerminalPosition`, em `src/electrical/realInterfaces.ts`. O editor reconhece a face de um borne no encaixe medido, mesmo quando este fica dentro da caixa exterior do modelo; bornes deslocados manualmente seguem a sua nova posição.
+
+A migração reconhece as duas convenções automáticas anteriores: Y invertido e posição na superfície. Preserva IDs, coordenadas 2D e posições manuais distintas dessas convenções. A repetição da migração conserva a identidade dos componentes já atualizados. Esta atualização substitui a opção de fixar os bornes medidos na superfície descrita no incremento anterior.
+
+Ambiente desta execução: Windows, Node.js **v24.13.1**, dependências já instaladas.
+
+| Verificação | Resultado |
+| --- | --- |
+| `npm test` na aplicação | PASS — 663 verificações; inclui todas as interfaces medidas, migração da superfície, idempotência e deslocação manual |
+| `npm run typecheck` | PASS — corrigido o import de `ComponentType` em falta no incremento retomado |
+| `npm run build` | PASS — Vite em 14,65 s, PWA com 77 entradas; mantém o aviso de chunks acima de 500 kB |
+| `npm run test:component-validate` | PASS — 10 verificações |
+| `npm run test:style` | PASS |
+| Browser local isolado | Confirmados 6 bornes no Topo (`−V/+V/RDY`) e 3 na Base (`PE/L/N`) do componente Proauto |
+| BrainNet: `npm test` | PASS — 45 testes, 0 falhas, 0 ignorados |
+| BrainNet: `npm run check` | PASS — 91 notas, 200 ligações, 3 workflows, sem erros |
+
+A verificação de browser usou Chromium através de `agent-browser`, com domínios limitados a `127.0.0.1`, API bloqueada e integrações remotas desativadas no processo de teste. O editor completo ficou no estado «A carregar o editor…»; para conferir as faces, foi montado o componente real `TerminalFaceEditor` num cenário isolado com uma fonte sintética. As capturas confirmam a renderização desse componente, sem constituir validação ponta-a-ponta do editor completo.
+
+Evidência local, ignorada pelo Git: `runtime/dc-simu-terminals-test.log`, `runtime/dc-simu-terminals-build.log`, `runtime/dc-simu-terminals-top.png` e `runtime/dc-simu-terminals-base.png`. Código alterado em `factory.ts`, `realInterfaces.ts`, `terminalFaces.ts`, `TerminalFaceEditor.tsx` e `scripts/smoke.ts`.
+
+**Preparado:** cenário sintético e evidências locais. **Implementado/testado:** cálculo partilhado, associação por face e migração. **Versionado:** commit `13896bc`, enviado para `origin/main` de `deopmdecastro/dc-simu`; o ponteiro do submódulo e estes registos acompanham o commit do BrainNet. **Autorização:** pedido direto do utilizador «fazer commit e push», em 2026-10-25, para as alterações desta tarefa nos dois repositórios. **Aprovado para produção:** sem aprovação de deploy registada. **Pendências:** repetir o percurso no editor completo e conferir o alinhamento visual dos restantes modelos; não foi executado qualquer deploy.
+
 [[Testing-Plan|Plano de validação]] · [[Backlog|Backlog]] · [[Decision-Log|Decisões]] · [[Project-Brief|Briefing]]
