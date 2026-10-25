@@ -35,6 +35,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - O editor GRAFCET deve tornar claras as relações entre etapas, transições, ações e ramos; selecionar um elemento deve mostrar as suas propriedades e estado.
 - A importação `.ct` suportada é do **FluidSIM 4**. Também se aceitam `.json` e `.grafcet`; não sugerir compatibilidade com outras versões de `.ct`.
 - A geração de Ladder tem de preservar networks manuais e identificar os estados sem Ladder, sincronizado, desatualizado e bloqueado por erros. A sincronização automática é uma preferência visível e reversível.
+- Na vista Ladder, mostrar o estado da parte gerada pelo GRAFCET e permitir abrir essa vista para corrigir ou atualizar a sequência.
 - Endereços partilhados devem manter a ligação às variáveis do projeto; não criar um modelo independente para uma vista sem necessidade.
 
 ## Contexto para agentes
