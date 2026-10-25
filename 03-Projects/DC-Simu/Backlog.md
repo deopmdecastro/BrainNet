@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-18
+updated: 2026-10-25
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
@@ -16,12 +16,12 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 | --- | --- | --- | --- | --- |
 | DC-01 / DC-02 | Alta | TODO | Reconfirmar chave exposta e proxy n8n; retirar segredos do cliente e rejeitar destinos não autorizados; confirmar correções por testes | Desenvolvimento / automação |
 | DC-03 / DC-04 | Alta | TODO | Alinhar webhook GRAFCET e resposta real de sucesso/falha; evidência de execução | Automação / QA |
-| ENV-01 | Alta | TODO | Restaurar dependências declaradas usando o lockfile escolhido; repetir npm test e npm run typecheck; registar falhas residuais com commit e ambiente | Desenvolvimento / QA |
+| ENV-01 | Alta | IN_PROGRESS | Dependências restauradas e validação Node 22 aprovada (tipo, núcleo, servidor, n8n e quatro percursos UI). Executar o build de produção num runner com memória suficiente; no sandbox Vite esgotou memória durante transformação/chunks | Evidência: [[Validation-2026-10-25]] |
 | OPS-01 | Alta | TODO | Confirmar URL, fornecedor, commit e modo de persistência de produção; distinguir Vercel/Docker do assistente de programação | Coordenação |
 | GRAFCET-IMPORT-01 | Alta | IMPLEMENTED_TESTED | Leitor FluidSIM 4 CT com 5 etapas, 7 transições e 7 ações recuperadas do exemplo; limites, rejeição de variantes não suportadas e aviso de referências externas | Evidência: [[FluidSIM-Import]]; 17 verificações locais |
 | GRAFCET-UX-01 | Alta | IMPLEMENTED_TESTED | Construção por arrasto, pontos de ligação, transições e derivações; modais compactas; gestos, teclado, histórico e responsividade verificados | Evidência: [[FluidSIM-Import]]; 17 verificações de construção e importação, 23 verificações de modais |
 
-As pendências n8n provêm da revisão anterior e precisam de reconfirmação. ENV-01 provém dos checks executados nesta avaliação, descritos em [[AI-Tooling-Assessment]].
+As pendências n8n provêm da revisão anterior e precisam de reconfirmação. ENV-01 conserva apenas a validação do build de produção num ambiente com memória suficiente; os checks recentes estão descritos em [[Validation-2026-10-25]].
 
 ## Adoção de IA com controlo de custo
 

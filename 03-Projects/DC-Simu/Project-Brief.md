@@ -27,10 +27,11 @@ O produto existente sincroniza esquema 2D, visualização 3D e programação Lad
 
 | Área | Situação documentada |
 | --- | --- |
-| Simulação e edição | Implementadas segundo o README e a estrutura do código; sem nova execução de testes do produto nesta integração documental |
-| Projetos e administração | Modos local e com API Node/SQLite descritos no repositório |
-| Integração n8n | Envio manual de GRAFCET existente; incompatibilidades e falsos sucessos registados na revisão local |
+| Simulação e edição | Validada em Node 22: smoke de núcleo com 643 verificações e quatro percursos UI GRAFCET/Blocos/Modais/Construção aprovados; ver [[Validation-2026-10-25]] |
+| Projetos e administração | API local/SQLite validada: 111 verificações de servidor aprovadas em dados temporários |
+| Integração n8n | Cliente local validado (7 verificações); contrato, segredo e serviço real continuam por reconfirmar |
 | Saúde n8n | Revisão anterior regista correção e teste bem-sucedido do ramo de saúde; restantes ramos não validados por esse teste |
+| Build de produção | Pendente em runner com memória suficiente: Vite esgota/é terminado pelo limite do sandbox, sem assertion de produto falhada |
 | Sandbox e pesquisa | Configuração e verificação anteriores documentadas em infra/n8n; estado atual dos serviços não consultado nesta integração |
 
 ## Entregáveis e aceitação
@@ -50,8 +51,9 @@ O [[../../04-Agents/ECC-Exploration|ECC]] está disponível como catálogo Codex
 O resultado esperado é um simulador utilizável, com persistência verificável e automações que comuniquem corretamente falhas e execuções. Baselines, metas de desempenho e critérios comerciais ficam por definir.
 
 ## Próxima ação
-Tratar primeiro a chave n8n exposta e as permissões do proxy; depois alinhar o webhook GRAFCET e os resultados de sucesso/erro. A revisão é evidência histórica: confirmar o estado do código e dos serviços antes de executar correções ou dar problemas como resolvidos. Para o piloto de IA, restaurar o baseline de dependências e validar o acesso Copilot da conta antes de comparar ferramentas; ver ENV-01 e AI-03 no [[Backlog]].
+Executar o build de produção num runner com memória suficiente e guardar a evidência; o sandbox atual não permite concluí-lo. Em paralelo, tratar a chave n8n exposta e as permissões do proxy; depois alinhar o webhook GRAFCET e os resultados de sucesso/erro. A revisão é evidência histórica: confirmar o estado do código e dos serviços antes de executar correções ou dar problemas como resolvidos. Para o piloto de IA, validar o acesso Copilot da conta antes de comparar ferramentas; ver ENV-01 e AI-03 no [[Backlog]].
 
 ## Evidências e acompanhamento
+- [[Validation-2026-10-25]] regista os comandos, resultados e limite de memória do build no sandbox.
 - A [documentação local da infraestrutura n8n](./dc-simu/infra/n8n/README.md) acompanha a configuração da aplicação. A revisão histórica de integração citada anteriormente não foi copiada para o cofre; as pendências que dela dependem estão resumidas no [[Backlog]] e necessitam de reconfirmação.
 - [[../../00-Dashboard/Projects-Dashboard|Dashboard de projetos]] · [[../../06-SOPs/Project-States|Estados]].

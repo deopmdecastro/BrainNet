@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: decisions
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-18
+updated: 2026-10-25
 tags: [brainet, dc-simu, decisions]
 ---
 # Decisões do DC-Simu
@@ -23,6 +23,8 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-011 | 2026-10-25 | Centralizar uma cópia do código em `03-Projects/DC-Simu/dc-simu/` dentro do cofre | Pedido direto do utilizador; checkout anterior preservado sem sincronização automática; cópia sem `.git`, `.env`, dependências instaladas e artefactos de build |
 
 | DC-ADR-012 | 2026-10-25 | Ligar `dc-simu/` como submódulo do repositório da aplicação | Pedido de clone/pull no DC-Simu e commit/push nos dois repositórios; cópia anterior e checkout exterior preservados; BrainNet fixa o commit da aplicação |
+| DC-ADR-013 | 2026-10-25 | Normalizar novas interfaces e cenários Siemens/LOGO! para endereços `I0.0`/`Q0.0` e manter compatibilidade de leitura/migração para aliases legados | Smoke de núcleo e percursos UI aprovados; a migração preserva IDs e cabos de projetos guardados; ver [[Validation-2026-10-25]] |
+| DC-ADR-014 | 2026-10-25 | Não classificar o build de produção como aprovado apenas a partir do sandbox atual | Vite excede a memória disponível neste host; repetir num runner dimensionado antes de declarar release; ver [[Validation-2026-10-25]] |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 

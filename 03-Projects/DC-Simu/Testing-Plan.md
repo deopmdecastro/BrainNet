@@ -1,20 +1,27 @@
 ---
 project_id: BN-DCSIMU-001
 type: qa
-status: PLANNED
+status: PARTIALLY_VERIFIED
 created: 2026-10-18
-updated: 2026-10-18
+updated: 2026-10-25
 tags: [brainet, dc-simu, qa]
 ---
 # Validação do DC-Simu
 
-Executar os comandos do produto na pasta [dc-simu/](./dc-simu/); os scripts estão no [package.json](./dc-simu/package.json). Não foram executados nesta integração documental; a avaliação de IA de 2026-10-18 registou o baseline abaixo no checkout então avaliado.
+Executar os comandos do produto na pasta [dc-simu/](./dc-simu/); os scripts estão no [package.json](./dc-simu/package.json).
 
-## Baseline da avaliação de IA
+## Execução mais recente — 2026-10-25
 
-- `npm test`: falhou por não encontrar a dependência declarada @supabase/supabase-js; não comprovou os casos de simulação.
-- `npm run typecheck`: falhou com dependências em falta (React Router, cliente Supabase e pacotes Font Awesome), além de TS7006 em src/supabase/supabaseBackend.ts:114. Restaurar as dependências e repetir antes de classificar falhas residuais.
-- Não foram alterados motores, backend ou modelos nesta avaliação. Ver ENV-01 em [[Backlog]] e [[AI-Tooling-Assessment|o relatório]].
+A validação foi repetida no runtime exigido, Node.js v22.23.4. O Node global do sandbox (v20.20.2) não satisfaz `>=22.12.0`; por isso a evidência do produto usa Node 22 temporário.
+
+- `tsc -b`: **PASS**.
+- `tsx scripts/smoke.ts`: **PASS**, 643 verificações e 0 falhas.
+- `scripts/server-e2e.mjs`: **PASS**, 111 verificações e 0 falhas, depois de reconstruir `better-sqlite3` para ABI Node 22.
+- `test:n8n-client`: **PASS**, 7 verificações.
+- Quatro smoke tests Playwright (GRAFCET, blocos, modais e construção/importação): **PASS**; os dois últimos reportaram respetivamente 23 e 17 verificações.
+- `vite build`: **pendente de runner com mais memória**. Os heaps de 768 MiB e 900 MiB atingiram OOM durante a transformação; uma tentativa anterior com 4 GiB chegou a `rendering chunks` e foi terminada pelo host. Não é uma assertion funcional falhada, mas não é evidência de artefacto de produção aprovado.
+
+O detalhe de ambiente, comandos e limitações está em [[Validation-2026-10-25]].
 
 ## Verificações previstas
 
