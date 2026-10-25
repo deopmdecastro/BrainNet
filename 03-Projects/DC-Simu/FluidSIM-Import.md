@@ -69,8 +69,14 @@ Ambiente local: Windows, Node.js 24.13.1; dependências do clone instaladas pelo
 
 **Preparado:** clone, pull, dependências, baseline e submódulo.
 
-**Implementado/testado:** leitor CT nativo, construção de ligações e ramos, modais compactas e confirmação antes de substituir; os testes de UI sintética passaram. O exemplo CT real foi validado na exploração anterior, mas não está disponível neste checkout para repetição.
+**Implementado/testado:** leitor CT nativo, construção de ligações e ramos, modais compactas e confirmação antes de substituir; os testes de UI sintética passaram. O exemplo de 5 etapas/7 transições usado na exploração anterior não foi incluído neste checkout; a nova amostra é uma validação separada.
 
-**Aprovado:** nenhum aprovador registado para o commit ou para publicação. **Pendências:** falha conhecida do cenário base em `src/simulation/scenarios.ts:14`; confirmar o teste com o CT original quando estiver disponível. Não foi comprovado qualquer deploy de produção.
+## Atualização — nova amostra CT (2026-10-25)
+
+Foi analisado um ficheiro FluidSIM 4 enviado nesta tarefa, sem o guardar no repositório. O leitor recuperou **4 etapas, 4 transições e 2 ações**, com ligações `5→1`, `10→5`, `15→10` e `1→15`; as ações ficaram associadas às etapas 5 e 15, as condições coincidiram com a referência visual e não houve avisos. A análise encontrou espaços duplicados em torno do operador OR. O leitor passou a normalizá-los e o smoke sintético ganhou cobertura para esse caso.
+
+**Verificações após o pull:** `npm test` passou; `npm run test:fluidsim` passou com 17 verificações, incluindo a normalização de espaços; `npm run test:grafcet-construction-ui` passou com 19 verificações, incluindo a importação do CT enviado através do seletor real; `npm run build` e `npm run check` passaram. O build mantém o aviso de chunks acima de 500 kB. A nota técnica [FLUIDSIM-IMPORT.md](./dc-simu/docs/FLUIDSIM-IMPORT.md) descreve o âmbito e o resultado sem incluir o ficheiro de referência.
+
+**Aprovado:** nenhum aprovador registado para publicação. **Pendências:** não foi comprovado qualquer deploy de produção. O CT da exploração anterior permanece fora deste checkout; a nova amostra enviada nesta tarefa foi verificada ponta-a-ponta.
 
 [[README|Índice]] · [[Testing-Plan|Validação]] · [[Backlog]]
