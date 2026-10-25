@@ -36,6 +36,8 @@ O produto existente sincroniza esquema 2D, visualização 3D e programação Lad
 ## Entregáveis e aceitação
 [[Requirements|Requisitos e prioridades]] · [[Testing-Plan|Plano de validação]] · [[Decision-Log|Decisões]].
 
+Para novas alterações de interface e interação, consultar também [[Design-Principles|os princípios de UI/UX e o pacote de contexto do DC-Simu]].
+
 ## Assistência de IA e orçamento
 A [[AI-Tooling-Assessment|avaliação de ferramentas e custos]] recomenda reutilizar Codex, experimentar Copilot Free quando elegível e usar Sonda/DeepSeek local para análise contextual. Objetivo inicial: zero novas subscrições; custo dos planos já existentes, energia e manutenção por confirmar. Plus, APIs e benefícios de mantenedor não são presumidos como gratuitos.
 

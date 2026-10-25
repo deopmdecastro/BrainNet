@@ -15,6 +15,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Conteúdo | Abrir |
 | --- | --- |
 | Briefing e estado do projeto | [[Project-Brief]] |
+| Princípios de UI, UX e contexto para agentes | [[Design-Principles]] |
 | Requisitos e prioridades | [[Requirements]] |
 | Backlog e próxima ação | [[Backlog]] |
 | Decisões | [[Decision-Log]] |
