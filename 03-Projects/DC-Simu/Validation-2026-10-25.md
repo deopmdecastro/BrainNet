@@ -68,4 +68,17 @@ O limite de memória anterior (ENV-01) não se reproduziu com 3 GiB de heap; o b
 
 Incremento novo (`84494d6`): `scripts/diagnostics-smoke.ts` (`npm run test:diagnostics`) cobre os diagnósticos adicionados ao Ladder e ao GRAFCET e confirma que nenhum dos 11 modelos incluídos gera falsos positivos.
 
+## Atualização — grelha comum dos editores (2026-10-25)
+
+Incremento `146972f` centraliza o contrato visual em `EDITOR_THEME`: fundo `#f7f9fc`, ponto de 1 px `#c9d3e3`, linha de 1 px `#e4eaf2` e passo visual padrão de 20 px. A alteração é apenas de apresentação: snap, zoom, o toggle de visibilidade e as coordenadas continuam nas respetivas stores; a malha estrutural Ladder mantém 20 px.
+
+| Área | Comando / percurso | Resultado |
+| --- | --- | --- |
+| Tipos | `tsc -b` com Node v22.23.4 | PASS |
+| Regressão GRAFCET | `GRAFCET_TEST_URL=http://127.0.0.1:5173 node scripts/grafcet-ui-smoke.mjs` | PASS |
+| Regressão Ladder | `BLOCK_TEST_URL=http://127.0.0.1:5173 node scripts/add-block-ui-smoke.mjs` | PASS |
+| Grelha transversal | `GRID_TEST_URL=http://127.0.0.1:5173 node scripts/editor-grid-ui-smoke.mjs` | PASS — confirma pontos e linhas no SVG do Esquema, fundo/linhas do GRAFCET e Ladder, montagem 3D e ausência de exceções ao alternar o estilo. |
+
+A grelha espacial do cenário 3D permanece uma ajuda de profundidade, distinta da textura de edição sobre a chapa; esta última passou a obedecer à preferência comum de pontos/linhas.
+
 [[Testing-Plan|Plano de validação]] · [[Backlog|Backlog]] · [[Decision-Log|Decisões]] · [[Project-Brief|Briefing]]

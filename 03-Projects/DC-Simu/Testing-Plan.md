@@ -19,6 +19,7 @@ A validação foi repetida no runtime exigido, Node.js v22.23.4. O Node global d
 - `scripts/server-e2e.mjs`: **PASS**, 111 verificações e 0 falhas, depois de reconstruir `better-sqlite3` para ABI Node 22.
 - `test:n8n-client`: **PASS**, 7 verificações.
 - Quatro smoke tests Playwright (GRAFCET, blocos, modais e construção/importação): **PASS**; os dois últimos reportaram respetivamente 23 e 17 verificações.
+- `test:grid-ui` (Esquema 2D, GRAFCET, Ladder e Painel 3D): **PASS**. O smoke confirma tokens de pontos/linhas, alternância do estilo e ausência de exceções; ver [[Validation-2026-10-25]].
 - `vite build`: **pendente de runner com mais memória**. Os heaps de 768 MiB e 900 MiB atingiram OOM durante a transformação; uma tentativa anterior com 4 GiB chegou a `rendering chunks` e foi terminada pelo host. Não é uma assertion funcional falhada, mas não é evidência de artefacto de produção aprovado.
 
 O detalhe de ambiente, comandos e limitações está em [[Validation-2026-10-25]].
