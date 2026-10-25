@@ -35,7 +35,7 @@ O produto existente sincroniza esquema 2D, visualização 3D e programação Lad
 | Sandbox e pesquisa | Configuração e verificação anteriores documentadas em infra/n8n; estado atual dos serviços não consultado nesta integração |
 
 ## Entregáveis e aceitação
-[[Requirements|Requisitos e prioridades]] · [[Testing-Plan|Plano de validação]] · [[Decision-Log|Decisões]].
+[[Requirements|Requisitos e prioridades]] · [[Testing-Plan|Plano de validação]] · [[Decision-Log|Decisões]] · [[Expansion-Audit-Plan|Auditoria da expansão e plano proposto]].
 
 Para novas alterações de interface e interação, consultar também [[Design-Principles|os princípios de UI/UX e o pacote de contexto do DC-Simu]].
 
