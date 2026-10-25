@@ -18,7 +18,7 @@ const allNotes = files.filter(f => /\.(md|canvas)$/u.test(f));
 let checkedLinks = 0;
 for (const file of markdownFiles) {
   const content = await readFile(file, 'utf8');
-  if (/^(?:\d{2}-|Templates\/)/u.test(relative(file))) {
+  if (/^(?:\d{2}-|Templates\/)/u.test(relative(file)) && !relative(file).startsWith('03-Projects/DC-Simu/dc-simu/')) {
     for (const property of ['type', 'status', 'created', 'updated', 'tags']) {
       if (!new RegExp(`^${property}:`, 'm').test(content.split('---')[1] || '')) errors.push(`${relative(file)}: propriedade ${property} ausente`);
     }
@@ -67,7 +67,7 @@ const canvas = JSON.parse(await readFile(path.join(root, '00-Dashboard/BraiNet-O
 const nodeIds = new Set(canvas.nodes.map(n => n.id));
 for (const node of canvas.nodes.filter(n => n.type === 'file')) if (!await exists(path.join(root, node.file))) errors.push(`Canvas: ficheiro inexistente: ${node.file}`);
 for (const edge of canvas.edges) if (!nodeIds.has(edge.fromNode) || !nodeIds.has(edge.toNode)) errors.push('Canvas: ligação sem nó');
-const result = { ok: errors.length === 0, checked_at: new Date().toISOString(), markdown_files: markdownFiles.length, links: checkedLinks, workflows: 3, errors, note: 'Bem-vindo.md e configurações pessoais excluídos das regras documentais.' };
+const result = { ok: errors.length === 0, checked_at: new Date().toISOString(), markdown_files: markdownFiles.length, links: checkedLinks, workflows: 3, errors, note: 'Bem-vindo.md e configurações pessoais excluídos das regras documentais; Markdown técnico da aplicação DC-Simu não exige frontmatter de notas Obsidian.' };
 await mkdir(path.join(root, 'runtime/checks'), { recursive: true });
 await writeFile(path.join(root, 'runtime/checks/foundation.json'), JSON.stringify(result, null, 2) + '\n');
 console.log(JSON.stringify(result, null, 2));

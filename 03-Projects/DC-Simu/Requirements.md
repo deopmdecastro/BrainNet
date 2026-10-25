@@ -8,7 +8,7 @@ tags: [brainet, dc-simu, requirements]
 ---
 # Requisitos e prioridades do DC-Simu
 
-Base inicial derivada do [README do produto](../../../dc-simu/dc-simu/README.md) e da [revisão n8n](../../../dc-simu/n8n-integration-review.md). Os critérios seguintes orientam o trabalho futuro; não são resultados de testes desta entrega.
+Base inicial derivada do [README técnico da aplicação](./dc-simu/README.md) e de uma revisão n8n histórica que não foi copiada para o cofre. Os critérios seguintes orientam o trabalho futuro; não são resultados de testes desta entrega.
 
 | ID | Prioridade | Resultado esperado | Critério de aceitação |
 | --- | --- | --- | --- |

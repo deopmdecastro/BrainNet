@@ -8,7 +8,7 @@ tags: [brainet, dc-simu, qa]
 ---
 # Validação do DC-Simu
 
-Executar os comandos do produto na pasta `C:\Users\Deogracia de Castro\Documents\Projetos\dc-simu\dc-simu`. Os scripts existem no package.json. Não foram executados no registo inicial; a avaliação de IA de 2026-10-18 executou o baseline abaixo.
+Executar os comandos do produto na pasta [dc-simu/](./dc-simu/); os scripts estão no [package.json](./dc-simu/package.json). Não foram executados nesta integração documental; a avaliação de IA de 2026-10-18 registou o baseline abaixo no checkout então avaliado.
 
 ## Baseline da avaliação de IA
 
@@ -30,7 +30,7 @@ Executar os comandos do produto na pasta `C:\Users\Deogracia de Castro\Documents
 | Piloto de IA | Mesmas três tarefas e critérios em ferramentas selecionadas | Tempo, correções, consumo e custo registados; nenhuma sugestão tomada como teste passado |
 
 ## Evidências anteriores
-A [revisão de integração](../../../dc-simu/n8n-integration-review.md) regista uma execução de saúde bem-sucedida após correção. O [guia de infraestrutura](../../../dc-simu/dc-simu/infra/n8n/README.md) documenta verificações anteriores do sandbox e SearXNG. Nenhuma delas comprova o envio GRAFCET completo ou o estado atual de todos os serviços.
+A revisão de integração histórica não foi copiada para o cofre. O [guia local de infraestrutura](./dc-simu/infra/n8n/README.md) documenta o ambiente; não comprova o envio GRAFCET completo nem o estado atual dos serviços.
 
 ## Validação do registo no BrainNet
 Verificar frontmatter, ligações internas e existência dos caminhos locais. Executar `npm test` e `npm run check` na raiz do BrainNet e comunicar os resultados da execução. Estes checks validam a fundação e a documentação, sem substituir os testes do produto acima.

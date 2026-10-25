@@ -53,3 +53,5 @@ Documentação consultada: [providers OpenCode](https://opencode.ai/docs/provide
 [[Maestri-Team|Equipa Maestri]] · [[DeepSeek-Analyst|Papel de Sonda]] · [[../03-Projects/DC-Simu/Project-Brief|DC-Simu]].
 
 Outros clientes de IA: [[AI-Terminals|terminais Copilot, Gemini, Gemma e Llama]]. Gemma local substitui a opção Mistral após o pedido do utilizador.
+
+O [[ECC-Exploration|catálogo ECC]] foi registado no Codex para exploração no BrainNet e no DC-Simu. O plugin continua por instalar; a seleção de skills e os critérios do piloto estão documentados nessa avaliação.

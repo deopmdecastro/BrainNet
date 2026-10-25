@@ -1,0 +1,3 @@
+[submodule "03-Projects/DC-Simu/dc-simu"]
+	path = 03-Projects/DC-Simu/dc-simu
+	url = https://github.com/deopmdecastro/dc-simu.git
