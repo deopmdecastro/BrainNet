@@ -24,8 +24,10 @@ Melhorar a interação e a simulação 3D: botoneiras com animação, sinalizado
 | `tsc -b`, `vite build` | passam |
 | `npm test`, `test:glow`, `test:motion`, `test:editor3d-functional`, `test:terminal-geometry`, `test:interactables`, `test:component-validate`, `test:diagnostics`, `test:fluidsim`, `test:style` | passam |
 
+## Correção posterior: halos fora das caixas envolventes
+Os halos são sprites na raiz do componente e inflacionavam `Box3.setFromObject`. `boundsWithoutGlow` (`glow.ts`) retira-os durante o cálculo e repõe-nos; aplicado ao enquadramento e à caixa do editor 3D (`Viewport.tsx`), à captura (`capture.ts`) e ao plano de desenho de cabos (`WireDraw.tsx`). `test:glow` passou a 16 verificações.
+
 ## Pendente
 - **Sem verificação visual** (sem Chromium/WebGL no sandbox): intensidades, tamanhos de halo e desempenho no iPhone por validar. Ver UI-VISUAL-01.
-- Os halos são sprites na raiz do componente: `Box3.setFromObject(..., true)` pode contá-los em enquadramentos do editor 3D com o LED aceso. Confirmar visualmente e, se necessário, excluí-los.
 - O disjuntor já tinha mola e disparo (`Breaker` com `stepSpring`); não foi alterado. Cabos: sem alteração à geometria/encaminhamento.
 - Fora do âmbito desta entrega: editor 3D (ferramentas de edição), esquema 3D e novos modelos.
