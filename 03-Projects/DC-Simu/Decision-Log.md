@@ -33,6 +33,10 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-021 | 2026-10-26 | GRAFCET: SET e RESET simultâneos na mesma saída → prevalece o RESET e o conflito fica registado e visível no simulador | Comportamento seguro e determinístico, independente da ordem das etapas; ver [[Validation-2026-10-26-Varredura-Editores]] |
 | DC-ADR-022 | 2026-10-26 | Ladder: contactos e ramos avaliados sem curto-circuito | Garante a memória de flanco dos contactos P/N em cada scan; ver [[Validation-2026-10-26-Varredura-Editores]] |
 | DC-ADR-023 | 2026-10-26 | Ladder: SR = set dominante, RS = reset dominante | Segue a IEC 61131-3; ver [[Validation-2026-10-26-Varredura-Editores]] |
+| DC-ADR-024 | 2026-10-26 | FluidSIM: a porta de entrada de etapas e transições é a que está em cima (geometria); só se a geometria não for conclusiva se usa o bit 2 de `FLIPPED` | O `FLIPPED I 2` troca as portas e invertia o fluxo; ver [[Validation-2026-10-26-FluidSIM-Ladder]] |
+| DC-ADR-025 | 2026-10-26 | Condições importadas na sintaxe do DC-Simu: `NOT`/`!` → `/`, `AND` → `*`, `OR` → `+`, com ` + ` e ` * ` espaçados e um `+` pneumático final preservado | Pedido do utilizador; evita a ambiguidade com nomes pneumáticos terminados em `+` |
+| DC-ADR-026 | 2026-10-26 | Ladder: JMP/JMPN só saltam para a frente; as networks saltadas não correm e mantêm as saídas; um salto para trás ou uma etiqueta inexistente são erro de lint e são ignorados em execução | Evita ciclos infinitos no scan; segue o comportamento do TIA Portal |
+| DC-ADR-027 | 2026-10-26 | Os pontos de paragem do Ladder são avaliados no fim do scan e o passo a passo percorre o rasto de um ciclo completo, em vez de executar uma network a meio do scan | O tick junta o elétrico, o GRAFCET e vários PLCs; parar a meio deixaria a imagem de processo incoerente. Os pontos de paragem ficam só em memória, como o forçar |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 

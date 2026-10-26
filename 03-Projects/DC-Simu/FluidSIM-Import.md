@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: engineering-report
 status: IN_PROGRESS
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-10-26
 tags: [brainet, dc-simu, grafcet, fluidsim]
 ---
 # Importação de GRAFCET do FluidSIM 4
@@ -73,10 +73,22 @@ Ambiente local: Windows, Node.js 24.13.1; dependências do clone instaladas pelo
 
 ## Atualização — nova amostra CT (2026-10-25)
 
-Foi analisado um ficheiro FluidSIM 4 enviado nesta tarefa, sem o guardar no repositório. O leitor recuperou **4 etapas, 4 transições e 2 ações**, com ligações `5→1`, `10→5`, `15→10` e `1→15`; as ações ficaram associadas às etapas 5 e 15, as condições coincidiram com a referência visual e não houve avisos. A análise encontrou espaços duplicados em torno do operador OR. O leitor passou a normalizá-los e o smoke sintético ganhou cobertura para esse caso.
+Foi analisado um ficheiro FluidSIM 4 enviado nesta tarefa, sem o guardar no repositório. O leitor recuperou **4 etapas, 4 transições e 2 ações**, com ligações `5→1`, `10→5`, `15→10` e `1→15` (**correção 2026-10-26:** estas relações estavam invertidas por causa do bit `FLIPPED`; as relações corretas são `1→5`, `5→10`, `10→15` e `15→1`, ver a atualização abaixo); as ações ficaram associadas às etapas 5 e 15, as condições coincidiram com a referência visual e não houve avisos. A análise encontrou espaços duplicados em torno do operador OR. O leitor passou a normalizá-los e o smoke sintético ganhou cobertura para esse caso.
 
 **Verificações após o pull:** `npm test` passou; `npm run test:fluidsim` passou com 17 verificações, incluindo a normalização de espaços; `npm run test:grafcet-construction-ui` passou com 19 verificações, incluindo a importação do CT enviado através do seletor real; `npm run build` e `npm run check` passaram. O build mantém o aviso de chunks acima de 500 kB. A nota técnica [FLUIDSIM-IMPORT.md](./dc-simu/docs/FLUIDSIM-IMPORT.md) descreve o âmbito e o resultado sem incluir o ficheiro de referência.
 
 **Aprovado:** nenhum aprovador registado para publicação. **Pendências:** não foi comprovado qualquer deploy de produção. O CT da exploração anterior permanece fora deste checkout; a nova amostra enviada nesta tarefa foi verificada ponta-a-ponta.
 
 [[README|Índice]] · [[Testing-Plan|Validação]] · [[Backlog]]
+
+## Atualização — FLIPPED, ficheiros mistos e normalização (2026-10-26)
+
+O ficheiro `Monta-Carga.ct` enviado (mantido fora dos repositórios) revelou seis problemas, corrigidos em `dc-simu` `684bf17`:
+- direção das portas com `FLIPPED`, que antes invertia o fluxo;
+- ficheiros com circuito elétrico misturado;
+- cabeçalho `PREVIEW <n>`;
+- normalização `NOT` → `/`, ` + `, ` * `;
+- variáveis de ações em formato válido;
+- traçado nativo do retorno e comentário «Q1».
+
+Resultado: `1→5`, `5→10`, `10→15`, `15→1`, com as condições `(SappelN1 + SenvoiN1) * SfdcPF` / `FdcN2` / `(SappelN1 + SenvoiN1) * SfdcPF` / `FdcN1`. Evidência e estado em [[Validation-2026-10-26-FluidSIM-Ladder]]; decisões DC-ADR-024 e DC-ADR-025 em [[Decision-Log]].
