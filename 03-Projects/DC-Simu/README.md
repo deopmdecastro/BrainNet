@@ -20,6 +20,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Backlog e próxima ação | [[Backlog]] |
 | Decisões | [[Decision-Log]] |
 | Plano de validação | [[Testing-Plan]] |
+| Auditoria editor vs efeitos | [[Audit-2026-10-26-Editor-Efeitos]] |
 | Evidência de validação mais recente | [[Validation-2026-10-26-Brilho-3D]] · [[Validation-2026-10-26-GRAFCET-Portos]] · [[Validation-2026-10-26-Zoom-Pinca]] · [[Validation-2026-10-26-Plataforma]] · [[Validation-2026-10-26-GRAFCET-Retorno]] · [[Validation-2026-10-26]] |
 | Avaliação de ferramentas e custos | [[AI-Tooling-Assessment]] |
 | Código-fonte da aplicação | [Pasta `dc-simu/`](./dc-simu/) |
