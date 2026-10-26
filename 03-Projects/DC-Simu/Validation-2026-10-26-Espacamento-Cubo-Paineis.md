@@ -18,7 +18,7 @@ tags: [brainet, dc-simu, ui, ux, css, toolbar, cubo, paineis, ladder, grafcet]
 
 - `toolbar-spacing.css` (novo): grupos segmentados com `gap` de 3 px e botões planos dentro da moldura; 10 px entre grupos.
 - `clean-mode.css`: cubo com `top: 14px`, sem margem negativa; `below-command` ajustado para 62 px; edição frontal do 3D com 14 px.
-- `panels-polish.css` (novo): cabeçalhos fixos e foco visível no editor de componentes; separadores do Ladder numa linha com deslocamento e ações fixas; cabeçalho fixo e secções separadas no painel do GRAFCET (≥ 701 px).
+- `panel-system.css` (novo, substitui `panels-polish.css`): ver secção «Padronização dos painéis».
 - Documentado em `docs/TOOLBAR-ATALHOS-SIMULACAO.md`.
 
 ## Evidência
@@ -36,3 +36,13 @@ tags: [brainet, dc-simu, ui, ux, css, toolbar, cubo, paineis, ladder, grafcet]
 | Espaçamento, cubo, polimento dos painéis | implementado (CSS) |
 | Verificação visual | **pendente**: ajustar valores após ver no ecrã |
 | Aprovação pelo responsável | pendente |
+
+## Padronização dos painéis
+
+Pedido: painéis com um desenho semelhante, sem muitos estilos diferentes.
+
+- `panel-system.css` define variáveis `--pn-*` e aplica o mesmo cabeçalho (46 px), etiqueta de secção, separadores (36 px, ativo com linha da marca), corpo (margem 14 px) e rodapé a: hierarquia e inspetor do editor de componentes, componentes e propriedades do GRAFCET, simulação do Esquema e estado do PLC do Ladder.
+- Só visual: larguras, posições e comportamento de cada painel mantêm-se.
+- Guia em `docs/TOOLBAR-ATALHOS-SIMULACAO.md`, secção «Sistema de painéis».
+- `tsc`, `npm test`, `test:style`, `vite build`: passam. Verificação visual pendente.
+- Pendência: painel da biblioteca do Esquema (`Sidebar.tsx`, classes Tailwind) e Monitor ainda não seguem o sistema.
