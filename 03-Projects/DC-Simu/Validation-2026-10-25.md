@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: validation-record
 status: PARTIALLY_VERIFIED
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-10-26
 tags: [brainet, dc-simu, qa, node-22, grafcet]
 ---
 # Validação operacional — 2026-10-25
@@ -105,5 +105,32 @@ A verificação de browser usou Chromium através de `agent-browser`, com domín
 Evidência local, ignorada pelo Git: `runtime/dc-simu-terminals-test.log`, `runtime/dc-simu-terminals-build.log`, `runtime/dc-simu-terminals-top.png` e `runtime/dc-simu-terminals-base.png`. Código alterado em `factory.ts`, `realInterfaces.ts`, `terminalFaces.ts`, `TerminalFaceEditor.tsx` e `scripts/smoke.ts`.
 
 **Preparado:** cenário sintético e evidências locais. **Implementado/testado:** cálculo partilhado, associação por face e migração. **Versionado:** commit `13896bc`, enviado para `origin/main` de `deopmdecastro/dc-simu`; o ponteiro do submódulo e estes registos acompanham o commit do BrainNet. **Autorização:** pedido direto do utilizador «fazer commit e push», em 2026-10-25, para as alterações desta tarefa nos dois repositórios. **Aprovado para produção:** sem aprovação de deploy registada. **Pendências:** repetir o percurso no editor completo e conferir o alinhamento visual dos restantes modelos; não foi executado qualquer deploy.
+
+## Atualização — alinhamento com as cavidades do CAD (2026-10-25)
+
+O utilizador assinalou, através de uma imagem do Phoenix PTI 6, que os marcadores continuavam fora dos furos. A validação anterior comparava coordenadas e faces configuradas, sem provar a coincidência com as cavidades do GLB. Esta execução substitui essa calibração por medições na geometria final.
+
+- `fitComponentModel` passa a ser o referencial comum do Painel 3D, capturas, catálogo, landing e medições: rotação, espelho e dimensões físicas nos três eixos. O dimensionamento isolado pela altura deixava volumes diferentes dos usados pelos bornes, sobretudo no multímetro.
+- As ligações foram recalibradas no CAD renderizado. Os marcadores cabem no diâmetro e na profundidade dos encaixes e respeitam a oclusão pelo plástico. A direção do cabo segue a face do encaixe, incluindo cavidades recuadas.
+- O utilizador escolheu expressamente acrescentar réguas com furos ao relé de segurança e ao PLC LS, cujos CAD não tinham os 16 e 34 encaixes necessários. As réguas são geometria funcional adicional, com recorte das tampas sobrepostas e fundo recuado. A caixa funcional do motor recebe os sete encaixes alinhados com os seus endereços; as pontes Y/Δ mantêm o comando existente.
+- O multímetro recupera as quatro tomadas `COM/VΩ/mA/10A`. A migração conserva os IDs das duas tomadas antigas, recupera as duas em falta e é idempotente. As posições antigas estão preservadas em `legacyRealInterfaces.ts`; posições manuais e bornes fixados não são deslocados.
+
+Ambiente: Windows, Node.js **v24.13.1**, Chrome instalado, Vite local com integrações remotas desativadas. Testes de browser usam projeto/sessão sintéticos e bloqueiam API real.
+
+| Verificação | Resultado |
+| --- | --- |
+| `npm test` na aplicação | PASS — 668 verificações, incluindo migração a partir de `13896bc`, IDs/2D, bornes fixados, carregamento completo e recuperação das tomadas |
+| `npm run test:terminal-geometry` | PASS — 142 ligações nos 20 modelos; raios medem aro/fundo, profundidade disponível, tamanho dos marcadores, escala física e face de saída do cabo |
+| `npm run build` | PASS — inclui tipos; Vite em 13,79 s; PWA com 77 entradas; mantém aviso de chunks acima de 500 kB |
+| `npm run test:component-validate` e `npm run test:style` | PASS |
+| `npm run test:motion` | PASS |
+| `test:grid-ui` com `GRID_TEST_CHANNEL=chrome` | PASS — oito verificações nos quatro editores, sem exceções JavaScript |
+| `test:terminal-geometry-ui` com Chrome | PASS — seis faces dos 20 componentes no editor completo, quatro tomadas do multímetro a 390 px e nenhuma exceção JavaScript |
+| BrainNet: `npm test` | PASS — 45 testes, 0 falhas, 0 ignorados |
+| BrainNet: `npm run check` | PASS — 92 notas, 204 ligações, 3 workflows, sem erros |
+
+As capturas de inspeção geométrica estão em `runtime/terminal-geometry-before.png`, `runtime/terminal-geometry-all-before.png` e `runtime/terminal-geometry-after.png`. As capturas do editor completo estão em `runtime/terminal-geometry-ui/`, para Phoenix PTI 6, PE, relé de segurança, PLC LS e multímetro. Logs de núcleo e build: `runtime/terminal-geometry-core.log` e `runtime/terminal-geometry-build.log`. São evidências locais sintéticas, ignoradas por Git. A documentação [TERMINAL-GEOMETRY.md](./dc-simu/docs/TERMINAL-GEOMETRY.md) descreve os ficheiros e a reprodução dos testes.
+
+**Preparado:** cenários de inspeção e teste UI reproduzíveis. **Implementado/testado:** calibração física dos 20 modelos, réguas, marcadores, migração e percurso no editor completo. O teste UI permite os ficheiros de fontes usados pelo texto 3D; bloquear o resolvedor de fontes suspendia o editor e originava o ecrã «A carregar o editor…» observado na tentativa anterior. **Versionado em 2026-10-26:** commit `2f1e801`, enviado para `origin/main` de `deopmdecastro/dc-simu`; estes registos e o ponteiro do submódulo acompanham o commit do BrainNet. **Autorização:** pedido direto do utilizador «fazer commit e push», em 2026-10-26, para as alterações desta tarefa nos dois repositórios. O utilizador também autorizou as réguas complementares; sem aprovação de deploy registada e sem deploy executado. A geometria acrescentada complementa a visualização funcional e não é uma medição dos conectores ausentes no CAD original.
 
 [[Testing-Plan|Plano de validação]] · [[Backlog|Backlog]] · [[Decision-Log|Decisões]] · [[Project-Brief|Briefing]]
