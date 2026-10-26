@@ -27,6 +27,7 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-014 | 2026-10-25 | Não classificar o build de produção como aprovado apenas a partir do sandbox atual | Vite excede a memória disponível neste host; repetir num runner dimensionado antes de declarar release; ver [[Validation-2026-10-25]] |
 | DC-ADR-015 | 2026-10-25 | Acrescentar diagnósticos estáticos ao Ladder e ao GRAFCET antes de novas funcionalidades de motor | Baixo risco: só geram avisos, sem alterar a simulação; cobertos por `test:diagnostics` e sem falsos positivos nos 11 modelos; ver [[Validation-2026-10-25]] |
 | DC-ADR-016 | 2026-10-25 | Tornar `EDITOR_THEME` o contrato visual efetivo da grelha | Fundo, pontos e linhas são partilhados entre Esquema, 3D, GRAFCET, Ladder e catálogo. A normalização não altera snap, zoom ou coordenadas; Ladder conserva a sua malha geométrica de 20 px e a grelha de piso 3D continua apenas cenário. Ver [[Validation-2026-10-25]]. |
+| DC-ADR-017 | 2026-10-26 | Arrastar troços GRAFCET como deslize ortogonal em vez de inserir pontos de quebra soltos | Elimina os saltos do percurso de retorno observados em iPhone; as ancoragens nas etapas ficam fixas; ver [[Validation-2026-10-26-GRAFCET-Retorno]] |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
