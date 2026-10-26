@@ -45,6 +45,9 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-033 | 2026-10-26 | A caixa de bornes do motor é gerada a partir de uma disposição única em dados (`motorTerminalLayout`) medida no CAD; geometria, bornes elétricos, pontes e editor derivam dela | Elimina o desvio de 31 mm entre bornes e caixa e impede que as partes voltem a divergir |
 | DC-ADR-034 | 2026-10-26 | Peças com rotação contínua (`spin`) e peças opcionais (`optional`, olho no projeto) fazem parte da definição; «só no editor» (`editorOnly`) nunca é publicado | A pá do motor e futuros rolos/ventiladores usam o mesmo mecanismo, sem código por componente |
 | DC-ADR-035 | 2026-10-26 | A biblioteca de texturas usa apenas materiais CC0 (ambientCG), servidos a pedido fora do precache e assados no GLB ao publicar | Sem encargos de licença, sem pesar a instalação PWA, e o componente publicado não depende da biblioteca |
+| DC-ADR-036 | 2026-10-26 | Sinais simulados de PLC somam-se (OU) aos cabos e ficam em `plc.state` (gravados, fora do histórico); saídas exigem alimentação | Testar programas sem cablar, sem falsear a regra elétrica das saídas |
+| DC-ADR-037 | 2026-10-26 | Geometria do LOGO! (LCD e bornes) deriva do GLB/integrado; correção de bornes só no espelho exato, idempotente | Evita coordenadas fixas desalinhadas e não destrói edições manuais |
+| DC-ADR-038 | 2026-10-26 | Sincronização editor ↔ simulador é uma auditoria no Admin com correções explícitas; publicar continua a ser ação do administrador | Os dados vivem no Supabase/navegador do utilizador; os projetos só mudam com aviso de atualização |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
