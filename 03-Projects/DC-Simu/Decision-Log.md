@@ -48,6 +48,10 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-036 | 2026-10-26 | Sinais simulados de PLC somam-se (OU) aos cabos e ficam em `plc.state` (gravados, fora do histórico); saídas exigem alimentação | Testar programas sem cablar, sem falsear a regra elétrica das saídas |
 | DC-ADR-037 | 2026-10-26 | Geometria do LOGO! (LCD e bornes) deriva do GLB/integrado; correção de bornes só no espelho exato, idempotente | Evita coordenadas fixas desalinhadas e não destrói edições manuais |
 | DC-ADR-038 | 2026-10-26 | Sincronização editor ↔ simulador é uma auditoria no Admin com correções explícitas; publicar continua a ser ação do administrador | Os dados vivem no Supabase/navegador do utilizador; os projetos só mudam com aviso de atualização |
+| DC-ADR-039 | 2026-10-26 | «Atalhos» vive na barra de ferramentas; a barra pede ao editor montado (evento `dcsimu:shortcuts`) e cada editor mostra a sua lista | Um só sítio para descobrir atalhos sem duplicar listas na barra |
+| DC-ADR-040 | 2026-10-26 | «Compilar» do Ladder passa para a barra; o estado da compilação é partilhado via `useLadderUi` | A barra do programa fica para networks/blocos; o estado fica visível noutras abas |
+| DC-ADR-041 | 2026-10-26 | «Simulação» é um interruptor por vista guardado no navegador: Ladder = painel inferior; Esquema 2D/3D = painel lateral com controlos, sinais e etapas | Igual ao GRAFCET, sem tapar a tela |
+| DC-ADR-042 | 2026-10-26 | Mudança de nome no sítio (`InlineName`) em vez de caixas nativas; o título do GRAFCET passa para a barra de páginas | Consistente com o nome do documento; funciona em tátil e não bloqueia a página |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
