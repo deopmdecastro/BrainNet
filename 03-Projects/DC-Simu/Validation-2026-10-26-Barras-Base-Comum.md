@@ -35,3 +35,10 @@ Barras partilhadas entre editores, mas cada ambiente acrescenta as ferramentas d
 | Verificação visual e Playwright | pendente |
 | Editor de componentes: botão Atalhos na barra | por fazer (usa botão próprio no cabeçalho) |
 | Aprovação pelo responsável | pendente |
+
+## Atualização — editor de componentes 3D
+
+- `ComponentEditor3D.tsx`: botão «Atalhos» (F1) movido do cabeçalho para o fim da barra secundária, com o `ShortcutsButton` comum (`data-shortcuts-button="component"`). Removido o botão antigo e a regra CSS `.ce-header-help`.
+- «Editar/Simular» mantém-se como separadores de modo (testes existentes dependem deles).
+- `tsc -b`, `npm test`, `test:style`: passam. Playwright não executado (navegadores indisponíveis).
+- Pendente: verificação visual em ecrã estreito e melhorias funcionais do editor (a definir com o responsável).
