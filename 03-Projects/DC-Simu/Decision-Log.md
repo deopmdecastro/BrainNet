@@ -52,6 +52,9 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-040 | 2026-10-26 | «Compilar» do Ladder passa para a barra; o estado da compilação é partilhado via `useLadderUi` | A barra do programa fica para networks/blocos; o estado fica visível noutras abas |
 | DC-ADR-041 | 2026-10-26 | «Simulação» é um interruptor por vista guardado no navegador: Ladder = painel inferior; Esquema 2D/3D = painel lateral com controlos, sinais e etapas | Igual ao GRAFCET, sem tapar a tela |
 | DC-ADR-042 | 2026-10-26 | Mudança de nome no sítio (`InlineName`) em vez de caixas nativas; o título do GRAFCET passa para a barra de páginas | Consistente com o nome do documento; funciona em tátil e não bloqueia a página |
+| DC-ADR-043 | 2026-10-26 | «+ Bloco»/«+ Nova network» do Ladder vão para a barra de ferramentas e falam com o editor pelo `ladderBus` | Ações principais num só sítio, como «Compilar»; o editor não depende da barra |
+| DC-ADR-044 | 2026-10-26 | Network vazia automática abaixo da primeira network preenchida (`withEmptyNetworkBelow`), na mesma entrada de histórico | Há sempre uma network livre para continuar; «Anular» repõe tudo de uma vez |
+| DC-ADR-045 | 2026-10-26 | Barras de ferramentas sem `scrollbar-width` (fica `auto`) em ecrãs > 800 px; Firefox usa `thin` por `@supports` | No Chrome ≥ 121 `scrollbar-width` desativa `::-webkit-scrollbar` e mostra a barra nativa |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
