@@ -42,6 +42,9 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-030 | 2026-10-26 | A aplicação dos limites tem três camadas: servidor Node devolve HTTP 402; Supabase usa RLS e triggers (`enforce_project_limit`, `protect_profile_role`); o modo local aplica só na interface | O modo local não tem servidor de confiança; a garantia real exige o servidor ou o Supabase |
 | DC-ADR-031 | 2026-10-26 | Os componentes têm estados `active`/`blocked`/`archived`/`deleted` e um plano mínimo; eliminar é lógico e reversível por «Repor» | Mantém projetos antigos legíveis e permite auditoria; bloquear exige motivo |
 | DC-ADR-032 | 2026-10-26 | A compilação Ladder trata etiquetas LBL/JMP como locais a cada bloco e faz referências cruzadas globais; o bloqueio de RUN com erros é opcional e guardado no navegador | Corresponde ao modelo TIA/STEP 7; o bloqueio opcional não interrompe fluxos de ensino existentes |
+| DC-ADR-033 | 2026-10-26 | A caixa de bornes do motor é gerada a partir de uma disposição única em dados (`motorTerminalLayout`) medida no CAD; geometria, bornes elétricos, pontes e editor derivam dela | Elimina o desvio de 31 mm entre bornes e caixa e impede que as partes voltem a divergir |
+| DC-ADR-034 | 2026-10-26 | Peças com rotação contínua (`spin`) e peças opcionais (`optional`, olho no projeto) fazem parte da definição; «só no editor» (`editorOnly`) nunca é publicado | A pá do motor e futuros rolos/ventiladores usam o mesmo mecanismo, sem código por componente |
+| DC-ADR-035 | 2026-10-26 | A biblioteca de texturas usa apenas materiais CC0 (ambientCG), servidos a pedido fora do precache e assados no GLB ao publicar | Sem encargos de licença, sem pesar a instalação PWA, e o componente publicado não depende da biblioteca |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
