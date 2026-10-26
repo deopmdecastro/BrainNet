@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: project-index
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-10-26
 tags: [brainet, dc-simu, index]
 ---
 # DC-Simu
@@ -20,7 +20,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Backlog e próxima ação | [[Backlog]] |
 | Decisões | [[Decision-Log]] |
 | Plano de validação | [[Testing-Plan]] |
-| Evidência de validação mais recente | [[Validation-2026-10-25]] |
+| Evidência de validação mais recente | [[Validation-2026-10-26]] |
 | Avaliação de ferramentas e custos | [[AI-Tooling-Assessment]] |
 | Código-fonte da aplicação | [Pasta `dc-simu/`](./dc-simu/) |
 | Documentação técnica da aplicação | [README da aplicação](./dc-simu/README.md) |
