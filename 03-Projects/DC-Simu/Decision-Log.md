@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: decisions
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-25
+updated: 2026-10-26
 tags: [brainet, dc-simu, decisions]
 ---
 # Decisões do DC-Simu
@@ -30,6 +30,9 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-018 | 2026-10-25 | Centralizar elementos comuns das barras de ferramentas em `src/ui/toolbarKit.tsx` e reutilizá-los em Esquema/3D, GRAFCET, Ladder e editor de componentes 3D | Pedido direto do utilizador; commit `e28db97` (renumerada de um DC-ADR-013 duplicado em 2026-10-26); ações específicas de cada editor mantêm-se nas respetivas barras |
 | DC-ADR-019 | 2026-10-26 | Retorno dos botões explícito (`returnMode: spring/latch`), omissão = retenção para compatibilidade | Botoneiras com mola passam a ficar ativas só enquanto premidas; componentes guardados não mudam de comportamento; ver [[Validation-2026-10-26-Deteccao-Bornes-Mola]] |
 | DC-ADR-020 | 2026-10-26 | Bornes do editor guardam sempre a geometria do encaixe medida no modelo (profundidade e recuo) | Evita a projeção na face exterior no esquema 3D; o mesmo método por raios valida os modelos integrados e os criados no editor; ver [[Validation-2026-10-26-Deteccao-Bornes-Mola]] |
+| DC-ADR-021 | 2026-10-26 | GRAFCET: SET e RESET simultâneos na mesma saída → prevalece o RESET e o conflito fica registado e visível no simulador | Comportamento seguro e determinístico, independente da ordem das etapas; ver [[Validation-2026-10-26-Varredura-Editores]] |
+| DC-ADR-022 | 2026-10-26 | Ladder: contactos e ramos avaliados sem curto-circuito | Garante a memória de flanco dos contactos P/N em cada scan; ver [[Validation-2026-10-26-Varredura-Editores]] |
+| DC-ADR-023 | 2026-10-26 | Ladder: SR = set dominante, RS = reset dominante | Segue a IEC 61131-3; ver [[Validation-2026-10-26-Varredura-Editores]] |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
