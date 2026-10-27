@@ -26,6 +26,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Adaptar painéis e controlos a ecrãs pequenos sem esconder a ação principal ou perder o contexto do objeto selecionado. Em ecrãs estreitos, dicas longas passam a pedido (um «?»), em vez de ocuparem o canvas.
 - O nome do projeto/título tem prioridade sobre ações secundárias no cabeçalho: as ações secundárias passam a ícone com nome acessível.
 - Nos editores com muito canvas (Esquema, Ladder, GRAFCET), painéis auxiliares abrem por cima do diagrama como folha e não empurram nem esmagam o conteúdo, salvo quando o utilizador os abre.
+- As opções da ferramenta ativa (por exemplo cor, secção, condutor rígido/flexível e terminal dos cabos) vivem no painel lateral, no sítio do que se está a criar — nunca num cartão sobre o canvas. O mesmo bloco serve o simulador e o editor de componentes: o ícone da ponteira e o ícone do condutor são a informação, não um enfeite, e a escolha aplica-se logo aos cabos seguintes.
 
 ## Administração
 
