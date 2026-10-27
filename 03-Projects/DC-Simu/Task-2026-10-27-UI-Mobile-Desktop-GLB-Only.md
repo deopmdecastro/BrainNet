@@ -62,3 +62,13 @@ Melhorar as telas do DC-Simu para mobile e desktop de forma consistente, usando 
 ### Commit dc-simu `b2387be`
 refactor(schematic): unificar renderização GLB — eliminar ramos duplicados.
 Ramos Weg/Proauto removidos; overlays LOGO/pilot/dual no ramo único de `<image>` do GLB.
+
+### Commit dc-simu `fd208e1` (2026-10-27)
+refactor(ui): componentizar SimTransportControls partilhado.
+
+- `SimTransportControls` em `toolbarKit.tsx` (variantes `dock` / `bar`).
+- `SimulationDock` e `GrafcetSimBar` passam a consumir o mesmo componente.
+- Elimina duplicação de botões de transporte da simulação entre Esquema e GRAFCET.
+- Base CSS em `toolbar-spacing.css`.
+
+Próximo foco: continuar componentização (painéis laterais / docks), polish Landing, Admin editor3d, Ladder e Esquema 3D overlays.
