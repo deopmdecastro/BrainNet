@@ -103,3 +103,10 @@ Próximo: Admin tabs/lista de componentes; Ladder + Esquema 3D overlays.
 - Ladder bottom panel + status rows/empty: tokens `--pn-*` (`status-panel-refine`, `ladder-editor`).
 - Esquema 3D overlays (`panel3d-axis-hud`, `panel3d-viewbar`, `panel3d-edit-context`, `schematic-hud`): borda, raio, fundo e estados ativos no idioma dos painéis.
 - Admin nav/filtros (`admin-refine`): labels em versalete, tabs ativos brand-soft, barra de filtros com fundo de painel.
+
+### Commit dc-simu (2026-10-27 · Admin resumo tiles + mobile polish)
+polish(admin): tiles do Resumo com acentos de cor suaves alinhados às referências visuais; classes `adm-tile-pending|approved|rejected|projects|accounts|storage`.
+
+- Cores apenas como fundo/decoração (borda + círculo ::after), respeitando Design-Principles (cor nunca única indicação).
+- Mobile (≤720px) já usava grelha 2 colunas; reforço de padding e tipografia mantém altura de toque.
+- Objetivo: desktop e mobile do Resumo visualmente próximos das screenshots de referência (cartões coloridos suaves + lista de atividade + acesso rápido).
