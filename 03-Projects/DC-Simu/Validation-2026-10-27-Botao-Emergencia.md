@@ -88,10 +88,15 @@ Executado no submódulo `03-Projects/DC-Simu/dc-simu` sobre o commit `c44c419`.
 Capturas: `emergency-editor.png`, `emergency-premido.png` e `emergency-telemovel.png` (produzidas pelo
 próprio smoke em `EDITOR3D_TEST_OUTPUT`).
 
+## Publicação
+
+- Commit `dc-simu` **`c2bac45`** enviado para `origin/main` (submódulo do BrainNet em **`346352b`**), sem
+  `--force`. Deploy da Vercel do commit seguinte (`a10ccd6`) concluído com estado **success**
+  (`buildId` `a10ccd6…r80.mvqj5fln`), que inclui este incremento.
+
 ## Estado
 
-- **Implementado e testado** no código; **não publicado** no momento em que este documento foi escrito
-  (o envio é feito junto com o incremento dos cabos no painel lateral).
+- **Implementado e testado**; incluído no build de produção `a10ccd6…r80`.
 - **Pendente / herdado:** `terminal-geometry-smoke` e `terminal-seat-smoke` falham no borne `21` do
   `emergencyButtonKeyP20ACR` — falha **anterior** a este incremento, não é regressão.
 - **Pendente de confirmação em dispositivo físico** depois do deploy (UI-VISUAL-01).

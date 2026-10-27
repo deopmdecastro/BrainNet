@@ -99,9 +99,18 @@ Confirmadas com `git stash` (o mesmo teste falha no `HEAD` sem estas alteraçõe
 | `test:editors-sweep-ui` | `TypeError: Cannot read properties of undefined (reading 'branches')` (Ladder) |
 | `test:terminal-geometry` / `test:terminal-seat` | borne `21` do `emergencyButtonKeyP20ACR` |
 
+## Publicação
+
+| Passo | Resultado |
+| --- | --- |
+| Commits | `dc-simu` **`c2bac45`** (botão de emergência) e **`a10ccd6`** (cabos no painel lateral); `BrainNet` **`346352b`** e **`8afb97a`** |
+| Envio | `origin/main` dos dois repositórios, sem `--force` |
+| Vercel | estado GitHub do commit `a10ccd6` → **success**; `https://dc-simu.vercel.app/version.json` → `buildId` `a10ccd6…r80.mvqj5fln` (`builtAt` 2026-10-27T10:16:47Z) |
+| Verificação no site publicado | Projeto novo + botão **Cabo**: painel lateral abre «Novo cabo» com **8 ponteiras**, **2 condutores**, **13 cores**; bloco dentro do painel lateral; **nenhum** cartão de cabos no canvas; 0 exceções JavaScript (captura `producao-cabos.png`) |
+
 ## Estado
 
-- **Implementado e testado**; por publicar no momento em que este documento foi escrito.
+- **Implementado, testado e publicado** (produção `a10ccd6…r80`).
 - **Pendente:** nenhuma opção foi retirada do utilizador — a barra superior do simulador mantém o
   acesso rápido (AUTO, amostras, condutor, secção e terminal) e as opções completas vivem agora no
   painel lateral. Confirmar em dispositivo físico depois do deploy (UI-VISUAL-01).
