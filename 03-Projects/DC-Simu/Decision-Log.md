@@ -72,6 +72,7 @@ tags: [brainet, dc-simu, decisions]
 
 
 | DC-ADR-059 | 2026-10-27 | Aplicar uma camada comum de acabamento visual a landing, administração, biblioteca 3D, editor 3D e painel Ladder | Foco acessível, estados mais legíveis, cartões com hierarquia e feedback de hover discreto; sem alterar o modelo elétrico nem o contrato de dados |
+| DC-ADR-060 | 2026-10-27 | Nenhum comando flutua sobre um canvas: zoom, «Ajustar», «Mapa», «Cabo», dicas, enquadramento e atalhos vivem na barra de ferramentas. O canvas publica o estado (`canvasHint`) e recebe os pedidos (`requestCanvasAction('fit'|'focusSelection')`) através de `useSimUi`/`useGrafcetUi`, em vez de desenhar cartões próprios | Pedido direto do utilizador («não quero que tenha esses cards nos canvas, fica nas barras de ferramentas apenas»). O que já não cabe na largura vai para o `ToolMenu` (ADR-046), pelo que nenhuma ação se perde; ver [[Validation-2026-10-27-Sem-Cartoes-Canvas]] |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
