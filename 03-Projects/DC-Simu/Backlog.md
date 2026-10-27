@@ -106,7 +106,8 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 | WIRE-SCALE-01 | Média | IMPLEMENTED_TESTED | Espessura do cabo e tamanho da ponteira proporcionais à secção: métrica única (`src/schematic/wireMetrics.ts`) usada nas três cópias da fórmula do Esquema; 0,5 mm² ≈ 1,3 px e 16 mm² ≈ 6,2 px, com limites para acompanhar a grelha de 20 px | Evidência: `npm test` (três verificações novas) e `test:sem-cartoes-canvas` 29; falta a escolha de cor/tamanho do terminal no painel (WIRE-TERM-01) |
 | WIRE-TERM-01 | Alta | TODO | Escolher cor e tamanho dos terminais (ponteiras) no painel lateral do cabo, além da cor do condutor; guardar por ponta (`fromEndColor`/`toEndColor` já existem, falta o tamanho) | Pedido do utilizador de 2026-10-27 |
 | WIRE-Z-01 | Alta | TODO | Impedir que o cabo atravesse o corpo dos componentes: passar por trás (ou à frente, à escolha) em vez de cruzar a peça | Pedido do utilizador de 2026-10-27 |
-| ADMIN-VISUAL-01 | Média | TODO | Rever as telas de administração em telemóvel (cartões de resumo, «Ver todos os registos», filtros de registos e ações que transbordam) | Pedido do utilizador de 2026-10-27, com capturas |
+| ADMIN-VISUAL-01 | Média | IMPLEMENTED_TESTED | Resumo da administração revisto a partir das capturas do telemóvel: indicadores com ícone e tons pelo significado, cabeçalho ≤720 px em grelha (botões lado a lado a 44 px), «Sem pendências» sem ponto órfão, atividade compacta sem repetir o e-mail (≈50 px/evento), cartões com uma única ação e descrições sem corte a meio da palavra; navegação com ícones em todos os tamanhos. Commits `606cb30` (+ deriva `acc6ac4`). Por confirmar em telemóvel físico (UI-VISUAL-01) | Evidência: [[Validation-2026-10-27-Admin-Resumo-Responsivo]]; `test:admin-ui` 58 | Desenvolvimento |
+| TEST-DRIFT-03 | Média | IMPLEMENTED_TESTED | `smoke.ts` manteve os limites antigos da espessura do cabo (≤6,2 px; ponteira ≤1,5) quando a escala intencional de `wireMetrics.ts` passou a 1,6–8,5 px (ponteiras ≈1,55): `npm test` falhava no `main` limpo em duas verificações. Limites alinhados com a escala documentada, sem mudança de produto. Commit `acc6ac4` | Evidência: [[Validation-2026-10-27-Admin-Resumo-Responsivo]]; `npm test` verde | Desenvolvimento |
 
 As pendências n8n provêm da revisão anterior e precisam de reconfirmação. ENV-01 conserva apenas a validação do build de produção num ambiente com memória suficiente; os checks recentes estão descritos em [[Validation-2026-10-25]].
 
@@ -139,6 +140,7 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 
 - Aplicada camada de acabamento visual em landing, administração, biblioteca 3D, editor de componentes, Esquema/3D e painel Ladder.
 - Mantido o princípio de comunicação: mudanças de apresentação ficam no DC-Simu; decisão e evidência ficam registadas neste cofre.
+- Resumo da administração responsivo (mobile + desktop) entregue e validado a 390/768/1024/1440 px: [[Validation-2026-10-27-Admin-Resumo-Responsivo]] (ADMIN-VISUAL-01 fechado).
 - Próxima validação: smoke visual no viewport desktop e teste de regressão dos editores.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[AI-Tooling-Assessment|Avaliação]].

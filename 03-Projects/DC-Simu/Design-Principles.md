@@ -32,6 +32,10 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - Estrutura: cabeçalho com o título, o ambiente (servidor ou modo local) e as ações principais; navegação lateral agrupada à esquerda (barra horizontal abaixo de 960 px e na Biblioteca 3D, que precisa da largura toda).
 - Pendências primeiro: o Resumo abre com o que espera decisão (contribuições, pedidos de plano, componentes bloqueados) e cada linha tem a sua ação. Os números do Resumo são atalhos para a lista respetiva.
+- Resumo componentizado (`OverviewTile`, `OverviewCard`, `OverviewEmpty` em `AdminPanel.tsx`): cada indicador é um cartão-botão com ícone do sistema único (`src/ui/icons.tsx`), valor, detalhe e seta; o tom do ícone segue o significado (aprovadas verde, rejeitadas vermelho, em revisão âmbar) e nunca é a única pista.
+- Cada cartão tem **uma única ação**, no cabeçalho, em botão-pílula com seta — nada de duas ligações sublinhadas para o mesmo destino. Estados vazios levam ícone, frase e explicação curta.
+- Listas compactas do Resumo (atividade, contribuições, cobertura): ícone + título/meta numa linha e data/estado/contagens à direita, também no telemóvel. A linha de contexto nunca repete a mesma identificação (ator = alvo nas sessões) e o alvo tem prioridade sobre repetir o e-mail.
+- A navegação usa os ícones das secções nas três formas (lateral, faixa do tablet, seletor do telemóvel); no tablet os separadores ficam compactos para continuarem em duas linhas com ícone.
 - Listas: tabela com cabeçalho para dados comparáveis (projetos, registos); cartões compactos para contas e componentes. Nada de cinzentos «desativados» em fila: o que não está disponível vai para o menu «Mais ações» e diz porquê (por exemplo, «Requer o servidor»).
 - Ações destrutivas ficam separadas, em vermelho e com confirmação; ações de gestão frequentes (plano, detalhes, bloquear componente) ficam visíveis.
 - Avisos de resultado são fixos no ecrã e não empurram o conteúdo; erros mantêm-se no topo da secção.

@@ -119,3 +119,12 @@ feat(wires): escala mm² mais próxima dos elementos; ponteira 3D com colarinho 
 - `WireEnd3D.tsx`: ponteira isolada com colarinho plástico aproximadamente quadrado (referência foto).
 - `SchematicView.tsx` `drawOrder`: se o traçado cruza a caixa de um elemento (exceto bornes próprios), o cabo fica inteiro atrás ou à frente — nunca a meio.
 - Ponteiras já existiam (`ferrule` default); SyncPanel Admin já faz varredura editor↔biblioteca publicada.
+
+### Commits dc-simu (2026-10-27 · Resumo da administração responsivo)
+feat(admin): Resumo responsivo com ícones, cartões e atividade compacta (`606cb30`, carimbo #71), precedido da correção de deriva dos limites de cabos no smoke (`acc6ac4`, carimbo #70).
+
+- A partir de duas capturas do telemóvel enviadas nesta sessão (Resumo + atividade): indicadores passam a cartões-botão com os ícones do sistema único e tons pelo significado; cabeçalho ≤720 px em grelha (botões lado a lado a 44 px); «Sem pendências» sem ponto órfão.
+- Atividade recente: ícone por categoria/gravidade, contexto sem repetir o e-mail (alvo prevalece), data à direita — ≈50 px por evento em vez de ≈110 px.
+- Acesso rápido com 4 áreas (inclui Contribuições), cartões com uma única ação em botão-pílula, estados vazios com ícone; navegação com ícones também na lateral/tablet/seletor.
+- Componentização: `OverviewTile` / `OverviewCard` / `OverviewEmpty` / `activityMeta` em `AdminPanel.tsx`; 8 ícones novos em `src/ui/icons.tsx`; `test:admin-ui` passa a 58 verificações (390/768/1024/1440). `vite build` não correu neste ambiente (2 GB; ENV-01) — Vercel a partir do `main`.
+- Evidência: [[Validation-2026-10-27-Admin-Resumo-Responsivo]] (inclui capturas em `evidence-admin-resumo/`). Fecha ADMIN-VISUAL-01; deriva registada como TEST-DRIFT-03.
