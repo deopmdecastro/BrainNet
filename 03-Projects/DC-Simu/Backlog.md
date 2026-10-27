@@ -130,4 +130,10 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 - A ferramenta selecionada demonstra utilidade numa tarefa real, com consumo observado e custo documentado.
 - Novas APIs ou planos pagos só avançam após decisão explícita sobre fornecedor, conta e orçamento.
 
+## Atualização UI/UX — 2026-10-27
+
+- Aplicada camada de acabamento visual em landing, administração, biblioteca 3D, editor de componentes, Esquema/3D e painel Ladder.
+- Mantido o princípio de comunicação: mudanças de apresentação ficam no DC-Simu; decisão e evidência ficam registadas neste cofre.
+- Próxima validação: smoke visual no viewport desktop e teste de regressão dos editores.
+
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[AI-Tooling-Assessment|Avaliação]].
