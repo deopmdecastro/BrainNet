@@ -148,3 +148,5 @@ Reexecutado depois da correção: `tsc -b`, `npm test`, `test:barras-padrao`, `t
 - LADDER-MODEL-01 (mais do que um temporizador/contador por network).
 
 [[Backlog|Backlog]] · [[Design-Principles|Princípios de interface]] · [[Validation-2026-10-26|Validação anterior]]
+
+| Build de produção na Vercel (após a correção da barra) | **confirmado**: `https://dc-simu.vercel.app/version.json` → `buildId` `57e463f…r76.mvqe3ke4` (`builtAt` 2026-10-27T07:55:21Z); o CSS publicado contém `.ce-contextbar` e `.ce-toolbars.is-compact .ce-ribbon-primary{min-height:42px}` e já não tem as regras antigas de 48 px / botões de 40 px |
