@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-26
+updated: 2026-10-27
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
@@ -80,6 +80,14 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 | ENV-02 | Média | IMPLEMENTED_TESTED | `engines.node` alinhado com `jsdom` 30 / `undici` 8 (`^22.22.2 \|\| ^24.15.0 \|\| >=26`); Node 22.12–22.18 falhava `test:ci`. Testes Playwright GRAFCET atualizados (rótulo «Desfazer» da barra comum; coordenada do retorno independente do enquadramento). | Evidência: [[Validation-2026-10-26-Deteccao-Bornes-Mola]] |
 | 3D-DETECT-02 | Média | TODO | Segmentar GLB fundidos numa só malha (LOGO!, NPB22, AD22, WEG) por componentes conexos/material para a deteção por geometria. | Desenvolvimento |
 | 3D-DETECT-03 | Baixa | TODO | Ligar automaticamente o ecrã detetado às variáveis dos controlos detetados. | Desenvolvimento |
+| TOOLBAR-MENU-01 | Alta | IMPLEMENTED_TESTED | Menu de ações comum (`ToolMenu` em `src/ui/toolbarKit.tsx`): itens com nome, descrição, atalho e motivo de bloqueio; setas/Home/End/Escape; popover medido em ecrã largo e folha inferior até 720 px. Aplicado à barra do editor de componentes. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]]; `test:editor3d-toolbar` 22, `test:logo-editor-ui` 62 | Desenvolvimento |
+| EDITOR3D-MOBILE-BAR-01 | Alta | IMPLEMENTED_TESTED | Barra do editor de componentes arrumada em duas linhas com «Mais» fixo: seis ferramentas sem corte a 390 px, zoom real, dica da ferramenta ativa, biblioteca de bornes e vista alcançáveis. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]]; `test:editor3d-toolbar` | Desenvolvimento |
+| EDITOR3D-ZOOM-01 | Média | IMPLEMENTED_TESTED | Zoom do editor 3D com referência honesta (`camStats.fit/zoom`, 100 % = enquadrado), ação `zoom(factor)`, −/+ e clique no valor. Enquadramento medido pela caixa projetada (modelo passa a ≈ 70 % da altura do canvas a 390 × 844). Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]]; `test:editor3d-toolbar`, `test:editor3d-ui` | Desenvolvimento |
+| PANEL3D-MOBILE-HINT-01 | Média | IMPLEMENTED_TESTED | Cartão de contexto do Esquema 3D numa linha no telemóvel (ferramenta, Manobrar, enquadrar) e explicação a pedido no «?»; painéis Biblioteca/GRAFCET/Objetos movidos para o início da faixa. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]]; `test:editor3d-ui` | Desenvolvimento |
+| LADDER-MOBILE-FIT-01 | Alta | IMPLEMENTED_TESTED | Ladder caber no ecrã: mínimo de zoom 40 %, `fitLadderZoom`, botão «Ajustar à largura» e ajuste automático em ≤ 900 px até escolha manual; resumo em pastilhas; estado vazio compacto; réguas recolhidas de 24 px. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]]; `test:pinch`, `test:ladder-blocks-ui` 25 | Desenvolvimento |
+| GRAFCET-MOBILE-DRAWER-01 | Média | IMPLEMENTED_TESTED | Propriedades do GRAFCET como folha flutuante (46 %), sem abertura automática ao selecionar no telemóvel; barra de zoom/ajuste movida para o topo do diagrama. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]]; `test:grafcet-ui` | Desenvolvimento |
+| HEADER-PROJECT-NAME-01 | Média | IMPLEMENTED_TESTED | Cabeçalho do editor no telemóvel: nome do projeto com a largura disponível (antes «E.»), «Projetos»/«Comentários» como ícones com contador. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]] | Desenvolvimento |
+| TEST-DRIFT-01 | Média | IMPLEMENTED_TESTED | Testes de UI desalinhados com a interface: `editor3d-autodetect-ui` procurava «Botões» fora da área do inspetor (falhava já em `fabe385`) e `logo-editor-ui` procurava «Organizar» a 390 px. Ambos corrigidos para a interface atual. Evidência: [[Validation-2026-10-27-UI-Ecras-Pequenos]] | Desenvolvimento |
 | LADDER-IDEAS-01 | Baixa | TODO | Avaliar CTUD, TONR já existente na UI, comentários por elemento e exportação de listagem de endereços cruzados (referências cruzadas) | Decisão do responsável |
 
 As pendências n8n provêm da revisão anterior e precisam de reconfirmação. ENV-01 conserva apenas a validação do build de produção num ambiente com memória suficiente; os checks recentes estão descritos em [[Validation-2026-10-25]].

@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-10-27
 tags: [brainnet, dc-simu, design, ux]
 ---
 # Princípios de interface do DC-Simu
@@ -21,7 +21,11 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Preservar os componentes, espaçamentos, tipografia e estados existentes. Tornar ações importantes reconhecíveis sem aumentar desnecessariamente a densidade da barra.
 - Usar uma hierarquia clara entre modo atual, ferramenta ativa, objeto selecionado e estado da simulação. Manter endereços e valores técnicos legíveis e alinhados.
 - Barras de ferramentas: usar os elementos de `src/ui/toolbarKit.tsx` (histórico, malha/ímã/zoom, botão com atalho, separador, atalhos) em todos os editores; só as ações próprias de cada editor ficam fora do kit.
-- Adaptar painéis e controlos a ecrãs pequenos sem esconder a ação principal ou perder o contexto do objeto selecionado.
+- O que não cabe na largura disponível vai para um menu (`ToolMenu`), nunca para fora do ecrã nem para um deslize sem sinal. Cada item do menu diz o que faz, o atalho e, quando está desativado, o que falta para o ativar. Ações principais continuam em botão visível.
+- Zoom mostra sempre a mesma referência: 100 % = conteúdo enquadrado; o valor é clicável e volta ao enquadramento.
+- Adaptar painéis e controlos a ecrãs pequenos sem esconder a ação principal ou perder o contexto do objeto selecionado. Em ecrãs estreitos, dicas longas passam a pedido (um «?»), em vez de ocuparem o canvas.
+- O nome do projeto/título tem prioridade sobre ações secundárias no cabeçalho: as ações secundárias passam a ícone com nome acessível.
+- Nos editores com muito canvas (Esquema, Ladder, GRAFCET), painéis auxiliares abrem por cima do diagrama como folha e não empurram nem esmagam o conteúdo, salvo quando o utilizador os abre.
 
 ## Interação e segurança do trabalho
 

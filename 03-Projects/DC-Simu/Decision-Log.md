@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: decisions
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-26
+updated: 2026-10-27
 tags: [brainet, dc-simu, decisions]
 ---
 # Decisões do DC-Simu
@@ -54,6 +54,10 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-042 | 2026-10-26 | Mudança de nome no sítio (`InlineName`) em vez de caixas nativas; o título do GRAFCET passa para a barra de páginas | Consistente com o nome do documento; funciona em tátil e não bloqueia a página |
 | DC-ADR-043 | 2026-10-26 | «+ Bloco»/«+ Nova network» do Ladder vão para a barra de ferramentas e falam com o editor pelo `ladderBus` | Ações principais num só sítio, como «Compilar»; o editor não depende da barra |
 | DC-ADR-044 | 2026-10-26 | Network vazia automática abaixo da primeira network preenchida (`withEmptyNetworkBelow`), na mesma entrada de histórico | Há sempre uma network livre para continuar; «Anular» repõe tudo de uma vez |
+| DC-ADR-046 | 2026-10-27 | O que não cabe na barra vai para um menu comum (`ToolMenu`) com descrição, atalho e motivo de bloqueio; em telemóvel abre como folha inferior | Nenhuma ação desaparece por falta de largura e o utilizador não precisa de descobrir deslizes |
+| DC-ADR-047 | 2026-10-27 | Zoom dos editores usa sempre 100 % = conteúdo enquadrado, valor clicável; o enquadramento mede a caixa projetada nos eixos da câmara | A percentagem significa algo verificável e o modelo aproveita o ecrã ao alto |
+| DC-ADR-048 | 2026-10-27 | Ladder ajusta-se à largura em ecrãs ≤ 900 px, com mínimo de 40 %, até o utilizador escolher a escala (pinça/botões); «Ajustar à largura» aplica o valor exato | A network inteira (bobina incluída) cabe no telefone sem perder o zoom manual |
+| DC-ADR-049 | 2026-10-27 | Painéis auxiliares de canvas (GRAFCET, Ladder, Esquema 3D) abrem por cima do diagrama como folha e não abrem sozinhos no telemóvel | Preserva a área de trabalho; tapar o que se acabou de tocar era o pior efeito |
 | DC-ADR-045 | 2026-10-26 | Barras de ferramentas sem `scrollbar-width` (fica `auto`) em ecrãs > 800 px; Firefox usa `thin` por `@supports` | No Chrome ≥ 121 `scrollbar-width` desativa `::-webkit-scrollbar` e mostra a barra nativa |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
