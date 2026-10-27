@@ -64,6 +64,9 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - Uma família de barras de ferramentas usa sempre os mesmos tokens (altura da faixa, altura do controlo, raio, fundo). Uma barra não inventa medidas próprias nem quebra em linhas: o que não cabe desliza ou passa para um menu, e textos auxiliares vivem em faixas próprias.
 
+- Alvos de toque a 40 px e texto ≥ 11 px em ecrãs estreitos (inspetor de bornes, compilação, botões de cabo). O rodapé de estado nunca transborda: versão e contador de ciclos saem, «Instalar» passa a ícone e o nome do projeto só aparece acima de 420 px. Os ajustes vivem em `src/styles/mobile-refine.css` (último import) — [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]].
+- Painéis inferiores (estado do PLC, compilação) ocupam no máximo 38 % da altura visível; réguas recolhidas medem 30 px no telemóvel.
+
 ## Contexto para agentes
 
 O Obsidian/BraiNet guarda estas orientações, requisitos e decisões em Markdown. O repositório da aplicação guarda o código. O Maestri tem o workspace **BraiNet OS** ligado a esta pasta segundo a verificação documentada, mas esta ligação não injeta automaticamente o histórico da conversa em cada tarefa. Em tarefas de UI no DC-Simu, incluir esta nota, o briefing e os ficheiros de código relevantes no pacote de contexto. Papéis em `04-Agents/` são instruções reutilizáveis e não significam que um agente esteja ativo.

@@ -128,3 +128,11 @@ feat(admin): Resumo responsivo com ícones, cartões e atividade compacta (`606c
 - Acesso rápido com 4 áreas (inclui Contribuições), cartões com uma única ação em botão-pílula, estados vazios com ícone; navegação com ícones também na lateral/tablet/seletor.
 - Componentização: `OverviewTile` / `OverviewCard` / `OverviewEmpty` / `activityMeta` em `AdminPanel.tsx`; 8 ícones novos em `src/ui/icons.tsx`; `test:admin-ui` passa a 58 verificações (390/768/1024/1440). `vite build` não correu neste ambiente (2 GB; ENV-01) — Vercel a partir do `main`.
 - Evidência: [[Validation-2026-10-27-Admin-Resumo-Responsivo]] (inclui capturas em `evidence-admin-resumo/`). Fecha ADMIN-VISUAL-01; deriva registada como TEST-DRIFT-03.
+
+### Commit dc-simu `67392cf` (2026-10-27 · refinamento mobile a partir de capturas)
+polish(mobile): rodapé compacto, réguas finas, painel de estado limitado, inspetor de bornes com alvos de toque.
+
+- Novo `src/styles/mobile-refine.css` (último import): rodapé sem transbordo, réguas 30 px, painel de estado ≤38dvh, compilação legível, inspetor de bornes a 40 px, cartão do componente opaco, fade nas barras deslizantes.
+- Evidência e pendências: [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]]. Render visual **não** verificado (sem navegador no ambiente).
+- Próximo: GRAFCET enquadrar à largura em ecrãs estreitos; Elementos/Projeto do Ladder; Admin editor de componentes; Esquema 3D.
+

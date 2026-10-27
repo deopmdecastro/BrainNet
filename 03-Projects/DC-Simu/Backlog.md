@@ -141,6 +141,7 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 - Aplicada camada de acabamento visual em landing, administração, biblioteca 3D, editor de componentes, Esquema/3D e painel Ladder.
 - Mantido o princípio de comunicação: mudanças de apresentação ficam no DC-Simu; decisão e evidência ficam registadas neste cofre.
 - Resumo da administração responsivo (mobile + desktop) entregue e validado a 390/768/1024/1440 px: [[Validation-2026-10-27-Admin-Resumo-Responsivo]] (ADMIN-VISUAL-01 fechado).
+- Refinamento mobile do Ladder, rodapé e inspetor de bornes entregue (`67392cf`): [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]]. Falta confirmar visualmente no telemóvel.
 - Próxima validação: smoke visual no viewport desktop e teste de regressão dos editores.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[AI-Tooling-Assessment|Avaliação]].
