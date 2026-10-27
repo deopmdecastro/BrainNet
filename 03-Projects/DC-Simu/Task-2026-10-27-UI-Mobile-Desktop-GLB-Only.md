@@ -96,3 +96,10 @@ refactor(ui): SidePanelHeader no SimulationDock e WirePanel; Landing mobile CTAs
 - Landing (`dx-landing.css` v4.8): CTAs a largura total ≤560px; showcase 3D com controlos legíveis ≤720px; hero mostra o viewport 3D primeiro em telemóvel.
 
 Próximo: Admin tabs/lista de componentes; Ladder + Esquema 3D overlays.
+
+### Commit dc-simu (2026-10-27 · Admin tabs/lista + Ladder/3D overlays)
+- Admin Biblioteca 3D (`CatalogTab`): filtro de estado em `pn-segment` (tabs) em vez de Select — mesmo padrão dos filtros da Hierarquia/painéis.
+- `panel-system.css`: componente `.pn-segment` partilhado; cartões da lista e títulos de estado Ladder alinhados a `--pn-*`.
+- Ladder bottom panel + status rows/empty: tokens `--pn-*` (`status-panel-refine`, `ladder-editor`).
+- Esquema 3D overlays (`panel3d-axis-hud`, `panel3d-viewbar`, `panel3d-edit-context`, `schematic-hud`): borda, raio, fundo e estados ativos no idioma dos painéis.
+- Admin nav/filtros (`admin-refine`): labels em versalete, tabs ativos brand-soft, barra de filtros com fundo de painel.
