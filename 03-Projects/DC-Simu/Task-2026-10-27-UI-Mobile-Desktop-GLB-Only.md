@@ -110,3 +110,12 @@ polish(admin): tiles do Resumo com acentos de cor suaves alinhados às referênc
 - Cores apenas como fundo/decoração (borda + círculo ::after), respeitando Design-Principles (cor nunca única indicação).
 - Mobile (≤720px) já usava grelha 2 colunas; reforço de padding e tipografia mantém altura de toque.
 - Objetivo: desktop e mobile do Resumo visualmente próximos das screenshots de referência (cartões coloridos suaves + lista de atividade + acesso rápido).
+
+### Commit dc-simu (2026-10-27 · cabos, ponteiras, escala, não atravessar)
+feat(wires): escala mm² mais próxima dos elementos; ponteira 3D com colarinho quadrado; cabos só atrás ou à frente dos componentes.
+
+- `wireMetrics.ts`: 0,5→1,6 px · 16 mm²→8,5 px; `wireEndScale` acompanha.
+- `wireGeometry3D.ts`: diâmetro exterior a 88% do físico (antes 72%).
+- `WireEnd3D.tsx`: ponteira isolada com colarinho plástico aproximadamente quadrado (referência foto).
+- `SchematicView.tsx` `drawOrder`: se o traçado cruza a caixa de um elemento (exceto bornes próprios), o cabo fica inteiro atrás ou à frente — nunca a meio.
+- Ponteiras já existiam (`ferrule` default); SyncPanel Admin já faz varredura editor↔biblioteca publicada.
