@@ -52,3 +52,9 @@ Melhorar as telas do DC-Simu para mobile e desktop de forma consistente, usando 
 - Repositórios: `deopmdecastro/dc-simu` e `deopmdecastro/BrainNet`.
 - Trabalho preferencialmente no cofre + sync.
 - Autorizado commit/push com o token fornecido na sessão.
+
+## Progresso 2026-10-27 (sessão)
+
+- Contexto da tarefa criado e commitado no BrainNet.
+- Em `dc-simu` (`SchematicView.tsx`): reforçado comentário e política GLB-only — tipos com `hasComponent3DVisual` nunca usam `SymbolGlyph` (SVG simbólico). Push em main.
+- Próximo: unificar ramos especiais de renderização de imagens GLB, componentizar toolbars/painéis para mobile/desktop, polish landing/admin/GRAFCET/Ladder/3D.
