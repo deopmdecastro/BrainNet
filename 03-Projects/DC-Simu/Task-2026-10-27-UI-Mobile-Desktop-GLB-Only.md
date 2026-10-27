@@ -40,10 +40,11 @@ Melhorar as telas do DC-Simu para mobile e desktop de forma consistente, usando 
 - O eixo HUD no Panel3D usa SVG (legítimo, não é componente elétrico).
 
 ## Próximas ações
-- [ ] Garantir que SymbolGlyph nunca é chamado para tipos com GLB (já é o caso; reforçar e remover qualquer caminho residual).
-- [ ] Unificar o ramo de renderização de componentes com GLB (eliminar ramos especiais duplicados).
-- [ ] Componentizar layout mobile/desktop (toolbar, painéis laterais, bottom bars).
-- [ ] Landing page: melhorar hero, showcase 3D, CTAs.
+- [x] Garantir que SymbolGlyph nunca é chamado para tipos com GLB (já é o caso; reforçar e remover qualquer caminho residual).
+- [x] Unificar o ramo de renderização de componentes com GLB (eliminar ramos especiais duplicados).
+- [x] Componentizar transporte de simulação (SimTransportControls partilhado por SimulationDock + GrafcetSimBar).
+- [ ] Componentizar layout mobile/desktop restante (painéis laterais, docks, overflow de toolbars).
+- [ ] Landing page: melhorar hero, showcase 3D, CTAs (base mobile já existe).
 - [ ] Admin editor3d: polish UI dos tabs, viewport, lista de componentes.
 - [ ] GRAFCET e Ladder: melhorar responsividade e consistência visual com o resto do editor.
 - [ ] Esquema 3D: polish de controlos e overlays mobile.
