@@ -64,6 +64,8 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-053 | 2026-10-27 | Barras fixas de gravação usam uma versão estreita (ação principal + menu) e o conteúdo reserva espaço para a sua altura | A barra tapava os últimos campos dos planos no telemóvel |
 | DC-ADR-050 | 2026-10-27 | A administração usa navegação lateral agrupada (Geral, Conteúdo, Gestão, Sistema) com a Biblioteca 3D em largura total; ações frequentes ficam visíveis e as raras/destrutivas vão para o menu «Mais ações» (`RowMenu`), com o motivo quando estão indisponíveis; resultados de ações aparecem num aviso fixo | Mais espaço para listas densas, menos botões sem efeito (contas fixas/modo local) e sem saltos de layout; o estilo vive em `src/styles/admin-refine.css` |
 
+| DC-ADR-054 | 2026-10-27 | Todas as barras de ferramentas — incluindo a do editor de componentes em ecrã pequeno — usam os mesmos tokens (`--toolbar-height` 42/40 px, `--toolbar-control-height` 30 px, raio 6) e nunca quebram em linhas: o que não cabe desliza ou vai para um menu; textos auxiliares (dicas, legendas) vivem em faixas próprias | Uma barra com medidas próprias parece outra aplicação; a v5.2 chegou a ter 48 px, botões de 40 px e a segunda faixa em três linhas (127 px) |
+
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[../../00-Dashboard/Projects-Dashboard|Projetos]].

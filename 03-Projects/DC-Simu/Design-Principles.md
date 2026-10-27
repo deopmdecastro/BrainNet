@@ -57,6 +57,8 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - O que é devolvido ao ecrã conta: fechar explicações extensas, subir o conteúdo e reduzir a altura das linhas valem tanto como uma funcionalidade nova — medir antes e depois em px, a 390, 768, 1024 e 1440.
 - Campos nativos com formato ambíguo (datas) levam sempre rótulo visível; nunca se depende do placeholder do sistema.
 
+- Uma família de barras de ferramentas usa sempre os mesmos tokens (altura da faixa, altura do controlo, raio, fundo). Uma barra não inventa medidas próprias nem quebra em linhas: o que não cabe desliza ou passa para um menu, e textos auxiliares vivem em faixas próprias.
+
 ## Contexto para agentes
 
 O Obsidian/BraiNet guarda estas orientações, requisitos e decisões em Markdown. O repositório da aplicação guarda o código. O Maestri tem o workspace **BraiNet OS** ligado a esta pasta segundo a verificação documentada, mas esta ligação não injeta automaticamente o histórico da conversa em cada tarefa. Em tarefas de UI no DC-Simu, incluir esta nota, o briefing e os ficheiros de código relevantes no pacote de contexto. Papéis em `04-Agents/` são instruções reutilizáveis e não significam que um agente esteja ativo.

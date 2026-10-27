@@ -83,6 +83,34 @@ barra e cubo de vistas, e remoção do modo «Manobrar» do esquema 3D). O incre
 Depois do rebase, todos os comandos de verificação foram executados de novo (tabela seguinte) e o
 envio foi feito para `origin/main` sem `--force`.
 
+
+## Correção — a barra do editor de componentes estava diferente das outras
+
+Regressão apontada pelo utilizador depois de ver o telemóvel: «a barra de ferramentas do editor de
+componentes está mal, é muito diferente das outras barras». Confirmado por medição a 390 × 844, com a
+barra do simulador (GRAFCET) como referência:
+
+| Elemento | Antes (v5.2) | Agora | Barra do simulador |
+| --- | --- | --- | --- |
+| Linha 1 (ferramentas) | 48 px | **42 px** | 42 px |
+| Linha 2 (vista) | **127 px em três linhas** (a dica ocupava uma linha inteira) | **40 px numa linha** com deslize | 40 px |
+| Controlos | 40 px de altura, raio 7 | **30 px, raio 6** | 30 px, raio 6 |
+| Dica da ferramenta | terceira linha da barra | faixa fina própria (26 px), como a linha de páginas do GRAFCET | — |
+
+Causa: a folha comum `src/styles/toolbar-spacing.css` (carregada por último) impunha ao editor de
+componentes `min-height: 48px`, botões de 40 px e raio 7 e, na segunda faixa, `min-height: 0` com
+`overflow: visible` — a altura comum desaparecia e a faixa quebrava em linhas. As medidas passaram
+para os mesmos tokens das restantes barras (`--toolbar-height`, `--toolbar-control-height`, raio 6) e
+a dica mudou para a nova `.ce-contextbar`. Nenhuma ação mudou de lugar.
+
+Guarda automática: **`npm run test:barras-padrao`** (novo) compara as duas barras a 390 px — altura de
+cada faixa, altura e raio dos controlos, `flex-wrap`, fundo, separadores e faixa da dica. Resultado:
+«Barra do editor de componentes alinhada com as do simulador (390 px)».
+
+Reexecutado depois da correção: `tsc -b`, `npm test`, `test:barras-padrao`, `test:editor3d-toolbar`
+(22), `test:logo-editor-ui` (62), `test:editor3d-ui` e `test:style` — todos passam. Na secretária
+(1440 px) e no tablet as faixas continuam com a dica em linha (49/49 px e 42/40 px).
+
 ## Verificações executadas (evidência real)
 
 | Comando | Resultado |
@@ -99,6 +127,7 @@ envio foi feito para `origin/main` sem `--force`.
 | `npm run test:editors-sweep-ui` | 19 verificações passam |
 | `npm run test:editor-grid-ui`, `test:motor-ui`, `test:pinch`, `test:style` | passam |
 | `npm run test:editor3d-toolbar` (2.ª execução, já sobre a base integrada) | 22 verificações passam |
+| `npm run test:barras-padrao` (novo, correção da barra) | 13 verificações: faixas 42/40 px, controlos 30 px e raio 6, uma linha com deslize, dica em faixa fina, seis ferramentas |
 | `npx vite build` (local) | **não concluído**: processo terminado por falta de memória no ambiente (2 GB; o projeto documenta 3 GiB em ENV-01). |
 | Build de produção na Vercel | **confirmado**: `https://dc-simu.vercel.app/version.json` → `buildId` `53ade78…r72`; site a 390 px sem erros de consola e sem deslocamento horizontal |
 
