@@ -45,4 +45,5 @@ Pedido: painéis com um desenho semelhante, sem muitos estilos diferentes.
 - Só visual: larguras, posições e comportamento de cada painel mantêm-se.
 - Guia em `docs/TOOLBAR-ATALHOS-SIMULACAO.md`, secção «Sistema de painéis».
 - `tsc`, `npm test`, `test:style`, `vite build`: passam. Verificação visual pendente.
-- Pendência: painel da biblioteca do Esquema (`Sidebar.tsx`, classes Tailwind) e Monitor ainda não seguem o sistema.
+- Biblioteca do Esquema (`Sidebar.tsx`) e Monitor (`MonitorPanel.tsx`) migrados para classes `pn-*` (`pn-panel`, `pn-tabs`, `pn-section`, `pn-body`, `pn-label`, `pn-page`, `pn-card`). Mudança de markup mínima: só classes de contentor, separadores, secções e cartões; lógica intacta.
+- `tsc`, `npm test`, `test:style`, `vite build` passam depois da migração. Verificação visual pendente.
