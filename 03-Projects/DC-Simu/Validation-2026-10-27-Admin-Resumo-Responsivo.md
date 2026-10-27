@@ -85,14 +85,13 @@ atividade revista também com registos semeados iguais aos das capturas
 | `npm run test:saas` | 58 verificações |
 | `npm run test:style` | `no-accent-border: ok` |
 | `npm test` | «TODOS OS TESTES PASSARAM» (antes: 2 falhas no `main` limpo — deriva acima) |
-| `vite build` | **não executado** neste ambiente (2 GB de RAM; ENV-01 pede 3 GiB). O build de produção é feito pela Vercel a partir do `main` |
+| `vite build` | não executado neste ambiente (2 GB de RAM; ENV-01 pede 3 GiB) — **confirmado na Vercel**: `version.json` de produção com `buildId` `606cb30….r71.mvra1dbo`, construído 2026-10-27T22:49Z |
 | Revisão visual das capturas | 390/768/1440 revistas; atividade semeada medidas 49–50 px por evento |
 
 ## Estado
 
 - **Implementado e testado** (telemóvel, tablet, portátil e secretária, Chromium headless).
-- **Publicado**: `dc-simu` em `606cb30` (`main`) — a Vercel publica a partir
-  daí; `BrainNet` com este registo, [[Backlog]], [[Decision-Log]]
+- **Publicado e no ar**: `dc-simu` em `606cb30` (`main`); produção confirmada em `dc-simu.vercel.app/version.json` (`r71`); `BrainNet` com este registo, [[Backlog]], [[Decision-Log]]
   (DC-ADR-061), [[Design-Principles]], índice do projeto, dashboard e o
   ponteiro do submódulo atualizado.
 - **Por confirmar**: revisão num telemóvel físico (UI-VISUAL-01) já com a
