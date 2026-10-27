@@ -43,7 +43,7 @@ Melhorar as telas do DC-Simu para mobile e desktop de forma consistente, usando 
 - [x] Garantir que SymbolGlyph nunca é chamado para tipos com GLB (já é o caso; reforçar e remover qualquer caminho residual).
 - [x] Unificar o ramo de renderização de componentes com GLB (eliminar ramos especiais duplicados).
 - [x] Componentizar transporte de simulação (SimTransportControls partilhado por SimulationDock + GrafcetSimBar).
-- [ ] Componentizar layout mobile/desktop restante (painéis laterais, docks, overflow de toolbars).
+- [x] Componentizar layout mobile/desktop restante (painéis laterais, docks, overflow de toolbars). — Hierarquia Admin migrada para SidePanelHeader (mesmo padrão do inspetor / Sidebar / GRAFCET / Ladder). CSS de recolha alinhado.
 - [ ] Landing page: melhorar hero, showcase 3D, CTAs (base mobile já existe).
 - [ ] Admin editor3d: polish UI dos tabs, viewport, lista de componentes.
 - [ ] GRAFCET e Ladder: melhorar responsividade e consistência visual com o resto do editor.
@@ -73,3 +73,17 @@ refactor(ui): componentizar SimTransportControls partilhado.
 - Base CSS em `toolbar-spacing.css`.
 
 Próximo foco: continuar componentização (painéis laterais / docks), polish Landing, Admin editor3d, Ladder e Esquema 3D overlays.
+
+### Commit dc-simu (2026-10-27 sessão painéis)
+refactor(admin): Hierarquia do editor3D usa SidePanelHeader.
+
+- `Hierarchy.tsx` deixa o cabeçalho custom `ce-hierarchy-title` e passa a `SidePanelHeader` (eyebrow Hierarquia, título Elementos, detail, contagem + vista lista/cartões + fechar mobile nas actions).
+- `catalog-editor.css`: estado `is-collapsed` do painel esquerdo alinhado ao do inspetor (rótulo vertical `dc-side-panel-collapsed-label`).
+- Objetivo: um só idioma visual de cabeçalho em Sidebar, Library, GRAFCET, Ladder e Admin (esquerdo + direito).
+
+Pendências de painéis:
+- Confirmar comportamento de folha (sheet) em mobile no Admin e no shell (App) — já partilham classes `dc-mobile-fullscreen-panel` / `dc-sheet-head` em vários sítios.
+- WirePanel / docks restantes se ainda tiverem cabeçalhos ad-hoc.
+- Landing CTAs + showcase 3D em viewports estreitos.
+- Ladder + Esquema 3D overlays no mesmo idioma.
+
