@@ -111,6 +111,29 @@ Reexecutado depois da correção: `tsc -b`, `npm test`, `test:barras-padrao`, `t
 (22), `test:logo-editor-ui` (62), `test:editor3d-ui` e `test:style` — todos passam. Na secretária
 (1440 px) e no tablet as faixas continuam com a dica em linha (49/49 px e 42/40 px).
 
+## Segunda correção — cabeçalho, faixa de painéis e botões (commit `cac48e3`)
+
+A correção anterior igualou só as alturas das duas faixas. No telemóvel continuava a parecer outra
+aplicação; com capturas a 390 × 844 lado a lado com o GRAFCET (Chromium headless) os desvios eram:
+
+| Elemento | Antes | Agora | Referência (GRAFCET) |
+| --- | --- | --- | --- |
+| Cabeçalho | 2 linhas, 100 px (título + Editar/Simular, depois botões) | **1 linha, 52 px**: título, voltar, guardar (ícones 36 px), «Publicar…», conta | 1 linha |
+| Faixa de painéis | 48 px com três botões grandes azuis/brancos a toda a largura | **44 px**, fundo suave, etiquetas de 30 px com contorno (ativa em azul) e Editar/Simular à esquerda, com deslize | linha de páginas (etiquetas com contorno) |
+| Botões isolados («Mais») | 30 px, sem borda nem sombra, peso 500 | **36 px**, borda, sombra fina, 12 px / 600, raio 6 | «Componentes»: 36 px, borda, sombra, 12 px / 600 |
+| Texto dos botões de grupo | peso 500 | 600 (30 px dentro do grupo com borda) | idem |
+
+Causa: o cabeçalho usava `display:grid` com as ações a ocupar uma linha inteira, a navegação por
+painéis tinha estilo próprio, e os botões do editor não herdavam borda/sombra/peso dos botões das
+outras barras. O seletor Editar/Simular passou a ser renderizado por `modeSwitch(...)` no cabeçalho
+(ecrã largo) e na faixa de painéis (telemóvel).
+
+Verificação: `tsc -b`, `npm run build`, `npm test`, `test:style` e `test:barras-padrao` (agora com
+guardas do cabeçalho numa linha, faixa ≤ 46 px e botão isolado de 36 px) passam; a 1280 px o
+cabeçalho mantém o seletor e a faixa de painéis continua oculta. **Por confirmar**: aspeto em
+dispositivo físico depois do build da Vercel. A etiqueta «Propriedades» fica parcialmente fora do
+ecrã a 390 px (a faixa desliza, como «Nova página» no GRAFCET).
+
 ## Verificações executadas (evidência real)
 
 | Comando | Resultado |
