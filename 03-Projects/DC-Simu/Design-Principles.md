@@ -52,6 +52,11 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Na vista Ladder, mostrar o estado da parte gerada pelo GRAFCET e permitir abrir essa vista para corrigir ou atualizar a sequência.
 - Endereços partilhados devem manter a ligação às variáveis do projeto; não criar um modelo independente para uma vista sem necessidade.
 
+- Em ecrãs estreitos, uma lista de navegação longa não se resolve com deslocamento horizontal: mostrar a secção atual e abrir a lista completa num só botão (folha inferior), com os grupos visíveis.
+- Uma barra fixa de ações (gravar, aplicar) nunca tapa conteúdo: a área de trabalho reserva espaço para a sua altura e as ações secundárias passam para um menu.
+- O que é devolvido ao ecrã conta: fechar explicações extensas, subir o conteúdo e reduzir a altura das linhas valem tanto como uma funcionalidade nova — medir antes e depois em px, a 390, 768, 1024 e 1440.
+- Campos nativos com formato ambíguo (datas) levam sempre rótulo visível; nunca se depende do placeholder do sistema.
+
 ## Contexto para agentes
 
 O Obsidian/BraiNet guarda estas orientações, requisitos e decisões em Markdown. O repositório da aplicação guarda o código. O Maestri tem o workspace **BraiNet OS** ligado a esta pasta segundo a verificação documentada, mas esta ligação não injeta automaticamente o histórico da conversa em cada tarefa. Em tarefas de UI no DC-Simu, incluir esta nota, o briefing e os ficheiros de código relevantes no pacote de contexto. Papéis em `04-Agents/` são instruções reutilizáveis e não significam que um agente esteja ativo.
