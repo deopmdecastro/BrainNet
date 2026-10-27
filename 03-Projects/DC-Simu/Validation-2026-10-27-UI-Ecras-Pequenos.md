@@ -12,8 +12,9 @@ Trabalho pedido por Deogracia de Castro: «melhorar UI e UX e funcionalidades qu
 editor de componentes, esquema 3D, ladder e Grafcet» e «melhorar também a barra de ferramentas do
 editor de componentes no telemóvel». Executado sobre o submódulo `03-Projects/DC-Simu/dc-simu`
 (commit de partida `fabe385`), com autorização explícita para commit, push e publicação das
-alterações nos repositórios `dc-simu` e `BrainNet`. O resultado publicado é o commit **`53ade78`**,
-rebaseado sobre o que entretanto já estava no GitHub (`383b349`).
+alterações nos repositórios `dc-simu` e `BrainNet`. O resultado publicado é o commit **`572c9a6`**
+(o incremento em `53ade78`, rebaseado sobre o que entretanto já estava no GitHub (`383b349`), mais a
+nota do build de produção).
 
 ## Como foi observado
 
@@ -98,15 +99,17 @@ envio foi feito para `origin/main` sem `--force`.
 | `npm run test:editors-sweep-ui` | 19 verificações passam |
 | `npm run test:editor-grid-ui`, `test:motor-ui`, `test:pinch`, `test:style` | passam |
 | `npm run test:editor3d-toolbar` (2.ª execução, já sobre a base integrada) | 22 verificações passam |
-| `npx vite build` | **não concluído**: processo terminado por falta de memória no ambiente (2 GB; o projeto documenta 3 GiB em ENV-01). Tipos e testes passam; falta confirmar o build num runner com memória suficiente. |
+| `npx vite build` (local) | **não concluído**: processo terminado por falta de memória no ambiente (2 GB; o projeto documenta 3 GiB em ENV-01). |
+| Build de produção na Vercel | **confirmado**: `https://dc-simu.vercel.app/version.json` → `buildId` `53ade78…r72`; site a 390 px sem erros de consola e sem deslocamento horizontal |
 
 ## Estado
 
 - **Implementado e testado**: alterações acima, em `dc-simu` (Node 20.22.2/22; Chromium do Playwright).
 - **Publicado**: `dc-simu` em `origin/main` = `53ade78` (rebase sobre `383b349`, sem `--force`) e nota
   correspondente no cofre `BrainNet` (esta nota).
-- **Por confirmar**: build de produção num runner com ≥ 3 GiB (ENV-01); revisão visual em dispositivo
-  físico (UI-VISUAL-01); `dist`/`release` publicados por Vercel a partir do novo commit.
+- **Por confirmar**: reproduzir `npm run build` localmente num runner com ≥ 3 GiB (ENV-01 — o build
+  *de produção* já foi feito pela Vercel a partir de `53ade78`); revisão visual em dispositivo físico
+  (UI-VISUAL-01).
 
 ## Pendências que continuam abertas
 
