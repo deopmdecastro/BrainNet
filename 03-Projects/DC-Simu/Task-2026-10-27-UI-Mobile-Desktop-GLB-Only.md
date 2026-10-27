@@ -87,3 +87,12 @@ Pendências de painéis:
 - Landing CTAs + showcase 3D em viewports estreitos.
 - Ladder + Esquema 3D overlays no mesmo idioma.
 
+
+### Commit dc-simu (2026-10-27 · docks + landing)
+refactor(ui): SidePanelHeader no SimulationDock e WirePanel; Landing mobile CTAs/showcase.
+
+- `SimulationDock`: cabeçalho ad-hoc → SidePanelHeader (eyebrow ESQUEMA, estado RUN/STOP no detail, fechar nas actions). Corrige import em falta de `IconPlay`.
+- `WirePanel` (Admin): cabeçalho ad-hoc → SidePanelHeader com recolha.
+- Landing (`dx-landing.css` v4.8): CTAs a largura total ≤560px; showcase 3D com controlos legíveis ≤720px; hero mostra o viewport 3D primeiro em telemóvel.
+
+Próximo: Admin tabs/lista de componentes; Ladder + Esquema 3D overlays.
