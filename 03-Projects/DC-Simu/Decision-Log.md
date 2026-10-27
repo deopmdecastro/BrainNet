@@ -59,6 +59,7 @@ tags: [brainet, dc-simu, decisions]
 | DC-ADR-048 | 2026-10-27 | Ladder ajusta-se à largura em ecrãs ≤ 900 px, com mínimo de 40 %, até o utilizador escolher a escala (pinça/botões); «Ajustar à largura» aplica o valor exato | A network inteira (bobina incluída) cabe no telefone sem perder o zoom manual |
 | DC-ADR-049 | 2026-10-27 | Painéis auxiliares de canvas (GRAFCET, Ladder, Esquema 3D) abrem por cima do diagrama como folha e não abrem sozinhos no telemóvel | Preserva a área de trabalho; tapar o que se acabou de tocar era o pior efeito |
 | DC-ADR-045 | 2026-10-26 | Barras de ferramentas sem `scrollbar-width` (fica `auto`) em ecrãs > 800 px; Firefox usa `thin` por `@supports` | No Chrome ≥ 121 `scrollbar-width` desativa `::-webkit-scrollbar` e mostra a barra nativa |
+| DC-ADR-050 | 2026-10-27 | A administração usa navegação lateral agrupada (Geral, Conteúdo, Gestão, Sistema) com a Biblioteca 3D em largura total; ações frequentes ficam visíveis e as raras/destrutivas vão para o menu «Mais ações» (`RowMenu`), com o motivo quando estão indisponíveis; resultados de ações aparecem num aviso fixo | Mais espaço para listas densas, menos botões sem efeito (contas fixas/modo local) e sem saltos de layout; o estilo vive em `src/styles/admin-refine.css` |
 
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 

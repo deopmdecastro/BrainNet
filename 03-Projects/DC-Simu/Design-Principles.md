@@ -27,6 +27,15 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - O nome do projeto/título tem prioridade sobre ações secundárias no cabeçalho: as ações secundárias passam a ícone com nome acessível.
 - Nos editores com muito canvas (Esquema, Ladder, GRAFCET), painéis auxiliares abrem por cima do diagrama como folha e não empurram nem esmagam o conteúdo, salvo quando o utilizador os abre.
 
+## Administração
+
+- Estrutura: cabeçalho com o título, o ambiente (servidor ou modo local) e as ações principais; navegação lateral agrupada à esquerda (barra horizontal abaixo de 960 px e na Biblioteca 3D, que precisa da largura toda).
+- Pendências primeiro: o Resumo abre com o que espera decisão (contribuições, pedidos de plano, componentes bloqueados) e cada linha tem a sua ação. Os números do Resumo são atalhos para a lista respetiva.
+- Listas: tabela com cabeçalho para dados comparáveis (projetos, registos); cartões compactos para contas e componentes. Nada de cinzentos «desativados» em fila: o que não está disponível vai para o menu «Mais ações» e diz porquê (por exemplo, «Requer o servidor»).
+- Ações destrutivas ficam separadas, em vermelho e com confirmação; ações de gestão frequentes (plano, detalhes, bloquear componente) ficam visíveis.
+- Avisos de resultado são fixos no ecrã e não empurram o conteúdo; erros mantêm-se no topo da secção.
+- Estilos em `src/styles/admin-refine.css` (carrega depois de `dx-contrib.css` e `dx-saas.css`); só tokens `--dx-*`. Sem barras laterais de destaque (`npm run test:style`).
+
 ## Interação e segurança do trabalho
 
 - A edição direta no diagrama deve dar resposta imediata e manter alternativas de teclado, foco visível e histórico de desfazer/refazer.
