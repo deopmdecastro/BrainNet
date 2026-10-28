@@ -155,3 +155,4 @@ Ver [[Validation-2026-10-28-Admin-Registos-Planos-Componentes]]. CSS em `mobile-
 - Feito: `Avatar`, `ProjectThumb`, `ComponentCover`, `admin-polish.css`, cabeçalho `adm-cta`/`adm-back`, ícones no Sistema e na Biblioteca 3D, `preview` na lista admin de projetos. Detalhe e verificações em [[Validation-2026-10-28-Admin-Avatares-Capas]].
 - Pendente: `test:admin-ui` e confirmação visual; fotografia de perfil editável; `Avatar` no centro de conta e Dashboard; Landing, GRAFCET, Ladder e Esquema 3D (itens por fechar acima).
 - GRAFCET: régua «Componentes» padronizada e setas do painel inferior cima/baixo — [[Validation-2026-10-28-Grafcet-Regua-Componentes]].
+- Gavetas laterais padronizadas em todos os editores — [[Validation-2026-10-28-Gavetas-Padronizadas]].
