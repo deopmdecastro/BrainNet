@@ -3,6 +3,7 @@ project_id: BN-DCSIMU-001
 type: validation
 status: IMPLEMENTED_VISUAL_PENDING
 created: 2026-10-28
+updated: 2026-10-28
 tags: [brainnet, dc-simu, account, toolbar, responsive]
 ---
 # Validação — conta do criador e barras (2026-10-28)
