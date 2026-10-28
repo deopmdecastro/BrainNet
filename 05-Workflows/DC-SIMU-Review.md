@@ -1,6 +1,6 @@
 ---
 type: review
-status: COMPLETE_STATIC_REVIEW
+status: IN_PROGRESS_UI_REFINEMENT
 created: 2026-10-18
 updated: 2026-10-18
 tags: [brainet, workflows, reference]
