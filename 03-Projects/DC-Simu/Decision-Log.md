@@ -87,3 +87,5 @@ tags: [brainet, dc-simu, decisions]
 O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit através de um submódulo. O dashboard é atualizado manualmente. Este registo não liga os workflows DC-Simu aos workflows da fundação BraiNet.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[../../00-Dashboard/Projects-Dashboard|Projetos]].
+
+| DC-ADR-070 | 2026-10-28 | Priorizar refinamento das vistas de simulação (GRAFCET, Ladder, Panel3D) e otimização de performance dos motores de scan / Three.js a partir das capturas de 2026-10-28 (Partida direta com selo, STOP/START/KM1/H1/H2). Trabalho começa no cofre (nova tarefa + este registo) e propaga para o repositório dc-simu. Manter comunicação contínua BrainNet ↔ código. | Pedido explícito do utilizador com capturas; [[Task-2026-10-28-UI-Sim-Views-Mobile-Desktop-Perf]] |
