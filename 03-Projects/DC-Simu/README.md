@@ -64,3 +64,7 @@ A cópia anterior sem histórico foi preservada em `runtime/dc-simu-before-fluid
 [[FluidSIM-Import|Análise do formato FluidSIM 4, evidências e estado da importação]].
 
 [[Project-Brief|Briefing]] · [[Backlog|Backlog]] · [[Testing-Plan|Validação]]
+
+## Canvas comments
+
+The dc-simu canvas now supports persistent free-text annotations in GRAFCET and the 2D/3D schematic views. Notes appear as numbered comment pins; double-click edits and right-click removes them.
