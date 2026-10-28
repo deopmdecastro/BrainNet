@@ -144,3 +144,7 @@ Pedido com captura do GRAFCET no telemóvel: o painel de componentes passa a seg
 ### dc-simu (2026-10-27 · GRAFCET igual à Biblioteca do Esquema)
 Feedback: o painel de componentes do GRAFCET deve ter o mesmo estilo das outras telas (régua fina com ícone + rótulo vertical; no telemóvel, folha de ecrã inteiro como a Biblioteca).
 - Régua «Componentes» (ícone Layers, igual à «Biblioteca»); ≤720 px a folha ocupa o ecrã inteiro (z 80); 721–1199 px folha lateral de 320 px. Botão da barra continua removido (pedido anterior) — repor é só retirar `.grafcet-palette-tool{display:none}` em `mobile-refine.css` §9.
+
+
+### dc-simu (2026-10-28 · Admin Registos/Planos/Componentes)
+Ver [[Validation-2026-10-28-Admin-Registos-Planos-Componentes]]. CSS em `mobile-refine.css` §10, sem alterar TSX.
