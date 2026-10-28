@@ -27,6 +27,9 @@ Nove capturas do telemóvel (≈390 px): GRAFCET etapas 11–79, Ladder vazio, p
 - `tsc -b`: sem erros. `npm test`: todos os testes passam. `test:style` (sem barras de destaque): ok. `vite build`: concluído.
 - **Não verificado**: render visual a 390/768/1024/1440 px. Este ambiente não tem navegador (sem Chromium/Playwright); as regras foram derivadas das capturas e do CSS existente. Confirmar no telemóvel após o deploy da Vercel e correr `npm run test:admin-ui` localmente.
 
+## Adenda · GRAFCET
+Componentes passam a painel lateral + régua (≤1199 px), botão removido da barra. `tsc`, teste de estilo e `vite build` OK; render visual por confirmar.
+
 ## Pendências
 - GRAFCET: o diagrama fica pequeno e centrado em coluna estreita; avaliar «enquadrar à largura» ao abrir em ecrãs ≤720 px.
 - Ladder: separador «Elementos» (lista com ícones) pode agrupar por categoria colapsada por omissão.

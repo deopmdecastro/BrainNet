@@ -136,3 +136,7 @@ polish(mobile): rodapé compacto, réguas finas, painel de estado limitado, insp
 - Evidência e pendências: [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]]. Render visual **não** verificado (sem navegador no ambiente).
 - Próximo: GRAFCET enquadrar à largura em ecrãs estreitos; Elementos/Projeto do Ladder; Admin editor de componentes; Esquema 3D.
 
+### dc-simu (2026-10-27 · GRAFCET: componentes em painel lateral)
+Pedido com captura do GRAFCET no telemóvel: o painel de componentes passa a seguir o padrão das outras telas.
+- ≤1199 px: botão «Componentes» sai da barra de ferramentas; a régua fina «Ferramentas» (30 px) fica à esquerda e abre uma folha lateral (máx. 320 px) por cima do diagrama, com fundo escurecido. Antes era uma modal ao centro. Ctrl+B mantém-se.
+- Implementado em `mobile-refine.css` §9 (sem alterar TSX). Render visual por confirmar no telemóvel.
