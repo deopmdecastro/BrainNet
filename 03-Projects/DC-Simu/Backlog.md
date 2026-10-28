@@ -150,3 +150,14 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 - Próxima validação: smoke visual no viewport desktop e teste de regressão dos editores.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[AI-Tooling-Assessment|Avaliação]].
+
+## Atualização — 2026-10-28 (conta e barras)
+
+| ID | Estado | Descrição |
+| --- | --- | --- |
+| ACCOUNT-PAGE-01 | Implementado, testado (e2e servidor), render por confirmar | Página `/account`: nome, e-mail, avatar, palavra-passe e plano. Commit `3c4a9df` no branch `feat/account-page-toolbar-refine` |
+| TOOLBAR-DUP-01 | Implementado, render por confirmar | Ícones únicos, menu «Ficheiro» em ecrãs estreitos, simulação visível no GRAFCET |
+| HEADER-REFINE-01 | Implementado, render por confirmar | Alturas únicas e área segura no cabeçalho |
+| ACCOUNT-PAGE-02 | Pendente | Validação visual a 390/768/1024/1440 px; testar `PATCH` do Supabase com projeto real; apagar a conta; pagamento de planos (hoje manual) |
+| REPO-SYNC-01 | Pendente | O commit pinned `b8b6017` não está no `main` do dc-simu (`a4905fb`): decidir a integração via PR do branch acima |
+

@@ -22,7 +22,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Plano de validação | [[Testing-Plan]] |
 | Auditoria editor vs efeitos | [[Audit-2026-10-26-Editor-Efeitos]] |
 | UI do editor de componentes e LCD/teclas do PLC | [[Validation-2026-10-26-Editor-PLC-UI]] |
-| Evidência de validação mais recente | [[Validation-2026-10-28-Barras-Espacamento-Scroll]] · [[Validation-2026-10-28-Gavetas-Padronizadas]] · [[Validation-2026-10-28-Grafcet-Regua-Componentes]] · [[Validation-2026-10-28-Admin-Avatares-Capas]] · [[Validation-2026-10-28-Admin-Registos-Planos-Componentes]] · [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]] · [[Validation-2026-10-27-Admin-Resumo-Responsivo]] · [[Validation-2026-10-27-Admin-Ecras-Pequenos]] · [[Validation-2026-10-27-Admin-UI]] · [[Validation-2026-10-26-Ladder-Barra-Network-Auto]] · [[Validation-2026-10-26-Painel-Estado-UI]] · [[Validation-2026-10-26-Toolbar-Atalhos-Simulacao]] · [[Validation-2026-10-26-PLC-Sinais-Sync]] · [[Validation-2026-10-26-Motor-Pa-Texturas]] · [[Validation-2026-10-26-Admin-SaaS]] · [[Validation-2026-10-26-FluidSIM-Ladder]] · [[Validation-2026-10-26-Varredura-Editores]] · [[Validation-2026-10-26-Deteccao-Bornes-Mola]] · [[Validation-2026-10-26-GRAFCET-Acoes-Cortes]] · [[Validation-2026-10-26-Brilho-3D]] · [[Validation-2026-10-26-GRAFCET-Portos]] · [[Validation-2026-10-26-Zoom-Pinca]] · [[Validation-2026-10-26-Plataforma]] · [[Validation-2026-10-26-GRAFCET-Retorno]] · [[Validation-2026-10-26]] |
+| Evidência de validação mais recente | [[Validation-2026-10-28-Conta-Barras]] · [[Validation-2026-10-28-Barras-Espacamento-Scroll]] · [[Validation-2026-10-28-Gavetas-Padronizadas]] · [[Validation-2026-10-28-Grafcet-Regua-Componentes]] · [[Validation-2026-10-28-Admin-Avatares-Capas]] · [[Validation-2026-10-28-Admin-Registos-Planos-Componentes]] · [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]] · [[Validation-2026-10-27-Admin-Resumo-Responsivo]] · [[Validation-2026-10-27-Admin-Ecras-Pequenos]] · [[Validation-2026-10-27-Admin-UI]] · [[Validation-2026-10-26-Ladder-Barra-Network-Auto]] · [[Validation-2026-10-26-Painel-Estado-UI]] · [[Validation-2026-10-26-Toolbar-Atalhos-Simulacao]] · [[Validation-2026-10-26-PLC-Sinais-Sync]] · [[Validation-2026-10-26-Motor-Pa-Texturas]] · [[Validation-2026-10-26-Admin-SaaS]] · [[Validation-2026-10-26-FluidSIM-Ladder]] · [[Validation-2026-10-26-Varredura-Editores]] · [[Validation-2026-10-26-Deteccao-Bornes-Mola]] · [[Validation-2026-10-26-GRAFCET-Acoes-Cortes]] · [[Validation-2026-10-26-Brilho-3D]] · [[Validation-2026-10-26-GRAFCET-Portos]] · [[Validation-2026-10-26-Zoom-Pinca]] · [[Validation-2026-10-26-Plataforma]] · [[Validation-2026-10-26-GRAFCET-Retorno]] · [[Validation-2026-10-26]] |
 | Avaliação de ferramentas e custos | [[AI-Tooling-Assessment]] |
 | Código-fonte da aplicação | [Pasta `dc-simu/`](./dc-simu/) |
 | Documentação técnica da aplicação | [README da aplicação](./dc-simu/README.md) |
@@ -64,6 +64,10 @@ A cópia anterior sem histórico foi preservada em `runtime/dc-simu-before-fluid
 [[FluidSIM-Import|Análise do formato FluidSIM 4, evidências e estado da importação]].
 
 [[Project-Brief|Briefing]] · [[Backlog|Backlog]] · [[Testing-Plan|Validação]]
+
+## Conta do criador
+
+Página `/account` com perfil, avatar, palavra-passe e plano (ver [[Validation-2026-10-28-Conta-Barras]]). Comentários: painel de conversa do projeto (`ProjectComments`, por plano) e pins de anotação no canvas.
 
 ## Canvas comments
 

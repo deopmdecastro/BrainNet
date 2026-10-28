@@ -48,6 +48,9 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Botões primários azuis: planos, sem brilho nem sombra colorida (o «Novo componente 3D» da administração também). Se um dia houver brilho, aplica-se a todos via `.dx-btn-primary`, não a um só botão.
 - Barras de ferramentas: 6 px entre botões de um grupo, 12 px entre grupos (`--toolbar-seg-gap`, `--toolbar-gap` em `toolbar-spacing.css`); ao trocar de vista a barra volta ao início (scroll 0) — [[Validation-2026-10-28-Barras-Espacamento-Scroll]].
 
+- Conta do criador: página `/account` (Avatar, Perfil, Segurança, Plano), aberta por «Gerir conta» no menu do avatar. E-mail só muda com a palavra-passe atual; sem servidor/Supabase as contas locais são fixas e a página diz porquê. Estilos em `account-page.css` — [[Validation-2026-10-28-Conta-Barras]].
+- Um símbolo, uma função: nenhum ícone se repete em botões diferentes da mesma barra (GRAFCET ≠ Passo, Novo ≠ PDF, reiniciar sequência ≠ reiniciar simulação). Controlos de simulação (Run/Pausa/Stop/Passo/Reiniciar) presentes em todas as vistas. Cabeçalho do projeto: 48 px (52 px no telemóvel), controlos 34/38 px, área segura do iPhone, nome do projeto com prioridade (`header-refine.css`).
+
 ## Interação e segurança do trabalho
 
 - A edição direta no diagrama deve dar resposta imediata e manter alternativas de teclado, foco visível e histórico de desfazer/refazer.
