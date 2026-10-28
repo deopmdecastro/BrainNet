@@ -162,4 +162,4 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | HEADER-REFINE-01 | Implementado, render por confirmar | Alturas únicas e área segura no cabeçalho |
 | ACCOUNT-PAGE-02 | Pendente | Validação visual a 390/768/1024/1440 px; testar `PATCH` do Supabase com projeto real; apagar a conta; pagamento de planos (hoje manual) |
 | REPO-SYNC-01 | Pendente | O commit pinned `b8b6017` não está no `main` do dc-simu (`a4905fb`): decidir a integração via PR do branch acima |
-
+| LANDING-PERF-01 | Alta | IN_PROGRESS | Precache PWA 39,5 → 6,2 MB, hero sem recursos externos e enquadrado, demo 3D em isométrica, cabos 3D em 9 faixas × 3 camadas. Falta: tirar `three` do arranque (≈ 795 KB), dividir o CSS (≈ 723 KB), pré-alojar fontes do troika e confirmar a demo 3D em navegador real | Evidência: [[Validation-2026-10-28-Landing-Peso-Hero-Demo]]; `dc-simu` `ad49cbd`, `8e60355` |
