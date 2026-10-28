@@ -89,3 +89,5 @@ O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[../../00-Dashboard/Projects-Dashboard|Projetos]].
 
 | DC-ADR-070 | 2026-10-28 | Priorizar refinamento das vistas de simulação (GRAFCET, Ladder, Panel3D) e otimização de performance dos motores de scan / Three.js a partir das capturas de 2026-10-28 (Partida direta com selo, STOP/START/KM1/H1/H2). Trabalho começa no cofre (nova tarefa + este registo) e propaga para o repositório dc-simu. Manter comunicação contínua BrainNet ↔ código. | Pedido explícito do utilizador com capturas; [[Task-2026-10-28-UI-Sim-Views-Mobile-Desktop-Perf]] |
+
+| DC-ADR-071 | 2026-10-28 | Em RUN bloquear seleção/edição de componentes; só botões e liga/desliga de atuadores. Cabos 3D nunca atravessam chapas. Efeito elétrico nos cabos segue a cor do cabo. Corrigir sentido do manípulo do disjuntor motor. | Pedido explícito do utilizador 2026-10-28; [[Task-2026-10-28-Sim-Lock-Wires-Breaker]] |
