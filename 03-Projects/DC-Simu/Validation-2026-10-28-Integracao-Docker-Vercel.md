@@ -94,3 +94,7 @@ O AGENTS.md exige aprovação que identifique pessoa, commit, ambiente, data e
 `deopmdecastro/dc-simu`, incluindo a integração das três branches e as correções
 descritas. Esta proposta não é um registo de aprovação. A falha geométrica acima
 deve acompanhar a decisão.
+
+Seguimento: [[Validation-2026-10-28-Menu-Conta]] acrescenta o refinamento do menu
+pedido pelo utilizador. O candidato de publicação foi atualizado nesse registo;
+a proposta acima permanece apenas como evidência histórica, sem aprovação.
