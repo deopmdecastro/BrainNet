@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: validation-record
 status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
-commit: b3a31e4
+commit: b3a31e4, 210018d
 date: 2026-10-28
 created: 2026-10-28
 updated: 2026-10-28
@@ -34,3 +34,10 @@ src/landing/Landing.tsx, src/landing/LandingEditorShowcase.tsx, src/three/Landin
 - Corrigida uma asserção desatualizada em `landing-hero-motor-smoke.mjs` («Vista isométrica por omissão» ainda procurava `camera={{ position: [1.4, 1.05, 1.4] }}`; a câmara é agora `FitIsoCamera`, direção `1, 0.82, 1`). A falha já existia antes do patch.
 - Trabalho feito no submódulo `03-Projects/DC-Simu/dc-simu`; ponteiro atualizado no BrainNet.
 - Ver [[../Decision-Log|Decision-Log]] (DC-ADR-068) · [[Validation-2026-10-28-Landing-Peso-Hero-Demo]].
+
+## Ajuste posterior — hero maior e mais fluido (`210018d`)
+- Pedido (com captura): «aumentar um pouco o tamanho e melhorar a renderização, ainda cola um pouco».
+- Tamanho: `FILL` 0,60 → 0,74 e altura do contentor `clamp(340px, 38vw, 620px)`.
+- Fluidez: `ContactShadows` com `frames={1}` (antes re-renderizada com desfoque a cada frame; resolução 256); `PerformanceMonitor` ajusta o dpr (1 ↔ 1,5, arranque 1,25); `powerPreference` `default` (o `low-power` podia escolher a GPU integrada em portáteis); `stencil: false`.
+- Verificado: `tsc -b`, `npm run build`, `landing-hero-motor-smoke` (+3 asserções). `landing-ui-smoke` não corre neste ambiente (sem browser Playwright; falha igual sem as alterações).
+- Por medir: FPS em GPU real e telemóvel; confirmar visualmente o novo enquadre.
