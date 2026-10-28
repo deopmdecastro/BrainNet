@@ -156,3 +156,4 @@ Ver [[Validation-2026-10-28-Admin-Registos-Planos-Componentes]]. CSS em `mobile-
 - Pendente: `test:admin-ui` e confirmação visual; fotografia de perfil editável; `Avatar` no centro de conta e Dashboard; Landing, GRAFCET, Ladder e Esquema 3D (itens por fechar acima).
 - GRAFCET: régua «Componentes» padronizada e setas do painel inferior cima/baixo — [[Validation-2026-10-28-Grafcet-Regua-Componentes]].
 - Gavetas laterais padronizadas em todos os editores — [[Validation-2026-10-28-Gavetas-Padronizadas]].
+- Barras: espaçamento maior e scroll a zero ao trocar de vista — [[Validation-2026-10-28-Barras-Espacamento-Scroll]].
