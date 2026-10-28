@@ -45,6 +45,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Cabeçalho da administração: uma ação principal com ícone e subtítulo (`adm-cta`) e uma ação de regresso com seta (`adm-back`), lado a lado a 48 px no telemóvel. Se a mesma ação existe no cabeçalho e na lista, no telemóvel fica só a do cabeçalho. Estilos em `src/styles/admin-polish.css` — [[Validation-2026-10-28-Admin-Avatares-Capas]].
 - Painéis recolhidos: sempre a régua comum (`CollapsedPanelRail`, 48 px, ícone + nome vertical + seta), nunca um botão flutuante próprio; setas laterais para painéis laterais e cima/baixo (`SidePanelHeader side="bottom"`) para gavetas no fundo, como o inspetor do GRAFCET até 800 px — [[Validation-2026-10-28-Grafcet-Regua-Componentes]]. Abertos no telemóvel, os painéis laterais são gaveta com cortina e o cabeçalho com a seta de recolher visível, nunca ecrã inteiro por baixo da barra do projeto.
 - Gavetas: todos os painéis laterais abrem com a mesma especificação (`src/styles/panel-drawer.css`: largura `min(340px, 88vw)`, cantos retos, sombra e cortina comuns, cabeçalho `SidePanelHeader`), esquerda para Biblioteca/Projeto/Componentes e direita para Elementos/GRAFCET e objetos. Painel novo entra nessa lista — [[Validation-2026-10-28-Gavetas-Padronizadas]].
+- Botões primários azuis: planos, sem brilho nem sombra colorida (o «Novo componente 3D» da administração também). Se um dia houver brilho, aplica-se a todos via `.dx-btn-primary`, não a um só botão.
 
 ## Interação e segurança do trabalho
 
