@@ -107,6 +107,7 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 | WIRE-TERM-01 | Alta | TODO | Escolher cor e tamanho dos terminais (ponteiras) no painel lateral do cabo, além da cor do condutor; guardar por ponta (`fromEndColor`/`toEndColor` já existem, falta o tamanho) | Pedido do utilizador de 2026-10-27 |
 | WIRE-Z-01 | Alta | TODO | Impedir que o cabo atravesse o corpo dos componentes: passar por trás (ou à frente, à escolha) em vez de cruzar a peça | Pedido do utilizador de 2026-10-27 |
 | ADMIN-VISUAL-01 | Média | IMPLEMENTED_TESTED | Resumo da administração revisto a partir das capturas do telemóvel: indicadores com ícone e tons pelo significado, cabeçalho ≤720 px em grelha (botões lado a lado a 44 px), «Sem pendências» sem ponto órfão, atividade compacta sem repetir o e-mail (≈50 px/evento), cartões com uma única ação e descrições sem corte a meio da palavra; navegação com ícones em todos os tamanhos. Commits `606cb30` (+ deriva `acc6ac4`). Por confirmar em telemóvel físico (UI-VISUAL-01) | Evidência: [[Validation-2026-10-27-Admin-Resumo-Responsivo]]; `test:admin-ui` 58 | Desenvolvimento |
+| ADMIN-VISUAL-02 | Média | IMPLEMENTED | Administração: avatares de utilizador (`Avatar`), capas de projeto e de componente, ícones no Sistema e na Biblioteca 3D, novos botões «Novo componente 3D» e «Projetos». `tsc`, estilo, testes e build OK; `test:admin-ui` e render visual por correr (sem navegador) | Evidência: [[Validation-2026-10-28-Admin-Avatares-Capas]]; falta UI-VISUAL-01 |
 | TEST-DRIFT-03 | Média | IMPLEMENTED_TESTED | `smoke.ts` manteve os limites antigos da espessura do cabo (≤6,2 px; ponteira ≤1,5) quando a escala intencional de `wireMetrics.ts` passou a 1,6–8,5 px (ponteiras ≈1,55): `npm test` falhava no `main` limpo em duas verificações. Limites alinhados com a escala documentada, sem mudança de produto. Commit `acc6ac4` | Evidência: [[Validation-2026-10-27-Admin-Resumo-Responsivo]]; `npm test` verde | Desenvolvimento |
 
 As pendências n8n provêm da revisão anterior e precisam de reconfirmação. ENV-01 conserva apenas a validação do build de produção num ambiente com memória suficiente; os checks recentes estão descritos em [[Validation-2026-10-25]].
@@ -142,6 +143,7 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 - Mantido o princípio de comunicação: mudanças de apresentação ficam no DC-Simu; decisão e evidência ficam registadas neste cofre.
 - Resumo da administração responsivo (mobile + desktop) entregue e validado a 390/768/1024/1440 px: [[Validation-2026-10-27-Admin-Resumo-Responsivo]] (ADMIN-VISUAL-01 fechado).
 - Refinamento mobile do Ladder, rodapé e inspetor de bornes entregue (`67392cf`): [[Validation-2026-10-27-Mobile-Refine-Ladder-Inspetor]]. Falta confirmar visualmente no telemóvel.
+- Administração com avatares, capas e botões novos (ADMIN-VISUAL-02): [[Validation-2026-10-28-Admin-Avatares-Capas]]. Falta `test:admin-ui` e confirmação no telemóvel.
 - Próxima validação: smoke visual no viewport desktop e teste de regressão dos editores.
 
 [[Project-Brief|Briefing]] · [[Requirements|Requisitos]] · [[AI-Tooling-Assessment|Avaliação]].

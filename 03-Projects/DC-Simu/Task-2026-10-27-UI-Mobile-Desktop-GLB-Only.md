@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: task
 status: IN_PROGRESS
 created: 2026-10-27
-updated: 2026-10-27
+updated: 2026-10-28
 tags: [dc-simu, ui, mobile, desktop, glb, componentization, grafcet, ladder, landing, admin]
 ---
 # Tarefa 2026-10-27: UI Mobile/Desktop + GLB-only + Componentização
@@ -148,3 +148,9 @@ Feedback: o painel de componentes do GRAFCET deve ter o mesmo estilo das outras 
 
 ### dc-simu (2026-10-28 · Admin Registos/Planos/Componentes)
 Ver [[Validation-2026-10-28-Admin-Registos-Planos-Componentes]]. CSS em `mobile-refine.css` §10, sem alterar TSX.
+
+## Progresso 2026-10-28 (sessão: avatares, capas e botões)
+
+- Pedido: melhorar as 4 telas de Administração (Projetos, Componentes, Biblioteca 3D, Sistema) com avatares, capas, ícones e melhores botões «Novo componente» e «Projetos».
+- Feito: `Avatar`, `ProjectThumb`, `ComponentCover`, `admin-polish.css`, cabeçalho `adm-cta`/`adm-back`, ícones no Sistema e na Biblioteca 3D, `preview` na lista admin de projetos. Detalhe e verificações em [[Validation-2026-10-28-Admin-Avatares-Capas]].
+- Pendente: `test:admin-ui` e confirmação visual; fotografia de perfil editável; `Avatar` no centro de conta e Dashboard; Landing, GRAFCET, Ladder e Esquema 3D (itens por fechar acima).

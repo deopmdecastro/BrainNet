@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-27
+updated: 2026-10-28
 tags: [brainnet, dc-simu, design, ux]
 ---
 # Princípios de interface do DC-Simu
@@ -40,6 +40,9 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Ações destrutivas ficam separadas, em vermelho e com confirmação; ações de gestão frequentes (plano, detalhes, bloquear componente) ficam visíveis.
 - Avisos de resultado são fixos no ecrã e não empurram o conteúdo; erros mantêm-se no topo da secção.
 - Estilos em `src/styles/admin-refine.css` (carrega depois de `dx-contrib.css` e `dx-saas.css`); só tokens `--dx-*`. Sem barras laterais de destaque (`npm run test:style`).
+
+- Identidade nas listas: pessoas têm avatar (`Avatar`: foto ou iniciais com tom estável, ponto de estado só quando importa) e coisas têm capa (`ProjectThumb`, `ComponentCover`). A capa nunca é a única pista: o nome vem sempre ao lado. Conteúdo pesado (capturas 3D) só monta perto do ecrã.
+- Cabeçalho da administração: uma ação principal com ícone e subtítulo (`adm-cta`) e uma ação de regresso com seta (`adm-back`), lado a lado a 48 px no telemóvel. Se a mesma ação existe no cabeçalho e na lista, no telemóvel fica só a do cabeçalho. Estilos em `src/styles/admin-polish.css` — [[Validation-2026-10-28-Admin-Avatares-Capas]].
 
 ## Interação e segurança do trabalho
 
