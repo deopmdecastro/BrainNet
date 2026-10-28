@@ -43,7 +43,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - Identidade nas listas: pessoas têm avatar (`Avatar`: foto ou iniciais com tom estável, ponto de estado só quando importa) e coisas têm capa (`ProjectThumb`, `ComponentCover`). A capa nunca é a única pista: o nome vem sempre ao lado. Conteúdo pesado (capturas 3D) só monta perto do ecrã.
 - Cabeçalho da administração: uma ação principal com ícone e subtítulo (`adm-cta`) e uma ação de regresso com seta (`adm-back`), lado a lado a 48 px no telemóvel. Se a mesma ação existe no cabeçalho e na lista, no telemóvel fica só a do cabeçalho. Estilos em `src/styles/admin-polish.css` — [[Validation-2026-10-28-Admin-Avatares-Capas]].
-- Painéis recolhidos: sempre a régua comum (`CollapsedPanelRail`, 48 px, ícone + nome vertical + seta), nunca um botão flutuante próprio; setas laterais para painéis laterais e cima/baixo (`SidePanelHeader side="bottom"`) para gavetas no fundo, como o inspetor do GRAFCET até 800 px — [[Validation-2026-10-28-Grafcet-Regua-Componentes]].
+- Painéis recolhidos: sempre a régua comum (`CollapsedPanelRail`, 48 px, ícone + nome vertical + seta), nunca um botão flutuante próprio; setas laterais para painéis laterais e cima/baixo (`SidePanelHeader side="bottom"`) para gavetas no fundo, como o inspetor do GRAFCET até 800 px — [[Validation-2026-10-28-Grafcet-Regua-Componentes]]. Abertos no telemóvel, os painéis laterais são gaveta (≤ 320 px) com cortina e o cabeçalho com a seta de recolher visível, nunca ecrã inteiro por baixo da barra do projeto.
 
 ## Interação e segurança do trabalho
 
