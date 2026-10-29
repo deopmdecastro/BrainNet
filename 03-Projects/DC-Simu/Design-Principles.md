@@ -55,6 +55,9 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Separadores de inspetor com poucos itens: mosaicos iguais com ícone + contagem e nome por baixo, para caberem a 360 px sem rolagem escondida. Símbolos de texto (◎ □ ↑ ↓, emoji) dão lugar a ícones do kit ou ao desenho da norma (caixa de etapa com o número).
 - Chips de estado e de tipo pertencem ao cartão que descrevem (rodapé da célula), nunca em posição absoluta por cima dos vizinhos.
 
+- Materiais 3D: a cor é a do fabricante; o realismo vem do estúdio (`studioEnvironment.ts`, tone mapping Neutral) e da superfície (`cadSurface.ts`: UV em mm e mapas PBR por família). Um renderizador novo usa o mesmo estúdio — capas, esquema e Painel 3D têm de parecer o mesmo objeto.
+- Capa de elemento = fotografia de produto 3/4 do GLB real, frente e lado direito à vista; botoneiras e sinaleiros mais de frente; peças muito longas (calha) mostram um troço à escala, nunca esmagadas. Rever com `scripts/component-cover-audit.html` sempre que entra um GLB novo — [[Validation-2026-10-29-Texturas-Capas-Vistas]].
+
 ## Interação e segurança do trabalho
 
 - A edição direta no diagrama deve dar resposta imediata e manter alternativas de teclado, foco visível e histórico de desfazer/refazer.
