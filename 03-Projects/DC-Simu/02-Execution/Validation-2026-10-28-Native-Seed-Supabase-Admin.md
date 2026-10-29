@@ -5,6 +5,9 @@ status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
 commit: b05219b
 date: 2026-10-28
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, native, supabase, admin, validation]
 ---
 
 # Projeto nativo «Partida direta» materializado na conta admin (Supabase)

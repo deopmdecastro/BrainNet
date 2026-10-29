@@ -5,6 +5,9 @@ status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
 commit: af0bb27 (apenas local — push bloqueado, ver Nota de rede)
 date: 2026-10-28
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, demo, validation]
 ---
 
 # Landing Demo: verificação funcional e contrato fixado por testes

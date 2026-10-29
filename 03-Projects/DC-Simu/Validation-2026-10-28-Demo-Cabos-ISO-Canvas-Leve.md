@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: validation
+status: IMPLEMENTED
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, demo, cabos, 3d, performance, validation]
+---
 # Validação 2026-10-28 — Demo da landing: cabos organizados, ISO e canvas leve
 
 **Commit dc-simu:** `4dd9821` (main, push ✔, carimbo #94)

@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: validation
+status: IMPLEMENTED
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, demo, ladder, grafcet, lock, validation]
+---
 # Validação 2026-10-28 — Demo: GRAFCET e Ladder em modo visualização
 
 **Commit dc-simu:** `6d78771` (main, push ✔, carimbo #95)

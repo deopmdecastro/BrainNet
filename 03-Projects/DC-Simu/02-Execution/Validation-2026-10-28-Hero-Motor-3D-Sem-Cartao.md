@@ -5,6 +5,9 @@ status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
 commit: d474cf9
 date: 2026-10-28
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, hero, motor, 3d, validation]
 ---
 
 # Hero da landing v2: sem cartão; pás na posição real do veio; sem auto-rotação

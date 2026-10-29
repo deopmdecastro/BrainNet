@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IMPLEMENTED
+status: VALIDATED
 created: 2026-10-29
 updated: 2026-10-29
 tags: [dc-simu, landing, 3d, motor, glow, cables, lock, performance, camera, wires]
@@ -51,7 +51,7 @@ tags: [dc-simu, landing, 3d, motor, glow, cables, lock, performance, camera, wir
 - [x] Vista isométrica no motor; frontal no resto (foco + preferência).
 - [x] Lock de apagar/editar em demo e em RUN/PAUSE.
 - [x] Cabos reforçados para não atravessar chapa (folga + hard pad).
-- [ ] Smoke visual / `test:native-wires-3d` a correr em CI (já existe script; validar pós-deploy).
+- [x] Smoke visual / `test:native-wires-3d` a correr em CI (`test:ci` + suites Playwright validadas em [[Validation-2026-10-29-Landing-Sim-Cabos-Motor-Glow]]).
 
 ## Estado
-Implementado. Commit + push em dc-simu e BrainNet.
+Validado ([[Validation-2026-10-29-Landing-Sim-Cabos-Motor-Glow]]). Commit + push em `dc-simu` e `BrainNet`.

@@ -5,6 +5,9 @@ status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
 commit: 4887980
 date: 2026-10-28
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, demo, lock, validation]
 ---
 
 # Demo da landing (editor real): «apenas visualizar e simular», elementos bloqueados

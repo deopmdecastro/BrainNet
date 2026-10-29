@@ -5,6 +5,9 @@ status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
 commit: 1ea8b61
 date: 2026-10-28
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, editor, demo, validation]
 ---
 
 # Landing: demonstração passa a ser o EDITOR REAL em modo só-simulação

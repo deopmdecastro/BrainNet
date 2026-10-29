@@ -5,6 +5,9 @@ status: IMPLEMENTED_TESTED
 repo: deopmdecastro/dc-simu
 commit: ce45276
 date: 2026-10-28
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, landing, hero, motor, 3d, validation]
 ---
 
 # Hero da landing: só o motor 3D real (SEW DRN80) com ventoinha em marcha, vistas giráveis

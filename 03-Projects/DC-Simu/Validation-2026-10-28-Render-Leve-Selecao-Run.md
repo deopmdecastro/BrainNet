@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: validation
+status: IMPLEMENTED
+created: 2026-10-28
+updated: 2026-10-28
+tags: [dc-simu, 3d, performance, run, selection, validation]
+---
 # Validação 2026-10-28 — Render leve, sem rotação automática, seleção em RUN
 
 **Commit dc-simu:** `808c4d5` (main, push ✔, carimbo #98; rebase sobre `4788efd`)
