@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IN_PROGRESS
+status: IMPLEMENTED
 created: 2026-10-29
 updated: 2026-10-29
 tags: [dc-simu, tablet, cover, admin, panels, key-switch, multimeter, view-lock, ui]
@@ -68,13 +68,23 @@ Preferência: trabalhar primeiro no cofre (BrainNet), depois commit + push em am
 - View lock: `src/store/useSimStore.ts`, `src/three/Panel3D.tsx` (ou equivalente), toolbar.
 
 ## Critérios de aceite
-- [ ] Tablet (768–1024) apresenta layout idêntico ao desktop (painéis, topbar, densidades).
-- [ ] Projeto nativo mostra cover na lista «Meus projetos».
-- [ ] Admin consegue promover qualquer projeto para a landing; o promovido aparece no hero/showcase.
-- [ ] Em todos os painéis laterais, o cabeçalho permanece fixo no topo durante scroll do conteúdo.
-- [ ] Ao rodar a chave, o mecanismo completo (chave + rotor) roda sem «partir».
-- [ ] Pinças do multímetro são arrastáveis.
-- [ ] Existe controlo de bloquear/desbloquear vista (câmera); estado persiste na sessão.
+- [x] Tablet (768–1024) apresenta layout idêntico ao desktop (painéis, topbar, densidades).
+- [x] Projeto nativo mostra cover na lista «Meus projetos» (fallback para semente se preview vazio).
+- [x] Admin consegue promover qualquer projeto para a landing (já existia; confirmado).
+- [x] Em todos os painéis laterais, o cabeçalho permanece sticky no topo durante scroll.
+- [x] Ao rodar a chave, o mecanismo completo (canhão + lâmina) roda sem «partir» (extractKeyBarrel alargado).
+- [x] Pinças do multímetro: handles de arrasto maiores e mais visíveis (cor ciano) em pontas `probe`.
+- [x] Controlo «Bloquear vista» / «Desbloquear» na toolbar do canvas 3D (`viewLocked` no store + OrbitControls).
+
+## Implementação (dc-simu)
+- `src/styles/panel-system.css` — `.dc-side-panel-head` sticky
+- `src/styles/panel-drawer.css` — gavetas só ≤767 px
+- `src/ui/device.ts` + `src/App.tsx` — paridade tablet↔desktop
+- `src/store/useSimStore.ts` — `viewLocked` / `setViewLocked` / `toggleViewLocked`
+- `src/three/Panel3D.tsx` — OrbitControls respeita lock; handles de pinça
+- `src/components/Toolbar.tsx` — botão bloquear/desbloquear vista
+- `src/three/breakerHandle.ts` — extractKeyBarrel inclui canhão + lâmina
+- `src/auth/localBackend.ts` — preview nativo com fallback à semente
 
 ## Estado
-IN_PROGRESS — documentação no cofre. Código a implementar em `dc-simu` após clone estável; depois commit + push em ambos.
+IMPLEMENTED — commit + push em `dc-simu` e `BrainNet`.
