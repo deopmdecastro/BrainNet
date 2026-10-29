@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-28
+updated: 2026-10-29
 tags: [brainnet, dc-simu, design, ux]
 ---
 # Princípios de interface do DC-Simu
@@ -50,6 +50,10 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - Conta do criador: página `/account` (Avatar, Perfil, Segurança, Plano), aberta por «Gerir conta» no menu do avatar. E-mail só muda com a palavra-passe atual; sem servidor/Supabase as contas locais são fixas e a página diz porquê. Estilos em `account-page.css` — [[Validation-2026-10-28-Conta-Barras]].
 - Um símbolo, uma função: nenhum ícone se repete em botões diferentes da mesma barra (GRAFCET ≠ Passo, Novo ≠ PDF, reiniciar sequência ≠ reiniciar simulação). Controlos de simulação (Run/Pausa/Stop/Passo/Reiniciar) presentes em todas as vistas. Cabeçalho do projeto: 48 px (52 px no telemóvel), controlos 34/38 px, área segura do iPhone, nome do projeto com prioridade (`header-refine.css`).
+
+- Painel de simulação no fundo dos editores de sequência (Ladder e GRAFCET): separadores à esquerda numa zona de rolagem própria, estado (rótulo + forma + cor) e ações à direita, nunca sobrepostos. No GRAFCET o botão «Simulação» abre/fecha o corpo e a barra fica sempre visível; no telemóvel o transporte fica só na barra de ferramentas — [[Validation-2026-10-29-UI-Paineis-Simulacao-GRAFCET]].
+- Separadores de inspetor com poucos itens: mosaicos iguais com ícone + contagem e nome por baixo, para caberem a 360 px sem rolagem escondida. Símbolos de texto (◎ □ ↑ ↓, emoji) dão lugar a ícones do kit ou ao desenho da norma (caixa de etapa com o número).
+- Chips de estado e de tipo pertencem ao cartão que descrevem (rodapé da célula), nunca em posição absoluta por cima dos vizinhos.
 
 ## Interação e segurança do trabalho
 
