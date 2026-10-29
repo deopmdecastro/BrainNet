@@ -10,7 +10,7 @@ tags: [dc-simu, simulation, start-gating, current-flow, ferrules, motor-gland, v
 
 Relacionado com [[Task-2026-10-29-Start-Gating-Corrente-Ponteiras-Bucim]], [[Validation-2026-10-29-Realismo-PBR-Emergencia-Cabos-Toolbar-Demo]], [[Design-Principles]] e [[Testing-Plan]].
 
-**Commit `dc-simu`:** `8642f8e` (`main`, push concluído · carimbo `#105`)
+**Commit `dc-simu`:** `1ad3444` (com `8642f8e` · `main`, push concluído · carimbo `#106`)
 
 ## Causas-raiz diagnosticadas e resolvidas
 
