@@ -34,6 +34,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Integração dos bundles, pushes e reinício Docker | [[Validation-2026-10-30-Integracao-Bundles-Docker]] |
 | Diagnóstico de página sem resposta e cálculo assíncrono dos cabos | [[Validation-2026-10-30-Bloqueio-Pagina-Cabos]] |
 | Importação do GRAFCET ATEC com textos livres editáveis | [[Validation-2026-10-30-Importacao-Grafcet-ATEC-Textos]] |
+| Ícone oficial do GRAFCET em barras, menus, painéis e estados | [[Validation-2026-10-30-Icone-Oficial-Grafcet]] |
 | Seletor de disposição e adição de ações GRAFCET | [[Validation-2026-10-30-Grafcet-Acoes]] |
 | Investigação e integração dos novos componentes CAD | [[Validation-2026-10-30-Novos-Componentes]] |
 | Auditoria editor vs efeitos | [[Audit-2026-10-26-Editor-Efeitos]] |

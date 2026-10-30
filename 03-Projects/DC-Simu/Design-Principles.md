@@ -19,6 +19,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Manter uma área de trabalho técnica, compacta e previsível, com ferramentas junto ao canvas e propriedades/contexto em painéis laterais.
 - Usar azul para seleção e ações principais, tons neutros para superfícies e separadores, e verde para estados ativos em execução. A cor deve acompanhar rótulo ou forma, não ser a única indicação.
 - Preservar os componentes, espaçamentos, tipografia e estados existentes. Tornar ações importantes reconhecíveis sem aumentar desnecessariamente a densidade da barra.
+- Ícone oficial do GRAFCET: três nós ligados (`faDiagramProject`), escolhido pelo utilizador. Usar sempre `IconGrafcet` de `src/ui/icons.tsx` nas barras, menus, painéis, estados e no editor vazio.
 - Usar uma hierarquia clara entre modo atual, ferramenta ativa, objeto selecionado e estado da simulação. Manter endereços e valores técnicos legíveis e alinhados.
 - Barras de ferramentas: usar os elementos de `src/ui/toolbarKit.tsx` (histórico, malha/ímã/zoom, botão com atalho, separador, atalhos) em todos os editores; só as ações próprias de cada editor ficam fora do kit.
 - O que não cabe na largura disponível vai para um menu (`ToolMenu`), nunca para fora do ecrã nem para um deslize sem sinal. Cada item do menu diz o que faz, o atalho e, quando está desativado, o que falta para o ativar. Ações principais continuam em botão visível.
