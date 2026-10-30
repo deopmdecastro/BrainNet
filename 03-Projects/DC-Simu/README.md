@@ -32,6 +32,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Componentes CAD importados: textura real, animação, luzes e bornes | [[Validation-2026-10-30-Componentes-Importados-Acabamento]] |
 | Inspeção da plataforma: paridade tablet/PC, barras sem cortes, editor offline, cabos do motor | [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
 | Integração dos bundles, pushes e reinício Docker | [[Validation-2026-10-30-Integracao-Bundles-Docker]] |
+| Diagnóstico de página sem resposta e cálculo assíncrono dos cabos | [[Validation-2026-10-30-Bloqueio-Pagina-Cabos]] |
 | Seletor de disposição e adição de ações GRAFCET | [[Validation-2026-10-30-Grafcet-Acoes]] |
 | Investigação e integração dos novos componentes CAD | [[Validation-2026-10-30-Novos-Componentes]] |
 | Auditoria editor vs efeitos | [[Audit-2026-10-26-Editor-Efeitos]] |

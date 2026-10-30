@@ -1,3 +1,10 @@
+---
+type: validation
+status: TESTED_LOCAL
+created: 2026-10-30
+updated: 2026-10-30
+tags: [dc-simu, motor, validation]
+---
 # Validação 2026-10-30 — Olhal do motor com anilha e porca
 
 - Commit dc-simu: `303821f` (`src/three/WireEnd3D.tsx`, `src/three/wireGeometry3D.ts`)
