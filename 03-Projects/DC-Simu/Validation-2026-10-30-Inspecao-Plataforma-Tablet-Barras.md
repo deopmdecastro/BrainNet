@@ -71,8 +71,9 @@ transbordo horizontal e largura de layout. Novo utilitário: `npm run inspect:pl
 ## Estado e pendências
 
 - IMPLEMENTED_TESTED localmente. Commit `dc-simu` `458ac7b` (carimbo #107).
-- **Publicação pendente**: o push foi recusado pela política da sessão (repositórios fora do conjunto
-  autorizado; é preciso ligar a conta GitHub). Commits prontos nos dois repositórios.
+- **Sessão de origem**: o relatório recebido indicava push recusado e commits prontos nos dois
+  repositórios. **Seguimento**: integração, verificações, pushes e reinício Docker concluídos
+  nesta sessão — [[Validation-2026-10-30-Integracao-Bundles-Docker]].
 - Testar em iPad e tablet Android reais (Safari/Chrome), em retrato e paisagem.
 - Rever as quatro suítes de UI que já falhavam antes deste incremento.
 
