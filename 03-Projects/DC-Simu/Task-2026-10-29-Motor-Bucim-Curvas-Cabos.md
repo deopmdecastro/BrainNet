@@ -1,8 +1,10 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IN_PROGRESS
+status: IMPLEMENTED_TESTED
 created: 2026-10-29
+updated: 2026-10-30
+tags: [dc-simu, motor, bucim, cabos, 3d]
 repos: [dc-simu, BrainNet]
 ---
 
@@ -36,3 +38,7 @@ Criar o **furo real do bucim M20** na caixa de bornes do motor SEW e melhorar as
 - [ ] Cabos atravessam o bucim sem “furar” a chapa solidamente
 - [ ] Curvas interiores suaves, sem ziguezague
 - [ ] Olhais nos bornes U1/V1/W1/PE do motor
+
+## Seguimento 2026-10-30
+
+Os commits `1775647`/`9075c72` deixaram 7 falhas em `test:native-wires-3d` (cabos pela carcaça, cabos colados no furo, olhal fora do eixo). Corrigido mantendo o furo real — ver [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]].

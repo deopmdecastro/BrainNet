@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-29
+updated: 2026-10-30
 tags: [brainnet, dc-simu, design, ux]
 ---
 # Princípios de interface do DC-Simu
@@ -57,6 +57,13 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - Materiais 3D: a cor é a do fabricante; o realismo vem do estúdio (`studioEnvironment.ts`, tone mapping Neutral) e da superfície (`cadSurface.ts`: UV em mm e mapas PBR por família). Um renderizador novo usa o mesmo estúdio — capas, esquema e Painel 3D têm de parecer o mesmo objeto.
 - Capa de elemento = fotografia de produto 3/4 do GLB real, frente e lado direito à vista; botoneiras e sinaleiros mais de frente; peças muito longas (calha) mostram um troço à escala, nunca esmagadas. Rever com `scripts/component-cover-audit.html` sempre que entra um GLB novo — [[Validation-2026-10-29-Texturas-Capas-Vistas]].
+
+## Tablet e largura das barras
+
+- Tablet = PC: um ecrã tátil com o lado curto ≥ 600 px recebe o layout de secretária a 1280 px (meta viewport escalada em `index.html`). Nada de gavetas, barras compactas ou alvos maiores só por ser tátil.
+- «Telemóvel» é `PHONE_TOUCH_QUERY` (`src/ui/device.ts`). Não usar `(pointer: coarse)` sozinho para mudar layout; só para revelar o que no PC aparece ao passar o rato.
+- Barras: compactar quando o conteúdo não cabe, medido com `useOverflowCompact` (`toolbarKit.tsx`), em vez de inventar um ponto de quebra — [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]].
+- Recursos do editor (fontes, modelos) são locais: o editor tem de abrir offline e em redes com firewall.
 
 ## Interação e segurança do trabalho
 

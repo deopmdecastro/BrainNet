@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-27
+updated: 2026-10-30
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
@@ -162,4 +162,10 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | HEADER-REFINE-01 | Implementado, render por confirmar | Alturas únicas e área segura no cabeçalho |
 | ACCOUNT-PAGE-02 | Pendente | Validação visual a 390/768/1024/1440 px; testar `PATCH` do Supabase com projeto real; apagar a conta; pagamento de planos (hoje manual) |
 | REPO-SYNC-01 | Pendente | O commit pinned `b8b6017` não está no `main` do dc-simu (`a4905fb`): decidir a integração via PR do branch acima |
+| TABLET-PARITY-02 | Alta | IMPLEMENTED_TESTED | Tablet (tátil, lado curto ≥ 600 px) abre com o layout do PC a 1280 px; regras `pointer: coarse` que mudavam o layout passam a só telemóvel (`PHONE_TOUCH_QUERY`). Falta confirmar em iPad/Android reais | Evidência: [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]]; `test:tablet-parity-ui` 36 |
+| TOOLBAR-FIT-01 | Média | IMPLEMENTED_TESTED | Barras do simulador e do editor de componentes compactam quando o conteúdo não cabe (`useOverflowCompact`); nenhum botão cortado de 1280 a 1920 px | Evidência: [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
+| EDITOR-OFFLINE-01 | Alta | IMPLEMENTED_TESTED | Rótulos 3D com fonte local: o editor abre sem a CDN jsdelivr (offline, PWA, firewall) | Evidência: [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
+| MOTOR-GLAND-03 | Alta | IMPLEMENTED_TESTED | Cabos do motor pelo furo real do bucim M20 sem atravessar a carcaça, quadrante por cabo, olhal virado para o bucim; repõe `test:native-wires-3d` | Evidência: [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
+| ADMIN-TILES-02 | Média | IMPLEMENTED_TESTED | Indicadores do Resumo sem sobreposição e com cor de tom | Evidência: [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
+| UI-SUITES-01 | Média | TODO | `test:admin-ui`, `test:landing-ui`, `test:barras-padrao` e `test:admin-saas-ui` já falhavam em `9075c72`; rever expectativas ou corrigir | QA |
 | LANDING-PERF-01 | Alta | IN_PROGRESS | Precache PWA 39,5 → 6,2 MB, hero sem recursos externos e enquadrado, demo 3D em isométrica, cabos 3D em 9 faixas × 3 camadas. Falta: tirar `three` do arranque (≈ 795 KB), dividir o CSS (≈ 723 KB), pré-alojar fontes do troika e confirmar a demo 3D em navegador real | Evidência: [[Validation-2026-10-28-Landing-Peso-Hero-Demo]]; `dc-simu` `ad49cbd`, `8e60355` |
