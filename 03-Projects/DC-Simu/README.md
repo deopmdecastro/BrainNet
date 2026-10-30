@@ -35,6 +35,8 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Diagnóstico de página sem resposta e cálculo assíncrono dos cabos | [[Validation-2026-10-30-Bloqueio-Pagina-Cabos]] |
 | Importação do GRAFCET ATEC com textos livres editáveis | [[Validation-2026-10-30-Importacao-Grafcet-ATEC-Textos]] |
 | Ícone oficial do GRAFCET em barras, menus, painéis e estados | [[Validation-2026-10-30-Icone-Oficial-Grafcet]] |
+| Biblioteca 3D, seletores e cabeçalho de LEDs e luzes | [[Validation-2026-10-30-Biblioteca-3D-Seletores-Luzes]] |
+| Nitidez do zoom e ligação entre ações GRAFCET | [[Validation-2026-10-30-Grafcet-Zoom-Ligacao-Acoes]] |
 | Seletor de disposição e adição de ações GRAFCET | [[Validation-2026-10-30-Grafcet-Acoes]] |
 | Investigação e integração dos novos componentes CAD | [[Validation-2026-10-30-Novos-Componentes]] |
 | Auditoria editor vs efeitos | [[Audit-2026-10-26-Editor-Efeitos]] |
