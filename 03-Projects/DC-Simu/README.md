@@ -39,6 +39,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Nitidez do zoom e ligação entre ações GRAFCET | [[Validation-2026-10-30-Grafcet-Zoom-Ligacao-Acoes]] |
 | Barras de deslocamento nos canvas 3D e GRAFCET | [[Validation-2026-10-30-Scroll-Canvas-3D-Grafcet]] |
 | Seletor de disposição e adição de ações GRAFCET | [[Validation-2026-10-30-Grafcet-Acoes]] |
+| Condições, edição de ligações e revisão da importação GRAFCET | [[Validation-2026-10-30-Grafcet-Condicoes-Ligacoes-Importacao]] |
 | Investigação e integração dos novos componentes CAD | [[Validation-2026-10-30-Novos-Componentes]] |
 | Auditoria editor vs efeitos | [[Audit-2026-10-26-Editor-Efeitos]] |
 | UI do editor de componentes e LCD/teclas do PLC | [[Validation-2026-10-26-Editor-PLC-UI]] |
