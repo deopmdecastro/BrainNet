@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-30
+updated: 2026-10-31
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
@@ -180,4 +180,11 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | RENDER-PERF-03 | Média | TODO | Medir fps em GPU real (tablet e PC modesto) e, se preciso, juntar também cabos/ponteiras (357 malhas no projeto nativo) | QA |
 | LIGHT-COLORS-02 | Baixa | TODO | Partilhar a biblioteca de cores de luzes criadas pela conta/organização (hoje fica no navegador) | Produto |
 | UI-SUITES-01 | Média | TODO | `test:admin-ui`, `test:landing-ui`, `test:barras-padrao` e `test:admin-saas-ui` já falhavam em `9075c72`; rever expectativas ou corrigir | QA |
+| VIEW-DIAG-01 | Alta | IMPLEMENTED_TESTED | Etiqueta de diagnóstico (✓ OK · ! avisos · ✖ erros) em cada vista da barra «Vistas» (3D Realista, Ladder, GRAFCET, Esquema IEC); a barra de estado mostra o diagnóstico da vista aberta e abre o detalhe | Evidência: [[Validation-2026-10-31-Diagnostico-Vistas-Nomes]] |
+| VIEW-DIAG-02 | Alta | IMPLEMENTED_TESTED | Separador «Diagnóstico» no painel direito do 3D Realista e do Esquema IEC (lista de erros/avisos; clicar seleciona o componente/símbolo) | Evidência: [[Validation-2026-10-31-Diagnostico-Vistas-Nomes]] |
+| VIEW-NAMES-01 | Média | IMPLEMENTED_TESTED | Vistas renomeadas: «Esquema» → «3D Realista», «Comandos» → «Esquema IEC» (barra, tipo de projeto, painel e testes) | Evidência: [[Validation-2026-10-31-Diagnostico-Vistas-Nomes]] |
+| DIAG-FALSE-POS-01 | Alta | IMPLEMENTED_TESTED | Sem falsos alarmes no projeto de referência: calha DIN «sobreposta» aos aparelhos, motor protegido por disjuntor-motor, saídas escritas em FC chamados por CALL | Evidência: [[Validation-2026-10-31-Diagnostico-Vistas-Nomes]] |
+| UI-SUITES-02 | Média | TODO | `test:toolbar-ui` (diálogo Atalhos), `test:workspace-panels-ui` («GRAFCET reutiliza o painel do PLC nativo») e `test:grid-ui` («GRAFCET herda o fundo») já falhavam antes desta alteração (verificado com `git stash`) | QA |
+| BREAKER-CUT-01 | Alta | IMPLEMENTED_TESTED | Disjuntor tripolar (QG) desligado deixava passar corrente: as entradas dos disjuntores a jusante (QM1, Q0) contavam como «rede». Agora só a entrada de um disjuntor de cabeça (sem aparelho/fonte a montante) é rede; `test:breaker-cut` 9 | Evidência: [[Validation-2026-10-31-Tablet-PC-Disjuntor]] |
+| TABLET-PARITY-03 | Alta | IMPLEMENTED_TESTED | Tablet = PC também em tablets de 7–8″ (lado curto ≥ 480 px, antes 600) e com o teclado aberto (regra «telemóvel deitado» só abaixo de 1100 px de largura); 2.ª linha da barra fica só com ícones quando não cabe — `test:tablet-parity-ui` 51 | Evidência: [[Validation-2026-10-31-Tablet-PC-Disjuntor]] |
 | LANDING-PERF-01 | Alta | IN_PROGRESS | Precache PWA 39,5 → 6,2 MB, hero sem recursos externos e enquadrado, demo 3D em isométrica, cabos 3D em 9 faixas × 3 camadas. Falta: tirar `three` do arranque (≈ 795 KB), dividir o CSS (≈ 723 KB), pré-alojar fontes do troika e confirmar a demo 3D em navegador real | Evidência: [[Validation-2026-10-28-Landing-Peso-Hero-Demo]]; `dc-simu` `ad49cbd`, `8e60355` |
