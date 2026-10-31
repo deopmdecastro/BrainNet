@@ -11,3 +11,9 @@ tags: [dc-simu, 3d, cabos, torre-luz, sensor]
 
 Terminais `contact: lead` com ponta livre a 45 mm do corpo. Pigtails 3D visíveis.
 Torre SB2-3011: R/Y/G/COM. Sensor XUKT: V+/0V/OUT. Ligáveis a bornes, pentes e outros aparelhos.
+
+## Iteração — arrasto, bucins e identificação
+
+- Mantido o editor 3D como ponto de verdade: waypoints, pontas livres e movimento integral do cabo continuam editáveis por arrastar e soltar.
+- As saídas dos cabos da torre e do sensor passam a ter bucins visuais, marcadores nas pontas e etiquetas com o nome do condutor.
+- Próximo passo de integração: validar encaixe direto dos marcadores nos bornes durante o modo de ligação.
