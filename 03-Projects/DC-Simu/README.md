@@ -97,3 +97,5 @@ The dc-simu canvas now supports persistent free-text annotations in GRAFCET and 
 ## Entrega de 31 de outubro de 2026
 
 [[Validation-2026-10-31-Esquema-Layout-Canvas|Esquema: laterais desktop e fundo comum ao GRAFCET]] — implementação, testes e pendências de build/publicação.
+
+[[Task-2026-10-31-Texto-IEC-Toolbar-Cursor|Esquema IEC: cartão de texto, alinhamento, rotação e cursores]] — implementação e validação do editor de textos e comentários.
