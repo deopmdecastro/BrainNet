@@ -1,12 +1,12 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: PREPARED
+status: PUBLISHED
 created: 2026-10-31
 updated: 2026-10-31
 repo: https://github.com/deopmdecastro/dc-simu
 commits:
-  - d98913f
+  - 57d3e43
 tags: [dc-simu, esquema-iec, texto, referencia, modal, rotacao]
 ---
 
@@ -22,8 +22,10 @@ No Esquema IEC, duplo clique no nome do elemento (ex.: Q1) abre uma modal de edi
 - `commands.css`: estilos da modal.
 
 ## Verificações
+- 2026-10-31 (publicação): `tsc -b` sem erros, `vite build` OK e `npm test` (smoke) «TODOS OS TESTES PASSARAM» sobre o dc-simu `main` com os 3 commits aplicados.
+- Teste visual em browser **ainda por fazer** (as linhas «não executados» abaixo referem-se ao ambiente anterior).
 - Sintaxe TS/TSX dos ficheiros alterados. Build, typecheck completo e teste visual **não executados** (sem dependências neste ambiente).
 
 ## Pendências
 - Testar no browser: duplo clique no nome, guardar/cancelar, desfazer (Ctrl+Z) e rotação no canvas.
-- Publicação: push por fazer (token GitHub recusado).
+- Publicado em `deopmdecastro/dc-simu` `main` (cb32a08..57d3e43); submódulo do cofre atualizado.

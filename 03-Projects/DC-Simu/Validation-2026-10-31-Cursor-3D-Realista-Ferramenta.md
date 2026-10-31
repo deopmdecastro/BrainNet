@@ -1,12 +1,12 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: PREPARED
+status: PUBLISHED
 created: 2026-10-31
 updated: 2026-10-31
 repo: https://github.com/deopmdecastro/dc-simu
 commits:
-  - e7dfd1d
+  - eacccb4
 tags: [dc-simu, 3d-realista, cursor, ferramentas, ui]
 ---
 
@@ -24,8 +24,10 @@ O cursor no 3D Realista não mudava consoante a ferramenta ativa.
 - Mesmo princípio do Esquema IEC ([[Validation-2026-10-31-IEC-Textos-Cursores-Termoretratil-Torre]]): a ferramenta vence os filhos.
 
 ## Verificações
+- 2026-10-31 (publicação): `tsc -b` sem erros, `vite build` OK e `npm test` (smoke) «TODOS OS TESTES PASSARAM» sobre o dc-simu `main` com os 3 commits aplicados.
+- Teste visual em browser **ainda por fazer** (as linhas «não executados» abaixo referem-se ao ambiente anterior).
 - Revisão de código e `git diff`. Typecheck/build completo e teste visual em browser **não executados** (dependências não instaladas neste ambiente).
 
 ## Pendências
 - Confirmar visualmente cada ferramenta (1–5 e Arrastar malha) e a deployment no Vercel.
-- Publicação: push por fazer (token GitHub recusado).
+- Publicado em `deopmdecastro/dc-simu` `main` (cb32a08..57d3e43); submódulo do cofre atualizado.

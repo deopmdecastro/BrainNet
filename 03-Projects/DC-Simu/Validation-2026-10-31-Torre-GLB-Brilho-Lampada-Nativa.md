@@ -1,12 +1,12 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: PREPARED
+status: PUBLISHED
 created: 2026-10-31
 updated: 2026-10-31
 repo: https://github.com/deopmdecastro/dc-simu
 commits:
-  - 9668444
+  - 769c591
 tags: [dc-simu, 3d-realista, torre, glow, lampada]
 ---
 
@@ -24,8 +24,10 @@ A luz da torre (3D Realista) devia acender como a lâmpada do projeto nativo: me
 - `importedFinish.ts`: removido o ponto de luz em mm; lentes acesas com `toneMapped=false` (como a lâmpada nativa).
 
 ## Verificações
+- 2026-10-31 (publicação): `tsc -b` sem erros, `vite build` OK e `npm test` (smoke) «TODOS OS TESTES PASSARAM» sobre o dc-simu `main` com os 3 commits aplicados.
+- Teste visual em browser **ainda por fazer** (as linhas «não executados» abaixo referem-se ao ambiente anterior).
 - Sintaxe TS/TSX de ambos os ficheiros validada. Build, typecheck completo e teste visual **não executados** (sem dependências neste ambiente).
 
 ## Pendências
 - Confirmar no browser: halo centrado no vidro nas 3 lentes, sem corte pela lente, intensidade semelhante à lâmpada `Lamp3D`.
-- Publicação: push falhou (token GitHub recusado).
+- Publicado em `deopmdecastro/dc-simu` `main` (cb32a08..57d3e43); submódulo do cofre atualizado.
