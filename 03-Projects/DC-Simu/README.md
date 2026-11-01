@@ -31,6 +31,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Organização dos cabos e encaixe das ponteiras na fonte, PLC e motor | [[Validation-2026-10-29-Cabos-Ponteiras-Encaixe]] |
 | Componentes CAD importados: textura real, animação, luzes e bornes | [[Validation-2026-10-30-Componentes-Importados-Acabamento]] |
 | Esquema IEC no telemóvel: pinça, mover a vista com um dedo, zoom flutuante e barras compactas | [[Validation-2026-11-01-Esquema-IEC-Telemovel-Pinca-Barras]] |
+| Grelha única em todos os canvas e painel lateral completo em baixo no telemóvel (IEC e GRAFCET) | [[Validation-2026-11-01-Grelha-Unica-Painel-Inferior-Telemovel]] |
 | Inspeção da plataforma: paridade tablet/PC, barras sem cortes, editor offline, cabos do motor | [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
 | Integração dos bundles, pushes e reinício Docker | [[Validation-2026-10-30-Integracao-Bundles-Docker]] |
 | Diagnóstico de página sem resposta e cálculo assíncrono dos cabos | [[Validation-2026-10-30-Bloqueio-Pagina-Cabos]] |

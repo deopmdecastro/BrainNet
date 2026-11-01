@@ -29,7 +29,7 @@ ferramentas estavam mal organizadas (capturas de 2026-11-01, vista «Partida dir
 | Canvas IEC | Um dedo no fundo vazio move a vista (editar, simular e demonstração). O retângulo de seleção fica para rato/caneta. |
 | Canvas IEC | Zoom 0,3×–5× (`CMD_ZOOM_MIN/MAX`), igual ao esquema 3D e ao GRAFCET. |
 | Canvas IEC | ~~Controlo de zoom flutuante~~ — removido a pedido (a pinça e o menu «Vista» chegam). |
-| Entradas/Saídas | No telemóvel passam para um **painel inferior** igual ao do GRAFCET (`CommandsSimDock`, casca `gdock`): barra sempre visível com estado + transporte, corpo com entradas e saídas. O botão «Simulação» da barra compacta abre/fecha-o. Tablet/PC mantêm o painel lateral. |
+| Entradas/Saídas | No telemóvel passam para um **painel inferior** igual ao do GRAFCET (`CommandsSimDock`, casca `gdock`): barra sempre visível com estado + transporte, corpo com entradas e saídas. O botão «Simulação» da barra compacta abre/fecha-o. Tablet/PC mantêm o painel lateral. | **Atualizado:** o corpo passou a ser o painel lateral completo, não só as entradas — [[Validation-2026-11-01-Grelha-Unica-Painel-Inferior-Telemovel]]. |
 | Textos | Os títulos do esquema («Circuito de potência…», «Q0 · proteção…») são clicáveis: toque seleciona, arrastar move (um passo de Desfazer), duplo toque/clique edita o texto, borracha apaga. Área de toque maior que a do texto. |
 | Canvas IEC | Aviso da simulação curto numa linha, à esquerda, sem tapar o zoom. |
 | Páginas | Nome do esquema + páginas numa só linha com deslize; «Nova página» passa a ícone no telemóvel. |

@@ -74,6 +74,8 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - Todo o canvas de diagrama (Esquema 3D, Esquema IEC, GRAFCET, Ladder) aceita **pinça com dois dedos** (`usePinchZoom` + `pinchPan`, 5× no máximo) e **um dedo no fundo vazio move a vista**, também em simulação. O retângulo de seleção é do rato e da caneta.
 - Quem não pode usar dois dedos tem sempre botões: no Esquema IEC um controlo flutuante −/%/+ (a percentagem enquadra o esquema).
+- Grelha dos canvas: **uma única regra** de passo visual, `editorGridPitch(scale, step)` em `src/ui/editorTheme.ts` — ponto de 1 px sempre em píxeis do ecrã (nunca dentro de um grupo escalado), passo ≥ 16 px, duplicando e nunca subdividindo para cada ponto coincidir com o íman. Esquema, Esquema IEC, GRAFCET, Ladder, 3D e editor de componentes usam o mesmo tema e a mesma regra; um canvas novo não calcula a grelha por conta própria — [[Validation-2026-11-01-Grelha-Unica-Painel-Inferior-Telemovel]].
+- Painel em baixo no telemóvel: é **o painel lateral completo** da vista (Esquema IEC: `RightDockPanel`; GRAFCET: o inspetor), nunca uma versão reduzida nem dois painéis em simultâneo. Tablet/PC mantêm a coluna lateral — [[Validation-2026-11-01-Grelha-Unica-Painel-Inferior-Telemovel]].
 - Num telemóvel não existe «Dois canvas». Linhas de nome/páginas deslizam numa única linha em vez de quebrar. A barra compacta fica acima das réguas recolhidas dos painéis — [[Validation-2026-11-01-Esquema-IEC-Telemovel-Pinca-Barras]].
 
 ## Interação e segurança do trabalho
