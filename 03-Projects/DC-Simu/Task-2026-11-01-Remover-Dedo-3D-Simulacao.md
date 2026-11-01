@@ -37,10 +37,10 @@ Não alterar motores elétricos, cabos, modelos GLB, estados RUN/PAUSA/STOP, sel
 - [x] Ligações START/STOP preservadas e comportamento elétrico aprovado em `test:native-sim`; seleção/inspeção em RUN aprovada no browser e bloqueio de movimento mantido.
 - [x] Não ficam importações, eventos, geometria ou CSS órfãos do dedo.
 - [x] Regressões relevantes e tipos executados; limitações anteriores e checks do cofre registados na validação.
-- [ ] Commit do código publicado primeiro; commit do BrainNet publicado com o ponteiro para esse commit.
+- [x] Commit do código publicado primeiro; commit do BrainNet publicado com o ponteiro para esse commit.
 
 ## Coordenação e evidências
 
 Trabalho realizado no submódulo dentro do cofre. Contexto: [[Design-Principles]], [[Project-Brief]], [[Requirements]], [[Testing-Plan]], [[Decision-Log]] e `AGENTS.md` de ambos os repositórios. Papéis aplicáveis: Developer e QA-Security; a execução não representa agentes Maestri ativos. Esta sessão não tem terminal Maestri disponível.
 
-Estado: implementação e validação concluídas no âmbito acima. Código publicado no GitHub em `e9e2a9d36bd7f4db280138df7c2e0442f675257b` (`main`), confirmado por `git ls-remote`. O cofre versiona esse commit no submódulo; a publicação do cofre segue a do código. Sem confirmação de deploy. Resultados e limitações em [[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]].
+Estado: implementação e validação concluídas no âmbito acima. Publicação GitHub confirmada por `git ls-remote`: código `e9e2a9d36bd7f4db280138df7c2e0442f675257b` e commit de integração do cofre `7310d0371e318072a093843477372c2a499d7aad`, ambos em `main`. O submódulo aponta exatamente para o commit do código. Este recibo fecha a tarefa; sem confirmação de deploy. Resultados e limitações em [[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]].

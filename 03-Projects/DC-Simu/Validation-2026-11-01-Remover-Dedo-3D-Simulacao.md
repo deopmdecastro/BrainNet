@@ -84,7 +84,12 @@ Esta nota e os princípios de design são o ponto de handoff para programação 
 
 ## Publicação e pendências
 
-Âmbito autorizado: commit e push do código e do cofre no GitHub. O código foi publicado primeiro: `dc-simu` **`e9e2a9d36bd7f4db280138df7c2e0442f675257b`**, remoto `main` confirmado por `git ls-remote`. O BrainNet versiona esse commit no submódulo e regista o contexto nesta entrega; o push do cofre é a operação seguinte. Um push não comprova deploy Vercel/Docker.
+Âmbito autorizado e publicado no GitHub, com confirmação por `git ls-remote`:
+
+1. `dc-simu`: **`e9e2a9d36bd7f4db280138df7c2e0442f675257b`** (`e9e2a9d`), publicado primeiro em `main`.
+2. BrainNet: **`7310d0371e318072a093843477372c2a499d7aad`** (`7310d03`), publicado em `main` com o submódulo a apontar exatamente para o commit acima. O recibo de publicação é guardado num commit documental seguinte.
+
+Os dois pushes foram confirmados. Um push não comprova deploy Vercel/Docker; o ambiente de produção não foi inspecionado nem alterado manualmente.
 
 Pendente fora do âmbito: corrigir o contrato estático de `commands-touch-smoke`, executar build de produção num runner com memória suficiente e confirmar o ambiente/commit de qualquer deploy. Não há aprovação humana adicional de lançamento implícita nestes testes.
 
