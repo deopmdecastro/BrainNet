@@ -98,6 +98,7 @@ The dc-simu canvas now supports persistent free-text annotations in GRAFCET and 
 
 [[Validation-2026-11-01-Painel-Direito-3D-IEC-GRAFCET|Painel direito do 3D e do IEC igual ao GRAFCET]] — separadores em mosaicos com contagens e régua recolhida com o nome do painel e o botão de reabrir sempre visíveis.
 
+[[Validation-2026-11-01-Diagnostico-Nativo-Partida-Direta|Diagnóstico do exemplo nativo sem erros]] — bobina AC do contactor comutada pela saída a relé, cabos PE como `earth`, identidade de fase através de polos abertos e regra das fontes limitada a bornes de alimentação.
 [[Validation-2026-11-01-Simbolos-Comando-IEC|Símbolos de comando: o desenho segue a condução]] — contactos fecham sobre os bornes e os NF deixam de aparecer invertidos, resistência em retângulo IEC, transformador com núcleo e três variantes de terra. Avaliação da folha SVG colada em [[Task-2026-11-01-Reaproveitamento-Folha-Simbolos-SVG]].
 
 ## Entrega de 31 de outubro de 2026
