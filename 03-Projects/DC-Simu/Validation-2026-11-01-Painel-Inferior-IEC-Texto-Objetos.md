@@ -7,6 +7,7 @@ updated: 2026-11-01
 repo: https://github.com/deopmdecastro/dc-simu
 commits:
   - e98e3b5
+  - 86b7675
 tags: [dc-simu, iec, grafcet, painel-inferior, texto, objetos, telemovel]
 ---
 
@@ -36,3 +37,10 @@ tags: [dc-simu, iec, grafcet, painel-inferior, texto, objetos, telemovel]
 
 - Sem navegador neste ambiente: nada foi visto a render. Confirmar num telemóvel: cabeçalho «Esquema IEC / Propriedades» igual ao do GRAFCET, escrita imediata ao tocar no texto com a barra visível, e ícones na lista de Objetos.
 - No GRAFCET, tocar num texto já o põe em edição (antes só selecionava): arrastar continua a mover.
+
+## Correção após ver no telemóvel (mesmo dia)
+
+- **Lista cortada («barra branca»):** o corpo de E/S/Objetos tinha `flex: 1; min-height: 0` e, dentro de uma gaveta com altura automática, ficava reduzido a 0 e cortado. Agora ocupa a altura natural e a gaveta rola.
+- **Botão de ampliar** (`grafcet-properties-tall`) adicionado ao cabeçalho do IEC; o estado RUN/STOP só aparece em marcha/pausa, como no GRAFCET (cabeçalho com a mesma altura).
+- **Texto:** a barra de formatação usa o mesmo contentor (`grafcet-textbar-slot`) e os mesmos controlos do GRAFCET (sem rotação/largura); o texto deixa de quebrar linha sozinho (sem `max-width`).
+- Continua sem verificação visual em navegador.
