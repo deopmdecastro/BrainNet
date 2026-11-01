@@ -70,6 +70,12 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Barras: compactar quando o conteúdo não cabe, medido com `useOverflowCompact` (`toolbarKit.tsx`), em vez de inventar um ponto de quebra — [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]].
 - Recursos do editor (fontes, modelos) são locais: o editor tem de abrir offline e em redes com firewall.
 
+## Gestos no telemóvel
+
+- Todo o canvas de diagrama (Esquema 3D, Esquema IEC, GRAFCET, Ladder) aceita **pinça com dois dedos** (`usePinchZoom` + `pinchPan`, 5× no máximo) e **um dedo no fundo vazio move a vista**, também em simulação. O retângulo de seleção é do rato e da caneta.
+- Quem não pode usar dois dedos tem sempre botões: no Esquema IEC um controlo flutuante −/%/+ (a percentagem enquadra o esquema).
+- Num telemóvel não existe «Dois canvas». Linhas de nome/páginas deslizam numa única linha em vez de quebrar. A barra compacta fica acima das réguas recolhidas dos painéis — [[Validation-2026-11-01-Esquema-IEC-Telemovel-Pinca-Barras]].
+
 ## Interação e segurança do trabalho
 
 - A edição direta no diagrama deve dar resposta imediata e manter alternativas de teclado, foco visível e histórico de desfazer/refazer.
