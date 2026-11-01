@@ -98,3 +98,17 @@ O P0 cresceu: ao escrever o teste geométrico apareceu que `st.closed` (que vem 
 ## Publicação
 
 Os clones locais foram recuperados do GitHub depois de o ambiente ter perdido os `.git`, o código foi publicado em `dc-simu` e esta nota acompanha o ponteiro do submódulo em `BrainNet`. P4 e P5 continuam por decidir.
+
+## Fecho de 2026-11-01 — desenho dos contactos fechados
+
+O utilizador enviou depois um segundo desenho de referência (os três símbolos «Normalmente Aberto»
+3-4, «Normalmente Fechado» 1-2 e «Comutador» 1-2-4) com o pedido «os meus contactos fechados devem ter
+este design». O P0 anterior tinha fechado a lâmina no borne, mas um contacto a conduzir ficava uma
+**linha contínua** — indistinguível de um cabo — e o NF distinguia-se por uma travessa cruzada.
+
+Feito agora: o contacto fixo desenha-se com gancho (à direita no NF, sempre presente; à esquerda no NA
+que conduz) e a lâmina assenta na ponta do gancho quando conduz, afastando-se quando abre. `contact3`
+segue o mesmo desenho nos três polos; disjuntores, seccionadores e o comutador mantêm a geometria
+(no comutador, a posição de repouso está por baixo do comum). Evidência:
+[[Validation-2026-11-01-Contactos-Fechados-Gancho]]; imagem `evidence-symbols/contactos-gancho.png` e
+referência `evidence-symbols/referencia-contactos-utilizador.png`.

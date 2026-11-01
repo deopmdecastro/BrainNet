@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-31
+updated: 2026-11-01
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
@@ -198,3 +198,5 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | BREAKER-CUT-01 | Alta | IMPLEMENTED_TESTED | Disjuntor tripolar (QG) desligado deixava passar corrente: as entradas dos disjuntores a jusante (QM1, Q0) contavam como «rede». Agora só a entrada de um disjuntor de cabeça (sem aparelho/fonte a montante) é rede; `test:breaker-cut` 9 | Evidência: [[Validation-2026-10-31-Tablet-PC-Disjuntor]] |
 | TABLET-PARITY-03 | Alta | IMPLEMENTED_TESTED | Tablet = PC também em tablets de 7–8″ (lado curto ≥ 480 px, antes 600) e com o teclado aberto (regra «telemóvel deitado» só abaixo de 1100 px de largura); 2.ª linha da barra fica só com ícones quando não cabe — `test:tablet-parity-ui` 51 | Evidência: [[Validation-2026-10-31-Tablet-PC-Disjuntor]] |
 | LANDING-PERF-01 | Alta | IN_PROGRESS | Precache PWA 39,5 → 6,2 MB, hero sem recursos externos e enquadrado, demo 3D em isométrica, cabos 3D em 9 faixas × 3 camadas. Falta: tirar `three` do arranque (≈ 795 KB), dividir o CSS (≈ 723 KB), pré-alojar fontes do troika e confirmar a demo 3D em navegador real | Evidência: [[Validation-2026-10-28-Landing-Peso-Hero-Demo]]; `dc-simu` `ad49cbd`, `8e60355` |
+| THERMAL-RELAY-01 | Alta | IMPLEMENTED_TESTED | Relé térmico Siemens 3RU1116: bornes `1L1/3L2/5L3` nas pontas dos pinos do topo, `2T1/4T2/6T3` nas cavidades da base e `95/96/97/98` + **A2** na fila da frente (11 bornes); botões STOP/RESET/TEST manobráveis na vista 3D (STOP e ensaio momentâneos, RESET só rearma, corpo dispara) com o grupo do comando na posição do aparelho; `test:imported-components` 169 e `test:terminal-geometry` com 11 ligações no relé | Evidência: [[Validation-2026-11-01-Rele-Termico-3RU1116]] |
+| SYMBOLS-CONTACT-02 | Alta | IMPLEMENTED_TESTED | Contactos fechados desenhados com o gancho do contacto fixo (IEC 60617): NF com gancho à direita e lâmina apoiada na ponta, NA com o mesmo desenho espelhado a conduzir; o traço do contacto aberto segue o desenho de referência do utilizador; `contact3` alinhado nos três polos | Evidência: [[Validation-2026-11-01-Contactos-Fechados-Gancho]] |
