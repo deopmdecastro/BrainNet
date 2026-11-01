@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: design-note
+status: IMPLEMENTED
+created: 2026-10-31
+updated: 2026-11-01
+tags: [dc-simu, esquema, layout, interface]
+---
 # DC-Simu — layout do editor de comandos
 
 ## Objetivo

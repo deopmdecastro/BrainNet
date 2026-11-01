@@ -10,7 +10,11 @@ tags: [brainet, dc-simu, qa]
 
 Executar os comandos do produto na pasta [dc-simu/](./dc-simu/); os scripts estão no [package.json](./dc-simu/package.json).
 
-## Execução mais recente — 2026-10-25
+## Validação específica mais recente — 2026-11-01
+
+[[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]] regista a remoção do dedo 3D: tipos, 733 verificações do núcleo, regressão de cursor (8) e browser (17), motores e movimento aprovados. O contrato estático `commands-touch-smoke` mantém uma falha reproduzida na base; o build de produção não foi executado neste runner. Esta validação específica não substitui a matriz completa abaixo nem constitui aprovação de lançamento.
+
+## Execução histórica — 2026-10-25
 
 A validação foi repetida no runtime exigido, Node.js v22.23.4. O Node global do sandbox (v20.20.2) não satisfaz `>=22.12.0`; por isso a evidência do produto usa Node 22 temporário.
 

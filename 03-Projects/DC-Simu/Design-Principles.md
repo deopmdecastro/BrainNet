@@ -83,6 +83,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 - A edição direta no diagrama deve dar resposta imediata e manter alternativas de teclado, foco visível e histórico de desfazer/refazer.
 - Distinguir seleção, arrasto, ligação e deslocamento da vista; manter as ferramentas e atalhos coerentes entre GRAFCET e esquema.
+- A visualização 3D usa o cursor normal do sistema e os cursores dos alvos/ferramentas, também em RUN e pausa. Não montar uma mão ou dedo 3D como cursor de simulação: a atuação pertence aos comandos do equipamento, não a uma sobreposição que tapa a cena. Regressões: `test:sim-cursor` e `test:sim-select-3d-ui` — [[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]].
 - Usar verbos que descrevam o efeito real. «Exportar» descarrega um ficheiro; «Importar» escolhe um ficheiro; «Guardar» persiste o projeto. Indicar formatos aceites na ajuda da ação.
 - Avisar antes de substituir um diagrama ou outro trabalho; erros de leitura devem deixar o conteúdo atual intacto.
 - Mostrar validação, diagnósticos e estado da simulação perto do contexto que os originou. Explicar quando uma referência importada depende de outro GRAFCET.

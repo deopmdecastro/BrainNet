@@ -20,6 +20,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Backlog e próxima ação | [[Backlog]] |
 | Decisões | [[Decision-Log]] |
 | Plano de validação | [[Testing-Plan]] |
+| Cursor normal na simulação 3D, sem dedo sobreposto | [[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]] |
 | Integração das branches, Docker e build Vercel | [[Validation-2026-10-28-Integracao-Docker-Vercel]] |
 | Refinamento do menu da conta | [[Validation-2026-10-28-Menu-Conta]] |
 | Integração dos bundles, interface local e validação final | [[Validation-2026-10-29-Integracao-Bundles]] |

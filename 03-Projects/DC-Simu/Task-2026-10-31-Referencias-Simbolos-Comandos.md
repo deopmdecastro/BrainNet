@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: IMPLEMENTED_TESTED
+created: 2026-10-31
+updated: 2026-11-01
+tags: [dc-simu, esquema, simbolos, referencias]
+---
 # Referências dos símbolos no esquema de comandos
 
 ## Pedido

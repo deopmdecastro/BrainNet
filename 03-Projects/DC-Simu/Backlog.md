@@ -10,6 +10,12 @@ tags: [brainet, dc-simu, backlog, ai]
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
 
+## Incremento de interação — 2026-11-01
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| SIM-CURSOR-01 | Média | IMPLEMENTED_TESTED | Remover a mão/dedo 3D da simulação, recuperar o cursor normal e preservar seleção, bloqueio de edição e comandos elétricos | [[Task-2026-11-01-Remover-Dedo-3D-Simulacao]] · [[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]]; `test:sim-cursor` (8), `test:sim-select-3d-ui` (17), tipos e núcleo. A falha anterior de `commands-touch-smoke` e o build não executado ficam explicitados na validação. |
+
 ## Integração e operação existentes
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Papel proposto |
