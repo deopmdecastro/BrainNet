@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: project-index
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-30
+updated: 2026-11-01
 tags: [brainet, dc-simu, index]
 ---
 # DC-Simu
@@ -93,6 +93,10 @@ Página `/account` com perfil, avatar, palavra-passe e plano (ver [[Validation-2
 ## Canvas comments
 
 The dc-simu canvas now supports persistent free-text annotations in GRAFCET and the 2D/3D schematic views. Notes appear as numbered comment pins; double-click edits and right-click removes them.
+
+## Entrega de 1 de novembro de 2026
+
+[[Validation-2026-11-01-Painel-Direito-3D-IEC-GRAFCET|Painel direito do 3D e do IEC igual ao GRAFCET]] — separadores em mosaicos com contagens e régua recolhida com o nome do painel e o botão de reabrir sempre visíveis.
 
 ## Entrega de 31 de outubro de 2026
 
