@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-10-30
+updated: 2026-11-01
 tags: [brainnet, dc-simu, design, ux]
 ---
 # Princípios de interface do DC-Simu
@@ -56,6 +56,8 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Separadores de painel com poucos itens: mosaicos iguais com ícone + contagem e nome por baixo, para caberem a 360 px sem rolagem escondida. Símbolos de texto (◎ □ ↑ ↓, emoji) dão lugar a ícones do kit ou ao desenho da norma (caixa de etapa com o número). **Vale para todos os painéis, não só para o inspetor GRAFCET**: o painel direito do 3D e do IEC usa o mesmo desenho (`RightDockTabs`) — um painel não inventa separadores próprios só porque pertence a outra vista — [[Validation-2026-11-01-Painel-Direito-3D-IEC-GRAFCET]].
 - Régua de painel recolhido: mostra sempre o **nome completo do painel** (o mesmo do cabeçalho aberto, «diagnóstico» incluído) e o botão de reabrir, dentro dos limites do painel. Num contentor em coluna a régua ocupa a largura e estica em altura; nunca se aplica-lhe o `flex: 0 0 <largura>` do fluxo em linha, que a esmaga e o `overflow: hidden` corta o que resta.
 - Chips de estado e de tipo pertencem ao cartão que descrevem (rodapé da célula), nunca em posição absoluta por cima dos vizinhos.
+- Símbolo desenha o estado, não o tipo: num esquema de comando o que se vê tem de ser o que conduz. A lâmina de um contacto apoia-se nos bornes quando fecha (sem folgas) e `st.closed` é o estado de **condução** — um contacto NF a conduzir desenha-se fechado. Sem estado (miniaturas da paleta) desenha-se o repouso: NF fechado, NA aberto. NF e NA distinguem-se sempre, mesmo fechados, pela barra do contacto fixo — [[Validation-2026-11-01-Simbolos-Comando-IEC]].
+- O desenho por omissão é o da norma europeia: retângulo na resistência (IEC 60617), três terras com o mesmo borne PE, transformador com núcleo. Variantes de desenho de outra origem (zigzag ANSI, coleção QElectroTech) são escolha explícita no inspetor, nunca a omissão.
 
 - Materiais 3D: a cor é a do fabricante; o realismo vem do estúdio (`studioEnvironment.ts`, tone mapping Neutral) e da superfície (`cadSurface.ts`: UV em mm e mapas PBR por família). Um renderizador novo usa o mesmo estúdio — capas, esquema e Painel 3D têm de parecer o mesmo objeto.
 - Capa de elemento = fotografia de produto 3/4 do GLB real, frente e lado direito à vista; botoneiras e sinaleiros mais de frente; peças muito longas (calha) mostram um troço à escala, nunca esmagadas. Rever com `scripts/component-cover-audit.html` sempre que entra um GLB novo — [[Validation-2026-10-29-Texturas-Capas-Vistas]].
