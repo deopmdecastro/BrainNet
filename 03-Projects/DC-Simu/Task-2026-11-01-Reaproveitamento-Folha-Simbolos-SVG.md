@@ -110,5 +110,5 @@ Feito agora: o contacto fixo desenha-se com gancho (à direita no NF, sempre pre
 que conduz) e a lâmina assenta na ponta do gancho quando conduz, afastando-se quando abre. `contact3`
 segue o mesmo desenho nos três polos; disjuntores, seccionadores e o comutador mantêm a geometria
 (no comutador, a posição de repouso está por baixo do comum). Evidência:
-[[Validation-2026-11-01-Contactos-Fechados-Gancho]]; imagem `evidence-symbols/contactos-gancho.png` e
+[[Validation-2026-11-01-Contactos-Fechados-Gancho]]; imagem `evidence-symbols/contactos-antes-depois.png` e
 referência `evidence-symbols/referencia-contactos-utilizador.png`.
