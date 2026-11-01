@@ -8,6 +8,7 @@ repo: https://github.com/deopmdecastro/dc-simu
 commits:
   - e98e3b5
   - 86b7675
+  - 999b9db
 tags: [dc-simu, iec, grafcet, painel-inferior, texto, objetos, telemovel]
 ---
 
@@ -44,3 +45,9 @@ tags: [dc-simu, iec, grafcet, painel-inferior, texto, objetos, telemovel]
 - **Botão de ampliar** (`grafcet-properties-tall`) adicionado ao cabeçalho do IEC; o estado RUN/STOP só aparece em marcha/pausa, como no GRAFCET (cabeçalho com a mesma altura).
 - **Texto:** a barra de formatação usa o mesmo contentor (`grafcet-textbar-slot`) e os mesmos controlos do GRAFCET (sem rotação/largura); o texto deixa de quebrar linha sozinho (sem `max-width`).
 - Continua sem verificação visual em navegador.
+
+## Segunda correção — legendas do esquema (ex.: «Q0 · proteção do comando»)
+
+- **Causa:** o IEC tem dois tipos de texto. Os textos livres já tinham a edição do GRAFCET, mas as **legendas** do esquema (`diagram.texts`, vindas dos exemplos, dos projetos nativos e das importações) abriam por duplo toque uma janela `uiPrompt` «Editar texto», sem barra de formatação nem edição no sítio.
+- **Solução:** `CommandsEditor` migra as legendas para textos livres (`canvasTexts`, vista `commands`, mesma posição, 13 px a negrito) assim que existem, e limpa `diagram.texts`. A partir daí têm a edição, a seleção e a barra de formatação do GRAFCET.
+- **Por confirmar:** o aspeto fica igual ao anterior (estilo copiado), mas sem navegador não vi o resultado. A demonstração (só leitura) continua com as legendas antigas.
