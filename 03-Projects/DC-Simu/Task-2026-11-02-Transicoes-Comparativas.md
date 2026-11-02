@@ -46,3 +46,7 @@ Criados quatro GRAFCETs manuais autónomos em `examples/`: B (`Y2_B+`/`Y3_B-`), 
 
 ## Transição C temporizada — 2026-11-02
 O manual C foi corrigido: a transição de avanço passou a usar `T(2s) * fc_c1`, aguardando dois segundos e confirmando o fim de curso C1. O tempo pode ser alterado diretamente na condição da transição. Commit DC-Simu: `711ddd7`.
+
+## Condição de estado vs. origem — 2026-11-02
+O bloco «Estado de outra etapa» saiu da coluna estreita das Origens e passou a secção própria, «Estado de outras etapas», com uma frase guiada (`Só disparar se a etapa [nº] estiver [ativa|inativa]` → «Adicionar à condição»). A modal reconhece `G0 <=> X9`, `G0 <> X9`, `G0X9`, `X9` e `/X9` já escritos na condição; cada termo aparece como linha legível com alternância ativa/inativa, remoção e «Usar como origem». O texto explica que a etapa consultada não é desativada, ao contrário de uma origem; a pré-visualização separa «Estado consultado» das origens. A ajuda deixou de dizer que `G0X9` é inválido (o motor lê-o como X9 ativa). Commit DC-Simu: `f0cf6fc`.
+- Testado: `typecheck`, `test:grafcet-dialogs` (31 OK), `build`, `git diff --check`; `test:grafcet-modals-ui` passa todas as verificações da transição (servidor Vite temporário sem Supabase, Edge), mas falha depois em `openImport` (clique intercetado pelos separadores do painel GRAFCET) — fora do âmbito desta alteração.
