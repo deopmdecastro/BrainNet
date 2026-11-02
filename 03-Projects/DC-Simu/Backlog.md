@@ -16,6 +16,12 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 | --- | --- | --- | --- | --- |
 | SIM-CURSOR-01 | Média | IMPLEMENTED_TESTED | Remover a mão/dedo 3D da simulação, recuperar o cursor normal e preservar seleção, bloqueio de edição e comandos elétricos | [[Task-2026-11-01-Remover-Dedo-3D-Simulacao]] · [[Validation-2026-11-01-Remover-Dedo-3D-Simulacao]]; `test:sim-cursor` (8), `test:sim-select-3d-ui` (17), tipos e núcleo. A falha anterior de `commands-touch-smoke` e o build não executado ficam explicitados na validação. |
 
+## Incremento de transições comparativas — 2026-11-02
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| GRAFCET-TRANS-COMP-01 | Alta | IMPLEMENTED | Modal de transição aceita referências documentais a transições equivalentes noutros GRAFCETs, com nome do diagrama, transição, condição equivalente e nota; o runtime local permanece inalterado. | `src/grafcet/engine.ts`, `src/grafcet/TransitionDialog.tsx`; validação pendente |
+
 ## Integração e operação existentes
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Papel proposto |
