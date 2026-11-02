@@ -1,0 +1,14 @@
+PASS — o F1 nativo está na posição de encaixe do KM1
+PASS — o relé fica por baixo do contactor, centrado
+PASS — os pinos do F1 ficam à profundidade dos bornes do KM1 (não saem pela frente)
+PASS — o corpo do F1 encosta à base do KM1, pinos inseridos (folga 0.7 mm)
+PASS — largado perto do fundo do KM1, o relé encaixa
+PASS — longe de qualquer contactor não encaixa
+PASS — um contactor com relé encaixado não aceita outro
+PASS — mover o contactor leva o relé encaixado
+PASS — sem mudanças, a sincronização não cria componentes novos
+PASS — apagado o contactor, o relé fica solto
+PASS — ligações internas: 2T1→1L1, 4T2→3L2, 6T3→5L3 e passagem A2
+PASS — projeto nativo sem avisos com o F1 encaixado ()
+
+12 verificações do encaixe relé térmico ↔ contactor passaram

@@ -1,0 +1,96 @@
+PASS — QG existe no esquema IEC e no quadro 3D
+PASS — QM1 existe no esquema IEC e no quadro 3D
+PASS — KM1 existe no esquema IEC e no quadro 3D
+PASS — M1 existe no esquema IEC e no quadro 3D
+PASS — Q0 existe no esquema IEC e no quadro 3D
+PASS — PS1 existe no esquema IEC e no quadro 3D
+PASS — B0 existe no esquema IEC e no quadro 3D
+PASS — H1 existe no esquema IEC e no quadro 3D
+PASS — H2 existe no esquema IEC e no quadro 3D
+PASS — duas páginas: Potência e Comando LOGO!
+PASS — QM1 usa o disjuntor-motor IEC com disparadores térmico e magnético
+PASS — todos os cabos ligam símbolos existentes
+PASS — ids únicos
+PASS — símbolos sem sobreposição (nenhuma)
+PASS — em repouso o motor está parado e sem curto-circuitos
+PASS — Q0.0 ligada energiza a bobina KM1 (230 V via X1/X2 entre páginas)
+PASS — KM1 fecha os contactos de potência e M1 roda
+PASS — QM1 desligado corta o motor
+PASS — Q0.1 acende H1 (24 V da PS1)
+PASS — em repouso: EMERG e STOP (NF) dão sinal ao PLC, START não
+PASS — premir START (B1.1) dá sinal em I0.1
+PASS — premir STOP (B1.2) corta o sinal em I0.2
+PASS — Q0.0/Q0.1 ligadas pelo programa: KM1 arranca M1 e H1 acende
+PASS — a semente nativa traz o esquema IEC
+PASS — projeto nativo antigo sem esquema IEC recebe-o
+PASS — um esquema IEC do utilizador não é substituído
+PASS — a migração corre uma só vez
+PASS — projetos não nativos não são tocados
+PASS — o LOGO! aparece em bloco (L+ M I0.x / saídas a relé Q0.x)
+PASS — F1: elementos térmicos na potência e 95-96 no comando
+PASS — F1 e PLC1 existem no quadro 3D
+PASS — F1 disparado: o 95-96 abre, KM1 cai e o motor para
+PASS — 3D: F1 encaixado por baixo do KM1 (fora da calha)
+PASS — 3D: sem cabos KM1 → F1 (os pinos entram nos bornes 2T1/4T2/6T3)
+PASS — 3D: retorno da bobina pela passagem A2 do F1
+PASS — 3D: F1 2T1/4T2/6T3 → motor U1/V1/W1
+PASS — 3D: Q0.0 → 95-96 do F1 → bobina KM1 (A1)
+PASS — projeto antigo intacto recebe o F1 encaixado e a cablagem nova (sem o 98 → I0.3)
+PASS — depois, a migração dos sinalizadores liga o 98 → I0.3
+PASS — cablagem migrada igual à da semente
+PASS — projeto com a cablagem alterada não é tocado (marca a migração como feita)
+PASS — migração do F1 corre uma só vez
+PASS — F1 na calha passa a encaixado no KM1 e os cabos KM1 → F1 saem
+PASS — o retorno da bobina passa para a passagem A2 do F1
+PASS — esquema IEC v1 intacto passa ao v2 (LOGO! em bloco e F1)
+PASS — esquema IEC alterado pelo utilizador não é substituído
+PASS — esquema v2 intacto passa ao v3 (LOGO! com a frente do aparelho)
+PASS — esquema v2 alterado pelo utilizador mantém-se
+PASS — a cablagem antiga reproduz o erro «KM1:A2 (AC) a PS1:-V2 (DC)»
+PASS — a migração repõe a cablagem atual (fase em Q0.0, retorno ao Q0:4 pela passagem A2 do F1)
+PASS — depois da migração o diagnóstico fica sem erros
+PASS — um projeto já correto não é alterado
+PASS — 3D: +24 V → 97-98 do F1 → I0.3 do LOGO!
+PASS — 3D: Q0.3 → H3 e retorno pelo H2
+PASS — 3D: H1 verde (marcha), H2 laranja (parado), H3 vermelho (emergência)
+PASS — 3D: quadro com o sinal do F1 e o H3 sem avisos
+PASS — tags I0.3 F1 e Q0.3 H3
+PASS — GRAFCET: START arranca só com o F1 armado (I0.3 = 0)
+PASS — GRAFCET: o disparo do F1 (I0.3) devolve a X0 como a emergência e o STOP
+PASS — X0 sem falha: H2 PARADO (laranja) aceso, H3 apagado
+PASS — X0 com emergência premida: H3 EMERGÊNCIA aceso, H2 apagado
+PASS — X0 com o F1 disparado: H3 aceso, H2 apagado
+PASS — IEC: 97-98 do F1 ligado a I0.3
+PASS — IEC: H3 vermelho e H2 laranja
+PASS — IEC: F1 disparado dá sinal em I0.3 (em repouso 0)
+PASS — IEC: Q0.3 acende H3
+PASS — IEC: voltímetro MM1 na página Potência, como o MM1 do 3D (U1–V1 do motor)
+PASS — IEC: sem voltímetro nos 24 V (passou para o motor)
+PASS — IEC: motor em marcha → MM1 lê 400 V AC (U1–V1)
+PASS — IEC: motor parado (KM1 aberto) → MM1 lê 0 V
+PASS — IEC: QM1 desligado → MM1 lê 0 V
+PASS — voltímetro: 230 V fase-neutro, 400 V entre fases, 0 V sem tensão
+PASS — esquema v3 intacto passa ao v4 (F1 em I0.3, H3, voltímetro)
+PASS — esquema v3 alterado pelo utilizador mantém-se
+PASS — esquema v4 intacto passa ao v5 (voltímetro MM1 no motor)
+PASS — esquema v4 alterado pelo utilizador mantém-se
+PASS — migração: entra o H3 e o H2 passa a laranja
+PASS — migração: entram os cabos F1 → I0.3 e Q0.3 → H3
+PASS — migração: GRAFCET, programa e tags com o F1 e o H3
+PASS — migração: quadro sem avisos
+PASS — migração dos sinais corre uma só vez
+PASS — migração: com I0.3 já usado pelo utilizador só o 98 → I0.3 fica de fora; o H3 é ligado
+PASS — reparação v2: H3 ligado a Q0.3 e 97 aos +24 V (os 5 cabos de sinal)
+PASS — reparação v2: variáveis I0.3 F1 e Q0.3 H3 nas tags efetivas do LOGO! (plcTags)
+PASS — reparação v2: FC Outputs com a saída Q0.3 (H3) e Main refeito no programa efetivo (plcPrograms)
+PASS — reparação v2: quadro sem avisos
+PASS — migração: GRAFCET alterado pelo utilizador mantém-se
+PASS — semente: blocos com os nomes do gerador do GRAFCET e Main a chamar FC Grafcet/Outputs
+PASS — semente: memórias geradas em byte.bit (sem «M1» que a app converte ao abrir)
+PASS — migração: Ladder com os nomes antigos passa às convenções do gerador
+PASS — migração: Ladder trocado pelos bits de etapa volta ao registo de etapa, com um só OB100
+PASS — migração: blocos do utilizador ficam; bits de etapa gerados saem
+PASS — migração: Main com networks do utilizador não é tocado
+PASS — migração do Ladder corre uma só vez
+
+94 verificações do esquema IEC nativo passaram

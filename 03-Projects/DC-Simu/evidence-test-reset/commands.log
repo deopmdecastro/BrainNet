@@ -1,0 +1,23 @@
+PASS — Modelo: rodar 90° leva o 2.º borne para a esquerda do 1.º
+PASS — Modelo: os cabos são ortogonais
+PASS — Modelo: a próxima referência livre segue o prefixo IEC 81346
+PASS — Arranque direto: em repouso nada liga
+PASS — Arranque direto: S2 liga K1 e o motor roda no sentido horário
+PASS — Arranque direto: a retenção K1 13-14 mantém o motor depois de largar S2
+PASS — Arranque direto: S1 (NF) para o motor
+PASS — Arranque direto: o disparo do térmico F1 abre o 95-96 e para o motor
+PASS — Arranque direto: rearmar o térmico não volta a arrancar sozinho
+PASS — Arranque direto: com o disjuntor Q1 aberto o motor fica sem tensão
+PASS — Trocar duas fases inverte o sentido de rotação
+PASS — Sem uma fase o motor não arranca e o estado indica falta de fase
+PASS — Estrela-triângulo: S1 liga K1, K6 e K3 — motor em estrela
+PASS — Estrela-triângulo: após 5 s de K6 passa a triângulo (K3 desliga, K2 liga)
+PASS — Estrela-triângulo: K2 e K3 nunca ficam ligados ao mesmo tempo (encravamento)
+PASS — Estrela-triângulo: S0 desliga tudo
+PASS — Sem encravamento, K2 com K3 é detetado como curto-circuito e a simulação para
+PASS — A mensagem do curto-circuito mantém-se enquanto a simulação está parada
+PASS — Uma bobina que se desliga a si própria é detetada como oscilação
+PASS — Gravação: guardar e reabrir conserva o esquema e o tipo «Comandos elétricos»
+PASS — Gravação: Desfazer também repõe o esquema de comandos
+
+✅ TODOS OS TESTES PASSARAM

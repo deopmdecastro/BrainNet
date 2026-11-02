@@ -1,0 +1,23 @@
+PASS — TEST arma a falha no instante em que é premido
+PASS — RESET bloqueado com TEST premido
+PASS — RESET bloqueado com STOP premido
+PASS — RESET desbloqueado depois de libertar os dois botões
+PASS — TEST repetido/libertação coerente: false
+PASS — TEST repetido/libertação coerente: true
+PASS — TEST repetido/libertação coerente: true
+PASS — TEST repetido/libertação coerente: false
+PASS — Repetição não transforma TEST num toggle de rearme
+PASS — Arrasto igual nos dois sentidos, limitado a −1/1
+PASS — Gesto vazio ou não finito não roda o mecanismo
+PASS — Gesto curto não rearma; curso suficiente rearma à esquerda ou direita
+PASS — Peças azuis e vermelhas existentes conservam pivôs próprios
+PASS — RESET roda 35° para a esquerda
+PASS — RESET roda 35° para a direita
+PASS — RESET regressa ao centro ao largar
+PASS — STOP vermelho mantém o curso axial de 2,8 mm
+PASS — IEC encontra o F1 físico pela referência, sem duplicar o aparelho
+PASS — Projeto não nativo não liga aparelhos por coincidência de referência
+PASS — Projeção IEC começa armada
+PASS — Projeção IEC acompanha o disparo do 3D
+
+21 verificações TEST/RESET passaram

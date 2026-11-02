@@ -1,0 +1,17 @@
+PASS — os 14 GLB recebem acabamento e mecânica sem erros
+PASS — DF103NV: quatro gavetas articuladas
+PASS — DF101V: indicador de fusível fundido
+PASS — EAO 61: chave roda no canhão
+PASS — XA2ED33: manípulo separado do corpo e rotativo
+PASS — 3RU1116: botão de rearme salta no disparo
+PASS — GV2ME: botões I e O
+PASS — torre: três lentes com luz
+PASS — 3TK2840: LED POWER, CH1 e CH2
+PASS — XUKT1: LED de alimentação e de saída
+PASS — DPS: janela de estado
+PASS — CAD sem cores recebem materiais reais (todos)
+PASS — os tipos com mecânica entram no projeto
+PASS — Painel 3D desenhado com os componentes importados
+PASS — sem erros JavaScript (ok)
+
+✅ 15 verificações de acabamento e mecânica dos CAD importados
