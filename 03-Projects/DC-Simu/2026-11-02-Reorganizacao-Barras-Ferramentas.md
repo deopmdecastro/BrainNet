@@ -112,3 +112,20 @@ Análise concluída. Implementação a seguir: refinamentos incrementais no Tool
 - [ ] Correr smoke scripts de toolbar existentes.
 - [ ] Atualizar Design-Principles.md com a secção de breakpoints e o reforço de 2026-11-02.
 - [ ] Commit + push DC-Simu e BrainNet.
+
+## Progresso adicional (mesma sessão)
+
+### Mais agrupamentos no Toolbar.tsx
+- Introduzido `viewExtraItems` / `viewExtrasSections`.
+- Quando `tightRow2`: Exemplos / Importar / Limpar (IEC), Tabela (3D), Variáveis (GRAFCET) → ToolMenu «Mais».
+- Em desktop largo: botões visíveis como antes.
+- Botão Tabela duplicado removido.
+- Anotações e simulação continuam no grupo primário.
+
+### Design-Principles.md
+- `updated: 2026-11-02`.
+- Nova secção de agrupamento semântico, estados de densidade, tablet e princípio orientador, com ligação a esta decisão.
+
+### Branches
+- DC-Simu: `toolbar-reorg-2026-11-02` (2 commits).
+- BrainNet: `toolbar-docs-2026-11-02` (atualizado).

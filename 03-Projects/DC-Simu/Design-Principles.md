@@ -3,12 +3,14 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-11-01
-tags: [brainnet, dc-simu, design, ux]
+updated: 2026-11-02
+tags: [brainnet, dc-simu, design, ux, toolbar]
 ---
 # Princípios de interface do DC-Simu
 
 Esta nota reúne contexto para alterações de interface e interação. É uma síntese das decisões e do feedback de trabalho no projeto, não uma especificação imutável. Confirmar o código e o comportamento atual antes de propor uma alteração.
+
+**Atualização 2026-11-02** — reorganização das barras de ferramentas: ver [[2026-11-02-Reorganizacao-Barras-Ferramentas]].
 
 ## Utilizadores e tarefa
 
@@ -23,6 +25,10 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - Usar uma hierarquia clara entre modo atual, ferramenta ativa, objeto selecionado e estado da simulação. Manter endereços e valores técnicos legíveis e alinhados.
 - Barras de ferramentas: usar os elementos de `src/ui/toolbarKit.tsx` (histórico, malha/ímã/zoom, botão com atalho, separador, atalhos) em todos os editores; só as ações próprias de cada editor ficam fora do kit.
 - O que não cabe na largura disponível vai para um menu (`ToolMenu`), nunca para fora do ecrã nem para um deslize sem sinal. Cada item do menu diz o que faz, o atalho e, quando está desativado, o que falta para o ativar. Ações principais continuam em botão visível.
+- **Agrupamento semântico (2026-11-02)**: Projeto (Novo/Abrir/Guardar/BOM/PDF) · Histórico · Painéis/Simulação · Ferramentas de edição · Anotações · Extras da vista. As ações secundárias (Exemplos, Importar, Limpar, Tabela, Variáveis…) passam a `ToolMenu «Mais»` quando a barra está em `is-tight`; em desktop largo ficam como botões. Anotações e transporte de simulação permanecem no grupo primário.
+- **Estados de densidade**: `is-tight` oculta texto nos grupos secundários; `is-dense` também nos principais (`.tb-primary`). Em ≤ 1100 px + tight/dense os labels de texto desaparecem (tooltip e `aria-label` mantêm-se). Overflow é content-based (`useOverflowCompact`), não por breakpoint rígido.
+- **Tablet**: parity de layout com desktop (`TABLET_LAYOUT_WIDTH`); alvos de toque ≥ 34 px e altura de barra 44 px em `pointer: coarse` ou ≤ 900 px. Telemóvel usa `compactBar` + menus.
+- **Princípio orientador**: não mais botões → melhor organização; não perder funcionalidades → torná-las mais acessíveis via menus e hierarquia. Ver [[2026-11-02-Reorganizacao-Barras-Ferramentas]].
 - Zoom mostra sempre a mesma referência: 100 % = conteúdo enquadrado; o valor é clicável e volta ao enquadramento.
 - Adaptar painéis e controlos a ecrãs pequenos sem esconder a ação principal ou perder o contexto do objeto selecionado. Em ecrãs estreitos, dicas longas passam a pedido (um «?»), em vez de ocuparem o canvas.
 - O nome do projeto/título tem prioridade sobre ações secundárias no cabeçalho: as ações secundárias passam a ícone com nome acessível.
