@@ -7,6 +7,7 @@ updated: 2026-11-02
 repo: https://github.com/deopmdecastro/dc-simu
 commits:
   - 9803bcd
+  - 5a17e10
 tags: [dc-simu, simulacao, iec, 3d, vistas, bugfix]
 ---
 
@@ -32,3 +33,18 @@ Iniciar «simulação para todos» em 3D → IEC → 3D → IEC: a simulação f
 2. Em 3D: Play → «Todos os simuladores».
 3. Alternar IEC → 3D → IEC várias vezes.
 4. Esperado: estado RUN mantém-se; no IEC os contactos/bobinas continuam vivos; Stop pára tudo.
+
+
+## Extensão — outros simuladores (Ladder, GRAFCET, Monitor)
+
+Verificação de código (2026-11-02):
+
+| Vista | Motor | Persiste ao sair? | Notas |
+| --- | --- | --- | --- |
+| 3D Realista | `useSimStore` (interval global) | Sim | Sem stop no unmount |
+| Ladder | mesmo motor PLC | Sim | Só lê `runState` |
+| GRAFCET | mesmo motor + `grafcetRuntime` | Sim | Scan no tick global do store |
+| Esquema IEC | `useCommandsUi` | Sim (após 9803bcd) | Tick global; sem stop no unmount |
+| Monitor | só observação | n/a | Não pára a simulação |
+
+Correção adicional `5a17e10`: badge e barra usam **estado combinado** PLC+IEC — em qualquer vista Stop/Pausa/Reset actuam nos dois motores e o indicador mostra RUN se algum estiver a correr.
