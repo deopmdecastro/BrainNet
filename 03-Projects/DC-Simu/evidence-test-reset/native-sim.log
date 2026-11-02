@@ -1,0 +1,24 @@
+PASS — LOGO! mantém o borne Q0.2 (migração não o renomeia)
+PASS — Fonte PS1 alimentada (L/N de um disjuntor 2P)
+PASS — PLC1 alimentado (L+/M)
+PASS — Repouso: H2 (parado) acesa, H1 e KM1 apagados
+PASS — Repouso: motor parado
+PASS — START: KM1 fecha (retenção após largar)
+PASS — START: H1 (marcha) acesa e H2 apagada
+PASS — START: motor roda em sentido horário
+PASS — STOP: KM1 abre, H2 acende, H1 apaga
+PASS — STOP: motor pára
+PASS — TEST: preparação com motor em marcha
+PASS — TEST premido: KM1/M1 param, H1 verde apaga e H3 vermelho acende
+PASS — TEST premido: I0.3 recebe 97–98 e GRAFCET regressa a X0
+PASS — Largar TEST mantém disparo e falha, sem rearranque
+PASS — START com F1 disparado continua bloqueado
+PASS — RESET rearma sem ligar motor: H3 apaga e H2 parado acende
+PASS — Nova ordem START depois de RESET volta a ligar o motor
+PASS — IEC: F1 do quadro projeta o estado armado no símbolo F1
+PASS — IEC: TEST do F1 abre o comando e para o motor
+PASS — STOP da simulação mantém o disparo do F1
+PASS — Guardar/reabrir mantém disparo e liberta TEST
+PASS — Simulador abre em vista frontal e apenas M1 usa orientação isométrica
+
+✅ TODOS OS TESTES PASSARAM

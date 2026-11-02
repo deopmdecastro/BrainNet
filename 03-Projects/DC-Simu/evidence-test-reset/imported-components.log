@@ -1,0 +1,161 @@
+PASS — porta-fusíveis aberto isola também o neutro; fusíveis fundidos mantêm a ponte de neutro quando fechado
+PASS — surgeProtectorWegSpw02: sem curto permanente através do DPS (failed=false)
+PASS — surgeProtectorWegSpw02: sem curto permanente através do DPS (failed=true)
+PASS — surgeProtectorWegSpw12: sem curto permanente através do DPS (failed=false)
+PASS — surgeProtectorWegSpw12: sem curto permanente através do DPS (failed=true)
+PASS — CFC225P: dois polos, 300 mA, não um diferencial tetrapolar de 30 mA
+PASS — disparo abre fase e neutro do CFC225P
+PASS — térmico disparado conserva potência e comuta os auxiliares
+PASS — 3RU1116: onze bornes, incluindo o A2 da bobina do contactor
+PASS — 1L1/3L2/5L3 nos pinos do topo
+PASS — 2T1/4T2/6T3 na base, não na frente
+PASS — A2 na fila dos auxiliares, na frente
+PASS — RESET rearma o térmico disparado
+PASS — RESET sem disparo não arma nem dispara
+PASS — ensaio (TEST): abre 95–96 e fecha 97–98 enquanto premiado
+PASS — ao largar o ensaio, 95–96 volta a fechar
+PASS — STOP é momentâneo: fecha ao largar
+PASS — TEST simula disparo real e retido
+PASS — largar TEST liberta o cursor sem rearma
+PASS — corpo do aparelho simula o disparo por sobrecarga
+PASS — segundo clique no corpo não substitui RESET
+PASS — RESET não rearma enquanto TEST estiver premido
+PASS — RESET não rearma enquanto STOP estiver premido
+PASS — RESET rearma depois de libertar TEST e STOP
+PASS — zonas de clique medidas: STOP, RESET e TEST
+PASS — corpo e escala não são botões
+PASS — ponto do clique convertido para o referencial do GLB
+PASS — seletor mantém três posições distintas, sem fechar os dois contactos em conjunto
+PASS — sensor: o toque inverte a deteção (com `no` reposto)
+PASS — 3TK2840 não habilita com um canal aberto
+PASS — repor o canal não substitui um novo pedido de rearme
+PASS — rearme com os dois canais e retorno fechados alimenta as duas saídas estáticas
+PASS — perda de alimentação desabilita imediatamente o relé e as saídas
+PASS — chave EAO: repouso 11–12, chave rodada 11–14 (comutador do elemento desenhado no CAD)
+PASS — chave EAO volta ao repouso quando se larga (retorno por mola)
+PASS — torre: um fio por cor e o comum
+PASS — torre: a cor não acende sem o comum
+PASS — torre: cada cor acende com o seu fio e o comum
+PASS — fuseHolderSchneiderDf103nv: todos os bornes têm posição medida no CAD
+PASS — fuseHolderSchneiderDf103nv: borne criado no sítio medido
+PASS — fuseHolderSchneiderDf101v: todos os bornes têm posição medida no CAD
+PASS — fuseHolderSchneiderDf101v: borne criado no sítio medido
+PASS — fuseHolderSchneiderDf81n: todos os bornes têm posição medida no CAD
+PASS — fuseHolderSchneiderDf81n: borne criado no sítio medido
+PASS — keyActuatorEao61: todos os bornes têm posição medida no CAD
+PASS — keyActuatorEao61: borne criado no sítio medido
+PASS — thermalRelaySiemens3ru1116: todos os bornes têm posição medida no CAD
+PASS — thermalRelaySiemens3ru1116: borne criado no sítio medido
+PASS — residualBreakerHagerCfc225p: todos os bornes têm posição medida no CAD
+PASS — residualBreakerHagerCfc225p: borne criado no sítio medido
+PASS — selectorSchneiderXa2ed33: todos os bornes têm posição medida no CAD
+PASS — selectorSchneiderXa2ed33: borne criado no sítio medido
+PASS — contactorWegCwbc65: todos os bornes têm posição medida no CAD
+PASS — contactorWegCwbc65: borne criado no sítio medido
+PASS — surgeProtectorWegSpw02: todos os bornes têm posição medida no CAD
+PASS — surgeProtectorWegSpw02: borne criado no sítio medido
+PASS — surgeProtectorWegSpw12: todos os bornes têm posição medida no CAD
+PASS — surgeProtectorWegSpw12: borne criado no sítio medido
+PASS — safetyRelaySiemens3tk2840: todos os bornes têm posição medida no CAD
+PASS — safetyRelaySiemens3tk2840: borne criado no sítio medido
+PASS — motorBreakerSchneiderGv2me: todos os bornes têm posição medida no CAD
+PASS — motorBreakerSchneiderGv2me: borne criado no sítio medido
+PASS — towerLightSb23011: todos os bornes têm posição medida no CAD
+PASS — towerLightSb23011: borne criado no sítio medido
+PASS — photoSensorXukt1ksml2: todos os bornes têm posição medida no CAD
+PASS — photoSensorXukt1ksml2: borne criado no sítio medido
+PASS — projeto antigo: 95 passa da fila genérica do topo para a frente do relé
+PASS — projeto antigo: torre sem fios recebe R/Y/G/COM
+PASS — fuseHolderSchneiderDf103nv: referência disponível no catálogo
+PASS — fuseHolderSchneiderDf101v: referência disponível no catálogo
+PASS — fuseHolderSchneiderDf81n: referência disponível no catálogo
+PASS — keyActuatorEao61: referência disponível no catálogo
+PASS — thermalRelaySiemens3ru1116: referência disponível no catálogo
+PASS — residualBreakerHagerCfc225p: referência disponível no catálogo
+PASS — limitSwitchLongRoller: referência disponível no catálogo
+PASS — limitSwitchLongRoller: bloqueado enquanto falta o modelo neutro
+PASS — selectorSchneiderXa2ed33: referência disponível no catálogo
+PASS — contactorWegCwbc65: referência disponível no catálogo
+PASS — surgeProtectorWegSpw02: referência disponível no catálogo
+PASS — surgeProtectorWegSpw12: referência disponível no catálogo
+PASS — safetyRelaySiemens3tk2840: referência disponível no catálogo
+PASS — motorBreakerSchneiderGv2me: referência disponível no catálogo
+PASS — buttonStart22: referência disponível no catálogo
+PASS — buttonStart22: bloqueado enquanto falta o modelo neutro
+PASS — buttonStop22: referência disponível no catálogo
+PASS — buttonStop22: bloqueado enquanto falta o modelo neutro
+PASS — towerLightSb23011: referência disponível no catálogo
+PASS — photoSensorXukt1ksml2: referência disponível no catálogo
+PASS — caminho GLB contido em public
+PASS — fuseHolderSchneiderDf103nv: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — fuseHolderSchneiderDf103nv: GLB íntegro, escala métrica e dimensões coerentes
+PASS — fuseHolderSchneiderDf103nv: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — fuseHolderSchneiderDf101v: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — fuseHolderSchneiderDf101v: GLB íntegro, escala métrica e dimensões coerentes
+PASS — fuseHolderSchneiderDf101v: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — fuseHolderSchneiderDf81n: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — fuseHolderSchneiderDf81n: GLB íntegro, escala métrica e dimensões coerentes
+PASS — fuseHolderSchneiderDf81n: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — keyActuatorEao61: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — keyActuatorEao61: GLB íntegro, escala métrica e dimensões coerentes
+PASS — keyActuatorEao61: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — thermalRelaySiemens3ru1116: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — thermalRelaySiemens3ru1116: GLB íntegro, escala métrica e dimensões coerentes
+PASS — thermalRelaySiemens3ru1116: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — residualBreakerHagerCfc225p: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — residualBreakerHagerCfc225p: GLB íntegro, escala métrica e dimensões coerentes
+PASS — residualBreakerHagerCfc225p: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — selectorSchneiderXa2ed33: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — selectorSchneiderXa2ed33: GLB íntegro, escala métrica e dimensões coerentes
+PASS — selectorSchneiderXa2ed33: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — contactorWegCwbc65: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — contactorWegCwbc65: GLB íntegro, escala métrica e dimensões coerentes
+PASS — contactorWegCwbc65: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — surgeProtectorWegSpw02: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — surgeProtectorWegSpw02: GLB íntegro, escala métrica e dimensões coerentes
+PASS — surgeProtectorWegSpw02: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — surgeProtectorWegSpw12: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — surgeProtectorWegSpw12: GLB íntegro, escala métrica e dimensões coerentes
+PASS — surgeProtectorWegSpw12: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — safetyRelaySiemens3tk2840: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — safetyRelaySiemens3tk2840: GLB íntegro, escala métrica e dimensões coerentes
+PASS — safetyRelaySiemens3tk2840: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — motorBreakerSchneiderGv2me: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — motorBreakerSchneiderGv2me: GLB íntegro, escala métrica e dimensões coerentes
+PASS — motorBreakerSchneiderGv2me: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — towerLightSb23011: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — towerLightSb23011: GLB íntegro, escala métrica e dimensões coerentes
+PASS — towerLightSb23011: inserção 3D disponível
+PASS — caminho GLB contido em public
+PASS — photoSensorXukt1ksml2: uma primitiva por material em cada malha (sem buffers de posições repetidos)
+PASS — photoSensorXukt1ksml2: GLB íntegro, escala métrica e dimensões coerentes
+PASS — photoSensorXukt1ksml2: inserção 3D disponível
+PASS — fuseHolderSchneiderDf103nv: inserção real na store
+PASS — fuseHolderSchneiderDf101v: inserção real na store
+PASS — fuseHolderSchneiderDf81n: inserção real na store
+PASS — keyActuatorEao61: inserção real na store
+PASS — thermalRelaySiemens3ru1116: inserção real na store
+PASS — residualBreakerHagerCfc225p: inserção real na store
+PASS — selectorSchneiderXa2ed33: inserção real na store
+PASS — contactorWegCwbc65: inserção real na store
+PASS — surgeProtectorWegSpw02: inserção real na store
+PASS — surgeProtectorWegSpw12: inserção real na store
+PASS — safetyRelaySiemens3tk2840: inserção real na store
+PASS — motorBreakerSchneiderGv2me: inserção real na store
+PASS — towerLightSb23011: inserção real na store
+PASS — photoSensorXukt1ksml2: inserção real na store
+PASS — guardar/reabrir conserva os 14 componentes e os tipos específicos
+
+174 verificações de componentes importados passaram

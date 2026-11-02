@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "event_id": "demo-handoff-001",
+  "source": "github",
+  "project_id": "BN-demo-website-001",
+  "objective": "Rever os requisitos do website antes de iniciar o desenvolvimento.",
+  "files": ["03-Projects/BraiNet-Website/Requirements.md"],
+  "acceptance": ["Requisitos têm critérios verificáveis e campos desconhecidos assinalados"],
+  "constraints": ["Não publicar", "Não inventar clientes, resultados ou orçamento"]
+}

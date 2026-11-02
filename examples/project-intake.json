@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "event_id": "demo-website-001",
+  "project": {
+    "name": "BraiNet Website — exemplo de teste",
+    "type": "website",
+    "problem": "Organizar a apresentação dos serviços e a receção de pedidos.",
+    "audience": "A confirmar em discovery; dado ilustrativo para teste.",
+    "objectives": ["Apresentar os serviços", "Preparar um percurso de contacto"],
+    "expected_result": "Briefing para revisão, sem publicação nem envio de mensagens."
+  }
+}

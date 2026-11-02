@@ -1,0 +1,14 @@
+PASS — GLB real montado com o pivô RESET azul
+PASS — Preparação: motor em marcha e H1 verde aceso
+PASS — TEST físico premido: motor parado, verde OFF, vermelho ON, I0.3 e X0 — {"test":true,"trip":true,"stop":false,"motor":false,"green":false,"red":true,"i03":true,"step":"native-s0","run":"running"}
+PASS — TEST físico libertado: dispara fica retido, sem rearranque
+PASS — RESET: arrasto curto não rearma
+PASS — RESET esquerda: ainda premido, não rearma antes de concluir o gesto
+PASS — RESET esquerda: rearma ao concluir, sem ligar o motor
+PASS — RESET direita: ainda premido, não rearma antes de concluir o gesto
+PASS — RESET direita: rearma ao concluir, sem ligar o motor
+PASS — Perda de foco liberta TEST e mantém o disparo
+PASS — Nova ordem START depois de RESET restaura a marcha
+PASS — Sem erros JavaScript (nenhum)
+
+12 verificações físicas TEST/RESET passaram

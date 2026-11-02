@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "purpose": "review-shortlist; not a Codex runtime config or an installed-skill filter",
+  "reviewed_at_utc": "2026-10-18T18:50:38.596175+00:00",
+  "source": {
+    "repository": "https://github.com/affaan-m/ECC",
+    "commit": "76aaa77df6adc5b889e689007bf99b9a4f74af34",
+    "version": "2.2.3",
+    "license": "MIT"
+  },
+  "catalog": {
+    "marketplace": "ecc",
+    "plugin_id": "ecc@ecc",
+    "skills_count": 311,
+    "agents_count": 71,
+    "registered": true,
+    "available_in": [
+      "DC-Simu",
+      "BrainNet"
+    ],
+    "installed": false,
+    "enabled": false,
+    "native_hooks_trusted_by_this_task": false,
+    "mcp_started_by_this_task": false
+  },
+  "projects": {
+    "DC-Simu": {
+      "primary": [
+        {
+          "name": "security-review",
+          "proposed_role": "Farol / Nexo",
+          "source_path": "skills/security-review/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/security-review/SKILL.md",
+          "sha256": "b9eb6416eebc8dda046674f0a2dbb3be88aff526d182b60a0f55998d3d6d0d8d",
+          "adaptation": "Reconfirm n8n findings in current code; no secret values in reports."
+        },
+        {
+          "name": "verification-loop",
+          "proposed_role": "Farol",
+          "source_path": "skills/verification-loop/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/verification-loop/SKILL.md",
+          "sha256": "5b06be54d4852f60e6cf1b04c6e9a4748554334eb3e41af6c0959b544e6464ae",
+          "adaptation": "Use existing package.json scripts and PowerShell; do not assume lint or coverage support."
+        },
+        {
+          "name": "react-patterns",
+          "proposed_role": "Bobina",
+          "source_path": "skills/react-patterns/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/react-patterns/SKILL.md",
+          "sha256": "f3208d44a5d553038c42e046cec4dc16e4a3d90a9dbf931f883a2e21919a64a9",
+          "adaptation": "React 18, Zustand and R3F; exclude React 19/RSC-only examples."
+        }
+      ],
+      "optional": [
+        {
+          "name": "react-testing",
+          "proposed_role": "Farol / Bobina",
+          "source_path": "skills/react-testing/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/react-testing/SKILL.md",
+          "sha256": "51c18b4e28285bb876ef469e47c6f53108b5a9f900950a60e897c3c24826a65e",
+          "adaptation": "Preserve smoke/Playwright workflow; no automatic test-library installation."
+        },
+        {
+          "name": "contract-first",
+          "proposed_role": "Nexo",
+          "source_path": "skills/contract-first/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/contract-first/SKILL.md",
+          "sha256": "3eaacf16a9bbd92888659e9c1e15b0fa4eb96a41c257dd9e08f2e63b824f0cea",
+          "adaptation": "Reuse the current client/proxy/n8n boundary contract before proposing another schema."
+        }
+      ]
+    },
+    "BrainNet": {
+      "primary": [
+        {
+          "name": "docs-governance",
+          "proposed_role": "Prumo",
+          "source_path": "skills/docs-governance/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/docs-governance/SKILL.md",
+          "sha256": "499ac59071e6e2b8fb60f085e337a3a1ec16e200adb8f5b8bc027afb338cf3eb",
+          "adaptation": "Reuse existing vault documents and npm run check; no parallel documentation system."
+        },
+        {
+          "name": "automation-audit-ops",
+          "proposed_role": "Nexo",
+          "source_path": "skills/automation-audit-ops/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/automation-audit-ops/SKILL.md",
+          "sha256": "71aa878fd06ef02f0c8ca50eaaee0ec45995981d769d8701806b9b83ca8a2f2c",
+          "adaptation": "Read-only evidence inventory; do not change services or claim auth/readiness from config alone."
+        },
+        {
+          "name": "contract-first",
+          "proposed_role": "Nexo / Prumo",
+          "source_path": "skills/contract-first/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/contract-first/SKILL.md",
+          "sha256": "3eaacf16a9bbd92888659e9c1e15b0fa4eb96a41c257dd9e08f2e63b824f0cea",
+          "adaptation": "automation/lib/contracts.mjs remains the executable source of truth."
+        }
+      ],
+      "optional": [
+        {
+          "name": "context-and-decisions",
+          "proposed_role": "Prumo",
+          "source_path": "skills/context-and-decisions/SKILL.md",
+          "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/context-and-decisions/SKILL.md",
+          "sha256": "5158283621d6d15288dab50fc2e884cf114b8d91137e45e619bf3dff4740f3e0",
+          "adaptation": "Reuse Architecture.md and existing project Decision-Log notes before creating artifacts."
+        }
+      ]
+    }
+  },
+  "shared_candidates": [
+    {
+      "name": "mcp-dependency-review",
+      "proposed_role": "Farol",
+      "source_path": "skills/mcp-dependency-review/SKILL.md",
+      "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/mcp-dependency-review/SKILL.md",
+      "sha256": "766536baa981710a85c8f761675f6a57f58600fff42b23ccf6171606180f4c12",
+      "adaptation": "Static inspection only; do not start discovered commands."
+    },
+    {
+      "name": "search-first",
+      "proposed_role": "Prumo / Bobina",
+      "source_path": "skills/search-first/SKILL.md",
+      "source_url": "https://github.com/affaan-m/ECC/blob/76aaa77df6adc5b889e689007bf99b9a4f74af34/skills/search-first/SKILL.md",
+      "sha256": "76835db48dd910061d2e4271b1151793d2fddbabeb2d2866eed068b3580c55d5",
+      "adaptation": "Use existing search capabilities; no automatic subagent delegation from an external example."
+    }
+  ],
+  "deferred": [
+    {
+      "component": "vite-patterns",
+      "reason": "Reviewed skill targets Vite 8+; DC-Simu declares Vite 5.4.9."
+    },
+    {
+      "component": "ECC OpenCode adapter",
+      "reason": "Reference agents enable tools; preserve the existing DeepSeek context-only profile."
+    },
+    {
+      "component": "knowledge-ops",
+      "reason": "Claude/MCP memory and external tracker assumptions require adaptation to BrainNet ownership."
+    },
+    {
+      "component": "autonomous loops / continuous learning / ECC GitHub App",
+      "reason": "Outside this exploratory pilot."
+    }
+  ],
+  "native_bundle": {
+    "mcp": {
+      "chrome-devtools": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "chrome-devtools-mcp@1.10.1"
+        ]
+      }
+    },
+    "hook_events": [
+      "SessionStart"
+    ]
+  }
+}
