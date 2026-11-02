@@ -78,3 +78,19 @@ Referência visual: screenshots do utilizador (IEC e GRAFCET mostram cabeçalho 
 
 ### Branches / commits
 A implementar em seguida (commit + push em ambos os repos).
+
+---
+
+## Extensão 2026-11-02 — Painel direito do 3D também em baixo no telemóvel
+
+Pedido: «O painel do lado direito no 3D, deve abrir em baixo também.»
+
+### Implementação (dc-simu)
+- Novo `src/components/SchematicSimDock.tsx` — espelho do `CommandsSimDock` (SidePanelHeader + grafcet-properties + RightDockPanel mode=schematic).
+- `App.tsx`: `phoneSchematic` / `phoneBottomDock`; no telemóvel o 3D deixa de montar a coluna/gaveta da direita e monta o painel em baixo na coluna do canvas.
+- `mobile-refine.css`: regras de altura/rolagem/safe-area para `.schematic-sim-dock-phone`.
+- Backdrop mobile não cobre o canvas só por causa do painel de baixo (só biblioteca / gavetas laterais).
+
+### Aceitação
+- [x] No telefone, 3D Realista: painel completo (GRAFCET / E/S / Objetos / Diagnóstico) abre em baixo com o mesmo cabeçalho que IEC e GRAFCET.
+- [ ] Confirmar visualmente no telemóvel.
