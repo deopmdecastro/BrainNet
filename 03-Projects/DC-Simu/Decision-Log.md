@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: decisions
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-10-27
+updated: 2026-11-02
 tags: [brainet, dc-simu, decisions]
 ---
 # Decisões do DC-Simu
@@ -108,3 +108,4 @@ O código em `dc-simu/` tem histórico próprio e o BrainNet guarda o seu commit
 | DC-ADR-084 | 2026-11-02 | Os PLC Siemens S7 (DI 32, CPU 1511C e CPU 315-2 DP) têm de estar na pose do aparelho — de pé, frente em +Z, perfil de calha encostado à chapa — porque os três CAD vêm em referenciais diferentes e apareciam de perfil no Painel 3D. S7-1500 com `Rx(−90)` e medidas 47/85 × 147 × 131,7 mm; S7-300 **sem rotação** (o CAD já vem de face). Os bornes passam a declarar a **face do cabo** (`front`) além da posição no encaixe: nos Siemens o encaixe está na lateral do CAD mas o fio sai pela frente. As lâmpadas ficam nos sítios medidos do aparelho (3 no S7-1500, 6 na CPU 315) e só acendem com L+/M ligados, o que obrigou a dar alimentação a estes PLC como ao LOGO!. A regra geral para CAD de calha: a frente é a face oposta ao encaixe, e o eixo `y` do inspetor de bornes conta a altura da base para o topo (as medidas do CAD contam-se de cima para baixo) | Pedido explícito do utilizador («ver as posições e vistas dos PLC, se os bornes estão nos sítios certos, o esquema IEC e os LEDs») com captura do telemóvel onde a CPU 315 aparecia em torre; [[Validation-2026-11-02-PLC-Siemens-Pose-Bornes-Leds]] |
 
 | DC-ADR-085 | 2026-11-02 | A alimentação DC L+/M (`logoElectricalInputs`) aplica-se ao LOGO! 12/24RC **e** aos Siemens S7. Na integração S7 a condição ficou só em `SIEMENS_S7_TYPES`, o LOGO! ficou com `state.powered=false` e as pontes dos contactos de relé (`powered !== false`) nunca fechavam — a simulação do nativo «Partida direta» parava de energizar KM1, H1/H2 e o motor. | Regressão detetada pelo utilizador («simulação no projeto nativo não funciona»); evidência e correção em [[Validation-2026-11-02-Sim-Nativo-LOGO-Powered]]; teste `test:native-sim` 22/22 PASS |
+| DC-ADR-086 | 2026-11-02 | Em RUN e PAUSA não há seleção nem edição de componentes, cabos, bornes ou textos (3D e Esquema 2D). Só botões e atuadores atuam. Ao entrar em RUN/PAUSA a seleção anterior é largada. A sonda do multímetro continua a medir (medição, não edição). Substitui o comportamento de seleção em RUN do smoke de 2026-10-29. Estado: IMPLEMENTED_TESTED no 3D e na store; Esquema 2D sem teste de browser (carregamento não concluído no ambiente de teste) | Pedido explícito do utilizador 2026-10-28 (DC-ADR-071); [[Task-2026-10-28-Sim-Lock-Wires-Breaker]]; [[Validation-2026-11-02-Sim-Bloqueio-Edicao]] |

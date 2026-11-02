@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: task
 status: IN_PROGRESS
 created: 2026-10-28
-updated: 2026-10-28
+updated: 2026-11-02
 tags: [dc-simu, simulation, lock, wires, cables, electricity-effect, breaker, motor-protection, 3d]
 ---
 # Tarefa 2026-10-28 — Bloquear edição em RUN + cabos sem atravessar chapas + efeito elétrico por cor + sentido do disjuntor motor
@@ -35,4 +35,5 @@ tags: [dc-simu, simulation, lock, wires, cables, electricity-effect, breaker, mo
 - [ ] Commit preparado (push depende de token válido).
 
 ## Estado
-Preparação: requisitos capturados · Implementação: em curso.
+- **Item 1 (bloqueio em RUN/PAUSA): IMPLEMENTED_TESTED** em 2026-11-02 — commit `db12006` no `dc-simu`. Ver [[Validation-2026-11-02-Sim-Bloqueio-Edicao]] e [[Decision-Log]] DC-ADR-086.
+- Item 2 (cabos sem atravessar chapas), item 3 (efeito elétrico pela cor do cabo) e item 4 (sentido do disjuntor motor): **pendentes**, não tratados nesta entrega.
