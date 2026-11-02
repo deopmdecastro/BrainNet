@@ -28,3 +28,6 @@ Seguidos `AGENTS.md`, `00-Dashboard/Home.md`, `00-Dashboard/Architecture.md`, `D
 - [ ] `git diff --check`
 - [ ] commit/push no `dc-simu`
 - [ ] commit/push no `BrainNet` com referência ao commit do submódulo
+
+## Melhoria posterior da modal de criação — 2026-11-02
+A modal de criação de projetos foi refinada no DC-Simu: largura maior no desktop, grelha de tipos em duas colunas, melhor agrupamento semântico, destaque de seleção e adaptação a uma coluna em ecrãs pequenos. Commit: `fa4206f`.
