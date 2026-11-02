@@ -43,3 +43,6 @@ Foi criado `examples/g3-manual-cilindro-a.json`, um GRAFCET manual autónomo bas
 
 ## Manuais B, C, D e E — 2026-11-02
 Criados quatro GRAFCETs manuais autónomos em `examples/`: B (`Y2_B+`/`Y3_B-`), C (`Y4_C+`/`Y4_C-`), D (`Y5_D+`/`Y6_D-`) e E (`Y7_E+_Vacuo_On`/`Y8_E-_Vacuo_Off`). Cada um tem etapas de comando, confirmação, retorno e ciclo de repouso, usando comparações explícitas na modal. O manual C assinala que `Y4_C-`, `fc_c1` e `fc_c0` não estavam presentes no projeto de origem e foram incluídos como pontos de completar/ligar aos sinais reais. Commit DC-Simu: `2b66f02`.
+
+## Transição C temporizada — 2026-11-02
+O manual C foi corrigido: a transição de avanço passou a usar `T(2s) * fc_c1`, aguardando dois segundos e confirmando o fim de curso C1. O tempo pode ser alterado diretamente na condição da transição. Commit DC-Simu: `711ddd7`.
