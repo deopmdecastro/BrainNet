@@ -37,3 +37,6 @@ O DC-Simu passou a expor Ctrl+X no sistema de atalhos universal. IEC copia e cor
 
 ## Clarificação da sintaxe de estado — 2026-11-02
 A modal passou a explicar diretamente: `G0 <> X9` significa que X9 está inativa; `G0 <=> X9` significa que X9 está ativa. O bloco mostra estas formas no título e junto ao seletor, e informa que `G0X9` sem operador é ambíguo/inválido. Commit DC-Simu: `14f000b`.
+
+## G3 Manual — Cilindro A — 2026-11-02
+Foi criado `examples/g3-manual-cilindro-a.json`, um GRAFCET manual autónomo baseado no esquema IEC 60848 fornecido. Inclui as ações `Y0_A+` na etapa 143 e `Y1_A-` na etapa 147, as receptividades `G0X4 * bp_Avança_A+`, `fc_a1 * bp_Avança_A+`, `fc_a0 * bp_Avança_A+ * G0<>X4`, e o ramo de sincronização com X9. Commit DC-Simu: `8dab20c`.
