@@ -31,3 +31,6 @@ Seguidos `AGENTS.md`, `00-Dashboard/Home.md`, `00-Dashboard/Architecture.md`, `D
 
 ## Melhoria posterior da modal de criação — 2026-11-02
 A modal de criação de projetos foi refinada no DC-Simu: largura maior no desktop, grelha de tipos em duas colunas, melhor agrupamento semântico, destaque de seleção e adaptação a uma coluna em ecrãs pequenos. Commit: `fa4206f`.
+
+## Clipboard entre páginas — 2026-11-02
+O DC-Simu passou a expor Ctrl+X no sistema de atalhos universal. IEC copia e corta a seleção; GRAFCET copia/cola subdiagramas e corta a seleção; Ladder copia/corta a network ativa e cola numa página Main, com ids novos e histórico por Ctrl+Z. Commit DC-Simu: `7230879`.
