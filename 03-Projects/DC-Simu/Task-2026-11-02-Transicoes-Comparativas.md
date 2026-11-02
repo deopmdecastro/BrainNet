@@ -34,3 +34,6 @@ A modal de criação de projetos foi refinada no DC-Simu: largura maior no deskt
 
 ## Clipboard entre páginas — 2026-11-02
 O DC-Simu passou a expor Ctrl+X no sistema de atalhos universal. IEC copia e corta a seleção; GRAFCET copia/cola subdiagramas e corta a seleção; Ladder copia/corta a network ativa e cola numa página Main, com ids novos e histórico por Ctrl+Z. Commit DC-Simu: `7230879`.
+
+## Clarificação da sintaxe de estado — 2026-11-02
+A modal passou a explicar diretamente: `G0 <> X9` significa que X9 está inativa; `G0 <=> X9` significa que X9 está ativa. O bloco mostra estas formas no título e junto ao seletor, e informa que `G0X9` sem operador é ambíguo/inválido. Commit DC-Simu: `14f000b`.
