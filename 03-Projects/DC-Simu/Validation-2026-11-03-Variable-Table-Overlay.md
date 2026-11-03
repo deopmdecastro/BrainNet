@@ -39,3 +39,16 @@ Componente partilhado `VariableTableOverlay` (`src/ui/VariableTableOverlay.tsx`)
 Reutiliza a tabela de tags e o import Excel já existentes — não é uma cópia estática.
 
 [[Design-Principles]] · [[Backlog]]
+
+## Atualização — importar do projeto (transições e acionamentos)
+
+Botão **«Do projeto»** na tabela flutuante:
+
+1. Corre `detectGrafcetSignalsDetailed` sobre o GRAFCET do projeto (mesmo no canvas IEC — o projeto é partilhado).
+2. Recolhe endereços I/Q/M nas **condições das transições** e nas **ações**.
+3. Recolhe **variáveis simbólicas** (Start, fc_a0, L_Verde, Y0_A…) usadas em condições (→ entradas I) e escritas por acionamentos (→ saídas Q), atribuindo o primeiro endereço livre.
+4. Só acrescenta o que ainda não está na tabela de tags; mensagem de estado com o resumo.
+
+Commit: `e3f9222`.
+
+Uso: abrir **Variáveis** → **Do projeto**.
