@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IN_PROGRESS
+status: IMPLEMENTED
 created: 2026-11-03
 updated: 2026-11-03
 tags: [dc-simu, rele-termico, 3ru1116, test, luz, h3, cover, 3d]
