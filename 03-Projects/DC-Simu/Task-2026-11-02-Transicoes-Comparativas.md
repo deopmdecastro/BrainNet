@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: task
 status: IMPLEMENTED_PENDING_VALIDATION
 created: 2026-11-02
-updated: 2026-11-02
+updated: 2026-11-03
 tags: [dc-simu, grafcet, transicao, comparacao]
 ---
 # Transições comparativas entre GRAFCETs
@@ -55,3 +55,10 @@ O bloco «Estado de outra etapa» saiu da coluna estreita das Origens e passou a
 `examples/grafcet-atec-com-manuais.json` junta ao projeto ATEC (G0 controlo, G1 funcionamento, G2 reset) os GRAFCETs manuais G3–G7 dos cilindros A–E, no padrão do desenho «G3 - Manual - Cilindro A»: repouso (141/151/161/171/181), avanço por `G0X4 * bp_Avanca_<k>+`, recuo por fim de curso + botão, saída do manual por `G0<>X4` e etapa de emergência por transição-fonte `G0X9`, libertada por `/G0X9`. T9, T26 e T28 passaram a transições-fonte (antes não disparavam). O motor passou a aceitar `bp_A+ + …` (sufixo + seguido de OU) e a ler sinais com maiúsculas e minúsculas. Commit DC-Simu: `14ab92f`.
 - Testado: `npm test` (com 2 verificações novas), `typecheck`, `test:grafcet-examples`, `test:grafcet-dialogs`, `test:grafcet-signals`, `test:fluidsim`; simulação do cenário manual A/B, saída do manual, emergência e rearme. `test:grafcet-links` já falhava antes (posição de ações).
 - Pendências: `fc_c0/fc_c1`, `fc_d0/fc_d1` e `Vacuo_OK` não existem no projeto de origem; `Y7_E+_Vacuo_On`/`Y8_E-_Vacuo_Off` são nomes inválidos para o motor (já vinham de G1/G2); botão por nível reinicia o ciclo se ficar premido; disposição no desenho não verificada visualmente.
+
+## Dependências de estado entre GRAFCETs e nova modal — 2026-11-03
+A modal deixou de ser uma lista de campos e passou a ter três blocos claros: identidade + receptividade na mesma linha, ligações (origens → destinos, limitadas às etapas da página) e «Depende do estado de etapas», que substitui o antigo «Estado de outras etapas». As equivalências documentais passaram a cartões compactos recolhíveis, com remoção por registo.
+
+A funcionalidade pedida ficou no motor: `G1 <=> X11` / `G1 <> X11` leem a etapa 11 da **página G1** (G0 = primeira página), com contagem de etapas por grafo e queda para a numeração global quando a página ou a etapa não existem — os projetos e importações anteriores continuam válidos. `stepStateReferences` é a leitura única das referências de estado (modal, validação e avaliação).
+
+Commit DC-Simu: `2ea1e8f`. Detalhe, verificações e pendências: [[Validation-2026-11-03-Transicoes-Estado-Entre-GRAFCETs]].

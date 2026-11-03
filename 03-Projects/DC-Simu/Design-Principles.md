@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: product-design
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-11-02
+updated: 2026-11-03
 tags: [brainnet, dc-simu, design, ux, toolbar]
 ---
 # Princípios de interface do DC-Simu
@@ -102,6 +102,10 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 - A geração de Ladder tem de preservar networks manuais e identificar os estados sem Ladder, sincronizado, desatualizado e bloqueado por erros. A sincronização automática é uma preferência visível e reversível.
 - Na vista Ladder, mostrar o estado da parte gerada pelo GRAFCET e permitir abrir essa vista para corrigir ou atualizar a sequência.
 - Endereços partilhados devem manter a ligação às variáveis do projeto; não criar um modelo independente para uma vista sem necessidade.
+
+- **Páginas = GRAFCETs numerados (2026-11-03)**: a 1.ª página é `G0` e as seguintes `G1`, `G2`… Todas correm no mesmo motor, por isso uma transição pode depender do estado de uma etapa de outra página: `G1 <=> X11` (etapa 11 ativa) e `G1 <> X11` (inativa). `X<n>` e `G0X<n>` continuam a valer para a numeração global; sem página/etapa correspondente a leitura cai nela, para os projetos importados não mudarem de comportamento. A leitura vive numa só função (`stepStateReferences`) usada pela modal, pela validação e pela simulação.
+- **Modal de transição**: nome e receptividade na mesma linha; ligações (origens → destinos) com a página `G0` assinalada e **só** com etapas dessa página; dependências de estado num construtor `GRAFCET → etapa → ativa/inativa → Adicionar` (lista de etapas filtrada pela página, com número e nome); o que é documental (equivalências com outros GRAFCETs) fica em cartões compactos recolhíveis e **nunca** se mistura com o que decide o disparo — [[Validation-2026-11-03-Transicoes-Estado-Entre-GRAFCETs]].
+- Uma dependência de outro GRAFCET tem sempre **dois sinais**: a etiqueta `G1` + «outro GRAFCET» e o traço tracejado do termo; nunca só a cor.
 
 - Em ecrãs estreitos, uma lista de navegação longa não se resolve com deslocamento horizontal: mostrar a secção atual e abrir a lista completa num só botão (folha inferior), com os grupos visíveis.
 - Uma barra fixa de ações (gravar, aplicar) nunca tapa conteúdo: a área de trabalho reserva espaço para a sua altura e as ações secundárias passam para um menu.
