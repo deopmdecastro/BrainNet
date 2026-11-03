@@ -39,3 +39,10 @@ Commit DC-Simu `24c8e87`. Removidos 20,6 MB (13 ficheiros), cabeçalhos anti-cli
 - O sparse-checkout local deixou de ser necessário (`git sparse-checkout disable` no clone local, opcional).
 - Retirar a dependência de dev `supabase` só se a CLI não for usada (o README do Supabase usa-a).
 - Validação manual na aplicação após o deploy.
+
+## CI — 2026-11-03 (tarde)
+O CI falhava em todos os pushes do dia. Commit DC-Simu `5b71f7c`:
+- **Código:** migração dos olhais do motor nativo identificava os cabos por ids antigos (os projetos guardados ficavam com ponteira dupla em U1/V1); exportação do catálogo encostava à face as pontas de fio fora do corpo (sensores/torres).
+- **Estrutura:** `test:commands-symbols-ui` e `test:right-dock-ui` precisam de navegador e servidor e estavam no job sem eles; passaram para o job de interface.
+- **Testes desatualizados (9):** alterações intencionais do produto (espaço entre ações, passagem A2 do F1, notas do nativo, peças procedurais, pontes de sinalização, edição por toque, painel de simulação só abaixo de 1200 px, «Organizar» no tablet).
+- **Resultado no GitHub (run 41678842944):** job «Tipos, testes e build» **verde**; job de interface (informativo) falha em `test:grafcet-ui`, que passa localmente com o mesmo Chromium (106 verificações). Falta ler o registo desse passo no GitHub para identificar a diferença de ambiente.

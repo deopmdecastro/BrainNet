@@ -44,13 +44,13 @@ Melhorar a apresentação da informação de revisão **no editor** (não só no
 4. Garantir que funciona em telemóvel/tablet (altura limitada, overflow).
 
 ## Critérios de aceite
-- [ ] Banner no topo do editor GRAFCET (modo full) mostra estado de revisão de forma organizada.
-- [ ] Avisos agrupados por categoria (reutilizar `groupWarnings`).
-- [ ] Contagem visível de avisos.
-- [ ] Botão «Concluir revisão» com estilo `dc-btn` / primário.
-- [ ] Não regredir o diálogo de importação.
-- [ ] Visual alinhado com Design-Principles (hierarquia, compacto, azul/seleção, neutros).
-- [ ] Typecheck e smoke relevantes passam.
+- [x] Banner no topo do editor GRAFCET (modo full) mostra estado de revisão de forma organizada.
+- [x] Avisos agrupados por categoria (reutilizar `groupWarnings`).
+- [x] Contagem visível de avisos.
+- [x] Botão «Concluir revisão» com estilo `dc-btn` / primário.
+- [x] Não regredir o diálogo de importação.
+- [x] Visual alinhado com Design-Principles (hierarquia, compacto, azul/seleção, neutros).
+- [x] Typecheck e smoke relevantes passam.
 
 ## Notas de implementação
 - Extrair `groupWarnings` para um util partilhado se fizer sentido (ou duplicar minimamente).
@@ -106,3 +106,5 @@ Bloco `.grafcet-review-banner*` acrescentado no final (hierarquia visual, badge,
 
 ## Estado
 Preparação · código do banner e CSS preparados · integração no Editor pendente de clone estável do repositório.
+
+> Implementado em 2026-11-03 (DC-Simu `6c5b32f`, `cc9076e`): barra compacta com erros em direto e notas agrupadas; detalhes em modal; teste de construção com `Grafcet ATEC.ct` (45 verificações). Ver [[Task-2026-11-02-Modal-Exportar-PDF]].

@@ -109,9 +109,9 @@ Análise concluída. Implementação a seguir: refinamentos incrementais no Tool
 
 ### Próximos passos
 - [ ] Verificar visualmente em 3D / Ladder / GRAFCET / IEC (desktop + tablet + phone).
-- [ ] Correr smoke scripts de toolbar existentes.
-- [ ] Atualizar Design-Principles.md com a secção de breakpoints e o reforço de 2026-11-02.
-- [ ] Commit + push DC-Simu e BrainNet.
+- [x] Correr smoke scripts de toolbar existentes.
+- [x] Atualizar Design-Principles.md com a secção de breakpoints e o reforço de 2026-11-02.
+- [x] Commit + push DC-Simu e BrainNet.
 
 ## Progresso adicional (mesma sessão)
 
@@ -132,3 +132,5 @@ Análise concluída. Implementação a seguir: refinamentos incrementais no Tool
 
 ## Atualização 2026-11-03 — ações à vista no PC e no tablet
 Por indicação do utilizador, a segunda linha (só PC e tablet) deixa de agrupar ações em menus «•••»: «Extras da vista» e «Sequência, modelos e ficheiros GRAFCET» passam a botões de ícone (`ToolInlineItems`), com nome, explicação e atalho na dica. Em barra apertada perdem só o texto; o «Alinhar» continua menu (precisa de seleção). Telemóvel inalterado (barra compacta). Isto substitui, para PC/tablet, a regra «secundárias vão para menus». Testado: `npm test`, `test:style`, `test:landing-editor`, `test:toolbar-row2-ui`, `test:commands-ui`, construção GRAFCET (45), capturas a 1440 e 1024 px. `test:grafcet-ui` atualizado: o painel de simulação inferior só existe abaixo de 1200 px (desde `4102822`), por isso as verificações do simulador correm a 1100 px e o teste confirma que o painel não aparece no ecrã largo — 106 verificações (commit `c1ed9ef`). Commit DC-Simu: `678d11c`.
+
+> 2026-11-03: smoke de barra (`test:toolbar-row2-ui`, `test:commands-ui`, `test:landing-editor`) a passar; Design-Principles atualizado com a regra PC/tablet. Verificação visual feita no GRAFCET (1440 e 1024 px) e no IEC (teste); falta 3D/Ladder e telemóvel.

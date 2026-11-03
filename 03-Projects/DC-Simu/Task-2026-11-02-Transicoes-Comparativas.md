@@ -21,13 +21,13 @@ Melhorar a modal de propriedades de transição para documentar equivalências c
 Seguidos `AGENTS.md`, `00-Dashboard/Home.md`, `00-Dashboard/Architecture.md`, `Design-Principles.md`, `Requirements.md`, `Backlog.md` e a validação anterior de condições/ligações/importação. O desenho mantém azul para ações, superfícies neutras, densidade técnica e ajuda contextual.
 
 ## Aceitação
-- [ ] `npm run typecheck`
-- [ ] `npm run test:grafcet-dialogs`
+- [x] `npm run typecheck`
+- [x] `npm run test:grafcet-dialogs`
 - [ ] `npm run test:grafcet-modals-ui`
-- [ ] `npm run build`
-- [ ] `git diff --check`
-- [ ] commit/push no `dc-simu`
-- [ ] commit/push no `BrainNet` com referência ao commit do submódulo
+- [x] `npm run build`
+- [x] `git diff --check`
+- [x] commit/push no `dc-simu`
+- [x] commit/push no `BrainNet` com referência ao commit do submódulo
 
 ## Melhoria posterior da modal de criação — 2026-11-02
 A modal de criação de projetos foi refinada no DC-Simu: largura maior no desktop, grelha de tipos em duas colunas, melhor agrupamento semântico, destaque de seleção e adaptação a uma coluna em ecrãs pequenos. Commit: `fa4206f`.
@@ -68,3 +68,5 @@ Nova propriedade `guard` na transição (ex.: `G3 <> X149`): estado de etapas de
 
 ## GRAFCETs pelos títulos na mesma página — 2026-11-03
 O motor reconhece G0, G1… pelos textos de título `G<n> - …` (também `:`/`·`); cada etapa pertence ao título mais próximo acima/à esquerda na sua página. Sem títulos, as páginas continuam a numerar G0, G1… Referências `G1X75`, `G3 <> X149`, a lista de GRAFCETs da modal e o indicador «Ligações Gn» seguem os títulos. Projeto ATEC de novo numa só página (`Downloads/dc-simu-atec-pagina-unica.json`), com as condições de estado mantidas. Testado: `npm test` (+2), `typecheck`, `build`, testes GRAFCET, `grafcet-modals-ui-smoke` (61 PASS), simulação e captura da modal com G0–G7. Commit DC-Simu: `722dc95`.
+
+> Verificação 2026-11-03: itens marcados confirmados nesta sessão (commits `8b9a9ef`, `722dc95`, `5b71f7c`). `test:grafcet-modals-ui`: 61 verificações da modal passam; o passo final de importação (`openImport`) ainda falha — pendente.
