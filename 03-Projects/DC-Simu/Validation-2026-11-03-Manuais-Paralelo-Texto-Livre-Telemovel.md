@@ -35,3 +35,9 @@ Contexto relido: [[Design-Principles]], [[Validation-2026-11-03-ATEC-Textos-Comp
 - `examples/gb…ge-manual-*.json` são exemplos simples de 3 etapas, sem T3; o conjunto completo é `grafcet-atec-com-manuais.json`, que já tem os cinco manuais e os `guard`.
 - O ficheiro do projeto tem uma transição solta sem origem nem destino (`5c4f047e…`, condição `1`, y 5980): não tocada.
 - O projeto na conta do utilizador só muda ao importar o JSON corrigido (entregue na conversa).
+
+## Correção — importação «Ficheiro inválido: faltam as etapas GRAFCET» (`dc-simu` 1404283)
+- Causa: entreguei o **projeto completo** (`dc-simu-atec-corrigido.json`, com o GRAFCET em `grafcet`), mas o botão «Importar GRAFCET» do editor espera **só o programa** (`steps` na raiz). Erro de entrega, não do importador.
+- Entregue `dc-simu-atec-grafcet.json` (só o GRAFCET: 54 etapas, 8 condições). O importador passa também a aceitar um projeto completo e usa o `grafcet` que traz dentro.
+- Teste novo `scripts/grafcet-import-project-smoke.ts` (5 verificações, em `test:fluidsim`): programa direto, projeto completo, ficheiro sem GRAFCET recusado, ATEC original e corrigido.
+- Não verificado: importação no editor real; importar substitui o GRAFCET atual do projeto aberto.
