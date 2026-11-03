@@ -28,3 +28,6 @@ O bloco de avisos em lista solta passou a barra compacta: estado, erros por corr
 
 ## Dicas ocultáveis nos painéis GRAFCET — 2026-11-03
 Os parágrafos de ajuda (rodapé de Componentes, «Nada selecionado» e separador Transições) passaram a cartões com uma frase de estado sempre visível e dicas em lista curta com teclas destacadas. «Ocultar dicas / Mostrar dicas» aplica-se a todos os painéis GRAFCET e fica guardado no navegador. Testado: `typecheck`, `npm test`, `test:grafcet-dialogs`, `build`; captura a 1440 px com ocultar → recarregar → mostrar. Commit DC-Simu: `d9d6334`.
+
+## Revisão da importação em modal — 2026-11-03
+«Ver detalhes» deixou de expandir a barra (empurrava a tela) e abre um modal com os erros por corrigir (clicar fecha e seleciona o elemento) e as notas agrupadas; «Concluir revisão» no rodapé só fica ativo sem bloqueios. Testado: `typecheck`, `npm test`, `build`, `grafcet-construction-ui-smoke` com `Grafcet ATEC.ct` (45 OK), capturas a 1440 px. Commit DC-Simu: `cc9076e`.
