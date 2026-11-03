@@ -44,6 +44,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Barras de deslocamento nos canvas 3D e GRAFCET | [[Validation-2026-10-30-Scroll-Canvas-3D-Grafcet]] |
 | Seletor de disposição e adição de ações GRAFCET | [[Validation-2026-10-30-Grafcet-Acoes]] |
 | ATEC: textos de comparação `Gk <> Xn` convertidos em condições das transições | [[Validation-2026-11-03-ATEC-Textos-Comparacao-Condicoes]] |
+| Telemóvel: barra de texto compacta, duplo toque pela hora real e ligações maiores | [[Validation-2026-11-03-Telemovel-Barra-Texto-Duplo-Toque]] |
 | GRAFCET no telemóvel: duplo toque abre a configuração, arrasto e puxadores para o dedo | [[Validation-2026-11-03-Grafcet-Toque-Duplo-Arrastar]] |
 | Condições, edição de ligações e revisão da importação GRAFCET | [[Validation-2026-10-30-Grafcet-Condicoes-Ligacoes-Importacao]] |
 | Investigação e integração dos novos componentes CAD | [[Validation-2026-10-30-Novos-Componentes]] |
