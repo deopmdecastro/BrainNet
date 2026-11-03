@@ -129,3 +129,6 @@ Análise concluída. Implementação a seguir: refinamentos incrementais no Tool
 ### Branches
 - DC-Simu: `toolbar-reorg-2026-11-02` (2 commits).
 - BrainNet: `toolbar-docs-2026-11-02` (atualizado).
+
+## Atualização 2026-11-03 — ações à vista no PC e no tablet
+Por indicação do utilizador, a segunda linha (só PC e tablet) deixa de agrupar ações em menus «•••»: «Extras da vista» e «Sequência, modelos e ficheiros GRAFCET» passam a botões de ícone (`ToolInlineItems`), com nome, explicação e atalho na dica. Em barra apertada perdem só o texto; o «Alinhar» continua menu (precisa de seleção). Telemóvel inalterado (barra compacta). Isto substitui, para PC/tablet, a regra «secundárias vão para menus». Testado: `npm test`, `test:style`, `test:landing-editor`, `test:toolbar-row2-ui`, `test:commands-ui`, construção GRAFCET (45), capturas a 1440 e 1024 px. Pendente: `test:grafcet-ui` está desatualizado desde 31/10 (procura o separador «Sequência», que já não existe). Commit DC-Simu: `678d11c`.
