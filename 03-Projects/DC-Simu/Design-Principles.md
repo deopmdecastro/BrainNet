@@ -71,6 +71,7 @@ O DC-Simu destina-se a aprendizagem, experimentação e diagnóstico de circuito
 
 ## Tablet e largura das barras
 
+- **Tablet, 1.ª linha (2026-11-03):** Projeto, vistas, «Dois canvas» e transporte só com ícone; o grupo das vistas não encolhe nem desliza por dentro, para nada esconder «Dois canvas». Espaçamentos por tokens `--tb-gap-item` / `--tb-gap-group` / `--tb-edge` em `toolbar-spacing.css` — [[Task-2026-11-03-Tablet-Dois-Canvas-Icones-Gaps]].
 - Tablet = PC: um ecrã tátil com o lado curto ≥ 600 px recebe o layout de secretária a 1280 px (meta viewport escalada em `index.html`). Nada de gavetas, barras compactas ou alvos maiores só por ser tátil.
 - «Telemóvel» é `PHONE_TOUCH_QUERY` (`src/ui/device.ts`). Não usar `(pointer: coarse)` sozinho para mudar layout; só para revelar o que no PC aparece ao passar o rato.
 - Barras: compactar quando o conteúdo não cabe, medido com `useOverflowCompact` (`toolbarKit.tsx`), em vez de inventar um ponto de quebra — [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]].
