@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IMPLEMENTED_PENDING_VALIDATION
+status: IMPLEMENTED
 created: 2026-11-03
 updated: 2026-11-03
 repos: [dc-simu, BrainNet]
@@ -20,10 +20,11 @@ tags: [dc-simu, cabos, selecao, renderizacao, nativo]
 - Mantido o worker e o último traçado válido durante refresh para impedir que a seleção limpe ou recarregue visualmente o conjunto de cabos.
 
 ## Validação pendente
-- `npm run typecheck`
-- `npm run test:native-wires-3d`
-- `npm run test:wire-curves-refresh`
-- verificação browser do editor nativo e seleção repetida de cabos
+- `npm run typecheck`: passou.
+- `npm run test:wire-curves-refresh`: passou.
+- `npm run test:native-wires-3d`: reproduziu duas falhas de geometria nativa já existentes na revisão trabalhada (`native-wire-14/17/39` e cabos frontais F1); as verificações de colisão, motor, chapa, cruzamento entre cabos e curvas do multímetro passaram.
+- Browser: o servidor iniciou e foi exposto, mas o Chromium deste ambiente não criou contexto WebGL (`llvmpipe`/`BindToCurrentSequence`), portanto a confirmação visual 3D ficou bloqueada pelo ambiente.
+- O volume de picking foi reduzido para 16–48 segmentos; a medição de INP visual de seleção precisa de GPU/browser funcional.
 
 ## Entrega
 O commit do código deve ser feito em `dc-simu`; depois o BrainNet atualiza esta evidência e referencia o commit do submódulo antes do push de ambos os repositórios.
