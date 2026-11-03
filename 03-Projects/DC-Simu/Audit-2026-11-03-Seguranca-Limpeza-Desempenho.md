@@ -34,8 +34,8 @@ Commit DC-Simu `24c8e87`. Removidos 20,6 MB (13 ficheiros), cabeçalhos anti-cli
 `typecheck`, `npm test`, `build`, `test:imported-components`, `test:grafcet-*` (dialogs, examples, signals, ladder-sync, ladder-word), `test:fluidsim`, `test:plc-signals`, `test:native-sim`, `test:pdf-export`, `test:excel`, `test:style`, `test:auto-detect-models`.
 
 ## Pendências
-- `test:terminal-geometry` já falhava antes: `towerLight` sem GLB nem caminho em `modelPaths`.
-- 20+ scripts de teste de UI não estão ligados ao `package.json` (o knip marca-os como sem uso); decidir se entram no `test:ci` ou se saem.
+- ~~`test:terminal-geometry`~~ resolvido: `towerLight`, `photoSensor` e `proximitySensor` são procedurais (sem CAD); o teste salta-os e continua a falhar se um GLB declarado faltar.
+- ~~Testes órfãos~~ resolvido: os 14 scripts sem comando (não eram 20+; o resto são ferramentas de build) passam todos — 4 entraram no `test:ci`, 10 de interface no `test:ui-extra` (job de UI informativo). `commands-import` usa a amostra FluidSIM só com `FLUIDSIM_CT_SAMPLE`. Commit DC-Simu: `f96f533`.
 - O sparse-checkout local deixou de ser necessário (`git sparse-checkout disable` no clone local, opcional).
 - Retirar a dependência de dev `supabase` só se a CLI não for usada (o README do Supabase usa-a).
 - Validação manual na aplicação após o deploy.
