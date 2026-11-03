@@ -25,3 +25,6 @@ Commit DC-Simu: `5867be1`.
 
 ## Barra «Revisão da importação» do GRAFCET — 2026-11-03
 O bloco de avisos em lista solta passou a barra compacta: estado, erros por corrigir em direto (Diagnóstico), número de notas, «Ver detalhes» e ação principal coerente («Corrigir erros» enquanto bloqueado, «Concluir revisão» quando limpo). Detalhes em duas colunas: erros clicáveis (selecionam o elemento) e notas da importação agrupadas por tema, com repetições juntas (×n). Testado: `typecheck`, `npm test`, `test:grafcet-dialogs`, `build`, `grafcet-construction-ui-smoke` com `Grafcet ATEC.ct` (45 OK), capturas 1440 e 390 px. Commit DC-Simu: `6c5b32f`.
+
+## Dicas ocultáveis nos painéis GRAFCET — 2026-11-03
+Os parágrafos de ajuda (rodapé de Componentes, «Nada selecionado» e separador Transições) passaram a cartões com uma frase de estado sempre visível e dicas em lista curta com teclas destacadas. «Ocultar dicas / Mostrar dicas» aplica-se a todos os painéis GRAFCET e fica guardado no navegador. Testado: `typecheck`, `npm test`, `test:grafcet-dialogs`, `build`; captura a 1440 px com ocultar → recarregar → mostrar. Commit DC-Simu: `d9d6334`.
