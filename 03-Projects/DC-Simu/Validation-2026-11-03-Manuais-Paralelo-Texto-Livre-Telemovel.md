@@ -41,3 +41,9 @@ Contexto relido: [[Design-Principles]], [[Validation-2026-11-03-ATEC-Textos-Comp
 - Entregue `dc-simu-atec-grafcet.json` (só o GRAFCET: 54 etapas, 8 condições). O importador passa também a aceitar um projeto completo e usa o `grafcet` que traz dentro.
 - Teste novo `scripts/grafcet-import-project-smoke.ts` (5 verificações, em `test:fluidsim`): programa direto, projeto completo, ficheiro sem GRAFCET recusado, ATEC original e corrigido.
 - Não verificado: importação no editor real; importar substitui o GRAFCET atual do projeto aberto.
+
+## Verificação do desenho T3/T2 (captura das 08:01 ainda em série)
+- Vercel: o commit `0718047` (ramo OU) ficou publicado às 07:54 UTC; o `vite build` local conclui (30 s) e o bundle contém o ramo (`data-or-branch`).
+- O `GrafcetEditor` real, montado em jsdom com o GRAFCET ATEC do utilizador, desenha G3·T3 como `M 200 2164 V 2192 H 500 V 2242` (ponto em 200, linha horizontal, barra em x=500) e T2 em `M 200 2164 V 2330`: **paralelo**. 10 marcadores (editor + minimapa) para G3–G7.
+- Conclusão: a captura mostra a versão antiga em cache. A PWA só se atualiza quando é seguro (`beforeUpdate`): com o projeto acabado de importar e **por guardar**, a atualização fica adiada (`snoozeUntil`). Guardar e recarregar.
+- CI do GitHub (`Tipos, testes e build`, `Playwright`) já falhava em `63e88bd`, antes destas alterações; causa não investigada.
