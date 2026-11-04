@@ -31,3 +31,9 @@ Continua [[Task-2026-11-02-Modal-Exportar-PDF]].
 - Se um símbolo não aparecer, o suspeito é `cloneWithStyles` (estilos vindos de `commands.css`).
 
 Commit DC-Simu: `8cdfd98`.
+
+## Atualização — logótipo na esquadria e modal v3
+- **Esquadria**: símbolo DC-Simu ao lado do nome da empresa (opção «Logótipo na esquadria», ligada por omissão, `titleBlock.logo`); corrigida a sobreposição do rótulo «Folha» com o valor.
+- **Modal**: cartão de resumo fixo no topo (páginas estimadas + conteúdo incluído) com seleção rápida segmentada (Tudo/Só ladder/Nada); itens sem conteúdo (tags, 3D, GRAFCET vazios) passam a uma nota «Sem conteúdo, omitido» em vez de caixas desativadas; campos da esquadria recolhidos por omissão («Editar campos da esquadria»); pré-visualização da esquadria com logótipo.
+- Verificações: `tsc`, `npm test`, `test:pdf-export` (15 OK), `build`; esquadria rasterizada. Modal **sem captura em browser** — validar no iPhone.
+- Commit DC-Simu: `c5d8607`.
