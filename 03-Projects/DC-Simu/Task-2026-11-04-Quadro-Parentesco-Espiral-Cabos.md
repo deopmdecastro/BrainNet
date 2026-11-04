@@ -113,3 +113,20 @@ Imagens de referência fornecidas: espiral preta de proteção de cabos; marcado
 - Testes automatizados (`test:panel-accessories` e novos).
 - Validação visual no browser e commit/push.
 
+
+## Continuação (dc-simu `56ed529`)
+
+### Desenho isolamento e marcadores
+- **2D** (`SchematicView` + `wireGeometry`): capas coloridas mais grossas entre `start`/`end`; anéis/etiquetas com texto e cores no ponto `t`.
+- **3D** (`Panel3D`): tubo de isolamento sobre a curva; anéis (torus) + placa de texto nos marcadores.
+
+### Filaçar
+- `selectedWireIds[]` + `selectWire(id, additive)` (Shift/Ctrl/Meta).
+- `laceWires` / `unlaceWires` → `bundleId` partilhado.
+- UI: inspetor do cabo e barra de seleção («Filaçar» / «Desfilaçar»).
+
+### Testes
+- `scripts/wire-isolation-markers-lace-smoke.ts` (geometria, modelo, espiral, enclosureId).
+- `panel-accessories-smoke` atualizado para incluir `spiralWrap`.
+- Validação visual no browser e `npm run test:panel-accessories` / smoke novo: pendentes no ambiente de instalação (registry npm instável neste runner).
+
