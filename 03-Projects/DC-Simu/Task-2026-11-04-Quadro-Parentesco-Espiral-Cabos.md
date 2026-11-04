@@ -140,3 +140,13 @@ Pedido: «calha e quadros são corpos sólidos, não atravessam elementos».
 - **Calha DIN**: continua `rail` (perfil aberto, cabos por cima).
 - Colisão 2D do Esquema: footprint do quadro continua a permitir aparelhos «dentro» do desenho; a solidez física aplica-se no 3D.
 
+
+## Calha DIN perfurada (dc-simu `aa1d6fb`)
+
+Pedido: calha DIN no grupo Quadros e calhas, 3D com textura real, todos os tamanhos de encaixe.
+
+- Catálogo em **«Quadros e calhas»**: «Calha DIN perfurada TS35 / G-rail (EN 60715) · textura real».
+- Perfis: **15×5,5** (G-rail), **35×7,5** (omissão, modular), **35×15** (pesados).
+- 3D: perfil em chapéu, furos oblongos, abas de encaixe, textura zincada PBR (flor de zinco).
+- Inspetor: escolha de perfil, acabamento (galvanizado / bicromatado / alumínio), perfurada sim/não.
+
