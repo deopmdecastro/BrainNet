@@ -70,3 +70,7 @@ Nova propriedade `guard` na transição (ex.: `G3 <> X149`): estado de etapas de
 O motor reconhece G0, G1… pelos textos de título `G<n> - …` (também `:`/`·`); cada etapa pertence ao título mais próximo acima/à esquerda na sua página. Sem títulos, as páginas continuam a numerar G0, G1… Referências `G1X75`, `G3 <> X149`, a lista de GRAFCETs da modal e o indicador «Ligações Gn» seguem os títulos. Projeto ATEC de novo numa só página (`Downloads/dc-simu-atec-pagina-unica.json`), com as condições de estado mantidas. Testado: `npm test` (+2), `typecheck`, `build`, testes GRAFCET, `grafcet-modals-ui-smoke` (61 PASS), simulação e captura da modal com G0–G7. Commit DC-Simu: `722dc95`.
 
 > Verificação 2026-11-03: itens marcados confirmados nesta sessão (commits `8b9a9ef`, `722dc95`, `5b71f7c`). `test:grafcet-modals-ui`: 61 verificações da modal passam; o passo final de importação (`openImport`) ainda falha — pendente.
+
+## Modal «Textos de comparação → condições» — 2026-11-04
+Indicador de passos (1 aplicar → 2 remover), contadores, linhas texto → transição com receptividade completa e estado, botão «Mostrar» (muda de página, seleciona a transição e abre Transições) e estado vazio que explica o formato reconhecido e como criar a condição à mão. Verificado no navegador com o projeto ATEC original (3 textos: aplicar → remover → mostrar) e no estado vazio; `typecheck`, `npm test`, `test:text-guards` (17), `build`. Commit DC-Simu: `8c942e4`.
+
