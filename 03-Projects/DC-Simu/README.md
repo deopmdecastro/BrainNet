@@ -34,6 +34,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Esquema IEC no telemóvel: pinça, mover a vista com um dedo, zoom flutuante e barras compactas | [[Validation-2026-11-01-Esquema-IEC-Telemovel-Pinca-Barras]] |
 | Grelha única em todos os canvas e painel lateral completo em baixo no telemóvel (IEC e GRAFCET) | [[Validation-2026-11-01-Grelha-Unica-Painel-Inferior-Telemovel]] |
 | Edição e seleção de texto do Esquema IEC iguais às do GRAFCET | [[Validation-2026-11-01-Texto-IEC-Igual-GRAFCET]] |
+| Painéis de baixo no telefone: cabeçalho fixo e opaco ao rolar | [[Task-2026-11-04-Paineis-Baixo-Cabecalho-Fixo]] |
 | Capa do projeto versionada e recapturada (fiel ao projeto real) | [[Task-2026-11-03-Capa-Versionada-Recaptura]] |
 | Modal «Importar» do Esquema IEC com o layout do GRAFCET | [[Task-2026-11-03-Importar-IEC-Layout-Grafcet]] |
 | Tablet: «Dois canvas» visível, módulos só com ícone e gaps das barras | [[Task-2026-11-03-Tablet-Dois-Canvas-Icones-Gaps]] |
