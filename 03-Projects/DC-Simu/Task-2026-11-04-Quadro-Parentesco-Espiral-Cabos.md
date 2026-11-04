@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IMPLEMENTED_PENDING_VALIDATION
+status: IN_PROGRESS
 created: 2026-11-04
 updated: 2026-11-04
 tags: [dc-simu, 3d, quadro, calha, cabos, espiral, isolamento, marcadores, filaçar]
@@ -150,3 +150,39 @@ Pedido: calha DIN no grupo Quadros e calhas, 3D com textura real, todos os taman
 - 3D: perfil em chapéu, furos oblongos, abas de encaixe, textura zincada PBR (flor de zinco).
 - Inspetor: escolha de perfil, acabamento (galvanizado / bicromatado / alumínio), perfurada sim/não.
 
+
+## Atualização 2026-11-04 (pedido utilizador — espiral como propriedade do cabo)
+
+O utilizador clarificou:
+
+> «a espirar não é um elemento, faça igual o isolamento dos cabos, selecionar cabo e definir onde começa e termina a espiral»
+
+**Mudança de desenho:**
+- A espiral de proteção **não** deve ser um componente separado do catálogo «Quadros e calhas».
+- Passa a ser uma **secção do cabo**, análoga a `isolation`:
+  ```ts
+  spirals?: Array<{ start: number; end: number; color?: string; pitchMm?: number; innerDiaMm?: number }>
+  ```
+- UI: no inspetor do cabo (quando selecionado), botão «+ Espiral» → sliders início/fim (0..1), cor (preto por omissão), passo e Ø interior opcionais.
+- Render 2D/3D: desenhar a hélice/capa espiralada sobre o troço do cabo entre start e end (reaproveitar geometria que já existia em SpiralWrap3D / 2D).
+- O tipo `spiralWrap` no catálogo pode ficar descontinuado ou convertido em preset que aplica uma secção de espiral a um cabo selecionado (atalho).
+
+### Outros pontos do pedido (já parcialmente cobertos)
+- **Tipo de cabo** (isolado / não isolado, nº de linhas/condutores, tipo de isolamento): estender o seletor de `kind` / preset no painel do cabo e no toolbar de criação, com presets multi-condutor (ex.: 3×1.5, 4×2.5, cabo flexível multicore) e flag `sheathed` / cor de capa global.
+- Parentescos quadro, isolamento, marcadores e filaçar mantêm-se como já implementados.
+
+### Próximos passos de código
+1. Adicionar `spirals?` ao tipo `Wire` em `src/types/index.ts`.
+2. UI no Sidebar / WireOptions (cópia do padrão de isolation).
+3. Render em `wireGeometry.ts` (2D) e `Panel3D.tsx` / `wireGeometry3D.ts` (3D).
+4. Remover ou marcar deprecated o componente `spiralWrap` (factory, isPanelAccessoryType, controles, smoke tests).
+5. Atualizar smoke `wire-isolation-markers-lace-smoke.ts`.
+6. Commit em dc-simu + atualização deste ficheiro no BrainNet + push.
+
+## Resultado 2026-11-04 (sessão atual)
+
+- Espiral passou a propriedade do cabo (`spirals?: Array<{start,end,color?,pitchMm?,innerDiaMm?}>`) em vez de elemento de catálogo.
+- UI no inspetor do cabo: + Espiral, início/fim, cor, passo, Ø.
+- Render 2D (SchematicView, dash pattern) e 3D (Panel3D, tubo mais grosso).
+- Smoke atualizado.
+- Componente `spiralWrap` do catálogo mantido como legado (pode ser removido depois).
