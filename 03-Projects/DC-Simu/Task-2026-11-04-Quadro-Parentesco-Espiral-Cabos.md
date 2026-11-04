@@ -130,3 +130,13 @@ Imagens de referência fornecidas: espiral preta de proteção de cabos; marcado
 - `panel-accessories-smoke` atualizado para incluir `spiralWrap`.
 - Validação visual no browser e `npm run test:panel-accessories` / smoke novo: pendentes no ambiente de instalação (registry npm instável neste runner).
 
+
+## Corpos sólidos (dc-simu `bbff15a`)
+
+Pedido: «calha e quadros são corpos sólidos, não atravessam elementos».
+
+- **Quadro 3D**: obstáculos *hard* nas paredes (fundo, laterais, topo, base; porta se fechada). Interior livre para aparelhos e cabos.
+- **Calha técnica / espiral**: deixam de ser tratadas como `rail`; passam a `hard` — o encaminhamento contorna o PVC.
+- **Calha DIN**: continua `rail` (perfil aberto, cabos por cima).
+- Colisão 2D do Esquema: footprint do quadro continua a permitir aparelhos «dentro» do desenho; a solidez física aplica-se no 3D.
+
