@@ -74,3 +74,6 @@ O motor reconhece G0, G1… pelos textos de título `G<n> - …` (também `:`/`�
 ## Modal «Textos de comparação → condições» — 2026-11-04
 Indicador de passos (1 aplicar → 2 remover), contadores, linhas texto → transição com receptividade completa e estado, botão «Mostrar» (muda de página, seleciona a transição e abre Transições) e estado vazio que explica o formato reconhecido e como criar a condição à mão. Verificado no navegador com o projeto ATEC original (3 textos: aplicar → remover → mostrar) e no estado vazio; `typecheck`, `npm test`, `test:text-guards` (17), `build`. Commit DC-Simu: `8c942e4`.
 
+### Conversão num só passo — 2026-11-04
+A modal passou de dois passos a uma ação «Converter N» (aplica as condições e remove os textos numa só alteração; um Ctrl+Z desfaz), com escolha por linha, grupos por GRAFCET e opção «Manter os textos para conferir». Verificado no navegador com o ATEC original: desmarcar G2 → converte 2 (T9, T26), fica 1 texto; um Ctrl+Z repõe tudo. Commit DC-Simu: `0f1c66d`.
+
