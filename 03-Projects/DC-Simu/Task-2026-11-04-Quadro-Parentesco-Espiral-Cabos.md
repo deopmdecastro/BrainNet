@@ -186,3 +186,29 @@ O utilizador clarificou:
 - Render 2D (SchematicView, dash pattern) e 3D (Panel3D, tubo mais grosso).
 - Smoke atualizado.
 - Componente `spiralWrap` do catálogo mantido como legado (pode ser removido depois).
+
+## Atualização 2026-11-04 (presets de tipo de cabo)
+
+Pedido: «Adicionar presets de tipo de cabo (isolado/não isolado, nº de condutores, capa global) no seletor de criação/inspetor.»
+
+### Modelo
+- `Wire` / `WireDefaults`:
+  - `conductorCount?: number` (1 = fio simples; 2+ = multicore)
+  - `sheathed?: boolean` (capa exterior global)
+  - `sheathColor?: string` (hex)
+- Presets em `wireStyle.ts` (`CABLE_PRESETS`): Fio simples, Fio com capa, Cabo 2×…7×, Par trançado.
+- `applyCablePreset` / `matchCablePreset`.
+- `cableOuterDiameterMm` e `wireStrokeWidth` consideram nº de condutores e capa.
+
+### UI
+- `WireOptions.tsx` (ferramenta Cabo / defaults): grelha de presets + Nº + Isolado/Sem capa + cor da capa.
+- `Sidebar.tsx` (cabo selecionado): mesmos controlos.
+- CSS em `wire-options.css`.
+
+### Render
+- 2D: capa global (traço mais grosso com `sheathColor`) quando `sheathed`.
+- 3D: tubo exterior com material PVC quando `sheathed`.
+- Espessura aumenta ligeiramente com multicore.
+
+### Criação
+- `addWire` / `addFreeWire` / `addWire3D` copiam `conductorCount`, `sheathed`, `sheathColor` dos defaults.
