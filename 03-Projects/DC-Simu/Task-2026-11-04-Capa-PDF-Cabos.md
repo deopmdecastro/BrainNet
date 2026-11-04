@@ -29,6 +29,13 @@ A capa do projeto nativo no dashboard e a vista 3D do PDF apareciam sem cabos, e
 - `tsc`, `test:ci` (verde), `test:pdf-export`, `vite build` e `node --check server/index.mjs`.
 - Testes desatualizados do upstream corrigidos: painel GRAFCET, 11 faixas de cabos e barra lateral na modal de textos.
 
+## Iteração 2 (dc-simu `d9e2292`)
+- O utilizador pediu que a capa fosse sempre o 3D real. O dashboard volta a mostrar a capa 3D guardada e já não troca pelo esquema desenhado.
+- Recaptura automática: no editor, com a cena 3D e os cabos prontos e sem alterações por guardar, a capa em falta ou antiga é capturada e gravada sozinha.
+- Defeito encontrado: a captura escalava as malhas dos cabos em 1,2. Como a geometria está em coordenadas do mundo, os cabos saíam deslocados dos bornes e os do multímetro ficavam cortados. A escala foi removida e `COVER_VERSION` passou a 4.
+- Verificado no browser: depois de abrir o projeto na vista 3D, o dashboard mostra a capa 3D com os cabos alinhados, sem guardar à mão. `test:ci`, `test:cover-version`, `test:flow-cover`, `test:pdf-export` e o build passam. Cache local do Vite limpa.
+
 ## Pendências
-- Validar em produção com sessão Supabase. A capa antiga é substituída quando se abre o projeto na Visualização 3D e se guarda ou sai.
+- Validar em produção com sessão Supabase. A capa antiga é substituída sozinha quando se abre o projeto na Visualização 3D. Projetos nunca abertos mantêm a capa antiga, ou o esquema desenhado se nunca tiveram foto.
+- Cache do navegador: a nova versão limpa as caches antigas ao atualizar; em alternativa, Administração → Sistema → atualização forçada.
 - Se o erro ao guardar o PDF persistir, falta o texto exato do erro: notificação do navegador ou mensagem da modal.
