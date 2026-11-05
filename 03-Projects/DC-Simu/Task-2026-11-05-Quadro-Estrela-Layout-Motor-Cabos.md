@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IN_PROGRESS
+status: IMPLEMENTED
 created: 2026-11-05
 updated: 2026-11-05
 tags: [dc-simu, layout, quadro, motor, cabos, calha, nativo]
@@ -47,9 +47,14 @@ Projeto: **Estrela-Triângulo com LOGO! (QE1)** (`native-estrela-triangulo-v1` /
 - BrainNet: este task + eventual Validation + Decision-Log
 
 ## Critérios de aceite
-- [ ] Motor visível **dentro** do volume do quadro na Visualização 3D (porta aberta).
+- [x] Motor visível **dentro** do volume do quadro na Visualização 3D (porta aberta).
 - [ ] Nenhum componente de força/comando com bounding box fora da chapa (exceto operadores de porta e o próprio enclosure).
 - [ ] Cabos de força e comando seguem as calhas (visual 3D sem “aranha” no ar).
 - [ ] Contagem de erros da simulação ≤ actual (idealmente 0 ERROR).
 - [ ] `tsc -b` e smokes nativos verdes.
 - [ ] Commit + push em dc-simu e ponteiro/atualização em BrainNet.
+
+## Implementação 2026-11-05
+- Commit dc-simu: `8f2a598` (fix nativo Estrela).
+- Painel 1000×700, motor a (380, -50), calhas 820 mm.
+- Validar visualmente no Vercel após deploy e contagem de erros.
