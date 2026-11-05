@@ -187,6 +187,14 @@ O utilizador clarificou:
 - Smoke atualizado.
 - Componente `spiralWrap` do catálogo mantido como legado (pode ser removido depois).
 
+## Atualização 2026-11-04 — UI Espiral no cabo (8ef7ea6)
+**Falta apontada:** `Sidebar.tsx` tinha `Isolamento` + `Marcadores` mas não `Espiral` — `spirals` só em modelo/render.
+**Correção:** `feat(wires): UI para espiral no cabo no inspetor` — cartão **Espiral de proteção** entre Isolamento e Marcadores:
+- `+ Espiral` → `{start:0.25,end:0.75,color:#0a0a0a,pitchMm:8,innerDiaMm:10}`
+- Por espiral: `Início/Fim 0..1`, `cor`, `Passo 4..30mm`, `Ø int. 4..40mm`, `×`
+- Reaproveita `patchSelectedWire`; render já existia (`strokeDasharray` 2D, `mesh` 3D)
+- `typecheck` OK, push `dc-simu 8ef7ea6`
+
 ## Atualização 2026-11-04 (presets de tipo de cabo)
 
 Pedido: «Adicionar presets de tipo de cabo (isolado/não isolado, nº de condutores, capa global) no seletor de criação/inspetor.»
