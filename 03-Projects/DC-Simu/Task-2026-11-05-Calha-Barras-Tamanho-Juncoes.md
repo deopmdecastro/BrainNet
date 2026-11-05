@@ -18,6 +18,11 @@ Adicionar uma barra que aumenta/reduz do lado direito e outra do lado esquerdo d
 - **Junções (`src/schematic/ductJunctions.ts`):** onde uma calha perpendicular desemboca ou atravessa a parede de outra (T, L, cruz), a parede abre-se: a fita lateral parte-se em troços, os dedos/patilhas desse vão são retirados e a aba da tampa também. Vale para o 3D (`buildCableDuct`) e para o Esquema (`CableDuct2D`). Calhas paralelas lado a lado não abrem.
 - Teste `test:duct-resize` passou de 4 para 19 verificações (âncora fixa nas 4 rotações, arrasto, bloqueio por aparelho, T, calha longe, paralelas).
 
+## Criação e edição encaixadas (dc-simu `%s`)
+- **Largar perto de outra calha** (alcance 80 mm) encaixa-a: além de uma ponta prolonga, ao lado da parede faz ramal em T, com a mesma largura, altura, tampa e cor. Se o encosto não cabe (aparelho/quadro), cai no comportamento anterior.
+- **Inspetor, «Juntar outra calha»:** ◀ ▶ prolongar e ▲ ▼ ramal, com a calha herdada e já selecionada (`addDuctAdjacent`; funciona em qualquer rotação).
+- Lógica pura em `src/schematic/ductPlacement.ts`; `test:duct-resize` passa a 29 verificações.
+
 ## Verificação
 - `tsc -b`: limpo. `test:duct-resize`: 19 verificações OK.
 - Resto do `test:ci`: sem regressões novas. Duas falhas **anteriores a esta tarefa**, confirmadas na base sem as alterações: `test:panel-accessories` («perfil guardado no estado») e `native-sim-smoke` («STOP: motor pára»).
