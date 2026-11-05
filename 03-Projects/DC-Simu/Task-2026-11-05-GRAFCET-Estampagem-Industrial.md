@@ -45,3 +45,10 @@ Criar o GRAFCET do projeto de formação «Sistema de Estampagem Industrial» (g
 4. Mapear os sinais reais do quadro (quando a tabela IN/OUT estiver completa).
 
 [[Project-Brief]] · [[Design-Principles]] · exemplos em `src/project/grafcetExamples.ts`
+
+## Correção 2026-11-05 (importação)
+Erro ao importar causado por:
+- `importReview: null` (o validador só aceita o campo ausente ou objeto com `source: "fluidsim4"`)
+- `allocation: "stored"` (valores permitidos: continuous | activation | deactivation | event | compulsory)
+
+Corrigido no commit `f65b3bf` do dc-simu. O ficheiro passa agora na validação de `src/grafcet/importFile.ts`.
