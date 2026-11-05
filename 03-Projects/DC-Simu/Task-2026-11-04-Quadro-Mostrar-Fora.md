@@ -77,10 +77,17 @@ panelMount?: {
 - `src/components/Sidebar.tsx` — cartão “Na face do quadro (visível fora)” com quadro, face (`Porta/Lateral/Topo`), Ø furo e offsets X/Y
 - `typecheck` OK, push para `origin/main`
 
-## Próximo passo (2D/3D)
-- `PanelAccessories2D.tsx:Enclosure2D` — furos na porta/lateral + aparelho sobreposto
-- `Panel3D.tsx` — pivô na face `D ± sheet/2`, porta com rotação, bornes virados para dentro
-- Smoke `panel-mount-smoke.ts` + atualizar `panel-accessories-smoke`
+## Resultado 2026-11-05 (a53cdf6) — 2D/3D + multicore
+- **2D `PanelAccessories2D.tsx`:** `Enclosure2D` lê `components.filter(panelMount.enclosureId===c.id)` e desenha furo por aparelho: `cx=W/2+offX*px, cy=H/2-offY*px, r=cutout/2`, cor por face (`door #0ea5e9`, `inside tracejado`), etiqueta `ref·face`.
+- **3D `Panel3D.tsx`:** `panelPivots` trata `panelMount` antes de `isMountingRail`: encontra `enclosure`, dims e baseZ. `door/doorOuter→ baseZ+D+22mm` (frente da porta), `left/right/top/bottom→ parede exterior -/+ half`, `inside→ PLATE_FRONT_Z`. Offsets X/Y em `mm*U`.
+- **Multicore:** `Wire.conductorColors?: string[]` + `WireDefaults.conductorColors`, cópia em `addWire/addFreeWire/addWire3D`, UI Sidebar `Veias:` pickers quando Nº>1 + Repor.
+- **Limitação conhecida:** 3D porta ainda não rotaciona botões com `doorOpen` (precisa parentear ao `door` Group de `Enclosure3D` — medir hinge).
+- `typecheck` OK, push `a53cdf6`.
+
+## Próximo passo (3D porta rotativa + smoke)
+- Parentesco 3D: prender aparelhos `door` ao `door` mesh com `openSign`/`angle` (sincronizar `useFrame`)
+- Smoke `panel-mount-smoke.ts` + `test:panel-accessories` para furos/offsets
+- Cores por veia no render 3D (tubo raiado) e legendas de bornes multicore
 
 [[Design-Principles]] · [[Task-2026-11-04-Quadro-Parentesco-Espiral-Cabos|Parentesco anterior]]
 
