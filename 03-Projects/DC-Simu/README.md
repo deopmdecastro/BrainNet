@@ -37,6 +37,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Menu/folha «Opções do projeto e da vista» (ToolMenu) no telefone: UI e UX | [[Task-2026-11-04-Menu-Folha-Telefone-UX]] |
 | Painéis de baixo no telefone: cabeçalho fixo e opaco ao rolar | [[Task-2026-11-04-Paineis-Baixo-Cabecalho-Fixo]] |
 | Capa do projeto versionada e recapturada (fiel ao projeto real) | [[Task-2026-11-03-Capa-Versionada-Recaptura]] |
+| Estampagem ATEC em 5 GRAFCETs (controlo, emergência, automático, reset, manual), nomes de tags e transições sem linha | [[Task-2026-11-06-Estampagem-5-GRAFCETs]] |
 | Modal «Importar» do Esquema IEC com o layout do GRAFCET | [[Task-2026-11-03-Importar-IEC-Layout-Grafcet]] |
 | Tablet: «Dois canvas» visível, módulos só com ícone e gaps das barras | [[Task-2026-11-03-Tablet-Dois-Canvas-Icones-Gaps]] |
 | Inspeção da plataforma: paridade tablet/PC, barras sem cortes, editor offline, cabos do motor | [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |

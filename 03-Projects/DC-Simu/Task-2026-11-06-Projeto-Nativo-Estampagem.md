@@ -32,3 +32,6 @@ O GRAFCET é **pedagógico** (3 rampas / 3 gavetas lógicas). A tabela física t
 - Incluída em `grafcetExamples()` → projetos semeados (`nativeProjectSeeds`) e «Modelos GRAFCET»
 - `nativeId`: `grafcet-estampagem-industrial-v8` (repõe se o admin apagar o projeto)
 - Abrir: lista de projetos (conta admin/local) ou Modelos GRAFCET no editor
+
+## Atualização — 5 GRAFCETs (2026-11-06)
+O exemplo foi dividido em G0 Controlo, G1 Emergência, G2 Automático, G3 Reset e G4 Manual, com nomes de tags e comparações entre GRAFCETs: ver [[Task-2026-11-06-Estampagem-5-GRAFCETs]]. `nativeId` passa a `grafcet-estampagem-industrial-v9`.
