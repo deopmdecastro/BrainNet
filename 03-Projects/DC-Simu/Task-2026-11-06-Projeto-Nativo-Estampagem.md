@@ -35,3 +35,6 @@ O GRAFCET é **pedagógico** (3 rampas / 3 gavetas lógicas). A tabela física t
 
 ## Atualização — 5 GRAFCETs (2026-11-06)
 O exemplo foi dividido em G0 Controlo, G1 Emergência, G2 Automático, G3 Reset e G4 Manual, com nomes de tags e comparações entre GRAFCETs: ver [[Task-2026-11-06-Estampagem-5-GRAFCETs]]. `nativeId` passa a `grafcet-estampagem-industrial-v9`.
+
+## Atualização — manual por atuador (2026-11-06)
+O G4 único foi substituído por um GRAFCET manual por cilindro, motor e lâmpada (G4–G15), `nativeId` v10: ver [[Task-2026-11-06-Estampagem-Manual-Por-Atuador]].

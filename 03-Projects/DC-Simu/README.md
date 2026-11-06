@@ -39,6 +39,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Capa do projeto versionada e recapturada (fiel ao projeto real) | [[Task-2026-11-03-Capa-Versionada-Recaptura]] |
 | GRAFCET: separador «E/S» com entradas INT/NO/NC e saídas, iguais ao Ladder e ao IEC | [[Task-2026-11-06-Grafcet-Painel-ES-INT-NO-NC]] |
 | Estampagem ATEC em 5 GRAFCETs (controlo, emergência, automático, reset, manual), nomes de tags e transições sem linha | [[Task-2026-11-06-Estampagem-5-GRAFCETs]] |
+| Estampagem ATEC: manual por cilindro, motor e lâmpada (G4–G15, toque liga/desliga, v10) | [[Task-2026-11-06-Estampagem-Manual-Por-Atuador]] |
 | Modal «Importar» do Esquema IEC com o layout do GRAFCET | [[Task-2026-11-03-Importar-IEC-Layout-Grafcet]] |
 | Tablet: «Dois canvas» visível, módulos só com ícone e gaps das barras | [[Task-2026-11-03-Tablet-Dois-Canvas-Icones-Gaps]] |
 | Inspeção da plataforma: paridade tablet/PC, barras sem cortes, editor offline, cabos do motor | [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |

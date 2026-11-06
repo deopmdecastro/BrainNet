@@ -58,3 +58,6 @@ O exemplo anterior usava `I0.8…I0.15`, `Q0.8…Q0.11` — **inválidos** no fo
 
 ## Nativos (2026-11-06)
 A versão `v9` aparece nos projetos nativos: no backend local repõe a semente; no Supabase (conta admin) a cópia `v8` existente é atualizada em vez de criar uma segunda. Aparece após o deploy e recarregar a lista de projetos.
+
+## Atualização — manual por atuador (2026-11-06)
+O G4 único foi substituído por um GRAFCET manual por cilindro, motor e lâmpada (G4–G15), `nativeId` v10: ver [[Task-2026-11-06-Estampagem-Manual-Por-Atuador]].
