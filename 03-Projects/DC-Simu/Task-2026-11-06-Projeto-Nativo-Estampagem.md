@@ -26,3 +26,9 @@ tags: [dc-simu, grafcet, estampagem, atec, nativo, io]
 
 ## Nota de mapeamento
 O GRAFCET é **pedagógico** (3 rampas / 3 gavetas lógicas). A tabela física tem braço central (sobe/desce), uma gaveta avança/recua e cilindro de estampa em %Q0.0–%Q0.8. No comissionamento real, mapear saídas lógicas → válvulas do quadro RS403/409.
+
+## Atualização — exemplo nativo no código (`23f013b`)
+- Função `estampagem()` em `src/project/grafcetExamples.ts`
+- Incluída em `grafcetExamples()` → projetos semeados (`nativeProjectSeeds`) e «Modelos GRAFCET»
+- `nativeId`: `grafcet-estampagem-industrial-v8` (repõe se o admin apagar o projeto)
+- Abrir: lista de projetos (conta admin/local) ou Modelos GRAFCET no editor
