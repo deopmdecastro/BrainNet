@@ -55,3 +55,11 @@ Capturas sintéticas locais: [controlo](../../runtime/estampagem-controlo-deskto
 - `npm run check` na raiz mantém nove problemas documentais anteriores: duas propriedades em falta em `Task-2026-11-03-Grafcet-Sem-Painel-Baixo.md` e sete ligações para imagens em duas notas de 2 de novembro.
 
 [[Design-Principles]] · [[Project-Brief]]
+
+## Atualização local — seletor de páginas da plataforma
+
+O seletor de páginas em `src/grafcet/GrafcetEditor.tsx` passa a usar `src/ui/Select.tsx`, o mesmo componente dos restantes seletores da plataforma. O CSS de `grafcet-editor.css` conserva apenas dimensões e responsividade; cores, seta, estados, marca da opção ativa e menu em portal vêm dos estilos comuns. Atualização enviada para `dc-simu/main` no commit `e74e631`, em 6 de novembro de 2026, após o pedido explícito do utilizador «commit e push».
+
+`npm run typecheck` e `git diff --check` passaram. Verificação no browser a 1440, 1024 e 390 px: 17 opções no menu próprio, seleção real de G2 e G16, fecho após escolha e Escape, menu dentro do ecrã e ausência de erros JavaScript. No telemóvel, faixa com largura/scroll de 354/354 px. A montagem sintética temporária foi removida.
+
+Capturas locais: [seletor no PC](../../runtime/grafcet-select-plataforma-pc.png) e [no telemóvel](../../runtime/grafcet-select-plataforma-mobile.png).
