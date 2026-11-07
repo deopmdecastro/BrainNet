@@ -57,10 +57,12 @@ Cada uma das 16 páginas usa o organizador em estilo clássico: sequência verti
 
 ## Atualização — organização do GRAFCET nativo (2026-11-06)
 
-O `nativeId` atual é `grafcet-estampagem-industrial-v22`; o ficheiro `examples/grafcet-estampagem-industrial.json` fica sincronizado com o gerador.
+O `nativeId` atual é `grafcet-estampagem-industrial-v23`; o ficheiro `examples/grafcet-estampagem-industrial.json` fica sincronizado com o gerador.
 
 No G16, as duas ações condicionadas pelo mesmo botão de rampa ficam lado a lado, em três grupos (Preta, Branca e Metálica), em vez de uma coluna longa. Ambas continuam condicionadas pelo respetivo `Reset_Rampa_*`; só a disposição muda.
 
 No manual por atuador, a etapa ativa já não repete o nome do equipamento como legenda junto da condição da ação; o nome continua no título da página e na caixa da ação, evitando a colisão visível na imagem de referência.
 
-Verificações atuais: `npm run test:grafcet-examples` (129 verificações do exemplo e 170 de organização) e `npm run build` concluídos. A apresentação ainda não foi aprovada visualmente no editor.
+No G2, as caixas das ações reservam largura para as receptividades e as ações condicionais ficam mais afastadas do texto da etapa e umas das outras.
+
+Verificações atuais: `npm run test:grafcet-examples` (129 verificações do exemplo e 234 de organização) e `npm run build` concluídos. A geometria foi testada; falta aprovação visual no editor.
