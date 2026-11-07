@@ -42,6 +42,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Estampagem ATEC: manual por cilindro, motor e lâmpada (G4–G15, toque liga/desliga, v10) | [[Task-2026-11-06-Estampagem-Manual-Por-Atuador]] |
 | Modal «Importar» do Esquema IEC com o layout do GRAFCET | [[Task-2026-11-03-Importar-IEC-Layout-Grafcet]] |
 | Tablet: «Dois canvas» visível, módulos só com ícone e gaps das barras | [[Task-2026-11-03-Tablet-Dois-Canvas-Icones-Gaps]] |
+| «Dois canvas» alinhado (altura e base) com o grupo das vistas | [[Task-2026-11-07-Dois-Canvas-Alinhamento]] |
 | Inspeção da plataforma: paridade tablet/PC, barras sem cortes, editor offline, cabos do motor | [[Validation-2026-10-30-Inspecao-Plataforma-Tablet-Barras]] |
 | Integração dos bundles, pushes e reinício Docker | [[Validation-2026-10-30-Integracao-Bundles-Docker]] |
 | Diagnóstico de página sem resposta e cálculo assíncrono dos cabos | [[Validation-2026-10-30-Bloqueio-Pagina-Cabos]] |
