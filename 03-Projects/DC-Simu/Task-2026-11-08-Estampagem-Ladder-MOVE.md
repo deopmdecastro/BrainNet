@@ -36,6 +36,17 @@ Editar o projeto de estampagem para permitir criar Ladder com MOVE (guião «Est
 - Cópia de segurança no painel: «Estampagem Industrial — ATEC (cópia v23, 2026-11-08)» (`3c53c61d…`), sem marca nativa. Pode apagar-se depois de validar.
 - Não foram tocados: a cópia antiga v8 (`5196fda1…`) e os projetos manuais «Estampagem» e «Grafcet Estampagem».
 
+## Organização do GRAFCET (dc-simu `c4decbc`, semente v25)
+- **Ações compactas:** o «Organizar» empilha as ações simples a 42 px; só as condicionadas reservam espaço para a condição. A G3 e a G2 ficaram mais curtas.
+- **Emergência ao lado:** as etapas só alcançadas por referência (ex.: X5 na G0) ficam no topo, à direita do fluxo, e já não muito abaixo.
+- **Ilhas:** um Grafcet grande com poucas ilhas pequenas fica na mesma fila.
+- **Legendas dos abortos:** G2 «A1–A11 → X20» e G3 «A1–A4 → X40».
+- **Notas:** as notas de página empilham-se e ficam abaixo das transições de referência.
+- **Projeto guardado (Supabase):**
+  - O GRAFCET era igual ao da semente v24 (impressão digital de etapas e transições), por isso foi atualizado no próprio projeto: 3 posições de etapa, 16 `dy` de ações, comentários e curvas de ligação.
+  - `nativeId` passou a v25, na revisão 42.
+  - Verificado por impressões digitais (etapas, ações e transições iguais às da v25). O Ladder com MOVE manteve-se.
+
 ## Pendências
-- Recarregar o editor se o projeto estava aberto (a revisão 40 antiga é recusada ao guardar).
+- Recarregar o editor se o projeto estava aberto (revisões antigas são recusadas ao guardar).
 - Validar no browser/produção.
