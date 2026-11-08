@@ -27,6 +27,15 @@ Editar o projeto de estampagem para permitir criar Ladder com MOVE (guião «Est
 - `test:estampagem-ladder` (13 verificações): o Ladder fica disponível, os MOVE dão 5/6/8 → MW100, a cópia para MW102 e o reset a 0 funcionam, e o GRAFCET corre em paralelo.
 - `test:ci` verde e `vite build`.
 
+## Atualização do projeto guardado (Supabase, 2026-11-08, a pedido do utilizador)
+- Projeto `68e94beb…` «Estampagem Industrial — ATEC» (v23, revisão 40): atualização cirúrgica, sem substituir o conteúdo pela semente.
+  - Foram acrescentadas as 5 networks MOVE e as tags MW100/MW102.
+  - O Ladder ficou desbloqueado e o `nativeId` passou a v24, para a semente não o voltar a substituir.
+  - Ficou na revisão 41.
+- Verificado por SQL: o GRAFCET (53 etapas) e o restante conteúdo ficaram iguais aos da cópia.
+- Cópia de segurança no painel: «Estampagem Industrial — ATEC (cópia v23, 2026-11-08)» (`3c53c61d…`), sem marca nativa. Pode apagar-se depois de validar.
+- Não foram tocados: a cópia antiga v8 (`5196fda1…`) e os projetos manuais «Estampagem» e «Grafcet Estampagem».
+
 ## Pendências
-- Alterações feitas à mão na cópia antiga (v23) perdem-se com a atualização da semente.
+- Recarregar o editor se o projeto estava aberto (a revisão 40 antiga é recusada ao guardar).
 - Validar no browser/produção.
