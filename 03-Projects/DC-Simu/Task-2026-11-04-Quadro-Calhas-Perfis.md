@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: task
 status: IMPLEMENTED_PENDING_VALIDATION
 created: 2026-11-04
-updated: 2026-11-04
+updated: 2026-11-08
 tags: [dc-simu, 3d, quadro, calha-tecnica, din, componentes]
 ---
 # Quadro com porta, calha técnica e perfis DIN
@@ -32,7 +32,12 @@ Criar nos componentes, em 3D realista: quadro com tampa e porta com dobradiças,
   - projeto nativo envolvido num quadro: «Tudo OK», sem avisos.
 - `tsc`, `test:ci` (verde, com o novo `test:panel-accessories`, 34 verificações), `test:pdf-export`, `build-component-covers --check` (48/48) e `vite build`.
 
+## Iteração 2026-11-08 (dc-simu `4352278`)
+- Mover o quadro (rato, 3D ou setas) leva tudo o que está dentro do contorno: calhas DIN, aparelhos, calhas técnicas e aparelhos marcados ou montados na porta.
+- O conteúdo é fixado no início do arrasto, por isso o quadro não apanha aparelhos por onde passa. Motores e aparelhos de máquina ficam de fora.
+- Os pontos de passagem 2D e 3D dos cabos entre aparelhos do grupo acompanham o quadro.
+- Teste novo `test:enclosure-move` no `test:ci` (verde).
+
 ## Pendências
-- Mover o quadro não leva os aparelhos consigo (move-se só o armário).
 - Ainda não há aparelhos montados na porta (botões, HMI); os de frente de painel continuam no plano dos aparelhos.
 - Validar em produção e com projetos reais. Os GLB de miniatura geram-se com `npm run build:enclosure-glb`.
