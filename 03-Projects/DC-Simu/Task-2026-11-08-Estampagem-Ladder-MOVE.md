@@ -47,6 +47,12 @@ Editar o projeto de estampagem para permitir criar Ladder com MOVE (guião «Est
   - `nativeId` passou a v25, na revisão 42.
   - Verificado por impressões digitais (etapas, ações e transições iguais às da v25). O Ladder com MOVE manteve-se.
 
+## «Gerar Ladder» por registo de etapa (MOVE) (dc-simu `34b2977`)
+- **Limite:** 16 → 32 sequências. A estampagem tem 17 sequências, uma por página G0–G16; o MOVE estava indisponível.
+- **Nomes dos registos:** as sequências seguem a ordem das páginas, e o registo Gn guarda a página Gn (antes, «G4» era a página G16).
+- **Erro corrigido:** o método por MOVE ignorava a guarda «Só se» (a T1 da G2 disparava sem G0 em automático). Agora usa a receptividade completa, como o motor e o método por bits.
+- **Verificação:** ensaio GRAFCET × Ladder MOVE na estampagem, 1200 patamares, 0 divergências; os piscas Q1.2 (1 Hz) e Q1.0 (2 Hz) estão corretos. `test:ci` e build verdes.
+
 ## Pendências
 - Recarregar o editor se o projeto estava aberto (revisões antigas são recusadas ao guardar).
 - Validar no browser/produção.
