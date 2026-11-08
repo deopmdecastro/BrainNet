@@ -53,6 +53,12 @@ Editar o projeto de estampagem para permitir criar Ladder com MOVE (guião «Est
 - **Erro corrigido:** o método por MOVE ignorava a guarda «Só se» (a T1 da G2 disparava sem G0 em automático). Agora usa a receptividade completa, como o motor e o método por bits.
 - **Verificação:** ensaio GRAFCET × Ladder MOVE na estampagem, 1200 patamares, 0 divergências; os piscas Q1.2 (1 Hz) e Q1.0 (2 Hz) estão corretos. `test:ci` e build verdes.
 
+## Gerar Ladder com todas as páginas (dc-simu `66ff321`)
+- **Erro:** o editor passava só as transições da página aberta ao «Gerar Ladder». No projeto real o diálogo dizia «mais de 32 sequências» (53 etapas soltas) e o Ladder gerado ficava incompleto: por bits, 84 em vez de 224 networks.
+- **Correção:** pré-visualização, diferença, aplicação e exportação JSON passam a usar todas as transições.
+- **Verificado no browser com a página G4 aberta:** MOVE «Recomendado», FC Grafcet 196, FC Outputs 13, OB100 17, registos G0–G16 em MW0–MW16; as networks MOVE dos tempos mantêm-se.
+- Por bits, o GRAFCET inteiro esgota a memória M (limite 99); usar MOVE.
+
 ## Pendências
 - Recarregar o editor se o projeto estava aberto (revisões antigas são recusadas ao guardar).
 - Validar no browser/produção.
