@@ -39,5 +39,4 @@ Criar nos componentes, em 3D realista: quadro com tampa e porta com dobradiças,
 - Teste novo `test:enclosure-move` no `test:ci` (verde).
 
 ## Pendências
-- Ainda não há aparelhos montados na porta (botões, HMI); os de frente de painel continuam no plano dos aparelhos.
 - Validar em produção e com projetos reais. Os GLB de miniatura geram-se com `npm run build:enclosure-glb`.
