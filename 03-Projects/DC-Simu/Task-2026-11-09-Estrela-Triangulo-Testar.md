@@ -34,6 +34,13 @@ Criar um projeto estrela-triângulo a partir do projeto do utilizador `dc-simu-t
 - Vista 3D no browser, com a porta aberta e fechada.
 - `test:ci` e `vite build` verdes.
 
+## Projeto nativo (dc-simu `ea07b97`)
+- Passou a nativo semeado: «Estrela-Triângulo com KS1 (nativo)» (`native-estrela-ks1-v1`, `src/project/nativeEstrelaKs1.ts`).
+- Substitui o nativo antigo «Estrela-Triângulo com LOGO! (QE1)». Saíram a semente, a migração e o teste antigos; as verificações da porta passaram para o teste novo.
+- O backend local remove as cópias antigas.
+- `test:native-estrela-ks1` e `test:ci` verdes; `vite build` verde.
+- Os dois projetos antigos na conta Supabase não foram apagados: a eliminação foi recusada na permissão. O utilizador pode apagá-los no painel.
+
 ## Pendências
 - Com a porta fechada, os cabos dos aparelhos da porta contornam o armário por fora no 3D. É uma limitação do traçado, também presente no nativo estrela-triângulo.
 - O rearme do KS1 faz-se no inspetor («Pedir rearme»).
