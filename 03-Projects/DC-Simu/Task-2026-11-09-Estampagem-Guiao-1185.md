@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: task
 status: IMPLEMENTED_PENDING_VALIDATION
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-11
 tags: [dc-simu, grafcet, estampagem, atec, nativo]
 ---
 # Estampagem — guião ATEC 1185 (GRAFCET de raiz)
@@ -43,4 +43,26 @@ Criar, a partir do guião «Estampagem_Guião_1185 v2», um projeto GRAFCET novo
   - O sítio da descarga para as rampas.
 - O contacto do relé de segurança (I1.7 Seguranca_OK) não consta da tabela do guião. Tem de ser ligado a uma entrada livre.
 - Sem sensor de peça no carregador, um ciclo em vazio é contado como peça preta.
-- Disposição das páginas sem revisão visual no browser.
+
+## Revisão e correções (dc-simu `590bbd1`, 2026-11-11)
+- **Diagnóstico sem falsos avisos:**
+  - Ações N em várias etapas fazem um OU (IEC 60848). O Diagnóstico só avisa quando essas etapas podem estar ativas ao mesmo tempo, ou quando se misturam S/R com ações contínuas.
+  - A receptividade «1» só avisa quando a etapa de origem tem ações contínuas.
+  - Resultado: a Estampagem ATEC passou de 26 avisos para 0 e o guião 1185 de 33 para 0, sem esconder problemas reais.
+- **Aviso novo:** transições entre as mesmas etapas ficam sobrepostas no desenho. Foi o que aconteceu na etapa 35 do G2. A estampagem passou a uma só transição, com o tempo de cada tipo (5/6/8 s).
+- **Referências:** uma referência a um GRAFCET que falta passou a dizer qual é a página em falta.
+- **Modelos corrigidos:**
+  - Reset G2: a etapa 135 estava duplicada, a temporização dizia `20s/X15` em vez de X115 e o retorno apontava para 51 em vez de 81.
+  - Seleção OU: a etapa E5 bloqueava a sequência; agora tem retorno a E0.
+- **Projeto do guião:**
+  - A luz de emergência passou para o G0 X7.
+  - O nativo passou a v2, para o painel repor a versão nova.
+  - O ficheiro `Downloads/dc-simu-estampagem-guiao-1185.json` foi gerado de novo.
+- **Verificação:**
+  - Páginas G0–G4 vistas no browser (offline): 0 erros, 0 avisos e sem erros de JavaScript.
+  - `test:ci` e `vite build` verdes.
+  - `test:estampagem-guiao` (76), exemplos (129) e diálogos (37) verdes.
+- **Pendências:**
+  - Os modelos G0 Controlo e Reset G2 referem outras páginas (G1/G2). Inseridos sozinhos, mostram erro até se juntar o resto do conjunto.
+  - No G3, a linha de retorno da etapa 56 cruza o tronco da etapa 51. É a regra do organizador e o diagrama continua inequívoco.
+  - Não foi possível ver o estado dos deploys no Vercel: o acesso à equipa tem de ser autorizado de novo.
