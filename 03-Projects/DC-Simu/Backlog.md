@@ -216,4 +216,13 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | SYMBOLS-CONTACT-02 | Alta | IMPLEMENTED_TESTED | Contactos fechados desenhados com o gancho do contacto fixo (IEC 60617): NF com gancho à direita e lâmina apoiada na ponta, NA com o mesmo desenho espelhado a conduzir; o traço do contacto aberto segue o desenho de referência do utilizador; `contact3` alinhado nos três polos | Evidência: [[Validation-2026-11-01-Contactos-Fechados-Gancho]] |
 | SYMBOLS-SHEETS-03 | Alta | IMPLEMENTED_TESTED | Cadernos «novos design e elementos»: 30 símbolos novos levam a biblioteca de 54 para 84 tipos (instrumentos A/V/TA, relés `I>`, `U<`, `U>`, `I>>`, retenção, operação lenta, TOF, «CT», seccionadora fusível, pressostato, sirene, contador, chave geral 3P, trafo trifásico, sensores de 3 fios BR/BK/BL com «Fe», válvulas 2/2, 4/2 e 5/3 centro fechado/pressurizado/escape, filtro, lubrificador, reguladora, manómetro, silenciador e reservatório); `test:commands-symbols` e `test:commands-symbols-ui` 12 | Evidência: [[Task-2026-11-01-Cadernos-Simbolos-Novos-Elementos]]; `dc-simu` `8701991` |
 
+## Revisão da plataforma — 2026-11-11
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| UI-SUITES-03 | Média | TODO | 34 de 56 testes de browser falham com `npm run dev:ui-test`; rever cada um contra a interface atual e distinguir teste desatualizado de defeito. Substitui UI-SUITES-01 e UI-SUITES-02 | [[Validation-2026-11-11-Revisao-Plataforma]] |
+| SUPA-SEC-01 | Alta | PREPARED | Aplicar `supabase/proposals/20261111120000_harden_function_privileges.sql` após autorização | [[Validation-2026-11-11-Revisao-Plataforma]] |
+| SUPA-SEC-02 | Alta | TODO | `public.profiles` legível por qualquer conta autenticada, incluindo `admin_note`; decidir o desenho da correção | [[Validation-2026-11-11-Revisao-Plataforma]] |
+| SUPA-SEC-03 | Média | TODO | Ativar a proteção contra palavras-passe comprometidas no Supabase | Responsável |
+
 - 2026-11-01: painel inferior IEC = gaveta GRAFCET, texto com clique e ícones nos Objetos — ver [[Validation-2026-11-01-Painel-Inferior-IEC-Texto-Objetos]] (falta confirmar em telemóvel).
