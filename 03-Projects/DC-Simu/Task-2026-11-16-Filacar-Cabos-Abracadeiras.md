@@ -28,4 +28,7 @@ tags: [dc-simu, cabos, filacar, chicote, abracadeiras, 3d, nativo]
 - Sem browser: confirmar o aspeto (tamanho, cor, espaçamento) no 3D do telefone.
 - O Esquema 2D não desenha o filaçamento (só o 3D).
 - Projetos já guardados: o nativo atualiza-se pela semente; noutros, usar «Filaçar seleção».
-- Proposta: ação «Filaçar por aparelhos» no menu Organizar (usa `lacePairBundles`).
+
+
+## Seguimento (mesmo dia): «Filaçar por aparelhos»
+Ação nova no menu Organizar (PC/tablet e telemóvel): `lacePairWires` no store usa `lacePairBundles`; filaça os cabos desbloqueados entre o mesmo par de aparelhos (2+), ignora sondas, só com a simulação parada, com Ctrl+Z e aviso no registo; fica desativada com o motivo («Precisa de 2+ cabos desbloqueados sem chicote»). Ícone `IconLink`. +3 verificações em `wire-lacing-smoke.ts`. `npm test`, `tsc -b`, `vite build` OK; `test:barras-padrao` (Chromium) falha também sem estas alterações — é do ambiente, por correr com navegador.
