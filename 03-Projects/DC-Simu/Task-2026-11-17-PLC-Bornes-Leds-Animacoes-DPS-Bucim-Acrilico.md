@@ -98,3 +98,21 @@ No painel a face de montagem é a **traseira (back = −Z)** — ver `terminalFa
 - [ ] Pose + serigrafia DPS
 - [ ] Testes e evidências
 - [ ] Commit + push
+
+## 2026-11-17 — Encaixe pente (busbarComb) nos disjuntores
+
+Pedido: melhorar e criar funcionalidades de encaixe dos pinos do pente (BP1 / LEXman) nos bornes superiores dos disjuntores (QF2 Easy9, etc.), no padrão do relé térmico sob o contactor.
+
+### Implementado
+- `src/three/combMount.ts` (novo) — espelho de `thermalMount.ts`:
+  - `findCombMountTarget` / `combMountPosition` / `syncCombMounted`
+  - `combMountPairs` / `combMountBridges` (pin → 1/3/5 sem cabos)
+  - suporte a vários disjuntores adjacentes (passo DIN 18 mm)
+  - `combMountDepthOffset` para alinhamento 3D dos pinos
+- Integração em `useSimStore` (snapToRails + load), `engine` (buildGraph + fedBreakerInputs), `errorDetection`, `Panel3D`.
+- Commits: `600d3c1a`, `553e241f`, `0f1c4ec9`, `6cd8becb`, `78cf3f87`.
+
+### Como usar
+1. Colocar disjuntores em linha (1P/2P/3P).
+2. Arrastar o pente (`busbarComb`) por cima dos bornes superiores e soltar (ou Snap à calha) — o íman encaixa e grava `mountedOn`.
+3. Continuidade elétrica automática pin→borne; alimentar o pente (IN.* ou source) energiza os disjuntores a jusante.
