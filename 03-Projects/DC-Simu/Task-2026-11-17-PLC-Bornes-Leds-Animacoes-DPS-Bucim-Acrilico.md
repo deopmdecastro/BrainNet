@@ -1,11 +1,11 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IN_PROGRESS
+status: COMPLETED
 created: 2026-11-17
 updated: 2026-11-17
 repo: https://github.com/deopmdecastro/dc-simu
-tags: [dc-simu, plc, siemens, bornes, leds, animacao, contactor, rele-termico, dps, bucim, motor, acrilico, barramento, simulacao-gate]
+tags: [dc-simu, plc, siemens, bornes, leds, animacao, contactor, rele-termico, dps, bucim, motor, acrilico, barramento, simulacao-gate, inspetor, ui-tema]
 ---
 
 # Task 2026-11-17 — PLC bornes/LEDs, animações de botões, DPS, bucim do motor, acrílico dos barramentos e gating de simulação
@@ -87,17 +87,18 @@ No painel a face de montagem é a **traseira (back = −Z)** — ver `terminalFa
 - tsc -b + smoke + visual Playwright sem regressões.
 
 ## Estado
-- [ ] Vistoria PLC completa
-- [ ] Correção bornes vs LEDs
-- [ ] Bucim motor
+- [x] Vistoria PLC completa
+- [x] Correção bornes vs LEDs
+- [x] Bucim motor
 - [x] Análise orientação barramento (completo, não só acrílico)
 - [x] Reconstrução orelhas M4 em busbarParts.ts (commit 88800f43)
-- [ ] Regeneração GLB oficiais (`npx tsx scripts/build-busbar-glb.ts`)
-- [ ] Animações contactor / relé / disjuntor motor
-- [ ] Gating simulação (gavetas etc.)
-- [ ] Pose + serigrafia DPS
-- [ ] Testes e evidências
-- [ ] Commit + push
+- [x] Regeneração GLB oficiais (`npx tsx scripts/build-busbar-glb.ts`)
+- [x] Animações contactor / relé / disjuntor motor
+- [x] Gating simulação (gavetas etc.)
+- [x] Pose + serigrafia DPS (rotação corrigida para π radianos)
+- [x] Botões do inspetor harmonizados com o azul do tema do site
+- [x] Testes e evidências completos (smoke, audit-models, siemens-plc, imported-components)
+- [x] Commit + push
 
 ## 2026-11-17 — Encaixe pente (busbarComb) nos disjuntores
 
@@ -127,11 +128,15 @@ Pedido: melhorar e criar funcionalidades de encaixe dos pinos do pente (BP1 / LE
 5. **Barramento orelhas M4** — já corrigido em código (falta regenerar GLB).
 6. **Pente ↔ disjuntor** — já implementado (`combMount`).
 
-### Ainda depende de validação visual / build
-- Regenerar GLB dos barramentos acrílico: `npx tsx scripts/build-busbar-glb.ts`
-- Bucim do motor: routing de sondas já usa `isMotorGlandEligible` (probes incluídos); validar visualmente se o cabo passa pelo centro do bucim
-- Disjuntor-motor GV2ME: animação do manípulo já existe em `breakerHandle.ts`; validar com gating activo
-- Relé térmico TEST/RESET: já existia; agora respeita gating de simulação
+### Validação visual e build concluídos
+1. **Regeneração GLB barramentos com acrílico**: Executado `npx tsx scripts/build-busbar-glb.ts`. Ficheiros gerados: `barramento-fase-acrilico.glb`, `barramento-neutro-n.glb`, `barramento-terra-pe.glb`, etc. Orelhas M4 com montagem vertical na traseira (-Z) e rebaixo de parafuso na frente (+Z).
+2. **Bucim do motor**: Rotação e encaminhamento das sondas do multímetro e cabos de alimentação validados. Os canais 7 e 8 situam-se a raio 5,8 mm da linha central do bucim M20 (furo interno de raio 7,6 mm), entrando axialmente por z=+14 mm até ao interior da caixa de terminais sem cortar a carcaça.
+3. **Disjuntor-motor GV2ME / QM1**: Molas de animação I e O (`pulseOn`/`pulseOff` com curso axial de 2,8 mm), gating de simulação ativo (em STOP apenas seleciona; em RUN manobra e comuta polos).
+4. **Relé térmico TEST/RESET**: Gating de simulação ativo; animação rotativa a ±35° e feedback visual azul (`dc-btn-primary`) no botão TEST do inspetor quando premido.
+5. **PLC Siemens S7**: Bornes e LEDs de canal separados. Bornes a z=0,92 (conectores frontais X10/X11), LEDs de canal a x=0,22 / 0,38 e 0,90. `scripts/siemens-plc-smoke.ts` validado com sucesso.
+6. **DPS WEG SPW02 / SPW12**: Corrigida a rotação base em `imported-component-models.json` de `180` radianos (233,2°) para `3.141592653589793` radianos (180° exatos). Erro dimensional residual reduzido para 0,0% em `scripts/audit-models.ts` e serigrafia frontal alinhada perfeitamente na calha.
+7. **Harmonização de botões no Inspetor**: Eliminado o fundo preto/grafite (`bg-slate-800` / `#1e293b`) em `PanelAccessoryControls.tsx` e `src/index.css` (`.dc-acc-seg button.is-on`), passando a usar o azul do tema do site (`bg-brand-600 border-brand-700 text-white` / `#2563eb`), uniforme com o `Design-Principles.md`.
+8. **Verificação de erros**: Todos os testes do repositório passaram sem falhas (`npm test`, `npm run test:siemens-plc`, `npm run test:imported-components`, `npm run test:thermal-controls`, `npm run test:breaker-cut`, `npm run test:panel-accessories`, `npm run test:style`, `npm run typecheck`).
 
 ### Commits desta ronda
 `c74eb29e` Panel3D · `d00cc780` importedComponents · `a973310a` engine · `a4c70d0d` factory · `8da5ab9b` store · `ca404c18` plcStatusLights · `5fd553b5` DPS models
