@@ -91,7 +91,8 @@ No painel a face de montagem é a **traseira (back = −Z)** — ver `terminalFa
 - [ ] Correção bornes vs LEDs
 - [ ] Bucim motor
 - [x] Análise orientação barramento (completo, não só acrílico)
-- [ ] Reconstrução orelhas M4 + regeneração GLB
+- [x] Reconstrução orelhas M4 em busbarParts.ts (commit 88800f43)
+- [ ] Regeneração GLB oficiais (`npx tsx scripts/build-busbar-glb.ts`)
 - [ ] Animações contactor / relé / disjuntor motor
 - [ ] Gating simulação (gavetas etc.)
 - [ ] Pose + serigrafia DPS
