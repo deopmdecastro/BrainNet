@@ -15,6 +15,7 @@ tags: [dc-simu, plc, siemens, bornes, leds, animacao, contactor, rele-termico, d
 1. **PLC**: Os bornes estão errados — no lugar dos LEDs indicadores de funcionamento das entradas e saídas foram postos os bornes do PLC. Fazer vistoria de todo o material PLC (Siemens S7-1500 DI32, CPU 1511C, S7-300 CPU 315), confirmar bornes, LCD, luzes e botões.
 2. **Cabo do multímetro**: Não passa dentro do bucim do motor.
 3. **Barramentos com acrílico**: Ficaram na posição errada — a parte que entra o parafuso fica na chapa (orientação invertida).
+   - **Clarificação 2026-11-17**: Não é só o acrílico. O **barramento completo** está invertido. A face de montagem (orelhas M4, lado de entrada do parafuso) está virada para a chapa de forma incorrecta.
 4. **Animações e funcionalidade de botões**:
    - Atracar o contactor manualmente clicando no botão de teste.
    - Botões do relé térmico (Test/Reset e outros).
@@ -31,6 +32,20 @@ tags: [dc-simu, plc, siemens, bornes, leds, animacao, contactor, rele-termico, d
 - Validation-2026-11-01-Rele-Termico-3RU1116 e Validation-2026-11-02-Test-Reset-Rele-Termico — botões Test/Reset do relé térmico.
 - Regras de simulação: componentes interativos (gavetas, botões de teste, alavancas) só animam/funcionam quando simulation.running ou estado de simulação ativo (exceto edição de pose em editor 3D).
 
+## Análise do barramento (clarificação)
+
+Em `src/three/busbarParts.ts` → `buildAcrylicBusbar`:
+
+- Painel frontal (furos de entrada de cabos) em **+Z**.
+- Painel traseiro em **−Z**.
+- Orelhas M4 construídas como **placas horizontais XZ** na base (Y baixo), com eixo do parafuso ao longo de **Y** e rebaixo da cabeça em Y+.
+
+No painel a face de montagem é a **traseira (back = −Z)** — ver `terminalFaces.ts` (`back` = «Face de montagem»). As orelhas devem apresentar face vertical à chapa, eixo do parafuso ao longo de **Z**, rebaixo da cabeça do parafuso acessível pelo lado da frente (+Z da orelha).
+
+**Causa**: geometria das orelhas orientada para montagem horizontal (parafuso de cima), não para montagem em chapa vertical. O barramento completo fica com o lado de entrada do parafuso incorrecto relativamente à chapa.
+
+**Correção**: reconstruir as orelhas como placas verticais nas extremidades, alinhadas com a face traseira, eixo do furo M4 ao longo de Z, rebaixo no lado +Z. Regenerar os GLB (`scripts/build-busbar-glb.ts`).
+
 ## Plano de trabalho
 
 ### 1. PLC (prioridade alta)
@@ -46,44 +61,37 @@ tags: [dc-simu, plc, siemens, bornes, leds, animacao, contactor, rele-termico, d
 - Rever geometria do bucim e o raycast/routing de cabos e sondas do multímetro (src/three/ motor parts, cableRouting ou equivalente).
 - Garantir que o cabo/sonda entra pelo centro do bucim e não colide com a carcaça.
 
-### 3. Acrílico dos barramentos
-- Em src/three/busbarParts.ts / Busbar3D.tsx / script de build GLB: inverter a orientação da tampa de acrílico para que o lado de entrada do parafuso fique voltado para fora (não para a chapa).
-- Validar com as 3 variantes (PE verde, N azul, Fase cor selecionável).
+### 3. Barramentos acrílico (PRIORIDADE desta mensagem)
+- Reconstruir orelhas M4 em `buildAcrylicBusbar` (face de montagem = back, eixo Z).
+- Regenerar GLBs oficiais.
+- Validar PE / N / Fase: frente = furos + acrílico no topo; trás = orelhas contra a chapa; parafuso entra pelo lado acessível.
 
 ### 4. Animações de botões
-- Contactor (ex. WEG CWC / TeSys): botão de teste (ou “Test”) atraca manualmente o contacto (estado manualLatch ou equivalente) e anima a armadura.
-- Relé térmico: botões Test e Reset já existentes — confirmar animação e que só funcionam em simulação; adicionar feedback visual se faltar.
-- Disjuntor motor (GV2ME / QM1): alavanca ON/OFF e botão de teste se existir — animação de trip/reset e estado ligado.
+- Contactor (ex. WEG CWC / TeSys): botão de teste atraca manualmente o contacto e anima a armadura.
+- Relé térmico: botões Test e Reset — confirmar animação e gating de simulação.
+- Disjuntor motor (GV2ME / QM1): alavanca ON/OFF e animação de trip/reset.
 
 ### 5. Gating de simulação
-- Localizar handlers de clique em gavetas de fusível, alavancas, botões de teste.
-- Guardar com if (!simRunning && !editorMode) return; (ou a regra canónica do projeto).
-- Componentes que devem continuar a permitir inspeção visual fora de simulação (abrir tampa para ver bornes) ficam com animação de tampa, mas sem alteração de estado elétrico.
+- Handlers de clique em gavetas de fusível, alavancas, botões de teste só activos em simulação (excepto inspeção visual de tampas).
 
 ### 6. DPS (DPS1 / DPS2 — WEG SPW)
-- Corrigir pose base (rotação/posição relativa à calha).
-- Mover serigrafia/textura para a face frontal (atualmente na traseira).
-- Confirmar bornes e LEDs de estado se existirem.
+- Corrigir pose base e mover serigrafia para a face frontal.
 
 ## Critérios de aceitação
 - PLC: bornes nos conectores frontais; LEDs de canal e de estado nos sítios certos; LCD e botões corretos.
 - Multímetro: cabo/sonda entra pelo bucim do motor.
-- Acrílico: lado do parafuso voltado para o observador/fora da chapa.
+- **Barramento**: orelhas com face de montagem na traseira; lado de entrada do parafuso acessível (não escondido na chapa); frente com furos e acrílico no topo.
 - Contactor e relé térmico: clique no botão de teste atraca/desarma com animação, só em simulação.
 - Fusível e alavancas: não alteram estado elétrico fora de simulação.
 - DPS: pose e serigrafia frontais corretas.
 - tsc -b + smoke + visual Playwright sem regressões.
 
-## Notas de implementação
-- Preferir reaproveitar padrões já existentes (ex. manualTest do contactor, testReset do relé térmico, gating de useSimStore).
-- Não inventar novas UI; seguir Design-Principles e o kit de toolbar/painéis.
-- Após correções: commit em dc-simu + nota de validação aqui + push em ambos os repos.
-
 ## Estado
 - [ ] Vistoria PLC completa
 - [ ] Correção bornes vs LEDs
 - [ ] Bucim motor
-- [ ] Orientação acrílico
+- [x] Análise orientação barramento (completo, não só acrílico)
+- [ ] Reconstrução orelhas M4 + regeneração GLB
 - [ ] Animações contactor / relé / disjuntor motor
 - [ ] Gating simulação (gavetas etc.)
 - [ ] Pose + serigrafia DPS
