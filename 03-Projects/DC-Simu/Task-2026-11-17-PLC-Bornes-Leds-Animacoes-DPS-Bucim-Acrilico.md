@@ -116,3 +116,22 @@ Pedido: melhorar e criar funcionalidades de encaixe dos pinos do pente (BP1 / LE
 1. Colocar disjuntores em linha (1P/2P/3P).
 2. Arrastar o pente (`busbarComb`) por cima dos bornes superiores e soltar (ou Snap à calha) — o íman encaixa e grava `mountedOn`.
 3. Continuidade elétrica automática pin→borne; alimentar o pente (IN.* ou source) energiza os disjuntores a jusante.
+
+## 2026-11-17 (noite) — Resolução dos pendentes
+
+### Feito nesta ronda
+1. **Gating de simulação** — gaveta de fusível, TEST, alavancas e restantes controlos mecânicos **só alteram estado elétrico com simulação activa** (ou demo). Em STOP apenas seleccionam o aparelho.
+2. **Contactor — botão de teste / atracagem manual** — `manualLatch` + `testPressed` mantêm polos fechados sem bobina; integrado em `importedActuationPatch`, `engine` e scan do `useSimStore`.
+3. **PLC Siemens** — `position3D` dos bornes fixo em z=0,92 (conectores frontais X10/X11); LEDs de canal I/Q adicionados em `plcChannelLamps` (separados dos bornes e das lâmpadas RUN/ERROR/MAINT).
+4. **DPS WEG SPW02/SPW12** — rotação base `[0, 180, 0]` para a serigrafia ficar na face frontal.
+5. **Barramento orelhas M4** — já corrigido em código (falta regenerar GLB).
+6. **Pente ↔ disjuntor** — já implementado (`combMount`).
+
+### Ainda depende de validação visual / build
+- Regenerar GLB dos barramentos acrílico: `npx tsx scripts/build-busbar-glb.ts`
+- Bucim do motor: routing de sondas já usa `isMotorGlandEligible` (probes incluídos); validar visualmente se o cabo passa pelo centro do bucim
+- Disjuntor-motor GV2ME: animação do manípulo já existe em `breakerHandle.ts`; validar com gating activo
+- Relé térmico TEST/RESET: já existia; agora respeita gating de simulação
+
+### Commits desta ronda
+`c74eb29e` Panel3D · `d00cc780` importedComponents · `a973310a` engine · `a4c70d0d` factory · `8da5ab9b` store · `ca404c18` plcStatusLights · `5fd553b5` DPS models
