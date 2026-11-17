@@ -1,3 +1,12 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: COMPLETED
+created: 2026-11-16
+updated: 2026-11-16
+tags: [brainet, dc-simu, task, barramento-pente, conector, calha]
+---
+
 # Task — 2026-11-16 — Barramento tipo pente (1P/1P+N/3P/3P+N), conector de pino personalizável e corte de dentes em T nas calhas ranhuradas
 
 ## Contexto

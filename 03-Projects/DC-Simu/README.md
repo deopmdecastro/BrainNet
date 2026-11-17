@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: project-index
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-11-01
+updated: 2026-11-17
 tags: [brainet, dc-simu, index]
 ---
 # DC-Simu
@@ -14,6 +14,14 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 
 | Conteúdo | Abrir |
 | --- | --- |
+| Protocolo de comunicação, workflows e automação BrainNet ↔ DC-Simu | [[Protocolo-Comunicacao-BrainNet-DCSimu]] |
+| Validação final de pendentes (GLBs, bucim, DPS, inspetor) | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]] |
+| PLC bornes/LEDs, animações, DPS, bucim e acrílico | [[Task-2026-11-17-PLC-Bornes-Leds-Animacoes-DPS-Bucim-Acrilico]] |
+| Barramentos 3D reais (PE, N, Fase com acrílico e Fases em escada) | [[Task-2026-11-16-Barramentos-3D-Reais-Acrilico-E-Escada]] |
+| Barramento pente e conector de pino personalizável | [[Task-2026-11-16-Barramento-Pente-Conector-Pino-E-Unioes-T-Calha]] |
+| Proteções 3D realistas, Hager CFC225P e anilhas clip-on | [[Task-2026-11-16-Protecoes-3D-Realistas-Hager-TeSysDF-E-Anilhas-IEC60062]] |
+| Réguas de bornes PTI 6, plaquetas ZB 8 e pontes FBS | [[Task-2026-11-16-Reguas-De-Bornes-PTI6-Plaquetas-ZB-Pontes-FBS-E-Inspetor-Total]] |
+| GRAFCET ao vivo no painel (lado a lado e foco ativo) | [[Task-2026-11-16-Grafcet-Ao-Vivo-Etapa-Ativa-Lado-A-Lado]] |
 | Briefing e estado do projeto | [[Project-Brief]] |
 | Princípios de UI, UX e contexto para agentes | [[Design-Principles]] |
 | Requisitos e prioridades | [[Requirements]] |
@@ -111,6 +119,25 @@ Página `/account` com perfil, avatar, palavra-passe e plano (ver [[Validation-2
 ## Canvas comments
 
 The dc-simu canvas now supports persistent free-text annotations in GRAFCET and the 2D/3D schematic views. Notes appear as numbered comment pins; double-click edits and right-click removes them.
+
+## Priorização da Comunicação BrainNet ↔ DC-Simu
+
+A cooperação contínua e a priorização da comunicação entre a aplicação e o cofre estão estruturadas em:
+- [[Protocolo-Comunicacao-BrainNet-DCSimu|Protocolo de Comunicação e Alinhamento: BrainNet ↔ DC-Simu]].
+- Contextos e diretrizes: [[Design-Principles]], [[Testing-Plan]], [[Collaboration-Contract]].
+- Workflows operacionais: `WF-01` (Intake), `WF-02` (Planning), `WF-03` (Agent Handoff), `WF-04` (Documentation Sync) e `WF-05` (QA Review).
+
+## Entregas de 17 de novembro de 2026
+
+[[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor|Resolução de pendentes: GLBs de barramento, bucim do motor, DPS, PLC e harmonização do Inspetor]] — validação completa dos 8 itens solicitados: regeneração dos modelos GLB com orelhas traseiras, passagem livre de sondas no bucim sem colisões com a carcaça, gating de simulação em GV2ME e relé térmico, alinhamento de bornes/LEDs Siemens S7, correção de rotação angular do DPS para $\pi$ radianos e harmonização completa dos botões do inspetor para azul do tema (`#2563eb`).
+
+## Entregas de 16 de novembro de 2026
+
+- [[Task-2026-11-16-Barramentos-3D-Reais-Acrilico-E-Escada|Barramentos 3D reais]]: Terra PE (verde), Neutro N (azul), Fase acrílico translúcido e barramentos em escada.
+- [[Task-2026-11-16-Barramento-Pente-Conector-Pino-E-Unioes-T-Calha|Barramento tipo pente e conector de alimentação]]: modelos 1P/1P+N/3P/3P+N e encaixes sem colisão em calhas ranhuradas.
+- [[Task-2026-11-16-Protecoes-3D-Realistas-Hager-TeSysDF-E-Anilhas-IEC60062|Proteções 3D realistas e anilhas normativas]]: correção de orientação Hager CFC225P, porta-fusíveis TeSys DF e anilhas cilíndricas IEC 60062.
+- [[Task-2026-11-16-Reguas-De-Bornes-PTI6-Plaquetas-ZB-Pontes-FBS-E-Inspetor-Total|Réguas de bornes PTI 6]]: plaquetas Zack ZB 8, pontes FBS e auditoria total 54/54 do inspetor.
+- [[Task-2026-11-16-Grafcet-Ao-Vivo-Etapa-Ativa-Lado-A-Lado|GRAFCET ao vivo no painel]]: acompanhamento dinâmico de etapas ativas e visualização de dois GRAFCETs simultâneos lado a lado.
 
 ## Entrega de 1 de novembro de 2026
 

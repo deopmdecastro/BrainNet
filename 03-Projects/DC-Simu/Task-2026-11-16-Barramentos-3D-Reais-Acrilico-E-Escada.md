@@ -1,3 +1,12 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: COMPLETED
+created: 2026-11-16
+updated: 2026-11-16
+tags: [brainet, dc-simu, task, barramento, acrilico, escada, 3d]
+---
+
 # Task — 2026-11-16 — Barramentos 3D reais (Terra PE, Neutro N, Fase com acrílico e Fases em escada)
 
 ## Contexto

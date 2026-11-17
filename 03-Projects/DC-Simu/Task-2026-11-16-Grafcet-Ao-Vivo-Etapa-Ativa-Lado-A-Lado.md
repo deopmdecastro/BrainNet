@@ -1,3 +1,12 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: COMPLETED
+created: 2026-11-16
+updated: 2026-11-16
+tags: [brainet, dc-simu, task, grafcet, live, ui-ux]
+---
+
 # Task — 2026-11-16 — GRAFCET ao vivo no painel (foco na etapa ativa + dois GRAFCETs lado a lado)
 
 ## Contexto

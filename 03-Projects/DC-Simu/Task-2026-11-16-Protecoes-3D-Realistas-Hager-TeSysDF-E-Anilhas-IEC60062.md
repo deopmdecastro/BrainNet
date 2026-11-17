@@ -1,3 +1,12 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: COMPLETED
+created: 2026-11-16
+updated: 2026-11-16
+tags: [brainet, dc-simu, task, protecoes, hager, tesys, anilhas, iec60062]
+---
+
 # Task — 2026-11-16 — Proteções 3D realistas (serigrafias vivas, ID Hager de pé, porta-fusíveis TeSys DF) e anilhas clip-on IEC 60062
 
 ## Contexto

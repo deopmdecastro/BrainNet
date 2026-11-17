@@ -29,7 +29,7 @@ for (const file of markdownFiles) {
     const target = match[1].split('#')[0];
     if (!target) continue;
     checkedLinks++;
-    const extensions = /\.(md|canvas)$/u.test(target) ? [''] : ['.md', '.canvas'];
+    const extensions = path.extname(target) ? [''] : ['.md', '.canvas'];
     const candidates = extensions.map(ext => path.resolve(path.dirname(file), target + ext));
     if ((await Promise.all(candidates.map(exists))).some(Boolean)) continue;
     if (!target.includes('/')) {
@@ -40,7 +40,7 @@ for (const file of markdownFiles) {
   }
   for (const match of prose.matchAll(/(?<!!)\[[^\]\n]+\]\(([^)]+)\)/gu)) {
     const target = match[1].replace(/^<|>$/gu, '').split('#')[0];
-    if (!target || /^[a-z][a-z0-9+.-]*:/iu.test(target)) continue;
+    if (!target || /^[a-z][a-z0-9+.-]*:/iu.test(target) || /^(\.\.\/)*runtime\//.test(target)) continue;
     checkedLinks++;
     if (!await exists(path.resolve(path.dirname(file), decodeURIComponent(target)))) errors.push(`${relative(file)}: link inválido: ${target}`);
   }

@@ -3,12 +3,34 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-11-01
+updated: 2026-11-17
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
+
+## Incremento de resolução de pendentes e integração — 2026-11-17
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| BRAINET-DCSIMU-COMM-01 | Alta | IMPLEMENTED_TESTED | Priorização da comunicação entre DC-Simu e cofre BrainNet: workflows (WF-01 a WF-05), contextos (Design-Principles) e automação (submódulo, check-foundation e testes) | [[Protocolo-Comunicacao-BrainNet-DCSimu]]; `check-foundation.mjs`, `npm test` cofre |
+| BUSBAR-GLB-REGEN-01 | Alta | IMPLEMENTED_TESTED | Regeneração dos GLBs dos barramentos com acrílico (orelhas de fixação traseiras M4, acesso frontal para parafusos) | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]]; `build-busbar-glb.ts`, GLBs gerados |
+| MOTOR-GLAND-VALIDATION-01 | Alta | IMPLEMENTED_TESTED | Validação dimensional da passagem de cabos e sondas no bucim M20 sem colisão com carcaça | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]]; verificação de trajeto axial e radial |
+| SIM-GATING-CONTROLS-01 | Alta | IMPLEMENTED_TESTED | Gating de simulação para botoeiras do disjuntor GV2ME e comandos TEST/RESET do relé térmico (manobra apenas em RUN, seleção em STOP) | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]]; `test:thermal-controls` (24) |
+| PLC-TERMINALS-LEDS-01 | Alta | IMPLEMENTED_TESTED | Vistoria geométrica de bornes vs. LEDs nos módulos Siemens S7-1500 e S7-300 | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]]; `test:siemens-plc` (9) |
+| DPS-ROTATION-RAD-01 | Alta | IMPLEMENTED_TESTED | Correção da rotação do DPS SPW02/SPW12 de 180° para pi radianos, eliminando erro de 78,8% para 0,0% | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]]; `scripts/audit-models.ts` 0.0% erro |
+| INSPECTOR-THEME-BLUE-01 | Alta | IMPLEMENTED_TESTED | Harmonização de botões pretos do Inspetor para azul de marca (`#2563eb`), conforme Design-Principles | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]]; `test:style` (no-accent-border) |
+
+## Incremento de barramentos reais e proteções — 2026-11-16
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| BUSBAR-REAL-01 | Alta | IMPLEMENTED_TESTED | Barramentos 3D reais (PE, N, Fase acrílico e Escada) com continuidade e medições | [[Task-2026-11-16-Barramentos-3D-Reais-Acrilico-E-Escada]]; `test:imported-components` |
+| COMB-BUSBAR-01 | Alta | IMPLEMENTED_TESTED | Barramento tipo pente (1P/1P+N/3P/3P+N), conector de pino personalizável e corte em T em calhas ranhuradas | [[Task-2026-11-16-Barramento-Pente-Conector-Pino-E-Unioes-T-Calha]]; `test:panel-accessories` |
+| PROTECT-3D-01 | Alta | IMPLEMENTED_TESTED | Proteções 3D realistas, Hager CFC225P de pé, porta-fusíveis TeSys DF e anilhas normativas IEC 60062 | [[Task-2026-11-16-Protecoes-3D-Realistas-Hager-TeSysDF-E-Anilhas-IEC60062]]; `test:breaker-cut` |
+| PTI6-STRIPS-01 | Alta | IMPLEMENTED_TESTED | Réguas de bornes PTI 6 com plaquetas Zack ZB 8, pontes FBS e auditoria total do inspetor | [[Task-2026-11-16-Reguas-De-Bornes-PTI6-Plaquetas-ZB-Pontes-FBS-E-Inspetor-Total]] |
+| GRAFCET-LIVE-01 | Alta | IMPLEMENTED_TESTED | GRAFCET ao vivo no painel direito/inferior com acompanhamento de etapa ativa e dois diagramas lado a lado | [[Task-2026-11-16-Grafcet-Ao-Vivo-Etapa-Ativa-Lado-A-Lado]] |
 
 ## Incremento de interação — 2026-11-01
 

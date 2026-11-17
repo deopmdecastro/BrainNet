@@ -1,3 +1,12 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: COMPLETED
+created: 2026-11-16
+updated: 2026-11-16
+tags: [brainet, dc-simu, task, reguas-bornes, pti6, zack-zb, pontes-fbs, inspetor]
+---
+
 # Task — 2026-11-16 — Réguas de bornes PTI 6 (plaquetas ZB 8, pontes FBS, anti-colisão de TAGs) e auditoria total 54/54 do Inspetor
 
 ## Contexto
