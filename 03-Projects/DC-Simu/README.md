@@ -14,6 +14,8 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 
 | Conteúdo | Abrir |
 | --- | --- |
+| QGD nativo, correção React #310, ícones SVG e permissões Admin | [[Validation-2026-11-17-QGD-Nativo-React310-SVG-Admin]] |
+| Quadro Geral de Distribuição Completo Multi-Circuitos | [[Task-2026-11-18-Quadro-Geral-Distribuicao-Completo-Multi-Circuitos]] |
 | Protocolo de comunicação, workflows e automação BrainNet ↔ DC-Simu | [[Protocolo-Comunicacao-BrainNet-DCSimu]] |
 | Validação final de pendentes (GLBs, bucim, DPS, inspetor) | [[Validation-2026-11-17-Resolucao-Pendentes-GLB-Bucim-DPS-Inspetor]] |
 | PLC bornes/LEDs, animações, DPS, bucim e acrílico | [[Task-2026-11-17-PLC-Bornes-Leds-Animacoes-DPS-Bucim-Acrilico]] |
