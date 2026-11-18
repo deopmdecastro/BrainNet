@@ -1,0 +1,107 @@
+
+> dc-simu@2.0.0 build
+> tsc -b && vite build --outDir /home/user/.cache/dc-simu-release-r214
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1896 modules transformed.
+
+(!) outDir /home/user/.cache/dc-simu-release-r214 is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+[plugin vite:reporter] 
+(!) /home/user/repos/dc-simu/src/admin/editor3d/validate.ts is dynamically imported by /home/user/repos/dc-simu/src/admin/editor3d/syncAudit.ts but also statically imported by /home/user/repos/dc-simu/src/admin/editor3d/ComponentEditor3D.tsx, /home/user/repos/dc-simu/src/admin/editor3d/tabs1.tsx, /home/user/repos/dc-simu/src/admin/editor3d/tabs2.tsx, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /home/user/repos/dc-simu/src/dashboard/projectPreview.ts is dynamically imported by /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts but also statically imported by /home/user/repos/dc-simu/src/auth/localBackend.ts, /home/user/repos/dc-simu/src/project/freeNativeSandbox.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /home/user/repos/dc-simu/src/project/freeNativeSandbox.ts is dynamically imported by /home/user/repos/dc-simu/src/auth/accountApi.ts, /home/user/repos/dc-simu/src/auth/accountApi.ts, /home/user/repos/dc-simu/src/auth/accountApi.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts but also statically imported by /home/user/repos/dc-simu/src/auth/localBackend.ts, /home/user/repos/dc-simu/src/dashboard/Dashboard.tsx, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /home/user/repos/dc-simu/src/project/landingPublish.ts is dynamically imported by /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts but also statically imported by /home/user/repos/dc-simu/src/auth/localBackend.ts, /home/user/repos/dc-simu/src/landing/LandingEditorShowcase.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+../../.cache/dc-simu-release-r214/version.json                                     0.11 kB │ gzip:     0.12 kB
+../../.cache/dc-simu-release-r214/manifest.webmanifest                             0.43 kB
+../../.cache/dc-simu-release-r214/index.html                                       5.51 kB │ gzip:     2.19 kB
+../../.cache/dc-simu-release-r214/assets/stepImport.worker-GVjfsOtX.js            57.30 kB
+../../.cache/dc-simu-release-r214/assets/wireRouting.worker-DQf67XeL.js          183.14 kB
+../../.cache/dc-simu-release-r214/assets/occt-import-js-DAA_IsEU.wasm         13,268.68 kB │ gzip: 4,206.32 kB
+../../.cache/dc-simu-release-r214/assets/InlineName-a2tclOC0.css                   1.17 kB │ gzip:     0.47 kB
+../../.cache/dc-simu-release-r214/assets/fluidSim4-CQFQOPNu.css                    4.69 kB │ gzip:     1.52 kB
+../../.cache/dc-simu-release-r214/assets/CommandsEditor-C9lFHeri.css              22.84 kB │ gzip:     4.96 kB
+../../.cache/dc-simu-release-r214/assets/GrafcetEditor-B5zNle4j.css               39.24 kB │ gzip:     7.15 kB
+../../.cache/dc-simu-release-r214/assets/index-inTEztO9.css                      879.94 kB │ gzip:   150.76 kB
+../../.cache/dc-simu-release-r214/assets/ladderZoom-CpK5QIMl.js                    0.57 kB │ gzip:     0.38 kB
+../../.cache/dc-simu-release-r214/assets/SymbolThumb-BXmiW2vW.js                   0.66 kB │ gzip:     0.45 kB
+../../.cache/dc-simu-release-r214/assets/geometry-3AVNshmN.js                      0.78 kB │ gzip:     0.44 kB
+../../.cache/dc-simu-release-r214/assets/textStyle-BKJHgZ5C.js                     1.86 kB │ gzip:     1.00 kB
+../../.cache/dc-simu-release-r214/assets/GlbPreview-DwccPdOF.js                    2.07 kB │ gzip:     1.09 kB
+../../.cache/dc-simu-release-r214/assets/LandingEditorShowcase-Di5n6EL3.js         2.49 kB │ gzip:     1.21 kB
+../../.cache/dc-simu-release-r214/assets/MotorShaftFan3D-BmAyWFyw.js               2.68 kB │ gzip:     1.19 kB
+../../.cache/dc-simu-release-r214/assets/usePinchZoom-CbBaHk8M.js                  2.72 kB │ gzip:     1.03 kB
+../../.cache/dc-simu-release-r214/assets/glbCompression-Ca32BVMQ.js                2.75 kB │ gzip:     1.43 kB
+../../.cache/dc-simu-release-r214/assets/editing-BHbnNTxb.js                       2.84 kB │ gzip:     1.26 kB
+../../.cache/dc-simu-release-r214/assets/Select-DMrjM28R.js                        3.05 kB │ gzip:     1.39 kB
+../../.cache/dc-simu-release-r214/assets/LandingPricing-D1Ywme69.js                3.05 kB │ gzip:     1.38 kB
+../../.cache/dc-simu-release-r214/assets/ContribParts-D2sRRcKs.js                  3.84 kB │ gzip:     1.70 kB
+../../.cache/dc-simu-release-r214/assets/ShortcutsDialog-k00U3ce7.js               4.44 kB │ gzip:     1.80 kB
+../../.cache/dc-simu-release-r214/assets/ProjectCover-8Z22LaQh.js                  5.15 kB │ gzip:     2.42 kB
+../../.cache/dc-simu-release-r214/assets/orientedComponentImage-4yOR1WuC.js        5.35 kB │ gzip:     2.41 kB
+../../.cache/dc-simu-release-r214/assets/EditorMinimap-DOoZm_xv.js                 5.72 kB │ gzip:     2.31 kB
+../../.cache/dc-simu-release-r214/assets/workbox-window.prod.es5-BBnX5xw4.js       5.75 kB │ gzip:     2.36 kB
+../../.cache/dc-simu-release-r214/assets/LandingMotorHero-IYWHz6z-.js              6.31 kB │ gzip:     2.92 kB
+../../.cache/dc-simu-release-r214/assets/AccountPlanCard-X3UZ9kzl.js               6.82 kB │ gzip:     2.57 kB
+../../.cache/dc-simu-release-r214/assets/CommandsPanels-wKCeHK3o.js                8.32 kB │ gzip:     3.15 kB
+../../.cache/dc-simu-release-r214/assets/MonitorPanel-D01q-Q_Y.js                  9.77 kB │ gzip:     3.20 kB
+../../.cache/dc-simu-release-r214/assets/ContributorPanel-DOD3RzXi.js             10.08 kB │ gzip:     3.75 kB
+../../.cache/dc-simu-release-r214/assets/componentThumbnails-Dw8ufjXZ.js          10.15 kB │ gzip:     4.30 kB
+../../.cache/dc-simu-release-r214/assets/AccountPage-BhCP4K3V.js                  10.81 kB │ gzip:     3.61 kB
+../../.cache/dc-simu-release-r214/assets/contribApi-cmOfcpZj.js                   10.86 kB │ gzip:     3.91 kB
+../../.cache/dc-simu-release-r214/assets/GrafcetLiveDock-DrFtqRwD.js              13.77 kB │ gzip:     4.96 kB
+../../.cache/dc-simu-release-r214/assets/modelFit-DumvNulT.js                     15.89 kB │ gzip:     6.63 kB
+../../.cache/dc-simu-release-r214/assets/staticComponentImages-IAJQbMEC.js        17.55 kB │ gzip:     6.30 kB
+../../.cache/dc-simu-release-r214/assets/InlineName-C8_aIZX2.js                   20.31 kB │ gzip:     6.59 kB
+../../.cache/dc-simu-release-r214/assets/Dashboard-CpNmZRi9.js                    20.54 kB │ gzip:     6.36 kB
+../../.cache/dc-simu-release-r214/assets/Landing-yA6zEvJk.js                      20.88 kB │ gzip:     6.57 kB
+../../.cache/dc-simu-release-r214/assets/CommandsSidebar-D_0TRjy4.js              26.12 kB │ gzip:     8.02 kB
+../../.cache/dc-simu-release-r214/assets/fluidSim4-BFA97uSu.js                    26.84 kB │ gzip:    11.37 kB
+../../.cache/dc-simu-release-r214/assets/componentRig-CTE2qItZ.js                 27.96 kB │ gzip:    10.52 kB
+../../.cache/dc-simu-release-r214/assets/purify.es-18JuyMri.js                    30.12 kB │ gzip:    11.51 kB
+../../.cache/dc-simu-release-r214/assets/Viewport-BJlN_9h8.js                     31.52 kB │ gzip:    11.30 kB
+../../.cache/dc-simu-release-r214/assets/NetworkDiagram-DJArpD0V.js               40.38 kB │ gzip:    12.65 kB
+../../.cache/dc-simu-release-r214/assets/symbols-CWe1Fm3V.js                      44.37 kB │ gzip:     9.91 kB
+../../.cache/dc-simu-release-r214/assets/index.module-9WJvHp9G.js                 47.64 kB │ gzip:    15.07 kB
+../../.cache/dc-simu-release-r214/assets/WireEnd3D-CgRj47u2.js                    60.88 kB │ gzip:    22.57 kB
+../../.cache/dc-simu-release-r214/assets/motorEditorTextures-Cr2bfkrD.js          78.63 kB │ gzip:    29.10 kB
+../../.cache/dc-simu-release-r214/assets/CommandsEditor-B27piPaf.js               89.66 kB │ gzip:    30.52 kB
+../../.cache/dc-simu-release-r214/assets/ViewCube-BYrwpt1U.js                    112.92 kB │ gzip:    35.60 kB
+../../.cache/dc-simu-release-r214/assets/LadderEditor-CrkEch76.js                139.27 kB │ gzip:    41.14 kB
+../../.cache/dc-simu-release-r214/assets/index.es-CQXNjVUE.js                    158.17 kB │ gzip:    52.76 kB
+../../.cache/dc-simu-release-r214/assets/vendor-react-DH-0J3Pc.js                192.11 kB │ gzip:    64.06 kB
+../../.cache/dc-simu-release-r214/assets/html2canvas.esm-DXEQVQnt.js             201.04 kB │ gzip:    47.43 kB
+../../.cache/dc-simu-release-r214/assets/vendor-supabase-CB7MGzWB.js             223.73 kB │ gzip:    58.62 kB
+../../.cache/dc-simu-release-r214/assets/SchematicView-TQ_88m-_.js               291.76 kB │ gzip:    95.83 kB
+../../.cache/dc-simu-release-r214/assets/GrafcetEditor-D1roJNim.js               372.32 kB │ gzip:   109.99 kB
+../../.cache/dc-simu-release-r214/assets/ExportPdfDialog-C82ln7gE.js             422.24 kB │ gzip:   138.62 kB
+../../.cache/dc-simu-release-r214/assets/AdminPanel-DMwo_17_.js                  432.23 kB │ gzip:   132.85 kB
+../../.cache/dc-simu-release-r214/assets/vendor-r3f-BTl0schN.js                  502.26 kB │ gzip:   163.09 kB
+../../.cache/dc-simu-release-r214/assets/App-CNLXTAFP.js                         519.38 kB │ gzip:   148.44 kB
+../../.cache/dc-simu-release-r214/assets/vendor-three-DYwG3KjM.js                798.75 kB │ gzip:   209.22 kB
+../../.cache/dc-simu-release-r214/assets/exceljs.min-DEFI__x4.js                 936.99 kB │ gzip:   270.75 kB
+../../.cache/dc-simu-release-r214/assets/index-CnWHJLtl.js                     1,138.80 kB │ gzip:   343.33 kB
+
+(!) Some chunks are larger than 900 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 46.43s
+
+PWA v1.3.0
+mode      generateSW
+precache  153 entries (8597.01 KiB)
+files generated
+  ../../.cache/dc-simu-release-r214/sw.js
+  ../../.cache/dc-simu-release-r214/workbox-4e9e9954.js

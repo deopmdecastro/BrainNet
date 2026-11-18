@@ -1,0 +1,34 @@
+{
+  "stage": "APP_COMMITTED_CANONICAL_BUILD_AND_PUBLICATION_PENDING",
+  "authorization": {
+    "actor": "deopmdecastro",
+    "source": "Explicit user authorization in this conversation",
+    "repositories": [
+      "deopmdecastro/dc-simu",
+      "deopmdecastro/BrainNet"
+    ],
+    "branches": [
+      "main"
+    ],
+    "environment": "Existing Vercel production deployment for dc-simu; BrainNet release documentation/gitlink",
+    "scope": "Previously validated LCD and six mechanical refinements; no personal checkout, account data or RLS changes"
+  },
+  "app": {
+    "baseRemote": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+    "parent": "7990560a8873e58561042a7025888a09286bc8a9",
+    "target": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43",
+    "stamp": {
+      "count": 214,
+      "epoch": "mwmqsiqd"
+    },
+    "expectedBuildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+    "reviewedSourceDigests": 62,
+    "stagedScopedFilesBeforeHook": 81,
+    "secretScanMatches": 0
+  },
+  "brainnet": {
+    "baseRemote": "7d397ec3f8fff6438d6885adca7dd7a0f164f3fa",
+    "pendingLcdParent": "53d131a4f9e3d9a63a57ae282273190dd6696750",
+    "protectedPersonalHead": "dac3a94e6e3964b56018a935ef4c51193f4b903e"
+  }
+}

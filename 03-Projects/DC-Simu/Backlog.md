@@ -10,6 +10,14 @@ tags: [brainet, dc-simu, backlog, ai]
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
 
+## Seis refinamentos mecânicos — release r214
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| MECHANICAL-SIX-01 | Alta | AUTHORIZED_RELEASE_PREPARED | CWBC65, ferragens GEYA/D52, seis proteções acrílicas opcionais, AVEL legível e pente/conector na entrada frontal de cabo; commit, push e publicação expressamente autorizados | [[Validation-2026-11-17-Refinamentos-Mecanicos]]; app `9b8b24e`/r214; 169 mecânica, 43 nativo, 68 Admin/catálogo, 86 LCD, 104 comandos CI; build canónico aprovado; confirmação remota em separado |
+
+A release r214 inclui a base LCD r213 abaixo. Os estados e JSON da preparação LCD/mecânica anteriores são históricos; a autorização atual permite o envio dos dois incrementos, sem modificar o checkout pessoal ou os dados cloud.
+
 ## Incremento LCD fiel — 2026-11-17
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |

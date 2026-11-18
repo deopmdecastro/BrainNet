@@ -1,0 +1,171 @@
+PASS — contactorWegCwbc65: only known factory endpoints migrate, retaining terminal IDs
+PASS — contactorWegCwbc65: migrated cable normals follow the corrected physical face
+PASS — contactorWegCwbc65: native migration is idempotent
+PASS — contactorWegCwbc65: pinned endpoint is untouched
+PASS — contactorWegCwbc65: manually moved endpoint is untouched
+PASS — contactorWegCwbc65: authored native geometry is not migrated
+PASS — contactorWegCwbc65: a custom socket/normal is not overwritten
+PASS — contactorWegCwbc65: preserves manually authored face
+PASS — contactorWegCwbc65: preserves manually authored contact
+PASS — contactorWegCwbc65: preserves manually authored socketPosition
+PASS — contactorWegCwbc65: preserves manually authored socketDiameter
+PASS — contactorWegCwbc65: preserves manually authored socketNormal
+PASS — contactorWegCwbc65: legacy socket-at-endpoint representation also follows its automatic endpoint
+PASS — contactorWegCwbc65: Admin recognises exact legacy geometry and preserves IDs/authored names
+PASS — contactorWegCwbc65: Admin preserves a manual endpoint
+PASS — contactorWegCwbc65: Admin does not rebase authored part transforms
+PASS — contactorWegCwbc65: Admin preserves authored lock
+PASS — contactorWegCwbc65: Admin preserves authored scale
+PASS — contactorWegCwbc65: Admin preserves authored position
+PASS — contactorWegCwbc65: Admin preserves authored normal
+PASS — contactorWegCwbc65: Admin preserves authored diameter
+PASS — contactorWegCwbc65: Admin preserves authored state
+PASS — contactorWegCwbc65: Admin preserves authored split
+PASS — contactorWegCwbc65: Admin migration is idempotent
+PASS — timerGeyaGrt8M1: only known factory endpoints migrate, retaining terminal IDs
+PASS — timerGeyaGrt8M1: migrated cable normals follow the corrected physical face
+PASS — timerGeyaGrt8M1: native migration is idempotent
+PASS — timerGeyaGrt8M1: pinned endpoint is untouched
+PASS — timerGeyaGrt8M1: manually moved endpoint is untouched
+PASS — timerGeyaGrt8M1: authored native geometry is not migrated
+PASS — timerGeyaGrt8M1: a custom socket/normal is not overwritten
+PASS — timerGeyaGrt8M1: preserves manually authored face
+PASS — timerGeyaGrt8M1: preserves manually authored contact
+PASS — timerGeyaGrt8M1: preserves manually authored socketPosition
+PASS — timerGeyaGrt8M1: preserves manually authored socketDiameter
+PASS — timerGeyaGrt8M1: preserves manually authored socketNormal
+PASS — timerGeyaGrt8M1: legacy socket-at-endpoint representation also follows its automatic endpoint
+PASS — timerGeyaGrt8M1: Admin recognises exact legacy geometry and preserves IDs/authored names
+PASS — timerGeyaGrt8M1: Admin preserves a manual endpoint
+PASS — timerGeyaGrt8M1: Admin does not rebase authored part transforms
+PASS — timerGeyaGrt8M1: Admin preserves authored lock
+PASS — timerGeyaGrt8M1: Admin preserves authored scale
+PASS — timerGeyaGrt8M1: Admin preserves authored position
+PASS — timerGeyaGrt8M1: Admin preserves authored normal
+PASS — timerGeyaGrt8M1: Admin preserves authored diameter
+PASS — timerGeyaGrt8M1: Admin preserves authored state
+PASS — timerGeyaGrt8M1: Admin preserves authored split
+PASS — timerGeyaGrt8M1: Admin migration is idempotent
+PASS — timerGeyaGrt8B1: only known factory endpoints migrate, retaining terminal IDs
+PASS — timerGeyaGrt8B1: migrated cable normals follow the corrected physical face
+PASS — timerGeyaGrt8B1: native migration is idempotent
+PASS — timerGeyaGrt8B1: pinned endpoint is untouched
+PASS — timerGeyaGrt8B1: manually moved endpoint is untouched
+PASS — timerGeyaGrt8B1: authored native geometry is not migrated
+PASS — timerGeyaGrt8B1: a custom socket/normal is not overwritten
+PASS — timerGeyaGrt8B1: preserves manually authored face
+PASS — timerGeyaGrt8B1: preserves manually authored contact
+PASS — timerGeyaGrt8B1: preserves manually authored socketPosition
+PASS — timerGeyaGrt8B1: preserves manually authored socketDiameter
+PASS — timerGeyaGrt8B1: preserves manually authored socketNormal
+PASS — timerGeyaGrt8B1: legacy socket-at-endpoint representation also follows its automatic endpoint
+PASS — timerGeyaGrt8B1: Admin recognises exact legacy geometry and preserves IDs/authored names
+PASS — timerGeyaGrt8B1: Admin preserves a manual endpoint
+PASS — timerGeyaGrt8B1: Admin does not rebase authored part transforms
+PASS — timerGeyaGrt8B1: Admin preserves authored lock
+PASS — timerGeyaGrt8B1: Admin preserves authored scale
+PASS — timerGeyaGrt8B1: Admin preserves authored position
+PASS — timerGeyaGrt8B1: Admin preserves authored normal
+PASS — timerGeyaGrt8B1: Admin preserves authored diameter
+PASS — timerGeyaGrt8B1: Admin preserves authored state
+PASS — timerGeyaGrt8B1: Admin preserves authored split
+PASS — timerGeyaGrt8B1: Admin migration is idempotent
+PASS — CWBC65: publication packs every original vertex, normal and index byte losslessly
+PASS — CWBC65: delivery compression preserves topology, authored node names/materials, transforms and accessor bounds
+PASS — CWBC65: only the two real carrier meshes are reparented to the bounds-derived pivot
+PASS — CWBC65: powered carrier moves axially 2.8 mm in physical front-normal Z, never vertically or by frame rotation
+PASS — CWBC65: housing, terminal screws and both exposed resistor banks remain fixed
+PASS — CWBC65: STOP returns the carrier to its original pose
+PASS — CWBC65: serialized carrier course survives cloning and mm fitting for the real Admin/catalogue rig
+PASS — CWBC65: catalogue STOP restores the physical carrier even if a saved coil variable is true
+PASS — powerSource1ph: Admin owns one real optional acrylic part, initially OFF
+PASS — powerSource1ph: Admin builds the same real transparent shield in mm, not an opaque placeholder
+PASS — powerSource1ph: reopening preserves authored cover transforms/visibility and every terminal
+PASS — powerSource1ph: an author-deleted cover is never silently reseeded
+PASS — powerSource3ph: Admin owns one real optional acrylic part, initially OFF
+PASS — powerSource3ph: Admin builds the same real transparent shield in mm, not an opaque placeholder
+PASS — powerSource3ph: reopening preserves authored cover transforms/visibility and every terminal
+PASS — powerSource3ph: an author-deleted cover is never silently reseeded
+PASS — powerSource24v: Admin owns one real optional acrylic part, initially OFF
+PASS — powerSource24v: Admin builds the same real transparent shield in mm, not an opaque placeholder
+PASS — powerSource24v: reopening preserves authored cover transforms/visibility and every terminal
+PASS — powerSource24v: an author-deleted cover is never silently reseeded
+PASS — terminalSet1ph: Admin owns one real optional acrylic part, initially OFF
+PASS — terminalSet1ph: Admin builds the same real transparent shield in mm, not an opaque placeholder
+PASS — terminalSet1ph: reopening preserves authored cover transforms/visibility and every terminal
+PASS — terminalSet1ph: an author-deleted cover is never silently reseeded
+PASS — terminalSet3ph: Admin owns one real optional acrylic part, initially OFF
+PASS — terminalSet3ph: Admin builds the same real transparent shield in mm, not an opaque placeholder
+PASS — terminalSet3ph: reopening preserves authored cover transforms/visibility and every terminal
+PASS — terminalSet3ph: an author-deleted cover is never silently reseeded
+PASS — terminalSet24v: Admin owns one real optional acrylic part, initially OFF
+PASS — terminalSet24v: Admin builds the same real transparent shield in mm, not an opaque placeholder
+PASS — terminalSet24v: reopening preserves authored cover transforms/visibility and every terminal
+PASS — terminalSet24v: an author-deleted cover is never silently reseeded
+PASS — Published acrylic: unmounting a clone does not dispose shared edge geometry or another instance material
+PASS — powerSource1ph: acrylic is in front of the native assembly, in its physical frame
+PASS — powerSource1ph: toggle/unmount disposes owned meshes, edge lines and shared materials exactly once
+PASS — powerSource3ph: acrylic is in front of the native assembly, in its physical frame
+PASS — powerSource3ph: toggle/unmount disposes owned meshes, edge lines and shared materials exactly once
+PASS — powerSource24v: acrylic is in front of the native assembly, in its physical frame
+PASS — powerSource24v: toggle/unmount disposes owned meshes, edge lines and shared materials exactly once
+PASS — terminalSet1ph: acrylic is in front of the native assembly, in its physical frame
+PASS — terminalSet1ph: toggle/unmount disposes owned meshes, edge lines and shared materials exactly once
+PASS — terminalSet3ph: acrylic is in front of the native assembly, in its physical frame
+PASS — terminalSet3ph: toggle/unmount disposes owned meshes, edge lines and shared materials exactly once
+PASS — terminalSet24v: acrylic is in front of the native assembly, in its physical frame
+PASS — terminalSet24v: toggle/unmount disposes owned meshes, edge lines and shared materials exactly once
+PASS — Screw head has a geometric cross recess 0.52 mm deep, not a painted cross
+PASS — timerGeyaGrt8M1: six real captive screws and finite, independent cable mouths
+PASS — timerGeyaGrt8B1: six real captive screws and finite, independent cable mouths
+PASS — D52 1: front driver well contains a recessed cross screw
+PASS — D52 2: front driver well contains a recessed cross screw
+PASS — D52: transverse primary-current passage remains genuinely open
+PASS — D52: original live LCD and internal-CT electrical interface remain unchanged
+PASS — Feeder cranked/down: actual metal tip and mounting datum coincide
+PASS — Feeder cranked/down: cranked/straight metal stays inside its physical depth frame
+PASS — Feeder cranked/down: moulded collar bevel stays within 0.15 mm of the nominal frame
+PASS — Feeder cranked/up: actual metal tip and mounting datum coincide
+PASS — Feeder cranked/up: cranked/straight metal stays inside its physical depth frame
+PASS — Feeder cranked/up: moulded collar bevel stays within 0.15 mm of the nominal frame
+PASS — Feeder straight/down: actual metal tip and mounting datum coincide
+PASS — Feeder straight/down: cranked/straight metal stays inside its physical depth frame
+PASS — Feeder straight/down: moulded collar bevel stays within 0.15 mm of the nominal frame
+PASS — Feeder straight/up: actual metal tip and mounting datum coincide
+PASS — Feeder straight/up: cranked/straight metal stays inside its physical depth frame
+PASS — Feeder straight/up: moulded collar bevel stays within 0.15 mm of the nominal frame
+PASS — Static feeder GLB: exported metal uses the same corrected physical tip and crank plane as the live generator
+PASS — Static feeder GLB: no legacy Z overhang or uncorrected blade survives in the distributed asset
+PASS — Mounted feeder: real tip enters downward 10 mm in the front cable lane
+PASS — Comb and feeder occupy distinct planes 5 mm apart, never the front screwdriver hole
+PASS — Feeder IN → PINO → original breaker clamp: continuity uses the same logical terminal ID
+PASS — Physical separation does not break electrical continuity
+PASS — Three-phase comb and feeder never short the adjacent phases
+PASS — Actual supply → saved wire → feeder IN/PINO → mounted clamp → closed breaker output is energized end-to-end
+PASS — The separately wired L2 supply never crosses to an adjacent comb phase
+PASS — Removing the real supply wire opens the entire feeder path; there is no synthetic source at IN
+PASS — Feeder accepts an actual separate supply wire before project roundtrip
+PASS — Save/reopen preserves both physical mounts, selected phase and every terminal and wire ID
+PASS — Reopening the wired feeder preserves its actual powered path, not just a mountedTerminal label
+PASS — Mount migration preserves a manually edited feeder terminal
+PASS — breaker1p: all comb/feed blade corners enter the measured top cavity without piercing plastic
+PASS — breaker2p: all comb/feed blade corners enter the measured top cavity without piercing plastic
+PASS — breaker3p: all comb/feed blade corners enter the measured top cavity without piercing plastic
+PASS — breakerSteckSdC25: all comb/feed blade corners enter the measured top cavity without piercing plastic
+PASS — residualBreakerHagerCfc225p: all comb/feed blade corners enter the measured top cavity without piercing plastic
+PASS — phoenixEcb3000760: all comb/feed blade corners enter the measured top cavity without piercing plastic
+PASS — Feeder inspector colour/gauge changes preserve authored pin
+PASS — Feeder inspector colour/gauge changes preserve authored move
+PASS — Feeder inspector colour/gauge changes preserve authored normal
+PASS — Feeder inspector colour/gauge changes preserve authored face
+PASS — Feeder inspector colour/gauge changes preserve authored name
+PASS — Unmounted feeder: flipping an automatic blade updates both its physical face and cable normal
+PASS — Legacy wired project: real loader migrates known geometry without changing a component/terminal/wire ID, route, colour or gauge
+PASS — Legacy wired CWBC65: cable endpoints follow the corrected physical front without recreating terminals
+PASS — Legacy wired project still energizes the actual CWBC65 coil and GEYA supply after migration
+PASS — Legacy wired migration and save/reopen are idempotent for the complete cable graph
+PASS — Generic 4P: existing no-CAD insertion guard stays enforced; the regression never enables a blocked library item
+PASS — Generic 4P (procedural, not CAD): real mounting and save/reopen retain finite positions, both mounts and all identities
+PASS — Generic 4P: the separately selected fourth pole conducts without shorting any of the other three poles
+
+169 mechanical revision assertions passed

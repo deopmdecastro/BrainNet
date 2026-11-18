@@ -1,0 +1,7 @@
+{
+  "sourceCommit": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43",
+  "filesCompared": 1292,
+  "allArchiveBlobsExact": true,
+  "innerGitDirectory": false,
+  "note": "Canonical git-archive materialized only in the isolated BrainNet release worktree; protected personal checkout untouched."
+}

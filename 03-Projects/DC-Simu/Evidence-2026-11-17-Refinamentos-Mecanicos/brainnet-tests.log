@@ -1,0 +1,284 @@
+
+> brainet-os@0.1.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: DeepSeek preserva providers, agentes e preferencias existentes sem alterar o input
+ok 1 - DeepSeek preserva providers, agentes e preferencias existentes sem alterar o input
+  ---
+  duration_ms: 1.770334
+  type: 'test'
+  ...
+# Subtest: DeepSeek pode ser preparado novamente sem alterar a configuracao
+ok 2 - DeepSeek pode ser preparado novamente sem alterar a configuracao
+  ---
+  duration_ms: 1.613349
+  type: 'test'
+  ...
+# Subtest: DeepSeek recusa conflito de configuracao existente
+ok 3 - DeepSeek recusa conflito de configuracao existente
+  ---
+  duration_ms: 0.646958
+  type: 'test'
+  ...
+# Subtest: DeepSeek sem ferramentas fica em analise de contexto fornecido, sem comandos ou edicao
+ok 4 - DeepSeek sem ferramentas fica em analise de contexto fornecido, sem comandos ou edicao
+  ---
+  duration_ms: 0.334756
+  type: 'test'
+  ...
+# Subtest: preset DeepSeek lanca diretamente o cliente e preserva caminho com espacos
+ok 5 - preset DeepSeek lanca diretamente o cliente e preserva caminho com espacos
+  ---
+  duration_ms: 0.320506
+  type: 'test'
+  ...
+# Subtest: PowerShell transmite o comando DeepSeek com aspas intactas a um CLI nativo
+ok 6 - PowerShell transmite o comando DeepSeek com aspas intactas a um CLI nativo # SKIP
+  ---
+  duration_ms: 0.702259
+  type: 'test'
+  ...
+# Subtest: intake gera briefing sem inventar responsável, orçamento ou aprovação
+ok 7 - intake gera briefing sem inventar responsável, orçamento ou aprovação
+  ---
+  duration_ms: 2.759912
+  type: 'test'
+  ...
+# Subtest: campos em falta, tipos inválidos, esquema e tamanho são rejeitados
+ok 8 - campos em falta, tipos inválidos, esquema e tamanho são rejeitados
+  ---
+  duration_ms: 5.780968
+  type: 'test'
+  ...
+# Subtest: flags e segredos fornecidos pelo chamador nunca alteram a política
+ok 9 - flags e segredos fornecidos pelo chamador nunca alteram a política
+  ---
+  duration_ms: 1.095907
+  type: 'test'
+  ...
+# Subtest: markdown é escapado e frontmatter mantém os campos fixos
+ok 10 - markdown é escapado e frontmatter mantém os campos fixos
+  ---
+  duration_ms: 0.445397
+  type: 'test'
+  ...
+# Subtest: handoff suporta cada origem sem executar nem chamar providers
+ok 11 - handoff suporta cada origem sem executar nem chamar providers
+  ---
+  duration_ms: 0.690847
+  type: 'test'
+  ...
+# Subtest: handoff rejeita caminhos absolutos, traversal e caminhos Windows
+ok 12 - handoff rejeita caminhos absolutos, traversal e caminhos Windows
+  ---
+  duration_ms: 0.261625
+  type: 'test'
+  ...
+# Subtest: limite total conta bytes UTF-8 e não apenas caracteres
+ok 13 - limite total conta bytes UTF-8 e não apenas caracteres
+  ---
+  duration_ms: 1.035715
+  type: 'test'
+  ...
+# Subtest: release falha fechado; resultados verdes apenas aguardam aprovação
+ok 14 - release falha fechado; resultados verdes apenas aguardam aprovação
+  ---
+  duration_ms: 0.623899
+  type: 'test'
+  ...
+# Subtest: release rejeita evidência ausente, booleanos textuais e testes duplicados
+ok 15 - release rejeita evidência ausente, booleanos textuais e testes duplicados
+  ---
+  duration_ms: 0.534872
+  type: 'test'
+  ...
+# Subtest: workflows exportados executam exatamente os contratos, incluindo batches
+ok 16 - workflows exportados executam exatamente os contratos, incluindo batches
+  ---
+  duration_ms: 19.552247
+  type: 'test'
+  ...
+# Subtest: acrescenta apenas quatro terminais, preserva comandos com espacos e reutiliza-os
+ok 17 - acrescenta apenas quatro terminais, preserva comandos com espacos e reutiliza-os # SKIP
+  ---
+  duration_ms: 0.785571
+  type: 'test'
+  ...
+# Subtest: substitui Mistral por Gemma no mesmo terminal e nao duplica ao repetir
+ok 18 - substitui Mistral por Gemma no mesmo terminal e nao duplica ao repetir # SKIP
+  ---
+  duration_ms: 0.122736
+  type: 'test'
+  ...
+# Subtest: terminal de substituicao ausente impede criar preset ou recrutar
+ok 19 - terminal de substituicao ausente impede criar preset ou recrutar # SKIP
+  ---
+  duration_ms: 0.176914
+  type: 'test'
+  ...
+# Subtest: Gemma e Mistral ja presentes impedem duplicar ou remover terminais
+ok 20 - Gemma e Mistral ja presentes impedem duplicar ou remover terminais # SKIP
+  ---
+  duration_ms: 1.712359
+  type: 'test'
+  ...
+# Subtest: workspace incorreto impede criacao de presets e terminais
+ok 21 - workspace incorreto impede criacao de presets e terminais # SKIP
+  ---
+  duration_ms: 0.159895
+  type: 'test'
+  ...
+# Subtest: StartOnly inicia Codex sem pipe e sem chamar Maestri
+ok 22 - StartOnly inicia Codex sem pipe e sem chamar Maestri # SKIP
+  ---
+  duration_ms: 1.05901
+  type: 'test'
+  ...
+# Subtest: Start permite arranque local apos falha de IPC e mostra a causa
+ok 23 - Start permite arranque local apos falha de IPC e mostra a causa # SKIP
+  ---
+  duration_ms: 0.184806
+  type: 'test'
+  ...
+# Subtest: falha de preset mostra comando, codigo e stderr sem declarar sucesso
+ok 24 - falha de preset mostra comando, codigo e stderr sem declarar sucesso # SKIP
+  ---
+  duration_ms: 0.120075
+  type: 'test'
+  ...
+# Subtest: debug indisponivel nao bloqueia consultas validas e preset e reutilizado
+ok 25 - debug indisponivel nao bloqueia consultas validas e preset e reutilizado # SKIP
+  ---
+  duration_ms: 0.164296
+  type: 'test'
+  ...
+# Subtest: Maestri configura quatro papeis/terminais e reutiliza-os sem reiniciar sessoes
+ok 26 - Maestri configura quatro papeis/terminais e reutiliza-os sem reiniciar sessoes # SKIP
+  ---
+  duration_ms: 1.098564
+  type: 'test'
+  ...
+# Subtest: Maestri acrescenta Sonda com DeepSeek preservando os quatro agentes ativos
+ok 27 - Maestri acrescenta Sonda com DeepSeek preservando os quatro agentes ativos # SKIP
+  ---
+  duration_ms: 0.241903
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe no-pipe sem recibo de sucesso
+ok 28 - Maestri interrompe no-pipe sem recibo de sucesso # SKIP
+  ---
+  duration_ms: 0.132503
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe wrong-workspace sem recibo de sucesso
+ok 29 - Maestri interrompe wrong-workspace sem recibo de sucesso # SKIP
+  ---
+  duration_ms: 1.723745
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe missing-preset sem recibo de sucesso
+ok 30 - Maestri interrompe missing-preset sem recibo de sucesso # SKIP
+  ---
+  duration_ms: 0.162784
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe recruit-failure sem recibo de sucesso
+ok 31 - Maestri interrompe recruit-failure sem recibo de sucesso # SKIP
+  ---
+  duration_ms: 0.152704
+  type: 'test'
+  ...
+# Subtest: Maestri reutiliza workspace existente (same) sem criar
+ok 32 - Maestri reutiliza workspace existente (same) sem criar # SKIP
+  ---
+  duration_ms: 1.510075
+  type: 'test'
+  ...
+# Subtest: Maestri reutiliza workspace existente (current) sem criar
+ok 33 - Maestri reutiliza workspace existente (current) sem criar # SKIP
+  ---
+  duration_ms: 1.471429
+  type: 'test'
+  ...
+# Subtest: Maestri reutiliza workspace existente (current-middle-dot) sem criar
+ok 34 - Maestri reutiliza workspace existente (current-middle-dot) sem criar # SKIP
+  ---
+  duration_ms: 0.13252
+  type: 'test'
+  ...
+# Subtest: Maestri reutiliza workspace existente (current-bullet) sem criar
+ok 35 - Maestri reutiliza workspace existente (current-bullet) sem criar # SKIP
+  ---
+  duration_ms: 0.126056
+  type: 'test'
+  ...
+# Subtest: Maestri reutiliza workspace existente (current-ascii-dot) sem criar
+ok 36 - Maestri reutiliza workspace existente (current-ascii-dot) sem criar # SKIP
+  ---
+  duration_ms: 0.196479
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe different sem criar nem escrever recibo
+ok 37 - Maestri interrompe different sem criar nem escrever recibo # SKIP
+  ---
+  duration_ms: 0.165399
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe prefix sem criar nem escrever recibo
+ok 38 - Maestri interrompe prefix sem criar nem escrever recibo # SKIP
+  ---
+  duration_ms: 0.113842
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe prefix-current sem criar nem escrever recibo
+ok 39 - Maestri interrompe prefix-current sem criar nem escrever recibo # SKIP
+  ---
+  duration_ms: 0.080396
+  type: 'test'
+  ...
+# Subtest: Maestri interrompe list-error sem criar nem escrever recibo
+ok 40 - Maestri interrompe list-error sem criar nem escrever recibo # SKIP
+  ---
+  duration_ms: 0.303625
+  type: 'test'
+  ...
+# Subtest: Maestri verifica a pasta depois da tentativa de criacao (absent)
+ok 41 - Maestri verifica a pasta depois da tentativa de criacao (absent) # SKIP
+  ---
+  duration_ms: 0.433513
+  type: 'test'
+  ...
+# Subtest: Maestri verifica a pasta depois da tentativa de criacao (concurrent)
+ok 42 - Maestri verifica a pasta depois da tentativa de criacao (concurrent) # SKIP
+  ---
+  duration_ms: 0.139078
+  type: 'test'
+  ...
+# Subtest: replay após nova data preserva briefing editado por humano
+ok 43 - replay após nova data preserva briefing editado por humano
+  ---
+  duration_ms: 10.599272
+  type: 'test'
+  ...
+# Subtest: mesmo event_id com conteúdo diferente produz conflito
+ok 44 - mesmo event_id com conteúdo diferente produz conflito
+  ---
+  duration_ms: 7.10544
+  type: 'test'
+  ...
+# Subtest: concorrência gera um único registo completo e limpa staging
+ok 45 - concorrência gera um único registo completo e limpa staging
+  ---
+  duration_ms: 24.168513
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 27
+# todo 0
+# duration_ms 648.883517

@@ -1,0 +1,13 @@
+
+> brainet-os@0.1.0 check
+> node scripts/check-foundation.mjs
+
+{
+  "ok": true,
+  "checked_at": "2026-11-18T23:22:46.224Z",
+  "markdown_files": 390,
+  "links": 973,
+  "workflows": 3,
+  "errors": [],
+  "note": "Bem-vindo.md e configurações pessoais excluídos das regras documentais; Markdown técnico da aplicação DC-Simu não exige frontmatter de notas Obsidian."
+}

@@ -1,0 +1,15 @@
+PASS — lib/browser-fixture.mjs: no async-Promise readiness false positive
+PASS — lib/admin-fixture.mjs: no async-Promise readiness false positive
+PASS — lib/panel-fixture.mjs: no async-Promise readiness false positive
+PASS — industrial-admin-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — industrial-panel-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — meters-schneider-admin-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — meters-schneider-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — msr127-panel-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — grafcet-geometry-lifecycle-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — panel3d-profile.mjs: no async-Promise readiness false positive
+PASS — device-lcd-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — mechanical-refinement-ui-smoke.mjs: no async-Promise readiness false positive
+PASS — mechanical-catalog-ui-smoke.mjs: no async-Promise readiness false positive
+
+PASS — 13 browser-fixture readiness contracts; actual browser suites remain required
