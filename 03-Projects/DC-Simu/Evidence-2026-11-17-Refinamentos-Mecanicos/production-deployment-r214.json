@@ -1,0 +1,133 @@
+{
+  "sha": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43",
+  "expectedBuildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+  "publicUrl": "https://dc-simu.vercel.app",
+  "productionConfirmed": true,
+  "coreCiConfirmed": true,
+  "samples": [
+    {
+      "elapsedSeconds": 0,
+      "buildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3",
+      "githubApiUpdated": true
+    },
+    {
+      "elapsedSeconds": 15,
+      "buildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3"
+    },
+    {
+      "elapsedSeconds": 30,
+      "buildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3"
+    },
+    {
+      "elapsedSeconds": 45,
+      "buildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3"
+    },
+    {
+      "elapsedSeconds": 60,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+      "githubApiUpdated": true
+    },
+    {
+      "elapsedSeconds": 76,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 91,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 106,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 122,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+      "githubApiUpdated": true
+    },
+    {
+      "elapsedSeconds": 137,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 152,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 167,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 183,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+      "githubApiUpdated": true
+    },
+    {
+      "elapsedSeconds": 198,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 213,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 228,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd"
+    },
+    {
+      "elapsedSeconds": 243,
+      "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+      "githubApiUpdated": true
+    }
+  ],
+  "productionVersion": {
+    "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+    "builtAt": "2026-11-18T23:24:51.320Z"
+  },
+  "commitStatus": {
+    "state": "success",
+    "statuses": [
+      {
+        "context": "Vercel",
+        "state": "success",
+        "description": "Deployment has completed",
+        "target_url": "https://vercel.com/deopmdecastros-projects/dc-simu/AbPF8hQqWmh4PWpCAh8odrNK24vx"
+      }
+    ]
+  },
+  "checkRuns": [
+    {
+      "id": 135211527449,
+      "name": "Tipos, testes e build",
+      "head_sha": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/deopmdecastro/dc-simu/actions/runs/44420402000/job/135211527449",
+      "completed_at": "2026-11-18T23:27:48Z",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 2,
+        "annotations_url": "https://api.github.com/repos/deopmdecastro/dc-simu/check-runs/135211527449/annotations"
+      }
+    },
+    {
+      "id": 135211527203,
+      "name": "Testes de interface (Playwright)",
+      "head_sha": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/deopmdecastro/dc-simu/actions/runs/44420402000/job/135211527203",
+      "completed_at": "2026-11-18T23:25:25Z",
+      "output": {
+        "title": null,
+        "summary": null,
+        "text": null,
+        "annotations_count": 3,
+        "annotations_url": "https://api.github.com/repos/deopmdecastro/dc-simu/check-runs/135211527203/annotations"
+      }
+    }
+  ],
+  "coreCiCompleted": true,
+  "checkedAt": "2026-11-18T23:28:38Z"
+}

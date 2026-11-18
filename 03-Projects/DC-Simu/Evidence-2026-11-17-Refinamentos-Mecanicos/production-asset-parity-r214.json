@@ -1,0 +1,67 @@
+{
+  "url": "https://dc-simu.vercel.app",
+  "buildId": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd",
+  "checks": [
+    {
+      "path": "/models/importados/contactorWegCwbc65.glb",
+      "status": 200,
+      "bytes": 5478020,
+      "sha256": "0aec38294084b6adf2f2e88b7d9a11314dcbef00e70e1665fadf963cfbd2a4f8",
+      "matchesSource": true,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "productionSha256": "0aec38294084b6adf2f2e88b7d9a11314dcbef00e70e1665fadf963cfbd2a4f8",
+      "productionMatchesReviewedSource": true
+    },
+    {
+      "path": "/models/industriais/timerGeyaGrt8M1.glb",
+      "status": 200,
+      "bytes": 338188,
+      "sha256": "c5d87a2e72eeac38a8c9c692536eeab02b22b1573667f59e54101e74086eaedb",
+      "matchesSource": true,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "productionSha256": "c5d87a2e72eeac38a8c9c692536eeab02b22b1573667f59e54101e74086eaedb",
+      "productionMatchesReviewedSource": true
+    },
+    {
+      "path": "/models/industriais/timerGeyaGrt8B1.glb",
+      "status": 200,
+      "bytes": 330104,
+      "sha256": "9cc41ec87af397a7bcbc85cb47b7582910e53ad6fab5b1be27fb0d2211c74950",
+      "matchesSource": true,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "productionSha256": "9cc41ec87af397a7bcbc85cb47b7582910e53ad6fab5b1be27fb0d2211c74950",
+      "productionMatchesReviewedSource": true
+    },
+    {
+      "path": "/models/industriais/avel-411-face.png",
+      "status": 200,
+      "bytes": 156442,
+      "sha256": "3086ead5cc6019f90ac0bc68c3a61640a63fe146b7c394f06efad3089b3eae42",
+      "matchesSource": true,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "productionSha256": "3086ead5cc6019f90ac0bc68c3a61640a63fe146b7c394f06efad3089b3eae42",
+      "productionMatchesReviewedSource": true
+    },
+    {
+      "path": "/models/bornes-e-barras/conector-barramento-pente.glb",
+      "status": 200,
+      "bytes": 265024,
+      "sha256": "936261d2e8016fe20c15a0ea86c3b5e6f330e9698698d08ce571d7359fc8784d",
+      "matchesSource": true,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "productionSha256": "936261d2e8016fe20c15a0ea86c3b5e6f330e9698698d08ce571d7359fc8784d",
+      "productionMatchesReviewedSource": true
+    },
+    {
+      "path": "/component-covers/contactorWegCwbc65.webp",
+      "status": 200,
+      "bytes": 8156,
+      "sha256": "38834e43fa0ab2c59b1d5b3cc944f432064cec1876550d42d71504b0bd455d4e",
+      "matchesSource": true,
+      "cacheControl": "public, max-age=0, must-revalidate",
+      "productionSha256": "38834e43fa0ab2c59b1d5b3cc944f432064cec1876550d42d71504b0bd455d4e",
+      "productionMatchesReviewedSource": true
+    }
+  ],
+  "allMatch": true
+}

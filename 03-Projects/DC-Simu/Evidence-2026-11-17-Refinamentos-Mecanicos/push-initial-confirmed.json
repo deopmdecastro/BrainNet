@@ -1,0 +1,57 @@
+{
+  "stage": "BOTH_REMOTE_MAIN_REFS_CONFIRMED_DEPLOYMENT_PENDING",
+  "authorization": {
+    "actor": "deopmdecastro",
+    "source": "Explicit user authorization in this conversation",
+    "repositories": [
+      "deopmdecastro/dc-simu",
+      "deopmdecastro/BrainNet"
+    ],
+    "branches": [
+      "main"
+    ],
+    "environment": "Existing Vercel production deployment for dc-simu; BrainNet release documentation/gitlink",
+    "scope": "Previously validated LCD and six mechanical refinements; no personal checkout, account data or RLS changes"
+  },
+  "repositories": [
+    {
+      "repository": "deopmdecastro/dc-simu",
+      "target": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43",
+      "mainBefore": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+      "pushConfirmed": true,
+      "mainAfter": "9b8b24e1c89def46b6e3d3298574b8cc30e93d43"
+    },
+    {
+      "repository": "deopmdecastro/BrainNet",
+      "target": "c31c5ee29446efc7adb6d8fd3198540b4bed7846",
+      "mainBefore": "7d397ec3f8fff6438d6885adca7dd7a0f164f3fa",
+      "pushConfirmed": true,
+      "mainAfter": "c31c5ee29446efc7adb6d8fd3198540b4bed7846"
+    }
+  ],
+  "allPushesConfirmed": true,
+  "protectedBefore": {
+    "filesCompared": 1039,
+    "differences": [],
+    "head": "adf9fbf3f1505b11759fc63b8741d5b96ffef327",
+    "statusEntries": 122,
+    "statusSha256": "e6a8e6453b62c04058de6bddb883b3d210304e3293cd4e610855d75f1f64f751",
+    "indexGitlink": "10e555bf47a68d8ab7cb7a0a5d1966f2fa13e666",
+    "baselineArchive": "/home/user/work/qgd-release/brainnet-nested-source-before.tar.gz",
+    "scope": "Every regular archived file; no checkout, reset, clean or write to the protected checkout.",
+    "preserved": true
+  },
+  "protectedAfter": {
+    "filesCompared": 1039,
+    "differences": [],
+    "head": "adf9fbf3f1505b11759fc63b8741d5b96ffef327",
+    "statusEntries": 122,
+    "statusSha256": "e6a8e6453b62c04058de6bddb883b3d210304e3293cd4e610855d75f1f64f751",
+    "indexGitlink": "10e555bf47a68d8ab7cb7a0a5d1966f2fa13e666",
+    "baselineArchive": "/home/user/work/qgd-release/brainnet-nested-source-before.tar.gz",
+    "scope": "Every regular archived file; no checkout, reset, clean or write to the protected checkout.",
+    "preserved": true
+  },
+  "temporaryCredentialSessionClosed": true,
+  "checkedAt": "2026-11-18T23:23:57Z"
+}

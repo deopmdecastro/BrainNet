@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: AUTHORIZED_RELEASE_PREPARED
+status: PUBLISHED_CORE_CI_VERIFIED
 created: 2026-11-17
 updated: 2026-11-17
 tags: [dc-simu, mecanica, lcd, admin, catalogo, preservacao, release]
@@ -15,7 +15,19 @@ O utilizador `deopmdecastro` autorizou expressamente, nesta conversa, o commit, 
 - Aplicação canónica: **`9b8b24e1c89def46b6e3d3298574b8cc30e93d43`**.
 - Build final: **`9b8b24e1c89def46b6e3d3298574b8cc30e93d43.r214.mwmqsiqd`**.
 - Base LCD preservada e incluída na ancestralidade: `7990560a8873e58561042a7025888a09286bc8a9`.
-- Estado desta preparação: commit e build locais concluídos; push e deploy serão confirmados separadamente, pelos SHAs remotos e pelo `version.json` público. Não se confunde autorização de publicação com certificação de hardware ou ensaio autenticado da cloud.
+- **Estado confirmado:** commit e push nos dois repositórios, produção Vercel com o `buildId` exato acima e CI remoto obrigatório aprovado. Não se confunde publicação com certificação de hardware ou ensaio autenticado da cloud.
+
+## Confirmação remota
+
+- Aplicação em `main`: [9b8b24e](https://github.com/deopmdecastro/dc-simu/commit/9b8b24e1c89def46b6e3d3298574b8cc30e93d43).
+- BrainNet: release [c31c5ee](https://github.com/deopmdecastro/BrainNet/commit/c31c5ee29446efc7adb6d8fd3198540b4bed7846) enviada para `main`; este registo de confirmação é um commit documental subsequente, com o mesmo gitlink canónico.
+- Produção: [DC-SIMU](https://dc-simu.vercel.app) e [version.json](https://dc-simu.vercel.app/version.json), build r214 exato confirmado.
+- [CI obrigatório remoto](https://github.com/deopmdecastro/dc-simu/actions/runs/44420402000/job/135211527449): **success** em tipos, 104 comandos CI, servidor, build e auditoria de dependências.
+- [Job UI informativo](https://github.com/deopmdecastro/dc-simu/actions/runs/44420402000/job/135211527203): **failure** na etapa `test:grafcet-ui`; cinco suites seguintes ficaram skipped. Não se apresenta o conjunto UI remoto como aprovado, nem se remove o cenário para obter verde.
+- Browser na produção real: 10 verificações do guard estático; 6 assets públicos com SHA-256 idêntico aos ficheiros revistos. Não é aceitação de login/projetos Supabase/RLS.
+- As duas referências `main` foram verificadas depois do push, sem force push. Autenticação temporária encerrada; nenhuma credencial guardada nos repositórios.
+
+[Comprovativo de push](./Evidence-2026-11-17-Refinamentos-Mecanicos/push-initial-confirmed.json) · [deploy e CI](./Evidence-2026-11-17-Refinamentos-Mecanicos/production-deployment-r214.json) · [recursos em produção](./Evidence-2026-11-17-Refinamentos-Mecanicos/production-asset-parity-r214.json).
 
 ## Âmbito entregue
 
@@ -57,4 +69,4 @@ A heurística global legada de proximidade de bornes conserva exit 1 e os mesmos
 - O `breaker4p` genérico não tem CAD: continua bloqueada a inserção normal. Os testes legados não certificam cavidades inexistentes.
 - IDs, fios, rotas, cores, bitolas e edições de autor continuam preservados; migrações só reconhecem geometria de fábrica.
 - O checkout pessoal `BrainNet`, incluindo o submódulo sujo e o gitlink previamente staged, não é usado para construir a release. Documentação e gitlink são preparados apenas na worktree isolada.
-- O teste UI remoto legado de GRAFCET continua identificado no backlog; não é reparado nem enfraquecido neste âmbito. O resultado remoto desta release será registado após a execução.
+- O job UI remoto falhou em `test:grafcet-ui` e as cinco suites seguintes não foram executadas. O teste GRAFCET legado continua identificado no backlog; não é reparado nem enfraquecido neste âmbito. Os ensaios mecânicos/LCD específicos e o CI obrigatório têm resultados próprios aprovados.

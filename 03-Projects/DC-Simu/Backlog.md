@@ -14,7 +14,7 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
 | --- | --- | --- | --- | --- |
-| MECHANICAL-SIX-01 | Alta | AUTHORIZED_RELEASE_PREPARED | CWBC65, ferragens GEYA/D52, seis proteções acrílicas opcionais, AVEL legível e pente/conector na entrada frontal de cabo; commit, push e publicação expressamente autorizados | [[Validation-2026-11-17-Refinamentos-Mecanicos]]; app `9b8b24e`/r214; 169 mecânica, 43 nativo, 68 Admin/catálogo, 86 LCD, 104 comandos CI; build canónico aprovado; confirmação remota em separado |
+| MECHANICAL-SIX-01 | Alta | PUBLISHED_CORE_CI_VERIFIED | CWBC65, ferragens GEYA/D52, seis proteções acrílicas opcionais, AVEL legível e pente/conector na entrada frontal de cabo; commit, push e publicação expressamente autorizados | [[Validation-2026-11-17-Refinamentos-Mecanicos]]; app `9b8b24e`/r214; 169 mecânica, 43 nativo, 68 Admin/catálogo, 86 LCD, 104 comandos CI; push nos dois repositórios, build público exato e CI obrigatório remoto success; job UI informativo falhou em GRAFCET |
 
 A release r214 inclui a base LCD r213 abaixo. Os estados e JSON da preparação LCD/mecânica anteriores são históricos; a autorização atual permite o envio dos dois incrementos, sem modificar o checkout pessoal ou os dados cloud.
 
@@ -22,7 +22,7 @@ A release r214 inclui a base LCD r213 abaixo. Os estados e JSON da preparação 
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
 | --- | --- | --- | --- | --- |
-| LCD-FIDELITY-01 | Alta | LOCAL_VALIDATED_RELEASE_PENDING | Faces físicas D52/KWS/ATV320, sete segmentos/cores/unidades/precisão, branco sem alimentação; mesmo desenho nativo/Admin/catálogo publicado; sem substituir conteúdo do autor ou inventar LCDs | [[Validation-2026-11-17-LCD-Fiel]]; app `7990560`/r213, 76 contratos + 86 navegador, zero exceções; TypeScript/103 comandos CI local/188 servidor aprovados; push e produção desta revisão ainda por confirmar |
+| LCD-FIDELITY-01 | Alta | PUBLISHED_WITH_R214 | Faces físicas D52/KWS/ATV320, sete segmentos/cores/unidades/precisão, branco sem alimentação; mesmo desenho nativo/Admin/catálogo publicado; sem substituir conteúdo do autor ou inventar LCDs | [[Validation-2026-11-17-LCD-Fiel]]; app `7990560`/r213, 76 contratos + 86 navegador, zero exceções; TypeScript/103 comandos CI local/188 servidor aprovados; incluído na produção `9b8b24e`/r214, confirmada em [[Validation-2026-11-17-Refinamentos-Mecanicos]] |
 
 O âmbito é o mostrador aplicável, não firmware completo, todo o CAD ou reparação
 do teste GRAFCET legado. O estado publicado r212 abaixo é histórico, não prova
