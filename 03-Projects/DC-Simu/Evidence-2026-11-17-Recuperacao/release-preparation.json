@@ -1,0 +1,25 @@
+{
+  "appCommit": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+  "expectedBuildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3",
+  "buildExit": 0,
+  "staticSessionGuardExit": 0,
+  "staticSessionGuardAssertions": 10,
+  "releaseGitlink": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+  "pushConfirmed": false,
+  "remoteCiConfirmed": false,
+  "productionDeployConfirmed": false,
+  "scope": "Release preparation and exact local committed build, not public deployment approval. Protected personal checkout and staged gitlink remain unchanged.",
+  "brainnetTests": {
+    "passed": 18,
+    "skipped": 27,
+    "failed": 0,
+    "exit": 0
+  },
+  "exactReleaseFoundation": {
+    "exit": 0,
+    "markdownFiles": 386,
+    "links": 953,
+    "workflows": 3,
+    "errors": []
+  }
+}

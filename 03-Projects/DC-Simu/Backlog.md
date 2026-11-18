@@ -10,10 +10,23 @@ tags: [brainet, dc-simu, backlog, ai]
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
 
+## Recuperação em curso — 2026-11-17
+
+O estado atual está em [[Validation-2026-11-17-Recuperacao-Industrial-Editores]].
+As linhas/validações históricas abaixo não aprovam a recuperação corrente.
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| RECOVERY-INDUSTRIAL-EDITORS-01 | Crítica | LOCAL_VALIDATED_RELEASE_PREPARED | Sete industriais, MSR127, IEC/GRAFCET, catálogo/IDs e política nativa; aplicação com commit/build; publicar ambos os repositórios | App `20150c0`, CI local 102 comandos/exit0, Admin 110+78, Panel3D 41, ciclo de vida 62 PASS |
+| REALISM-METER-CT-DIN-01 | Alta | IMPLEMENTED_PENDING_VISUAL_ACCEPTANCE | Reconstruções D52/KWS/TC, STEP Schneider, iIL3P 18 mm, calhas individuais, sobretampa/obturadores; não apresentar protótipos como CAD oficial | [[Task-2026-11-17-Realismo-Medidores-CT-iIL-Calhas-Sobretampa]]; 53 contrato, 110 Admin e 41 Panel3D; aceitação visual e GPU reais pendentes |
+| RELEASE-AUTH-2026-11-17 | Crítica | AUTHENTICATION_PENDING | Commit/push/publicação autorizados; usar sessão transitória, conferir CI/deploy/hash e preservar checkout pessoal/índice | App `20150c0`/r212 com build0; push/deploy ainda não confirmados; 1039 ficheiros pessoais idênticos |
+
 ## Incremento de resolução de pendentes e integração — 2026-11-17
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
 | --- | --- | --- | --- | --- |
+| METER-LIBRARY-01 | Alta | IMPLEMENTED_TESTED_LOCAL | D52-2066 e KWS-306 em Aparelhos de medir; LCD, manobra e migrações sem perder IDs/cabos | [[Validation-2026-11-17-Recuperacao-Industrial-Editores]]; 53 contrato, 110 Admin/catálogo e 41 Panel3D partilhados com Schneider; CI local verde, publicação remota por confirmar |
+| SCHNEIDER-RCD-CAD-01 | Alta | IMPLEMENTED_TESTED_LOCAL | iID 4P A9R11440 e iDPN N Vigi 1P+N A9D32616 derivados de STEP documentados; T com mola independente, TRIP/rearme, cavidades e IDs preservados | [[Validation-2026-11-17-Recuperacao-Industrial-Editores]]; publicação local dos dois incluída nos 110 PASS; CI/build locais verdes; sem aprovação visual/certificação do fabricante |
 | QGD-NATIVE-01 | Alta | PUBLISHED_VERIFIED | QGD nativo disponível a Admin e Free; 47 componentes/76 cabos, diagnóstico limpo, cortes independentes e rascunhos privados sem consumo de quota | [[Task-2026-11-18-Quadro-Geral-Distribuicao-Completo-Multi-Circuitos]]; 42 verificações de contrato e 19 no navegador |
 | REACT-HOOKS-310-01 | Crítica | PUBLISHED_VERIFIED | Inserir e selecionar elementos sem mudar a ordem dos hooks no Sidebar e nos controlos de barramentos; auditoria de todo src e despacho 3D procedural sem spec.path inexistente | [[Validation-2026-11-17-QGD-Nativo-React310-SVG-Admin]]; 39 verificações de hooks e 20 no build minificado |
 | UI-SVG-ADMIN-01 | Alta | PUBLISHED_VERIFIED | Pictogramas SVG em toda a interface e cartão do plano; integrações e detalhes técnicos da sessão apenas para Admin | [[Validation-2026-11-17-QGD-Nativo-React310-SVG-Admin]]; 67 verificações de menus por perfil e largura |

@@ -14,6 +14,9 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 
 | Conteúdo | Abrir |
 | --- | --- |
+| Estado atual da recuperação: industriais, medidores, IEC/GRAFCET e publicação | [[Validation-2026-11-17-Recuperacao-Industrial-Editores]] |
+| Revisão de realismo e aceitação visual dos medidores/TC/calhas/sobretampa | [[Task-2026-11-17-Realismo-Medidores-CT-iIL-Calhas-Sobretampa]] |
+| Medidores nas bibliotecas e diferenciais Schneider em CAD | [[Task-2026-11-17-Medidores-Bibliotecas-Schneider-CAD]] · [[Validation-2026-11-17-Medidores-Schneider-CAD]] |
 | QGD nativo, correção React #310, ícones SVG e permissões Admin | [[Validation-2026-11-17-QGD-Nativo-React310-SVG-Admin]] |
 | Quadro Geral de Distribuição Completo Multi-Circuitos | [[Task-2026-11-18-Quadro-Geral-Distribuicao-Completo-Multi-Circuitos]] |
 | Protocolo de comunicação, workflows e automação BrainNet ↔ DC-Simu | [[Protocolo-Comunicacao-BrainNet-DCSimu]] |
