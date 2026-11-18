@@ -1,0 +1,26 @@
+
+> dc-simu@2.0.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+
+<--- Last few GCs --->
+
+[313493:0x3e9de000]    26921 ms: Scavenge (reduce) (interleaved) 907.2 (925.5) -> 907.0 (926.8) MB, pooled: 0 MB, 31.63 / 0.00 ms  (average mu = 0.263, current mu = 0.239) allocation failure;
+[313493:0x3e9de000]    27107 ms: Mark-Compact (reduce) 907.8 (926.8) -> 906.4 (926.0) MB, pooled: 0 MB, 42.50 / 0.01 ms  (+ 627.6 ms in 0 steps since start of marking, biggest step 0.0 ms, walltime since start of marking 819 ms) (average mu = 0.308, curre
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 0xe48c12 node::OOMErrorHandler(char const*, v8::OOMDetails const&) [node]
+ 2: 0x1249780 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]
+ 3: 0x1249a57 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]
+ 4: 0x1478965  [node]
+ 5: 0x1478993  [node]
+ 6: 0x1491a6a  [node]
+ 7: 0x1494c38  [node]
+ 8: 0x1cfd6e1  [node]
+Aborted

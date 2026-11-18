@@ -1,0 +1,16 @@
+
+> dc-simu@2.0.0 test:qgd-build-ui
+> node scripts/qgd-production-ui-smoke.mjs --static-guard
+
+PASS — build servido declara um buildId real, sem intercetar version.json
+PASS — buildId corresponde exatamente ao commit/carimbo esperado
+PASS — user: build estático rejeita sessão local fabricada no dashboard
+PASS — user: rota Admin também exige sessão real de base de dados
+PASS — user: recusa de acesso não produz exceções React
+PASS — user: guard executado nos assets minificados reais
+PASS — admin: build estático rejeita sessão local fabricada no dashboard
+PASS — admin: rota Admin também exige sessão real de base de dados
+PASS — admin: recusa de acesso não produz exceções React
+PASS — admin: guard executado nos assets minificados reais
+
+10 verificações do build minificado passaram (guard de sessão estático; projeto autenticado NÃO ensaiado).

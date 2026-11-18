@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "checked_at": "2026-11-18T21:02:16.557Z",
+  "markdown_files": 388,
+  "links": 964,
+  "workflows": 3,
+  "errors": [],
+  "note": "Bem-vindo.md e configurações pessoais excluídos das regras documentais; Markdown técnico da aplicação DC-Simu não exige frontmatter de notas Obsidian."
+}

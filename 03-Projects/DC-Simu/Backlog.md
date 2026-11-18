@@ -10,6 +10,16 @@ tags: [brainet, dc-simu, backlog, ai]
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
 
+## Incremento LCD fiel — 2026-11-17
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| LCD-FIDELITY-01 | Alta | LOCAL_VALIDATED_RELEASE_PENDING | Faces físicas D52/KWS/ATV320, sete segmentos/cores/unidades/precisão, branco sem alimentação; mesmo desenho nativo/Admin/catálogo publicado; sem substituir conteúdo do autor ou inventar LCDs | [[Validation-2026-11-17-LCD-Fiel]]; app `7990560`/r213, 76 contratos + 86 navegador, zero exceções; TypeScript/103 comandos CI local/188 servidor aprovados; push e produção desta revisão ainda por confirmar |
+
+O âmbito é o mostrador aplicável, não firmware completo, todo o CAD ou reparação
+do teste GRAFCET legado. O estado publicado r212 abaixo é histórico, não prova
+de publicação do incremento LCD.
+
 ## Recuperação em curso — 2026-11-17
 
 O estado atual está em [[Validation-2026-11-17-Recuperacao-Industrial-Editores]].

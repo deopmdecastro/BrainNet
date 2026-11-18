@@ -1,0 +1,6 @@
+{
+  "sourceCommit": "7990560a8873e58561042a7025888a09286bc8a9",
+  "filesCompared": 1265,
+  "allArchiveBlobsExact": true,
+  "note": "Read-only hash comparison of the git-archive materialization in the isolated release worktree. Personal nested checkout untouched."
+}

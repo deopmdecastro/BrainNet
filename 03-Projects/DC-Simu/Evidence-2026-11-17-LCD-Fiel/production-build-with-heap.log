@@ -1,0 +1,101 @@
+
+> dc-simu@2.0.0 build
+> tsc -b && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1889 modules transformed.
+rendering chunks...
+[plugin vite:reporter]
+(!) /home/user/repos/dc-simu/src/admin/editor3d/validate.ts is dynamically imported by /home/user/repos/dc-simu/src/admin/editor3d/syncAudit.ts but also statically imported by /home/user/repos/dc-simu/src/admin/editor3d/ComponentEditor3D.tsx, /home/user/repos/dc-simu/src/admin/editor3d/tabs1.tsx, /home/user/repos/dc-simu/src/admin/editor3d/tabs2.tsx, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter]
+(!) /home/user/repos/dc-simu/src/dashboard/projectPreview.ts is dynamically imported by /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts but also statically imported by /home/user/repos/dc-simu/src/auth/localBackend.ts, /home/user/repos/dc-simu/src/project/freeNativeSandbox.ts, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter]
+(!) /home/user/repos/dc-simu/src/project/freeNativeSandbox.ts is dynamically imported by /home/user/repos/dc-simu/src/auth/accountApi.ts, /home/user/repos/dc-simu/src/auth/accountApi.ts, /home/user/repos/dc-simu/src/auth/accountApi.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts but also statically imported by /home/user/repos/dc-simu/src/auth/localBackend.ts, /home/user/repos/dc-simu/src/dashboard/Dashboard.tsx, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter]
+(!) /home/user/repos/dc-simu/src/project/landingPublish.ts is dynamically imported by /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts, /home/user/repos/dc-simu/src/supabase/supabaseBackend.ts but also statically imported by /home/user/repos/dc-simu/src/auth/localBackend.ts, /home/user/repos/dc-simu/src/landing/LandingEditorShowcase.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+dist/version.json                                     0.11 kB │ gzip:     0.12 kB
+dist/manifest.webmanifest                             0.43 kB
+dist/index.html                                       5.51 kB │ gzip:     2.19 kB
+dist/assets/stepImport.worker-GVjfsOtX.js            57.30 kB
+dist/assets/wireRouting.worker-DNAFX1RH.js          182.88 kB
+dist/assets/occt-import-js-DAA_IsEU.wasm         13,268.68 kB │ gzip: 4,206.32 kB
+dist/assets/InlineName-a2tclOC0.css                   1.17 kB │ gzip:     0.47 kB
+dist/assets/fluidSim4-CQFQOPNu.css                    4.69 kB │ gzip:     1.52 kB
+dist/assets/CommandsEditor-C9lFHeri.css              22.84 kB │ gzip:     4.96 kB
+dist/assets/GrafcetEditor-B5zNle4j.css               39.24 kB │ gzip:     7.15 kB
+dist/assets/index-inTEztO9.css                      879.94 kB │ gzip:   150.76 kB
+dist/assets/ladderZoom-CpK5QIMl.js                    0.57 kB │ gzip:     0.38 kB
+dist/assets/SymbolThumb-BHCgHfRi.js                   0.66 kB │ gzip:     0.45 kB
+dist/assets/geometry-BJsfEtfH.js                      0.78 kB │ gzip:     0.44 kB
+dist/assets/textStyle-BKJHgZ5C.js                     1.86 kB │ gzip:     1.00 kB
+dist/assets/GlbPreview-BWLyYS5L.js                    2.07 kB │ gzip:     1.09 kB
+dist/assets/LandingEditorShowcase-NoeXlyhp.js         2.49 kB │ gzip:     1.21 kB
+dist/assets/MotorShaftFan3D-QF9H4od4.js               2.68 kB │ gzip:     1.19 kB
+dist/assets/usePinchZoom-CbBaHk8M.js                  2.72 kB │ gzip:     1.03 kB
+dist/assets/editing-vbK2uT82.js                       2.84 kB │ gzip:     1.25 kB
+dist/assets/Select-3lToddvx.js                        3.05 kB │ gzip:     1.39 kB
+dist/assets/LandingPricing-B6ZdfHFD.js                3.05 kB │ gzip:     1.38 kB
+dist/assets/ContribParts-ByYAep-i.js                  3.84 kB │ gzip:     1.70 kB
+dist/assets/ShortcutsDialog-Ct-P9e3v.js               4.44 kB │ gzip:     1.80 kB
+dist/assets/ProjectCover-XL-q_Dvh.js                  5.15 kB │ gzip:     2.43 kB
+dist/assets/orientedComponentImage-DKD5urU3.js        5.35 kB │ gzip:     2.40 kB
+dist/assets/EditorMinimap-Z_2nZ1aa.js                 5.72 kB │ gzip:     2.31 kB
+dist/assets/workbox-window.prod.es5-BBnX5xw4.js       5.75 kB │ gzip:     2.36 kB
+dist/assets/LandingMotorHero-DNJNcwLo.js              6.31 kB │ gzip:     2.92 kB
+dist/assets/AccountPlanCard-BDqe2KEU.js               6.82 kB │ gzip:     2.57 kB
+dist/assets/CommandsPanels-elJz6KYS.js                8.32 kB │ gzip:     3.15 kB
+dist/assets/MonitorPanel-BS7O-Xbf.js                  9.77 kB │ gzip:     3.20 kB
+dist/assets/ContributorPanel-CZ2FKr1o.js             10.08 kB │ gzip:     3.75 kB
+dist/assets/componentThumbnails-_T4XoZT1.js          10.15 kB │ gzip:     4.30 kB
+dist/assets/AccountPage-B7hLXOce.js                  10.81 kB │ gzip:     3.60 kB
+dist/assets/contribApi-Dk2mja2G.js                   10.86 kB │ gzip:     3.91 kB
+dist/assets/GrafcetLiveDock-BY04d1mU.js              13.77 kB │ gzip:     4.96 kB
+dist/assets/modelFit-Coh8WXx8.js                     15.83 kB │ gzip:     6.60 kB
+dist/assets/staticComponentImages-C40ku-Rf.js        17.55 kB │ gzip:     6.30 kB
+dist/assets/InlineName-DRvoHP8p.js                   20.31 kB │ gzip:     6.59 kB
+dist/assets/Dashboard-B6mun9ib.js                    20.54 kB │ gzip:     6.36 kB
+dist/assets/Landing-CMtmIYFX.js                      20.88 kB │ gzip:     6.57 kB
+dist/assets/CommandsSidebar-C4wHrxyp.js              26.12 kB │ gzip:     8.02 kB
+dist/assets/fluidSim4-3GR4Hy6W.js                    26.84 kB │ gzip:    11.37 kB
+dist/assets/componentRig-CLdo0SI7.js                 27.20 kB │ gzip:    10.29 kB
+dist/assets/purify.es-18JuyMri.js                    30.12 kB │ gzip:    11.51 kB
+dist/assets/Viewport-DlMCnl3F.js                     31.43 kB │ gzip:    11.26 kB
+dist/assets/NetworkDiagram-xjwUrM9Y.js               40.38 kB │ gzip:    12.64 kB
+dist/assets/symbols-D5tCkA_q.js                      44.37 kB │ gzip:     9.91 kB
+dist/assets/WireEnd3D-C0H_PTjE.js                    60.88 kB │ gzip:    22.57 kB
+dist/assets/motorEditorTextures-BEOHxDb5.js          76.23 kB │ gzip:    28.12 kB
+dist/assets/CommandsEditor-DNUIUxwb.js               89.66 kB │ gzip:    30.52 kB
+dist/assets/ViewCube-D7WhHQbF.js                    112.92 kB │ gzip:    35.60 kB
+dist/assets/LadderEditor-DH1Uc_2s.js                139.27 kB │ gzip:    41.14 kB
+dist/assets/index.es-CQXNjVUE.js                    158.17 kB │ gzip:    52.76 kB
+dist/assets/vendor-react-DH-0J3Pc.js                192.11 kB │ gzip:    64.06 kB
+dist/assets/html2canvas.esm-DXEQVQnt.js             201.04 kB │ gzip:    47.43 kB
+dist/assets/vendor-supabase-CB7MGzWB.js             223.73 kB │ gzip:    58.62 kB
+dist/assets/SchematicView-DSBEs34h.js               290.64 kB │ gzip:    95.35 kB
+dist/assets/GrafcetEditor-D48Y878e.js               372.32 kB │ gzip:   109.99 kB
+dist/assets/ExportPdfDialog-C_TS0KW3.js             422.24 kB │ gzip:   138.62 kB
+dist/assets/AdminPanel-C5T-k9Vi.js                  429.27 kB │ gzip:   131.98 kB
+dist/assets/vendor-r3f-UWqxrI5_.js                  502.26 kB │ gzip:   163.09 kB
+dist/assets/App-CNc4tjO2.js                         518.89 kB │ gzip:   148.22 kB
+dist/assets/vendor-three-DgavjmkQ.js                798.74 kB │ gzip:   209.21 kB
+dist/assets/exceljs.min-DEFI__x4.js                 936.99 kB │ gzip:   270.75 kB
+dist/assets/index-B-JGeiN_.js                     1,131.48 kB │ gzip:   340.83 kB
+
+(!) Some chunks are larger than 900 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 44.35s
+
+PWA v1.3.0
+mode      generateSW
+precache  151 entries (8533.38 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-4e9e9954.js

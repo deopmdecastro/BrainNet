@@ -1,0 +1,29 @@
+{
+  "stage": "LOCAL_COMMIT_AND_BUILD_VALIDATED_REMOTE_RELEASE_NOT_YET_ATTEMPTED",
+  "appCommit": "7990560a8873e58561042a7025888a09286bc8a9",
+  "build": {
+    "buildId": "7990560a8873e58561042a7025888a09286bc8a9.r213.mwmlqehr",
+    "builtAt": "2026-11-18T20:59:22.101Z"
+  },
+  "sourceClean": true,
+  "typecheckExitCode": 0,
+  "unitAssertions": 76,
+  "browserAssertions": 86,
+  "browserExceptions": [],
+  "fullCiExitCode": 0,
+  "ciChainedCommands": 103,
+  "serverAssertions": 188,
+  "productionVulnerabilities": 0,
+  "firstBuildExitCode": 134,
+  "firstBuildReason": "Default Node heap (~926 MB) exhausted; no source modification. Original log retained.",
+  "releaseBuildExitCode": 0,
+  "releaseBuildNodeOptions": "--max-old-space-size=3072",
+  "localStaticGuardAssertions": 10,
+  "brainnetTests": {
+    "pass": 18,
+    "skip": 27,
+    "fail": 0
+  },
+  "remotePushConfirmed": false,
+  "productionPublicationConfirmed": false
+}
