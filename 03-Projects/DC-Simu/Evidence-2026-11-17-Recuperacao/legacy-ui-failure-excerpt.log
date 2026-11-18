@@ -1,0 +1,15 @@
+2026-11-18T20:02:59.0845450Z     triggerUncaughtException(
+2026-11-18T20:02:59.0845613Z     ^
+2026-11-18T20:02:59.0845680Z
+2026-11-18T20:02:59.0845788Z locator.waitFor: Timeout 30000ms exceeded.
+2026-11-18T20:02:59.0845956Z Call log:
+2026-11-18T20:02:59.0846152Z   - waiting for locator('[data-grafcet-sim-dock]') to be visible
+2026-11-18T20:02:59.0846331Z
+2026-11-18T20:02:59.0846485Z     at /home/runner/work/dc-simu/dc-simu/scripts/grafcet-ui-smoke.mjs:115:49 {
+2026-11-18T20:02:59.0846709Z   log: [
+2026-11-18T20:02:59.0846898Z     "  - waiting for locator('[data-grafcet-sim-dock]') to be visible"
+2026-11-18T20:02:59.0847096Z   ],
+2026-11-18T20:02:59.0847220Z   name: 'TimeoutError'
+2026-11-18T20:02:59.0847355Z }
+2026-11-18T20:02:59.0847417Z
+2026-11-18T20:02:59.0847476Z Node.js v22.23.4

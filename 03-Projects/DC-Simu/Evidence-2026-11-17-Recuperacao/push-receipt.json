@@ -1,0 +1,21 @@
+{
+  "stage": "BOTH_PUSHES_CONFIRMED_DEPLOYMENT_VERIFICATION_SEPARATE",
+  "checkedAt": "2026-11-18T20:01:24Z",
+  "repositories": [
+    {
+      "repository": "deopmdecastro/dc-simu",
+      "target": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+      "mainBefore": "d474ab3e99383e1e8ede6cc75a2b8ae1277b3323",
+      "pushConfirmed": true,
+      "mainAfter": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0"
+    },
+    {
+      "repository": "deopmdecastro/BrainNet",
+      "target": "9cda5ac8513d47e5392248b5b893c34252a2ba5a",
+      "mainBefore": "dac3a94e6e3964b56018a935ef4c51193f4b903e",
+      "pushConfirmed": true,
+      "mainAfter": "9cda5ac8513d47e5392248b5b893c34252a2ba5a"
+    }
+  ],
+  "allPushesConfirmed": true
+}

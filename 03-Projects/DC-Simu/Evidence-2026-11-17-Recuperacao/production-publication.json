@@ -1,0 +1,91 @@
+{
+  "commit": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+  "expectedBuildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3",
+  "checkedAt": "2026-11-18T20:09:18Z",
+  "mainCommit": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+  "publicVersion": {
+    "buildId": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3",
+    "builtAt": "2026-11-18T20:02:33.591Z"
+  },
+  "productionHttpStatus": 200,
+  "githubHttpStatuses": {
+    "appMain": 200,
+    "statuses": 200,
+    "checks": 200,
+    "workflows": 200,
+    "deployments": 200,
+    "deployment-7894732437": 200,
+    "brainnetMain": 200
+  },
+  "statuses": [
+    {
+      "context": "Vercel",
+      "state": "success",
+      "description": "Deployment has completed",
+      "target_url": "https://vercel.com/deopmdecastros-projects/dc-simu/DCfxCapCSAZbXnNLgNPqbfctz1DA",
+      "updated_at": "2026-11-18T20:03:06Z"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Testes de interface (Playwright)",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211/job/135092830980",
+      "completed_at": "2026-11-18T20:03:01Z"
+    },
+    {
+      "name": "Tipos, testes e build",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211/job/135092830472",
+      "completed_at": "2026-11-18T20:05:25Z"
+    }
+  ],
+  "workflowRuns": [
+    {
+      "id": 44386624211,
+      "name": "CI",
+      "head_sha": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211"
+    }
+  ],
+  "deployments": [
+    {
+      "id": 7894732437,
+      "sha": "20150c06d4d05e0ef38d2ba9bb59978e86a660c0",
+      "environment": "Production",
+      "statuses": [
+        {
+          "state": "success",
+          "environment_url": "https://dc-simu-2si8myuhg-deopmdecastros-projects.vercel.app",
+          "log_url": "https://dc-simu-2si8myuhg-deopmdecastros-projects.vercel.app",
+          "created_at": "2026-11-18T20:03:07Z",
+          "description": "Deployment has completed"
+        }
+      ]
+    }
+  ],
+  "brainnet": {
+    "expectedCommit": "9cda5ac8513d47e5392248b5b893c34252a2ba5a",
+    "mainCommit": "9cda5ac8513d47e5392248b5b893c34252a2ba5a",
+    "verified": true
+  },
+  "productionVerified": true,
+  "ciVerified": true,
+  "ciVerifiedScope": "Required core job and CI workflow conclusion only. Informative jobs retain their actual conclusions below.",
+  "allCiChecksSuccessful": false,
+  "failedInformativeChecks": [
+    {
+      "name": "Testes de interface (Playwright)",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211/job/135092830980",
+      "completed_at": "2026-11-18T20:03:01Z"
+    }
+  ],
+  "note": "Exact production/core release verification does not approve failed informative UI jobs, visual acceptance, cloud/RLS or hardware/GPU performance.",
+  "releaseVerified": true
+}

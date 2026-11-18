@@ -1,0 +1,14 @@
+{
+  "job": "Testes de interface (Playwright)",
+  "conclusion": "failure",
+  "informative": true,
+  "jobUrl": "https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211/job/135092830980",
+  "failedStep": "npm run test:grafcet-ui",
+  "failure": "30 s waiting for [data-grafcet-sim-dock] at scripts/grafcet-ui-smoke.mjs:115",
+  "subsequentSuites": "SKIPPED",
+  "baseline": "d474ab3e99383e1e8ede6cc75a2b8ae1277b3323",
+  "testAndWorkflowUnchangedFromBaseline": true,
+  "dockDisabledWithFalseGuardInBaselineAndCurrent": true,
+  "scope": "Remote failure log and source comparison, not a browser baseline rerun or all-UI acceptance. Update scenario for current controls and rerun without re-enabling retired UI or weakening assertions.",
+  "status": "OPEN"
+}

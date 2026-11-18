@@ -20,8 +20,9 @@ com obturadores nas vagas sem aparelhos. Nova fotografia: `IMG_5810.jpeg`.
 A baseline histórica da tarefa anterior
 [[Task-2026-11-17-Medidores-Bibliotecas-Schneider-CAD]] citava `10e555b`/`6e031a4`.
 Esses apontamentos não aprovam a árvore recuperada. A recuperação atual parte de
-`d474ab3` e tem commit local **20150c0**, build estático r212 e regressões verdes;
-a publicação remota deve ser confirmada no registo de validação atual.
+`d474ab3` e tem commit **20150c0** publicado, build estático r212 e CI obrigatório
+remoto aprovados; o registo atual confirma o `buildId` público exato e mantém
+visível a falha legada do job informativo de UI.
 **A aceitação visual do utilizador continua pendente.** Não apresentar o
 protótipo procedural como produto fiel ou CAD oficial.
 
@@ -81,8 +82,9 @@ Panel3D 41 e ciclo de vida ampliado 62 PASS. TypeScript, os 102 comandos de CI
 local e build estático do commit 20150c0 passaram. Suites browser executadas em
 série por RAM de 2 GB; isso não substitui aceitação visual nem GPU reais.
 
-Commit/push/publicação dos dois repositórios foram autorizados. A aplicação
-está committed localmente; push/CI remoto/deploy exigem confirmação separada.
+Commit/push/publicação dos dois repositórios foram autorizados e executados.
+A aplicação está em produção com hash/carimbo exatos e CI obrigatório verde;
+o job informativo legado de UI falhou e continua por corrigir/repetir.
 Sem Supabase/RLS/cloud reais aprovados. Preservado integralmente o checkout
 pessoal aninhado adf9fbf/122 entradas, os 1039 ficheiros e o gitlink pessoal
 preparado. A release BrainNet usa outra worktree e o commit canónico 20150c0.

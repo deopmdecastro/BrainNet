@@ -1,28 +1,34 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: LOCAL_VALIDATED_RELEASE_PREPARED
+status: PUBLISHED_CORE_CI_VERIFIED_LEGACY_UI_PENDING
 created: 2026-11-17
 updated: 2026-11-17
 tags: [dc-simu, recuperacao, industrial, medidores, grafcet, iec, preservacao, release]
 ---
 # Recuperação — aparelhos industriais, medidores e editores
 
-**Aplicação com commit e build locais aprovados. Push, CI remoto e deploy não
-estão confirmados por este registo de preparação.** O utilizador autorizou
-commit/push/publicação de ambos os repositórios. Uma chave enviada no chat não
-é guardada em código, notas, URLs, Git config, logs ou comandos de publicação.
-A sessão de push deve ser transitória e permanecer apenas em memória.
+**Push confirmado nos dois repositórios; aplicação publicada no Vercel com
+hash/carimbo exatos. O CI obrigatório passou. O job informativo antigo de UI
+falhou e fica explicitamente pendente.** O utilizador autorizou a publicação.
+Uma chave enviada no chat não pertence a código, notas, URLs, Git config ou
+logs. A autenticação de publicação é transitória, apenas em memória, e deve
+ser encerrada no fecho; recomenda-se revogar a chave exposta no chat.
 
 | Identidade | Valor confirmado |
 | --- | --- |
 | Baseline da aplicação | `d474ab3e99383e1e8ede6cc75a2b8ae1277b3323` |
-| Novo commit local da aplicação | `20150c06d4d05e0ef38d2ba9bb59978e86a660c0` |
+| Commit publicado da aplicação | [`20150c06d4d05e0ef38d2ba9bb59978e86a660c0`](https://github.com/deopmdecastro/dc-simu/commit/20150c06d4d05e0ef38d2ba9bb59978e86a660c0) |
 | Carimbo do hook pre-commit | **r212.mwmjddq3** |
 | Build estático local | **exit 0**, `VERCEL=1 npm run build` sobre esse commit |
 | `dist/version.json` local | `20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3` |
 | Baseline BrainNet | `dac3a94e6e3964b56018a935ef4c51193f4b903e` |
-| Gitlink preparado na worktree de release | **20150c06d4d05e0ef38d2ba9bb59978e86a660c0**, não o HEAD pessoal |
+| Primeiro commit BrainNet publicado | [`9cda5ac8513d47e5392248b5b893c34252a2ba5a`](https://github.com/deopmdecastro/BrainNet/commit/9cda5ac8513d47e5392248b5b893c34252a2ba5a), seguido deste registo de confirmação |
+| Gitlink publicado na release BrainNet | **20150c06d4d05e0ef38d2ba9bb59978e86a660c0**, não o HEAD pessoal |
+| Versão pública confirmada | [version.json](https://dc-simu.vercel.app/version.json): **20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3** |
+| Deploy Vercel | **Production / success**, commit exato confirmado por API e domínio público |
+| CI obrigatório remoto | **success** — tipos, 102 comandos de testes, servidor, build e auditoria |
+| Job informativo remoto de UI | **failure** — espera pelo dock GRAFCET antigo; suites seguintes não executadas |
 
 Este registo substitui os estados de validação antigos de
 [[Validation-2026-11-17-Medidores-Schneider-CAD]]. Os números/hashes históricos
@@ -67,7 +73,7 @@ não aprovam a recuperação nem constituem prova de publicação do novo commit
 | Dependências de produção | **0 vulnerabilidades** | Auditoria local `npm audit --omit=dev` |
 | Capas | **18 tipos regenerados; 69 capas + 69 frontais presentes** | Gerador rejeita captura falhada mesmo com capa antiga |
 | Build estático do commit 20150c0 | **exit 0**, PWA gerada | Avisos de chunks >900 kB conservados, não ocultados |
-| Guard no build minificado | **10 PASS** | `--static-guard`: `buildId` exato e recusa de sessões locais fabricadas User/Admin; **não** é projeto cloud autenticado |
+| Guard no build minificado local / domínio de produção real | **10 / 10 PASS** | Duas execuções de `--static-guard`: `buildId` exato e recusa de sessões locais fabricadas User/Admin; **não** é projeto cloud autenticado |
 | Testes BrainNet na worktree de release | **18 PASS, 27 SKIP**, exit 0 | Não são 45 testes executados |
 | Fundação da worktree de release exata | **exit 0; 386 Markdown, 953 links, 3 workflows; zero erros** | Documentação atual + arquivo do commit 20150c0; não é o checkout pessoal |
 | Fundação do checkout pessoal protegido | **2 links partidos preservados** | Falha pessoal distinta; sem alterar ficheiros nem regras |
@@ -98,19 +104,30 @@ O perfil Panel3D/R3F conservado estabilizou recursos em cinco ciclos
 SwiftShader mediu **1,922 FPS**, CPU média 3,62 ms/p95 5,4 ms. **Não aprova
 fluidez numa GPU física.**
 
-## Release preparada e pendências
+## Publicação confirmada e pendências
 
-1. Publicar o commit canónico da aplicação e o commit de documentação/gitlink
-   do BrainNet, usando uma sessão autenticada transitória. Não há confirmação
-   de push neste registo de preparação.
-2. Observar o CI/deploy remotos e conferir que o `buildId` público em
-   `https://dc-simu.vercel.app/version.json` coincide exatamente com
-   `20150c06d4d05e0ef38d2ba9bb59978e86a660c0.r212.mwmjddq3`.
-   Build local ou `ls-remote` público não substituem essa confirmação.
-3. Aceitação visual face às fotografias e ensaio com GPU/hardware reais.
-4. Supabase/RLS/cloud, login de produção, projetos reais e colisões de rede
-   não foram aprovados por fixtures com API externa/service workers bloqueados.
-   A proteção estática não foi afrouxada para fazer passar um login sintético.
+- Os pushes de `20150c0` e `9cda5ac` para os respetivos `main` foram executados
+  com autenticação transitória e confirmados por leitura posterior das refs.
+  O Vercel concluiu o deploy de produção; o domínio público declarou exatamente
+  o novo `buildId`. O CI obrigatório remoto concluiu com sucesso.
+- [Execução CI](https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211):
+  o workflow global é success porque o job UI já era informativo
+  (`continue-on-error: true`). **Isso não transforma a falha UI num PASS.**
+- [Falha UI](https://github.com/deopmdecastro/dc-simu/actions/runs/44386624211/job/135092830980):
+  `scripts/grafcet-ui-smoke.mjs:115` espera 30 s por
+  `[data-grafcet-sim-dock]` a 1100 px. O dock está protegido por `false &&`
+  tanto no código atual como na baseline `d474ab3`; o script/workflow também
+  não foram alterados nesta recuperação. É uma divergência legada de teste/UI,
+  não uma execução aprovada. As suites remotas subsequentes foram **SKIP**.
+  Corrigir o cenário para os controlos atuais e repetir o job continua pendente;
+  não se reativa uma funcionalidade desativada nem se remove a asserção para
+  fingir uma aprovação. As suites dedicadas locais de 110/78/41/62 PASS são
+  evidência separada, não substituem esse job remoto.
+- Aceitação visual face às fotografias e ensaio com GPU/hardware reais
+  continuam pendentes.
+- Supabase/RLS/cloud, login de produção, projetos reais e colisões de rede
+  não foram aprovados por fixtures com API externa/service workers bloqueados.
+  A proteção estática não foi afrouxada para fazer passar um login sintético.
 
 O verificador de publicação deixou de ter o SHA/carimbo antigos fixos:
 recebe o commit exato, lê o carimbo desse commit e separa produção/CI/refs.
