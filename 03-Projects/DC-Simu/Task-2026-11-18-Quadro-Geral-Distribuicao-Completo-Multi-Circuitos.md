@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: task
-status: IMPLEMENTED_TESTED
+status: PUBLISHED_VERIFIED
 created: 2026-11-18
 updated: 2026-11-18
 repo: https://github.com/deopmdecastro/dc-simu
@@ -18,7 +18,9 @@ Projeto registado em `nativeProjectSeeds()` com o ID estável
 Disponível no dashboard para Admin e restantes contas, incluindo Free. O Admin
 é proprietário da semente; os restantes utilizadores editam rascunhos isolados,
 sem consumir a quota de projetos próprios. Guardar, recarregar e repor são
-cobertos por testes. A implementação local não constitui prova de publicação.
+cobertos por testes. Publicação confirmada na Vercel e no `version.json`
+público: commit `d474ab3e99383e1e8ede6cc75a2b8ae1277b3323`, release
+`r209.mwlsnh6v`. Ver evidência e limitações na nota de validação.
 
 ## Conteúdo revisto
 

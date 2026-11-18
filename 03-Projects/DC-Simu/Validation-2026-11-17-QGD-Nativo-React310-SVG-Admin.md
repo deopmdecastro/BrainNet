@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: IMPLEMENTED_TESTED
+status: PUBLISHED_VERIFIED
 created: 2026-11-17
 updated: 2026-11-17
 tags: [dc-simu, qgd, react310, hooks, svg, permissions, qa, publication]
@@ -114,11 +114,43 @@ restaurar/apagar os seus ficheiros. Não deve ser usada como cópia da release
 sem primeiro tratar essas alterações locais. O código publicado vem do
 repositório principal da aplicação.
 
-**Estado desta nota: commits locais preparados; publicação pendente de
-autenticação GitHub, pushes e verificação do deployment.** A versão pública
-observada antes desta entrega continuava a corresponder a
-`a9356e9b8b004852193c666adcc4f64457dbfb4d.r206.mwlbltqu`.
+### Publicação verificada
 
-Depois de autenticar, enviar primeiro a aplicação, depois o BrainNet. Confirmar
-o commit remoto, o estado do deployment Vercel e o `buildId` em
-`https://dc-simu.vercel.app/version.json`; push não é prova de deploy.
+- Aplicação enviada primeiro; referência remota `main` confirmada em
+  `d474ab3e99383e1e8ede6cc75a2b8ae1277b3323`.
+- BrainNet enviado a seguir, inicialmente em
+  `81e19265bd363bd893d247613c1869c7eb67e113`; esta atualização regista a
+  confirmação de publicação, sem mudar o gitlink da aplicação.
+- Deployment GitHub **7877225493**, ambiente **Production**, SHA exato acima:
+  estado **success**. Contexto Vercel: «Deployment has completed».
+- [Deployment Vercel](https://vercel.com/deopmdecastros-projects/dc-simu/7EGxg85EGie4JPEdhPW55oew4cCb).
+- [Aplicação pública](https://dc-simu.vercel.app) e
+  [versão pública](https://dc-simu.vercel.app/version.json) verificadas com
+  `buildId = d474ab3e99383e1e8ede6cc75a2b8ae1277b3323.r209.mwlsnh6v`.
+- `builtAt` devolvido pela aplicação: `2026-11-18T07:40:55.076Z`;
+  confirmação da versão pública às `2026-11-18T07:41:59Z`.
+- Nome canónico e ID do QGD presentes no JavaScript publicado. Página pública
+  de autenticação: HTTP 200, renderização e abertura sem exceções JavaScript.
+  Não se usou uma conta real da aplicação nem se alteraram dados de produção.
+
+A versão anterior era `a9356e9b8b004852193c666adcc4f64457dbfb4d.r206.mwlbltqu`.
+A confirmação não foi inferida apenas do push: a produção devolveu o commit e
+o carimbo novos.
+
+### CI remoto após o push
+
+A [execução 44260491723](https://github.com/deopmdecastro/dc-simu/actions/runs/44260491723)
+terminou com falhas, embora o deployment Vercel independente tenha concluído:
+
+- Job «Tipos, testes e build»: tipos passaram; `test:ci` interrompeu em
+  `editors-sweep`, com a sobreposição de bornes do condensador já reproduzida
+  na base pública. O build desse job foi, por isso, ignorado; o build local e
+  o build/deployment Vercel concluíram separadamente.
+- Job de interface: `test:grafcet-ui` atingiu o timeout de 30 s à espera de
+  `[data-grafcet-sim-dock]` em `grafcet-ui-smoke.mjs:115`. O download dos logs
+  da [execução anterior 44217273312](https://github.com/deopmdecastro/dc-simu/actions/runs/44217273312)
+  confirmou exatamente o mesmo timeout, seletor e linha.
+
+O CI global **não está verde**. A publicação confirma a entrega do código
+pedido, não a resolução das sete pendências gerais ou de todos os testes
+GRAFCET. Não foram removidos gates, ignoradas falhas nem alterado o workflow.
