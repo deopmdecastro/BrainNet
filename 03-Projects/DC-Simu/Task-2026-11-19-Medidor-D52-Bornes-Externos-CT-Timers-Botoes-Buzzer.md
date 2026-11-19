@@ -1,0 +1,47 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: IN_PROGRESS
+created: 2026-11-19
+updated: 2026-11-19
+tags: [dc-simu, cad, realismo, medidores, bornes, timer, botao, buzzer, pente, capacitor]
+---
+
+# Melhorias de realismo: medidor D52-2066 (CT externo), bornes de temporizadores, botões, buzzer, capacitor e pente universal
+
+## Pedido e baseline
+
+Utilizador forneceu fotografias e capturas de ecrã (IMG_5843–IMG_5861) do medidor D52-2066 em instalação com CT externo, temporizadores GEYA GRT8-M1/M2, blocos de contacto NO/NC KEOLEA KL-XB2, botões de pressão coloridos, sinalizador sonoro Metaltex TBY-301, capacitor e pente de ligação.
+
+Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo atravessante no medidor (variante CT externo), serigrafia, texturas, operação e encaixe do pente em todos os dispositivos compatíveis.
+
+## Alterações realizadas (2026-11-19)
+
+### Medidor D52-2066 (meterD522066)
+- Removido o furo/túnel de passagem do condutor primário no corpo (variante CT externo).
+- Bornes 1/2 (tensão L/N) mantidos com entrada inferior + poços de parafuso frontais e parafusos captivos.
+- Bornes 3/4 promovidos a terminais reais de CT secundário (S1/S2): entrada superior + parafusos captivos frontais.
+- Atualizados factory terminals, realInterfaces, legacy positions, engine (sem bridge primário) e panelMeterModel (leitura de corrente via CT ligado ou escala 100 A / 50 mA no secundário).
+- Comentários de origem e intenção preservados; não se afirma CAD oficial do fabricante.
+
+### Próximos passos nesta sessão
+1. Melhorar bornes dos temporizadores GEYA (parafusos na vista frontal + bornes superiores).
+2. Capacitor: 6 pinos corretos + tipo de terminal automático ao ligar cabo.
+3. Sinalização sonora (buzzerMetaltexTby301): fidelidade geométrica e sonora.
+4. Botões de pressão (cores, cabeças metálicas, blocos NO/NC, serigrafia, cover, ação de clique, bornes, símbolo IEC).
+5. Pente (comb busbar): replicar borne do disjuntor em diferenciais e restantes dispositivos compatíveis para encaixe universal.
+6. Remover componentes com cadeado (locked) no editor e painel quando já existem equivalentes.
+7. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
+
+## Referências de imagem
+- IMG_5843–IMG_5845: medidor D52-2066 e diagrama CT externo.
+- IMG_5846–IMG_5852: temporizadores GEYA GRT8 e capacitor.
+- IMG_5853–IMG_5859: botões, blocos NO/NC, buzzer Metaltex TBY-301.
+- IMG_5860–IMG_5861: capturas 3D atuais da aplicação.
+
+## Critérios de aceitação (visuais + funcionais)
+- Medidor sem furo atravessante; bornes 1–4 utilizáveis e cotados.
+- Temporizadores com parafusos visíveis na frente e bornes superiores fiéis.
+- Botões e buzzer reconhecíveis face às fotos de produto.
+- Pente encaixa e faz contacto em qualquer disjuntor/diferencial/aparelho com borne compatível.
+- Sem regressões em medidores existentes, LCD, reset 5 s e projetos QGD.
