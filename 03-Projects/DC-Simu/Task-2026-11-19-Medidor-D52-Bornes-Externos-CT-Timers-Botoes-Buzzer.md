@@ -35,12 +35,15 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 - A seleção automática de ponta de cabo (`defaultWireEndTypeForTerminal`) já reage ao `terminalType` faston.
 - Verificação visual do GLB e da disposição dos 6 pinos fica para aceitação; não inventar geometria extra sem cotas.
 
+### Pente (comb busbar) — commit dc-simu 69f68b1
+- BREAKER_TYPES alargado a Schneider iC60H, residuais Hager/Schneider (iID/iDPN), motor (PKZM/GV2) e residual genérico.
+- Mapas de bornes de entrada (topo) cobrem 1P / 1P+N / 3P / 4P para snap e bridges em todos os dispositivos compatíveis.
+
 ### Próximos passos
 1. Sinalização sonora (buzzerMetaltexTby301): fidelidade geométrica e sonora face às fotos Metaltex TBY-301.
 2. Botões de pressão (cores, cabeças metálicas, blocos NO/NC KEOLEA, serigrafia, cover, ação de clique, bornes, símbolo IEC).
-3. Pente (comb busbar): replicar borne do disjuntor em diferenciais e restantes dispositivos compatíveis para encaixe universal.
-4. Remover componentes com cadeado (locked) no editor e painel quando já existem equivalentes.
-5. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
+3. Remover componentes com cadeado (locked) no editor e painel quando já existem equivalentes.
+4. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
 
 ## Referências de imagem
 - IMG_5843–IMG_5845: medidor D52-2066 e diagrama CT externo.
