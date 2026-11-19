@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: validation
+status: APPROVED_PENDING_PRODUCTION_VISUAL
+created: 2026-11-19
+updated: 2026-11-19
+tags: [dc-simu, validação, atv320, hmi, cookies]
+---
 # Validation — 2026-11-19 — ATV320 HMI fiel + Modal de cookies
 
 **Estado:** APPROVED_PENDING_PRODUCTION_VISUAL

@@ -1,3 +1,11 @@
+---
+project_id: BN-DCSIMU-001
+type: task
+status: DONE
+created: 2026-11-19
+updated: 2026-11-19
+tags: [dc-simu, tarefa, atv320, hmi, cookies]
+---
 # Task — 2026-11-19 — ATV320 HMI fiel + Modal de cookies
 
 **Estado:** DONE
