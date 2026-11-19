@@ -76,3 +76,7 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 - Pente encaixa e faz contacto em qualquer disjuntor/diferencial/aparelho com borne compatível.
 - ATV320 com LCD/encoder/serigrafia reconhecíveis face à foto do produto.
 - Sem regressões em medidores existentes, LCD, reset 5 s e projetos QGD.
+
+### Projeto nativo + interação STOP — commit dc-simu ff149a0
+- Projeto retido f8df6df2-… listado e abrível em todas as contas (incl. free).
+- Painel 3D em STOP: toque seleciona; não arma disjuntor / não abre gaveta até RUN.
