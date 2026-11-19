@@ -4,6 +4,7 @@ type: task
 status: IN_PROGRESS
 created: 2026-11-19
 updated: 2026-11-19
+# commits: dc-simu 9074dd0 (medidor), a5c0133 (timers)
 tags: [dc-simu, cad, realismo, medidores, bornes, timer, botao, buzzer, pente, capacitor]
 ---
 
@@ -17,21 +18,29 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 
 ## Alterações realizadas (2026-11-19)
 
-### Medidor D52-2066 (meterD522066)
+### Medidor D52-2066 (meterD522066) — commit dc-simu 9074dd0
 - Removido o furo/túnel de passagem do condutor primário no corpo (variante CT externo).
 - Bornes 1/2 (tensão L/N) mantidos com entrada inferior + poços de parafuso frontais e parafusos captivos.
 - Bornes 3/4 promovidos a terminais reais de CT secundário (S1/S2): entrada superior + parafusos captivos frontais.
 - Atualizados factory terminals, realInterfaces, legacy positions, engine (sem bridge primário) e panelMeterModel (leitura de corrente via CT ligado ou escala 100 A / 50 mA no secundário).
 - Comentários de origem e intenção preservados; não se afirma CAD oficial do fabricante.
 
-### Próximos passos nesta sessão
-1. Melhorar bornes dos temporizadores GEYA (parafusos na vista frontal + bornes superiores).
-2. Capacitor: 6 pinos corretos + tipo de terminal automático ao ligar cabo.
-3. Sinalização sonora (buzzerMetaltexTby301): fidelidade geométrica e sonora.
-4. Botões de pressão (cores, cabeças metálicas, blocos NO/NC, serigrafia, cover, ação de clique, bornes, símbolo IEC).
-5. Pente (comb busbar): replicar borne do disjuntor em diferenciais e restantes dispositivos compatíveis para encaixe universal.
-6. Remover componentes com cadeado (locked) no editor e painel quando já existem equivalentes.
-7. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
+### Temporizadores GEYA GRT8-M1 / B1 — commit dc-simu a5c0133
+- Adicionados parafusos captivos com ranhura em cruz na face frontal (+Z), alinhados com as filas superior (A1/S/A2) e inferior (15/16/18).
+- Bornes superiores e inferiores já existiam no geometry.json como sockets; os parafusos frontais completam o hardware visível na vista frontal.
+- Reutiliza `buildCaptiveTerminalScrew` (mesmo hardware do medidor).
+
+### Capacitor (capacitorRun60uF)
+- Já possui 6 terminais (1, 1B, 2, 2B, 2C, 2D) com `terminalType: 'faston'` no factory e contact pin no realInterfaces.
+- A seleção automática de ponta de cabo (`defaultWireEndTypeForTerminal`) já reage ao `terminalType` faston.
+- Verificação visual do GLB e da disposição dos 6 pinos fica para aceitação; não inventar geometria extra sem cotas.
+
+### Próximos passos
+1. Sinalização sonora (buzzerMetaltexTby301): fidelidade geométrica e sonora face às fotos Metaltex TBY-301.
+2. Botões de pressão (cores, cabeças metálicas, blocos NO/NC KEOLEA, serigrafia, cover, ação de clique, bornes, símbolo IEC).
+3. Pente (comb busbar): replicar borne do disjuntor em diferenciais e restantes dispositivos compatíveis para encaixe universal.
+4. Remover componentes com cadeado (locked) no editor e painel quando já existem equivalentes.
+5. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
 
 ## Referências de imagem
 - IMG_5843–IMG_5845: medidor D52-2066 e diagrama CT externo.
