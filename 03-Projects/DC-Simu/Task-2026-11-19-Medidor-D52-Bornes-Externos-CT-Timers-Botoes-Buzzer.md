@@ -51,10 +51,15 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 - Etiquetas danger / product / Altivar regeneradas mais próximas da foto de produto.
 - Comportamento inalterado: STO/DI1/DI2 cablados, sem RUN inventado, rampa linear.
 
+### Fichas PDF por tipo — commit dc-simu 2c08390
+- Bug: o cartão amarelo do inspetor caía no texto do manual Siemens LOGO! 0BA4 em componentes sem nota explícita (ex.: ATV320).
+- Correção: dispositivos industriais usam INDUSTRIAL_INFO (fabricante/referência/proveniência); cada tipo conhecido tem nota própria; o texto LOGO só aparece em plcSiemensLogo1224RC.
+- Sem PDF builtin → mensagem «Sem datasheet disponível…» mantida.
+
 ### Próximos passos
 1. Refinar ainda mais botões (blocos NO/NC KEOLEA separados, serigrafia completa, cover, símbolo IEC se em falta).
 2. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
-3. Aceitação visual (medidor, timers, pente, botões, buzzer, ATV320).
+3. Aceitação visual (medidor, timers, pente, botões, buzzer, ATV320, fichas PDF).
 
 ## Referências de imagem
 - IMG_5843–IMG_5845: medidor D52-2066 e diagrama CT externo.
@@ -62,6 +67,7 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 - IMG_5853–IMG_5859: botões, blocos NO/NC, buzzer Metaltex TBY-301.
 - IMG_5860–IMG_5861: capturas 3D atuais da aplicação.
 - IMG_5862–IMG_5864: ATV320U04M2C real vs modelo 3D atual.
+- IMG_5865: inspetor com PDF Siemens LOGO no ATV320 (corrigido).
 
 ## Critérios de aceitação (visuais + funcionais)
 - Medidor sem furo atravessante; bornes 1–4 utilizáveis e cotados.
