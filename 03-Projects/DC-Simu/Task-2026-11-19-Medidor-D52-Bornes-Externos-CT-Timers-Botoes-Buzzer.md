@@ -4,7 +4,7 @@ type: task
 status: IN_PROGRESS
 created: 2026-11-19
 updated: 2026-11-19
-# commits: dc-simu 9074dd0 (medidor), a5c0133 (timers)
+# commits: 9074dd0 medidor | a5c0133 timers | 69f68b1 pente | b9d40ed buzzer+botões+unlock
 tags: [dc-simu, cad, realismo, medidores, bornes, timer, botao, buzzer, pente, capacitor]
 ---
 
@@ -39,11 +39,15 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 - BREAKER_TYPES alargado a Schneider iC60H, residuais Hager/Schneider (iID/iDPN), motor (PKZM/GV2) e residual genérico.
 - Mapas de bornes de entrada (topo) cobrem 1P / 1P+N / 3P / 4P para snap e bridges em todos os dispositivos compatíveis.
 
+### Buzzer + Botões + cadeados — commit dc-simu b9d40ed
+- Buzzer TBY-301: tom piezo mais agudo (≈2.85 kHz, LFO leve, bandpass) — ainda didático, não SPL.
+- PushButton3D: anel metálico, base estilo zinc alloy, cabeça colorida (respeita state.color), poços de borne frontais; proporções mais próximas de Ø29 / furação 22 mm.
+- hasComponent3DVisual: buttonNO/NC, emergency, dual, selectors, capacitor, buzzer e timers GEYA passam a contar como representação 3D existente → deixam de mostrar cadeado no editor/painel quando já há visual procedural ou industrial.
+
 ### Próximos passos
-1. Sinalização sonora (buzzerMetaltexTby301): fidelidade geométrica e sonora face às fotos Metaltex TBY-301.
-2. Botões de pressão (cores, cabeças metálicas, blocos NO/NC KEOLEA, serigrafia, cover, ação de clique, bornes, símbolo IEC).
-3. Remover componentes com cadeado (locked) no editor e painel quando já existem equivalentes.
-4. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
+1. Refinar ainda mais botões (blocos NO/NC KEOLEA separados, serigrafia completa, cover, símbolo IEC se em falta).
+2. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
+3. Aceitação visual dos pontos já publicados (medidor, timers, pente, botões, buzzer).
 
 ## Referências de imagem
 - IMG_5843–IMG_5845: medidor D52-2066 e diagrama CT externo.
