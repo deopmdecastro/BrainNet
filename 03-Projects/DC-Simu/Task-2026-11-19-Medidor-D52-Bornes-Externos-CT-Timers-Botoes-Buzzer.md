@@ -44,20 +44,29 @@ Prioridade: fidelidade ao componente real, bornes corretos, remoção de furo at
 - PushButton3D: anel metálico, base estilo zinc alloy, cabeça colorida (respeita state.color), poços de borne frontais; proporções mais próximas de Ø29 / furação 22 mm.
 - hasComponent3DVisual: buttonNO/NC, emergency, dual, selectors, capacitor, buzzer e timers GEYA passam a contar como representação 3D existente → deixam de mostrar cadeado no editor/painel quando já há visual procedural ou industrial.
 
+### ATV320 (vfdSchneiderAtv320) — commit dc-simu 3d395b2
+- Feedback (IMG_5862–5864): serigrafia, botões e LCD não fiéis ao ATV320U04M2C real.
+- LCD: legendas Ref/Mon/Conf + Value/Unit à volta dos 4 dígitos 7-segmentos; destaque do menu ativo.
+- Encoder: material verde + anel de knurling subtil; botão ESC com acabamento metálico escuro.
+- Etiquetas danger / product / Altivar regeneradas mais próximas da foto de produto.
+- Comportamento inalterado: STO/DI1/DI2 cablados, sem RUN inventado, rampa linear.
+
 ### Próximos passos
 1. Refinar ainda mais botões (blocos NO/NC KEOLEA separados, serigrafia completa, cover, símbolo IEC se em falta).
 2. Otimizar suites de teste longas (execução em série / timeouts / smoke prioritários).
-3. Aceitação visual dos pontos já publicados (medidor, timers, pente, botões, buzzer).
+3. Aceitação visual (medidor, timers, pente, botões, buzzer, ATV320).
 
 ## Referências de imagem
 - IMG_5843–IMG_5845: medidor D52-2066 e diagrama CT externo.
 - IMG_5846–IMG_5852: temporizadores GEYA GRT8 e capacitor.
 - IMG_5853–IMG_5859: botões, blocos NO/NC, buzzer Metaltex TBY-301.
 - IMG_5860–IMG_5861: capturas 3D atuais da aplicação.
+- IMG_5862–IMG_5864: ATV320U04M2C real vs modelo 3D atual.
 
 ## Critérios de aceitação (visuais + funcionais)
 - Medidor sem furo atravessante; bornes 1–4 utilizáveis e cotados.
 - Temporizadores com parafusos visíveis na frente e bornes superiores fiéis.
 - Botões e buzzer reconhecíveis face às fotos de produto.
 - Pente encaixa e faz contacto em qualquer disjuntor/diferencial/aparelho com borne compatível.
+- ATV320 com LCD/encoder/serigrafia reconhecíveis face à foto do produto.
 - Sem regressões em medidores existentes, LCD, reset 5 s e projetos QGD.
