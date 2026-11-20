@@ -317,6 +317,16 @@ por polo e face, alavanca vermelha e travessa reais. Fechado em `dc-simu@a7c6ad9
 e reaberto na mesma tarde para a serigrafia (ver secção seguinte).
 Evidência em `Evidence-2026-11-20-Easy9-CAD-Correto/`.
 
+## Botoeiras XB2 — acabamentos, clique e bornes (2026-11-20, noite)
+Reportado: acabamentos pouco fiéis, clique sem efeito de cor e «parafusos soltos
+atrás» no borne. Causas medidas: parafusos 4,1 mm atrás da face traseira, poços
+nunca escavados (`drill` com coordenadas de mundo num mesh centrado), aro Ø29 à
+frente do disco e atravessado pelo espigão de fixação. Corrigido em
+`dc-simu@b5719f3`: pilha frontal real (disco flush → aro → porca sextavada →
+placa → bloco), parafusos de fenda no fundo do poço com o número do borne
+impresso ao lado, e clique com 2 mm de curso + mudança de cor + som.
+Evidência em `Evidence-2026-11-20-XB2-Acabamentos/`.
+
 ## GEYA GRT8 — bornes fiéis e variante M2 (2026-11-20, noite)
 Reportado no painel do projeto «Teste»: faixas escuras no corpo do temporizador
 e bornes sem identificação. Causas medidas: reentrância de 7,5 mm a meio do
