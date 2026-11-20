@@ -45,3 +45,11 @@ Evidências da aplicação: [vista frontal](dc-simu/docs/validation/mico-classic
 ## Estado e pendências
 
 Implementado e testado localmente. Sem publicação remota nem deploy. A aceitação visual continua pendente do utilizador. A forma e as impressões foram reconstruídas pela referência; não foi obtido STEP oficial do fabricante e não é apresentada como cópia metrológica ou CAD de fabrico. Não foram inventados números de série nem símbolos de certificação.
+
+## Correção após revisão — GND 0V na carcaça
+
+A marcação `GND 0V` estava num plano frontal afastado cerca de 10 mm da superfície inferior. Foi reduzida para caber na face estreita à direita das lâminas e ligada à própria malha da carcaça. A posição e a inclinação são obtidas por interseção com a superfície real; o afastamento de 0,035 mm serve apenas para evitar cintilação entre superfícies coincidentes.
+
+Atualizados `scripts/lib/mico-classic-model.mjs`, o GLB MICO, a proveniência e as duas capas. Não se alteraram dimensões, bornes nem comportamento elétrico. `npm run test:industrial` voltou a aprovar as 178 verificações. A verificação no Painel React/R3F confirmou o parentesco com a carcaça, nove pontos sobre a superfície (afastamento entre 0,034998 e 0,035004 mm) e ausência de exceções React/WebGL.
+
+Evidências desta correção: [vista inferior frontal](dc-simu/docs/validation/mico-gnd-marking/lower-front.png) e [medições](dc-simu/docs/validation/mico-gnd-marking/results.json). Esta correção está implementada, testada e enviada para o GitHub no commit DC-Simu `58c09a9` (sem deploy). O MICO 2.4 seguiu em `ec023da`.
