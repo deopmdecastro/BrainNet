@@ -289,6 +289,15 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | SMOKE-CRASH-03 | Alta | IMPLEMENTED_TESTED | `scripts/smoke.ts` abortava em `:790` (`TypeError: reading 'db'`) e escondia ~30 asserções, incluindo todo o bloco EZ9. O cenário DB/PLC chamava `step()` em STOP, que desde a regra de manobra não acorda a simulação; passa a arrancar em RUN e repõe STOP. O `boxOf` passou a compor as matrizes dos nós (caixa no mundo) | [[Validation-2026-11-20-Easy9-Switch-Frente-Serigrafia-Manipulos]]; 21 → 7 falhas, 14 resolvidas |
 | PRE-EXISTING-SUITES-04 | Média | TODO | Continuam a falhar no baseline, sem relação com este trabalho: `test:mechanical` (CWBC65/GEYA após migração), `test:industrial` (ATV mains/STO), e no `smoke.ts` a cadeia Hager/DF101V/DF81N, a gaveta em STOP, o cartucho DF101V, o fusível DF81N, o CFC225P (2) e «programas distintos … Q0.0» | QA |
 
+## Medidores — LCD do D52 e trifásico KWS-306 · 2026-11-20
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| METER-LCD-05 | Crítica | IMPLEMENTED_TESTED_PENDING_VISUAL_ACCEPTANCE | O LCD do D52-2066 aparecia branco: o `applyRenderMode` do painel trata qualquer `MeshStandardMaterial` como superfície física e forçava `opacity = 1`/`transparent = false` no vidro do visor. Passa a levar `keepTransparent`, como as barras e a chapa industrial. O canvas sempre esteve correto (píxeis verdes/azuis no centro do ecrã) | [[Validation-2026-11-20-Medidores-LCD-KWS-306]] |
+| METER-KWS-06 | Alta | IMPLEMENTED_TESTED_PENDING_VISUAL_ACCEPTANCE | KWS-306 refeito no mesmo vocabulário do D52: degraus de borne, tampa frontal boleada, aro preto + vidro, parafusos de latão captivos em gaiola, serigrafia A/B/C/N com seta de corrente e coluna de quatro teclas M/+/-/ON-OFF. Cotas dos bornes alinhadas nas três fontes (boca a 37 mm, passo de 18 mm) | [[Validation-2026-11-20-Medidores-LCD-KWS-306]]; `meters-schneider` e `builtin-sync` (975) PASS |
+| COVERS-METER-07 | Média | IMPLEMENTED_TESTED | Capas 3/4 e vistas frontais dos dois medidores regeneradas do modelo final (`build-component-covers.mjs --only`); `cover-version` PASS | [[Validation-2026-11-20-Medidores-LCD-KWS-306]]; `cover-version` |
+| PRE-EXISTING-COVERS-08 | Baixa | TODO | `build-component-covers.mjs --check` acusa `buttonNO`, `buttonNC`, `selector2`, `selector3` sem capa — igual no baseline, não é regressão | QA |
+
 ## Revisão da plataforma — 2026-11-11
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
