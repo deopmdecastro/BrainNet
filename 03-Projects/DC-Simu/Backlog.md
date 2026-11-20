@@ -309,7 +309,14 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 
 - 2026-11-01: painel inferior IEC = gaveta GRAFCET, texto com clique e ícones nos Objetos — ver [[Validation-2026-11-01-Painel-Inferior-IEC-Texto-Objetos]] (falta confirmar em telemóvel).
 
-## Easy9 Switch — manípulo/bornes (2026-11-20)
+## Easy9 Switch — CAD errado substituído (2026-11-20, tarde)
+A tentativa `9cef9be` foi rejeitada: o STEP MCADFD0001285 é da gama iSW/SW (duas
+cabeças de borne por polo e por face, manípulo branco liso). Substituído pelo CAD do
+próprio produto — 2242 (1P), 2243 (2P), 2245 (4P) —, com um único parafuso Pozidriv
+por polo e face, alavanca vermelha e travessa reais. Fechado em `dc-simu@a7c6ad9`.
+Evidência em `Evidence-2026-11-20-Easy9-CAD-Correto/`.
+
+## Easy9 Switch — manípulo/bornes (2026-11-20, manhã — obsoleto)
 Fechado em `dc-simu@9cef9be`. Travessa vermelha limitada à frente (z > 71 mm), parafuso
 Pozidriv visível no fundo do poço (z ≈38,6 mm) sem aro opaco à frente, rótulo de
 catálogo no filete sob o manípulo. Evidência em
