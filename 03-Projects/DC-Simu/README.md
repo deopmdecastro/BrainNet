@@ -14,6 +14,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 
 | Conteúdo | Abrir |
 | --- | --- |
+| Fidelidade visual GEYA GRT8-M1/M2 e Schneider ATV320U04M2C | [[Validation-2026-11-20-GEYA-M1-M2-ATV320-Fidelidade]] |
 | Estado atual da recuperação: industriais, medidores, IEC/GRAFCET e publicação | [[Validation-2026-11-17-Recuperacao-Industrial-Editores]] |
 | Revisão de realismo e aceitação visual dos medidores/TC/calhas/sobretampa | [[Task-2026-11-17-Realismo-Medidores-CT-iIL-Calhas-Sobretampa]] |
 | Medidores nas bibliotecas e diferenciais Schneider em CAD | [[Task-2026-11-17-Medidores-Bibliotecas-Schneider-CAD]] · [[Validation-2026-11-17-Medidores-Schneider-CAD]] |
