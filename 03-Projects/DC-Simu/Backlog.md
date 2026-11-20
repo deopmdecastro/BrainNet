@@ -308,3 +308,9 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | SUPA-SEC-03 | Média | TODO | Ativar a proteção contra palavras-passe comprometidas no Supabase | Responsável |
 
 - 2026-11-01: painel inferior IEC = gaveta GRAFCET, texto com clique e ícones nos Objetos — ver [[Validation-2026-11-01-Painel-Inferior-IEC-Texto-Objetos]] (falta confirmar em telemóvel).
+
+## Easy9 Switch — manípulo/bornes (2026-11-20)
+Fechado em `dc-simu@9cef9be`. Travessa vermelha limitada à frente (z > 71 mm), parafuso
+Pozidriv visível no fundo do poço (z ≈38,6 mm) sem aro opaco à frente, rótulo de
+catálogo no filete sob o manípulo. Evidência em
+`Evidence-2026-11-20-Easy9-Manipulo-Bornes/`. Serigrafia mantida (assinada pelo utilizador).
