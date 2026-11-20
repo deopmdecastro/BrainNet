@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: backlog
 status: ACTIVE
 created: 2026-10-18
-updated: 2026-11-17
+updated: 2026-11-20
 tags: [brainet, dc-simu, backlog, ai]
 ---
 # Backlog do DC-Simu
@@ -279,6 +279,15 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 | THERMAL-RELAY-01 | Alta | IMPLEMENTED_TESTED | Relé térmico Siemens 3RU1116: bornes `1L1/3L2/5L3` nas pontas dos pinos do topo, `2T1/4T2/6T3` nas cavidades da base e `95/96/97/98` + **A2** na fila da frente (11 bornes); botões STOP/RESET/TEST manobráveis na vista 3D (STOP e ensaio momentâneos, RESET só rearma, corpo dispara) com o grupo do comando na posição do aparelho; `test:imported-components` 169 e `test:terminal-geometry` com 11 ligações no relé | Evidência: [[Validation-2026-11-01-Rele-Termico-3RU1116]] |
 | SYMBOLS-CONTACT-02 | Alta | IMPLEMENTED_TESTED | Contactos fechados desenhados com o gancho do contacto fixo (IEC 60617): NF com gancho à direita e lâmina apoiada na ponta, NA com o mesmo desenho espelhado a conduzir; o traço do contacto aberto segue o desenho de referência do utilizador; `contact3` alinhado nos três polos | Evidência: [[Validation-2026-11-01-Contactos-Fechados-Gancho]] |
 | SYMBOLS-SHEETS-03 | Alta | IMPLEMENTED_TESTED | Cadernos «novos design e elementos»: 30 símbolos novos levam a biblioteca de 54 para 84 tipos (instrumentos A/V/TA, relés `I>`, `U<`, `U>`, `I>>`, retenção, operação lenta, TOF, «CT», seccionadora fusível, pressostato, sirene, contador, chave geral 3P, trafo trifásico, sensores de 3 fios BR/BK/BL com «Fe», válvulas 2/2, 4/2 e 5/3 centro fechado/pressurizado/escape, filtro, lubrificador, reguladora, manómetro, silenciador e reservatório); `test:commands-symbols` e `test:commands-symbols-ui` 12 | Evidência: [[Task-2026-11-01-Cadernos-Simbolos-Novos-Elementos]]; `dc-simu` `8701991` |
+
+## Easy9 Switch (QS1/QS2/QS3) — frente, serigrafia e manípulos · 2026-11-20
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| EZ9S-FRONT-01 | Crítica | IMPLEMENTED_TESTED_PENDING_VISUAL_ACCEPTANCE | Os três interruptores de corte (1P/2P/4P) tinham o molde invertido em profundidade: serigrafia e manípulos na traseira e a face da calha a 29 mm da chapa. O STEP do fabricante já usa a convenção do GLB; o gerador espelhava em Z. Corrigido o mapa, o manípulo vermelho passa a ser as 9 faces do próprio STEP, a serigrafia assenta na parede frontal (z 65,5 mm) e a gravação lateral na largura real do molde. `npm run test:ci:fast` 16/19, zero falhas novas contra o baseline | [[Validation-2026-11-20-Easy9-Switch-Frente-Serigrafia-Manipulos]] |
+| EZ9S-TERMINAL-02 | Alta | IMPLEMENTED_TESTED | Túneis de borne do EZ9S reposicionados no eixo medido nas bocas do STEP (`z = 25 mm`, profundidade 14, Ø9): `terminal-geometry` e `terminal-seat` PASS nos três | [[Validation-2026-11-20-Easy9-Switch-Frente-Serigrafia-Manipulos]] |
+| SMOKE-CRASH-03 | Alta | IMPLEMENTED_TESTED | `scripts/smoke.ts` abortava em `:790` (`TypeError: reading 'db'`) e escondia ~30 asserções, incluindo todo o bloco EZ9. O cenário DB/PLC chamava `step()` em STOP, que desde a regra de manobra não acorda a simulação; passa a arrancar em RUN e repõe STOP. O `boxOf` passou a compor as matrizes dos nós (caixa no mundo) | [[Validation-2026-11-20-Easy9-Switch-Frente-Serigrafia-Manipulos]]; 21 → 7 falhas, 14 resolvidas |
+| PRE-EXISTING-SUITES-04 | Média | TODO | Continuam a falhar no baseline, sem relação com este trabalho: `test:mechanical` (CWBC65/GEYA após migração), `test:industrial` (ATV mains/STO), e no `smoke.ts` a cadeia Hager/DF101V/DF81N, a gaveta em STOP, o cartucho DF101V, o fusível DF81N, o CFC225P (2) e «programas distintos … Q0.0» | QA |
 
 ## Revisão da plataforma — 2026-11-11
 
