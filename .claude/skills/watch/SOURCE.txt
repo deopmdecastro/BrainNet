@@ -1,0 +1,6 @@
+source: https://github.com/bradautomates/claude-video
+commit: 03ceb42f7fa2c4439aca01752118044baabffb8f
+path: skills/watch
+version: 0.3.2
+license: MIT
+installed: 2026-11-20
