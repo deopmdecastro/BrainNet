@@ -313,8 +313,28 @@ As pendências n8n provêm da revisão anterior e precisam de reconfirmação. E
 A tentativa `9cef9be` foi rejeitada: o STEP MCADFD0001285 é da gama iSW/SW (duas
 cabeças de borne por polo e por face, manípulo branco liso). Substituído pelo CAD do
 próprio produto — 2242 (1P), 2243 (2P), 2245 (4P) —, com um único parafuso Pozidriv
-por polo e face, alavanca vermelha e travessa reais. Fechado em `dc-simu@a7c6ad9`.
+por polo e face, alavanca vermelha e travessa reais. Fechado em `dc-simu@a7c6ad9`
+e reaberto na mesma tarde para a serigrafia (ver secção seguinte).
 Evidência em `Evidence-2026-11-20-Easy9-CAD-Correto/`.
+
+## Easy9 Switch — serigrafia completa (2026-11-20, tarde)
+A serigrafia de `a7c6ad9` foi rejeitada: só tinha o logótipo («só tem logo, não
+informações como na referência»). Refeita em `dc-simu@6912212`:
+
+- bloco do primeiro polo, 17 × 18 mm — logótipo Schneider Electric a verde; quatro
+  linhas grafite `Easy9` / `Switch` / `<calibre>A` / `<referência>` com o passo vertical
+  do molde (2,4 mm, corpo ~1,85 mm); símbolo `EZ` verde à direita (quadrado de cantos
+  redondos com monograma vazado em branco).
+- degrau superior, 15 × 7,6 mm — quadro técnico em filete fino: `AC-22A`, `50/60Hz`,
+  `IP20`, `400V~` (230 V~ no 1P) e as quatro colunas de calibre/corrente
+  (40/63/80/100 A; 14/14/15/15 e 12/14/18/18), como na foto `ref-step-table.png`.
+
+Ambas continuam películas `alphaTest` sobre a parede real do STEP (parede frontal a
+z 66,5 mm; degrau superior a z 50,1 mm, acima da fila de poços dos parafusos a
+y 66,3…73,3) — nada de placas opacas. Capas 1P/2P/4P regeneradas (`79/83`).
+Gates: `tsc -b --noEmit` limpo; `meters-schneider`, `builtin-sync`, `imported-components`,
+`breaker-cut`, `cad-surface`, `terminal-geometry`, `terminal-seat`,
+`editor3d-functional` todos PASS.
 
 ## Easy9 Switch — manípulo/bornes (2026-11-20, manhã — obsoleto)
 Fechado em `dc-simu@9cef9be`. Travessa vermelha limitada à frente (z > 71 mm), parafuso

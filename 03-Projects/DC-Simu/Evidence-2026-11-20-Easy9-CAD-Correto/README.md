@@ -39,9 +39,24 @@ escuro — um cilindro de Ø9 mm a sair da face lia-se como um tarugo preto.
   `measuredSizeMm` (1P: 17,85 × 84,5 × 74,26) e a malha nunca é esticada para caber.
 - Charneira do manípulo na aresta de topo do conjunto vermelho; a travessa passa a
   estar na lista de nós que rodam.
-- Serigrafia reancorada: parede frontal do molde a 66,5 mm da traseira; faixa de
-  catálogo no filete entre o degrau e a parede (63,4…66,3 mm sobre a calha).
+- Serigrafia reancorada: parede frontal do molde a 66,5 mm da traseira.
 - Cabeças de parafuso em aço claro (eram discos escuros lidos como buracos).
+
+## Serigrafia completa (revisão da tarde, `dc-simu@6912212`)
+A primeira versão levava só o logótipo e foi rejeitada. A parede frontal passa a
+reproduzir toda a identificação do produto de referência:
+
+- bloco do primeiro polo, 17 × 18 mm — `Schneider Electric` a verde; `Easy9` /
+  `Switch` / `<calibre>A` / `<referência>` a grafite, alinhados à esquerda, com o passo
+  vertical do molde; símbolo `EZ` (quadrado verde de cantos redondos, monograma vazado)
+  à direita das quatro linhas.
+- degrau superior, 15 × 7,6 mm — quadro técnico em filete fino com `AC-22A`,
+  `50/60Hz`, `IP20`, `400V~` (`230V~` no 1P) e quatro colunas de calibre/corrente
+  (40/63/80/100 A).
+
+As duas chapas são películas finas com `alphaTest` assentes na parede real do STEP —
+a frontal a z 66,5 mm, o degrau a z 50,1 mm (acima da fila de poços dos parafusos, que
+ocupa y 66,3…73,3). Não há placas opacas a pintar a caixa.
 
 ## Verificação
 `terminal-geometry` PASS (58 CAD, 326 encaixes) e `terminal-seat` PASS (314 bornes),
@@ -52,5 +67,7 @@ dos três regeneradas.
 
 ## Evidência
 `ez9s-1p-iso.png`, `ez9s-2p-iso.png`, `ez9s-4p-iso.png` (as três vistas 3/4 do GLB
-final), `step-2242-modulo.png` (módulo bruto do STEP, para comparar), e as capas
-`switchSchneiderEz9s{1p,2p,4p}.webp`.
+final), `step-2242-modulo.png` (módulo bruto do STEP, para comparar), as capas
+`switchSchneiderEz9s{1p,2p,4p}.webp`, e a serigrafia final em
+`ez9s-4p-serigrafia.png` (vista frontal) e `ez9s-4p-serigrafia-iso.png` (3/4, para
+mostrar o quadro técnico no degrau), com as vistas frontais `front-{1p,2p,4p}.webp`.
