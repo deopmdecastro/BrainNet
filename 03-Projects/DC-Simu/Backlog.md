@@ -317,6 +317,14 @@ por polo e face, alavanca vermelha e travessa reais. Fechado em `dc-simu@a7c6ad9
 e reaberto na mesma tarde para a serigrafia (ver secção seguinte).
 Evidência em `Evidence-2026-11-20-Easy9-CAD-Correto/`.
 
+## GEYA GRT8 — bornes fiéis e variante M2 (2026-11-20, noite)
+Reportado no painel do projeto «Teste»: faixas escuras no corpo do temporizador
+e bornes sem identificação. Causas medidas: reentrância de 7,5 mm a meio do
+perfil frontal, divisórias a sair 15 mm à frente do corpo e ausência das
+legendas A1/S/A2 e 15/16/18. Corrigido em `dc-simu@d167d98` e acrescentada a
+variante **GRT8-M2 (2×SPDT, 9 bornes: A1/S/A2 + 15/16/18 + 25/26/28)**.
+Evidência em `Evidence-2026-11-20-GEYA-Bornes/`.
+
 ## Easy9 Switch — serigrafia completa (2026-11-20, tarde)
 A serigrafia de `a7c6ad9` foi rejeitada: só tinha o logótipo («só tem logo, não
 informações como na referência»). Refeita em `dc-simu@6912212`:
