@@ -18,6 +18,8 @@ Origem: reel público sobre cinco MCPs para o Claude (Playwright, Blotato, Perpl
 | **Perplexity** (API MCP Server) | Pesquisa com respostas e fontes | Pesquisa com citações para estratégia e SEO | API paga por pedido | Custo recorrente; respostas sintetizadas precisam de verificação na fonte | Pendente: requer aprovação de despesa |
 | **Higgsfield** | Geração de imagem e vídeo | Ativos de marketing do website | Plano pago | Direitos e uso de imagem; despesa | Pendente: requer aprovação de despesa |
 | **Blotato** | Publicar, agendar e analisar redes sociais | Distribuição de conteúdo aprovado | Plano pago e ligação às contas sociais | **Publicação externa**: cada post é uma ação externa irreversível | Não ativar sem autorização explícita por publicação ou âmbito |
+| **PostHog** (servidor alojado) | Analytics, funis, erros e replays | DC-Simu, depois de ser instrumentado | Conta PostHog e chave pessoal | Dados de utilizadores; exige consentimento e retenção definidos | Pendente da decisão sobre analytics no DC-Simu |
+| **Composio** | Hub OAuth para mais de 1000 apps | Sem caso de uso concreto | Conta Composio | Concentra credenciais de várias contas num terceiro | Não adotar |
 
 Prioridade: Playwright agora (sem custo, utilidade imediata nos testes do DC-Simu); Firecrawl a seguir quando houver um pedido de pesquisa concreto; os pagos só com aprovação de despesa que identifique pessoa, data e âmbito.
 
@@ -59,5 +61,7 @@ Estado: **preparado e testado ao nível do protocolo**. Ainda não foi executada
 Apagar `.mcp.json`, a secção `[mcp_servers.playwright]` do Codex e a chave `mcp` do OpenCode, ou repor as cópias `.bak`.
 
 Fontes: [Playwright MCP](https://github.com/microsoft/playwright-mcp), [pacote npm](https://www.npmjs.com/package/@playwright/mcp), [Firecrawl MCP](https://github.com/firecrawl/firecrawl-mcp-server), [Perplexity MCP](https://docs.perplexity.ai/guides/mcp-server), [Blotato MCP](https://blotato.com/mcp), [Higgsfield](https://higgsfield.ai).
+
+Atualização 2026-11-21: PostHog e Composio acrescentados a partir de [[../02-Strategy/Avaliacao-Videos-IA-2026-11-21|quatro vídeos adicionais]].
 
 [[Agent-Environment]] · [[ECC-Exploration]] · [[QA-Security]] · [[Marketing-SEO]]
