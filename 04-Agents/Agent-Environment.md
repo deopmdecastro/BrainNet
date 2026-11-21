@@ -55,3 +55,5 @@ Documentação consultada: [providers OpenCode](https://opencode.ai/docs/provide
 Outros clientes de IA: [[AI-Terminals|terminais Copilot, Gemini, Gemma e Llama]]. Gemma local substitui a opção Mistral após o pedido do utilizador.
 
 O [[ECC-Exploration|catálogo ECC]] foi registado no Codex para exploração no BrainNet e no DC-Simu. O plugin continua por instalar; a seleção de skills e os critérios do piloto estão documentados nessa avaliação.
+
+Servidores MCP: [[MCP-Evaluation|avaliação e piloto]]. Playwright MCP 0.0.86 configurado no Claude Code (`.mcp.json`), Codex e OpenCode; Firecrawl, Perplexity, Higgsfield e Blotato pendentes de chave, despesa ou autorização.
