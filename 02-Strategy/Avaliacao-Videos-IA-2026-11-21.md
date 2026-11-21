@@ -65,6 +65,8 @@ Sitemap XML também está em falta no DC-Simu, embora não conste do vídeo.
 
 ## Prioridades propostas
 
+Continuação: [[Avaliacao-Videos-IA-2026-11-21-Lote-2|lote 2 (leis de UX, skills de vídeo, OpenMontage)]].
+
 1. **DC-Simu, SEO técnico básico** (os ganhos rápidos acima), com testes. Mais valor por esforço e sem custo.
 2. **Skill `escrita-pt-pt`** para documentação e marketing.
 3. **Regras YAGNI ao estilo Ponytail** no AGENTS.md do DC-Simu.
