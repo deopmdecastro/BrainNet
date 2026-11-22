@@ -1,6 +1,6 @@
 # Ligação ao TIA Portal (S7-PLCSIM Advanced)
 
-**Data:** 2026-11-22 · **Commit:** `dc-simu@f4fb5bb` (`main`) · **Estado:** implementado e testado com CPU simulada; ensaio real só até à listagem de instâncias.
+**Data:** 2026-11-22 · **Commit:** `dc-simu@f4fb5bb` (`main`) · **Estado:** implementado e testado, incluindo o ensaio real com o TIA Portal V21 e o PLCSIM Advanced 8.0 (CPU em RUN, 9/9 verificações).
 
 ## Pedido
 
@@ -42,9 +42,46 @@ Simular o TIA Portal no DC-Simu. Já existia a lógica na store e a ponte local,
 - É preciso o **S7-PLCSIM Advanced**. O S7-PLCSIM normal não tem a API.
 - O Chrome pede autorização de acesso à rede local na primeira ligação a `127.0.0.1`.
 
+## Ensaio real com o TIA Portal e o PLCSIM Advanced (testado)
+
+**Comando:** `npm run test:tia-e2e` (`scripts/Test-TiaE2E.ps1`). Passou a 2026-11-22, a partir de um estado
+limpo, com o TIA Portal V21 e o S7-PLCSIM Advanced 8.0.
+
+1. Cria a instância `DCSIMU_E2E` (CPU1511C, Softbus, 192.168.0.1).
+2. O TIA Portal sem interface, através do Openness (autorizado pelo utilizador em «Openness access»), cria um
+   projeto temporário com a CPU 6ES7 511-1CL03-0AB0 V3.1 e importa `bridge/tia/e2e/Estampagem.scl` com o mapa
+   %I0.0–%Q0.5 da maquete. A compilação termina com 0 erros.
+3. Carrega o programa pelo interface PLCSIM: `Download: Success`, blocos `Ciclo`, `Main` e tabela de tags,
+   e `PLC_1 started`. A CPU fica em **RUN**.
+4. `scripts/tia-e2e-plcsim.ts` percorre o caminho DC-Simu → ponte → adaptador → CPU com 9/9 verificações:
+   homing, Y1, vácuo, braço, prensa, rampa do metal (Q0.4), fim de ciclo, peça polimérica (Q0.5) e eco das
+   entradas. Latência: média 2,1 ms, máxima 3 ms, 33 trocas.
+5. Remove a instância e o projeto.
+
+**Problemas encontrados e corrigidos:**
+
+- **Adaptador real:** listas JSON chegam como `ArrayList` e não como `object[]`, por isso todas as ligações
+  davam «Mapeamento vazio». A CPU simulada da ponte não passa por este código, por isso o defeito não
+  aparecia nos outros testes.
+- **TIA Portal V21:**
+  - a CPU tem de ser a referência que o PLCSIM V8 emula (1CL03);
+  - o projeto precisa da gestão de utilizadores e funções com um utilizador de acesso total;
+  - o projeto precisa de «Support simulation during block compilation»;
+  - é preciso confiar no certificado TLS da CPU virtual;
+  - é preciso responder às perguntas de download «Reset module» e gestão de utilizadores.
+
+**Segurança:** as opções abaixo aplicam-se só ao projeto temporário e à CPU simulada.
+
+- Utilizador anónimo com «Full access». O TIA avisa que isto é «only allowed for testing purposes».
+- Dados confidenciais sem proteção.
+- Certificado TLS aceite, com a impressão digital registada.
+
+Não foi alterado nenhum projeto do utilizador. A sessão do TIA Portal aberta com a maquete (Ex10) ficou
+intacta.
+
 ## Pendências
 
-- Ensaio de ponta a ponta com uma CPU real em RUN no PLCSIM Advanced, com um programa carregado a partir do
-  TIA Portal (por exemplo, o mapa %I0.0–%Q0.5 da maquete de estampagem).
+- A janela «Openness access» volta a aparecer sempre que `TiaDeploy.cs` muda. Isto é intencional: o script só
+  recompila quando a fonte muda.
 - O GRAFCET interno não corre em modo TIA (por desenho: quem decide é a CPU externa).
 - Não foi feito deploy.
