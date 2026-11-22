@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: delivery
-status: PUSHED
+status: INTEGRATED_AUTO_VERIFIED
 created: 2026-11-22
 updated: 2026-11-22
 tags: [brainnet, dc-simu, entrega, git, maquetes, tomadas]
@@ -36,7 +36,13 @@ A referência do submódulo é atualizada para `d8fa230`, acompanhada pelos rela
 
 ## Integração automática
 
-O push foi concluído sem executar qualquer comando de deploy manual. A verificação GitHub/Vercel de `d8fa230` estava `pending` às `18:48:37 UTC` de 22 de novembro de 2026: [execução Vercel](https://vercel.com/deopmdecastros-projects/dc-simu/J2RCbwenW5dAFQ6iC9byDzZgU22C). Este estado não constitui confirmação de atualização do site.
+O push foi concluído sem executar qualquer comando de deploy manual. A verificação GitHub/Vercel de `d8fa230` passou de `pending` para **`success`**: [execução Vercel](https://vercel.com/deopmdecastros-projects/dc-simu/J2RCbwenW5dAFQ6iC9byDzZgU22C).
+
+Às `18:51:07 UTC` de 22 de novembro de 2026 foi confirmada a integração automática:
+
+- As duas branches `origin/main` foram conferidas com `git ls-remote`: DC-Simu em `d8fa230201be8aedbe654df284a2e5848a3a9f14`; BrainNet em `f5b0819a9eefd370de3eec529d4f90574276ed97` antes deste registo final.
+- O [version.json público](https://dc-simu.vercel.app/version.json) anuncia `buildId: d8fa230201be8aedbe654df284a2e5848a3a9f14.r304.mws6vzth` e `builtAt: 2026-11-22T18:49:28.435Z`.
+- Esta confirmação verifica o commit servido e a conclusão do build automático; não substitui os limites de aceitação visual, os testes de autenticação cloud ou as pendências já documentadas.
 
 ## Evidências
 

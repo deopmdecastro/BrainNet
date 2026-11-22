@@ -1,7 +1,7 @@
 ---
 project_id: BN-DCSIMU-001
 type: validation
-status: COMMITTED_PUSHED
+status: INTEGRATED_AUTO_VERIFIED
 created: 2026-11-22
 updated: 2026-11-22
 tags: [brainnet, dc-simu, bug, tdz, maquetes, build]
@@ -45,4 +45,4 @@ Evidências locais: bundle público em `dc-simu/runtime/tdz-maquette/index-YOf6s
 
 ## Estado e pendência
 
-**Corrigido, testado e enviado para `origin/main`.** Commit `d8fa230`, carimbo de release `#304`. Não foi executado deploy manual. O estado do processo automático e do código servido deve ser confirmado antes de declarar a atualização do site concluída.
+**Corrigido, testado e integrado automaticamente após o push.** Commit `d8fa230`, carimbo de release `#304`. Não foi executado deploy manual. A Vercel confirmou `success` e o `version.json` público confirmou esse commit/carimbo em 22 de novembro de 2026, às `18:51:07 UTC`; ver o registo de entrega. A tentativa E2E local descrita acima continua a não ser apresentada como teste passado.
