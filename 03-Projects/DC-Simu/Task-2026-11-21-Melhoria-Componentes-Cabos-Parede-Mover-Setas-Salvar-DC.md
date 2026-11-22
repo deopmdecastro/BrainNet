@@ -69,3 +69,31 @@ Repositórios autorizados: `dc-simu` e `BrainNet`. Token fornecido. Preferência
 - Reutilizar código existente de persistência (`src/utils/persistence.ts`), de cabos (`EditableCable3D`, `WiresView`) e de movimento de componentes.
 - Não reinventar: seguir padrões de UI do `toolbarKit` e Design-Principles.
 - Trabalhar primeiro no cofre; só depois código e push.
+
+## Incremento 2026-11-22 — Auto-ajuste do pavilhão + interruptor vs perfil
+
+### Problema reportado
+- Ao colocar interruptor Odace, o ambiente fabril abria espaço excessivo (esquerda crescia de forma exagerada; direita bloqueava movimento).
+- Interruptor entrava no perfil/coluna de aço da parede.
+
+### Correções (dc-simu)
+1. **`Panel3D.tsx` — sceneBounds / panelOnlyBox**
+   - Tipos de iluminação (`isLightingType`) deixam de contribuir para a **chapa do quadro** (`plate` / `panelOnlyBox`).
+   - Continuam em `all` para a cena, mas já não disparam expansão do mountBounds do quadro.
+
+2. **`FactoryEnvironment3D.tsx` — sizing estável**
+   - `sceneSpan` limitado a ±22 u além do quadro.
+   - `leftWallX` / `rightWallX` com base ±21 e teto ±48 em torno do centro.
+   - Evita assimetria (só um lado cresce) e profundidade limitada a 56 u.
+
+3. **`factoryPhysics.ts` — `computeFactoryRoomBounds`**
+   - Teto `hallWidth ≤ 96`, `hallDepth ≤ 56` alinhado com a geometria visual.
+
+4. **`Panel3D.tsx` — clearance de colunas**
+   - Em `factoryMode`, interruptores/lâmpadas de parede são afastados dos eixos de coluna (passo 7.5 u) para não penetrar o perfil.
+
+### Critérios
+- [x] Pavilhão não explode ao colocar interruptor de parede
+- [x] Movimento possível em ambos os lados dentro de limites estáveis
+- [x] Interruptor não entra no perfil de aço
+- [ ] Cabos lâmpada / setas / restantes itens da tarefa original (ainda em aberto)
