@@ -31,7 +31,7 @@ tags: [dc-simu, pneumatica, hidraulica, unioes, push-in, reservatorio, capas]
 - [x] Entrada do reservatório com passa-parede oco e porca realista
 - [x] Família de uniões Push-In (reta / cotovelo / T / Y) em 3D
 - [x] Registo em tipos, factory, Panel3D, pneumaticsModel, store
-- [ ] Capas fotográficas finais (regeneração Playwright pendente)
+- [x] Capas fotográficas finais: regeneradas em 2026-11-22 via pipeline de captura procedural (`hasProceduralCapture`) em [Validation-2026-11-22-Compressor-VTUG-Fidelidade](Validation-2026-11-22-Compressor-VTUG-Fidelidade.md) — placeholders manuais substituídos por captura real 3/4
 
 ## Incremento CI / bornes (2026-11-22)
 
