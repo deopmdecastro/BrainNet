@@ -100,3 +100,24 @@ o cilindro ao chegar à prensa. Foram feitas duas adaptações:
 - O componente é colocado sem rotação. As rampas e o Cilindro 1 têm direção fixa
   (descida/avanço para +X).
 - Não foi feita publicação nem deploy.
+
+## Atualização da mesma data: 22 componentes
+
+O grupo «Mecatrónica» passou de 14 para 22 tipos. Os 8 novos são equipamento que já
+estava na bancada fotografada: `mecDrawerCylinder` (Cilindro 3 · B2/B1),
+`mecValveIsland` (Festo 2× 5/2 · C1A/C2A), `mecOpticalSensor` (S. OTICO · B11),
+`mecInductiveSensor` (S. INDUTIVO), `mecHmiKtp700` (Siemens KTP700 Basic em bastidor
+30 × 30), `mecOperatorBox` (6 operadores Ø22), `mecSignalTower` (3 níveis LED) e
+`mecBenchDuct` (calhas ranhuradas perimetrais).
+
+Os 14 anteriores foram refeitos com geometria e texturas tiradas das fotos de
+2026-11-04: braço trapezoidal com dois rasgos, correia dentada e filtro ZFC no
+manipulador, mangas impressas Portescap/RT3806 no motor, disco ótico de 4 pás, gaveta
+com alojamento quadrado, etiquetas `CILINDRO 1/3/4`, `FC 1/2` e `METALICA`/`PRETA`/
+`BRANCA`, e a folha «PROJETO DESENVOLVIDO PELA TURMA ARMI 01.26-A M» na calha frontal.
+
+Capturas novas nesta pasta: `maquete-22-componentes.png` (montagem completa),
+`hmi-ktp700.png`, `pupitre-6-operadores.png`, `ilha-valvulas-c1a.png`,
+`cilindro-3-gaveta.png`, `torre-sinalizacao.png` e `sensor-otico-b11.png`.
+
+Detalhe completo em `Validation-2026-11-22-Maquete-ATEC-22-Componentes.md`.
