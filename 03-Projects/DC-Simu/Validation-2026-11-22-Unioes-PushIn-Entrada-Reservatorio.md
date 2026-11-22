@@ -32,3 +32,8 @@ tags: [dc-simu, pneumatica, hidraulica, unioes, push-in, reservatorio, capas]
 - [x] Família de uniões Push-In (reta / cotovelo / T / Y) em 3D
 - [x] Registo em tipos, factory, Panel3D, pneumaticsModel, store
 - [ ] Capas fotográficas finais (regeneração Playwright pendente)
+
+## Incremento CI / bornes (2026-11-22)
+
+- **Vercel/CI:** `factoryMode` usado antes da declaração em `Panel3D.tsx` (clearance de colunas) — corrigido; typecheck volta a passar.
+- **Rastreamento:** position3D dos bornes das uniões pneumáticas e do T hidráulico alinhados às bocas dos portos 3D (mesmo modelo que os bornes elétricos via `terminalWorld3D`).
