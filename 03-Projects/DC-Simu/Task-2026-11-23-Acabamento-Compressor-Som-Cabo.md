@@ -29,3 +29,11 @@
 - `/home/user/dc-simu/src/electrical/compressor-finish-proposal.md`
 - `/home/user/uploads/` (Imagens de referência)
 - Datasheet Maxxim 24L
+
+## Correção de registo (2026-11-23, dc-simu `97cd090d`)
+O commit `11d0b56b` publicou este ficheiro **truncado**: `src/three/PneumaticsDevices3D.tsx` ficou
+com 598 linhas em vez de 2270 e perderam-se 11 dos 13 componentes pneumáticos (FRL, válvula 5/2,
+cilindro, T, união, cotovelo, Y, cilindro elétrico EPCS, cilindro guiado, manifold e ventosa).
+O ficheiro foi restaurado a partir de `f5ab2c0f` e as melhorias do compressor refeitas de raiz em
+`97cd090d` (consola e coletor do grupo de ar, tubos com luva, som próprio do compressor).
+Ver `Task-2026-11-23-QE1-Ilha-S7300-Cablagem-Guiao.md`.
