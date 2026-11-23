@@ -1,6 +1,6 @@
 ---
 type: validation
-status: IN_PROGRESS
+status: IMPLEMENTED
 created: 2026-11-23
 updated: 2026-11-23
 tags: [dc-simu, esteiras, tubos, ar, continuidade, TrayCableBundle]
@@ -34,3 +34,10 @@ Os tubos de ar (azul, `kind: 'tube'`) apareciam partidos nas descidas e curvas v
 - Integrar o patch no repositório `dc-simu` (commit + push).
 - Verificar visualmente na Maquete Estampagem.
 - Passo 2: parafusos das tomadas + acabamentos finais de junções.
+
+## Integração
+- Commit dc-simu: `753159392d6e1eb58588dc9ff22ec4542609ffa8` (main)
+- Push via API Contents (ficheiro único).
+- Vercel deve fazer deploy automático.
+
+Estado: **implementado e publicado**. Revisão visual do utilizador pendente.
