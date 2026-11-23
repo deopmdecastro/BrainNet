@@ -77,3 +77,30 @@ Três correções na maquete, a partir das fotos do telemóvel e da bancada real
   passagem do contacto físico do KS1.
 - Os módulos S7-300 ocupam 164 mm dos 520 mm da calha C: sobra espaço para o módulo de contagem
   se se quiser contar peças por hardware em vez de M0.3–M1.0.
+
+---
+
+## Build de produção (2026-11-23, 11:14 UTC)
+
+O `npm run build` falhava no Vercel no passo `test:maquettes-build` (entre o `tsc -b` e o
+`vite build`), não por TypeScript. Três causas, em três commits:
+
+- **`f7dbc3da`** — `test:maquettes-build` comparava com o literal `161`; a ilha S7-300 levou a
+  maquete a **117 peças / 168 componentes / 59 tipos**. Os testes passam a calcular as contagens
+  na fonte. Corrigida também uma regressão minha: `stopCompressorSound` usava `window.setTimeout`
+  e rebentava em Node, derrubando qualquer teste que chamasse `silenceAll()`.
+  E a cablagem inválida: `Q4.1 → CPV10:Y7` (o CPV10 tem Y0–Y6 + VON/VOFF, não tem Y7) — o cabo
+  era descartado em silêncio. As réguas mantêm os endereços do guião e as tags passam a nomear a
+  função no aparelho real: estação 1 = Cil1 (Y0/Y1), 2 = Cil2 (Y2/Y3), 3 = Cil3 (Y4/Y5),
+  4 = Cil4 mono (Y6), 5 = vácuo (VON/VOFF).
+- **`f6883301`** — os «✕ 3 ⚠ 6» da barra de estado. Os 3 erros: os bornes dos sinalizadores iIL
+  1P eram `io`/`io` (X2 é o neutro; a versão 3P já o declarava `neutral`); os cabos de 0 V estavam
+  marcados `power` e o validador acusava fase-no-neutro; e a fonte PS1 estava montada sem um único
+  cabo. Agora PS1 é alimentada a 230 V pela tomada da maquete (XS-MAQ `OUT.L`/`OUT.N`) e entrega
+  +24 V / 0 V / PE ao X20. Estado: **0 erros · 2 avisos** (o canal `+V2`/`-V2` da fonte, livre).
+- **Deploy**: `dc-simu.vercel.app` passou a servir o bundle `index-DyL2gKoM.js` às 11:16:50 —
+  contém `Cil1_Avanc` e já não contém `Y7_Cil1_Rec`.
+
+Nota: `vite build` não corre no sandbox de desenvolvimento (2 GB, «Killed» em transforming) —
+já falhava antes destes commits; no Vercel passa com folga. `test:qgd` falha por falta de
+backend, também já antes destas alterações.
