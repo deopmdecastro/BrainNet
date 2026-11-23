@@ -127,3 +127,9 @@ priority: high
 - Ficheiros-chave lidos via API (StructuresDevices3D, ductJunctions, stampingBenchWiring, renderOptimization, PneumaticsDevices3D, WireMarkers3D).
 - Clone local completo do dc-simu ainda instável (repo grande); trabalho a prosseguir com patches incrementais + evidência no cofre.
 - Próximo commit no BrainNet: esta atualização da task + eventual Validation parcial.
+
+## Atualização 23 Nov (noite)
+- Passo 5 (carregamento) resolvido na causa: traçado dos cabos 168 s → 19 s, com traçado provisório em ~2 s; a cena deixou de ficar sem cabos — [[Validation-2026-11-23-QE1-Lateral-Renderizacao-Cabos]].
+- QE1 passou para a lateral esquerda da mesa (pedido de 23 Nov); fichas CEE encaixadas; entradas pelos bucins; tubos de ar por fora do tampo.
+- Pendências transitam para a nota de validação.
+
