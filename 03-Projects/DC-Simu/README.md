@@ -3,7 +3,7 @@ project_id: BN-DCSIMU-001
 type: project-index
 status: ACTIVE
 created: 2026-10-25
-updated: 2026-11-17
+updated: 2026-11-23
 tags: [brainet, dc-simu, index]
 ---
 # DC-Simu
@@ -14,6 +14,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 
 | Conteúdo | Abrir |
 | --- | --- |
+| Cabos nas calhas, X1 L/N/PE, anilhas IEC, bainha única, QGD só Schneider e seletor do motor do simulador | [[Task-2026-11-23-Cabos-Calhas-X1-Anilhas-Bainha-QGD-Schneider-Motor-Sim]] · [[Validation-2026-11-23-Cabos-Calhas-QGD-Schneider-Motor-Sim]] |
 | Fidelidade visual GEYA GRT8-M1/M2 e Schneider ATV320U04M2C | [[Validation-2026-11-20-GEYA-M1-M2-ATV320-Fidelidade]] |
 | Estado atual da recuperação: industriais, medidores, IEC/GRAFCET e publicação | [[Validation-2026-11-17-Recuperacao-Industrial-Editores]] |
 | Revisão de realismo e aceitação visual dos medidores/TC/calhas/sobretampa | [[Task-2026-11-17-Realismo-Medidores-CT-iIL-Calhas-Sobretampa]] |

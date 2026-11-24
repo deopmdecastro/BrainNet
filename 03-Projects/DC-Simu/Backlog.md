@@ -10,6 +10,14 @@ tags: [brainet, dc-simu, backlog, ai]
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
 
+## Cabos nas calhas, X1 L/N/PE, anilhas IEC, bainha única, QGD Schneider e motor do simulador — 2026-11-23
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| BENCH-WIRING-01 | Alta | IMPLEMENTED_TESTED_PENDING_VISUAL | Alimentação da maquete F-MAQ → régua X1 (fase/neutro/terra) → PS1 → X20; cabos de ficha com **bainha única** por `bundleId`; anilhas por dígito (IEC); **um só** tubo azul até ao compressor; cabos dos sensores a saírem diretos dos cilindros para os bornes (sem ponteira na saída do sensor) | [[Task-2026-11-23-Cabos-Calhas-X1-Anilhas-Bainha-QGD-Schneider-Motor-Sim]]; [[Validation-2026-11-23-Cabos-Calhas-QGD-Schneider-Motor-Sim]] |
+| QGD-SCHNEIDER-01 | Alta | IMPLEMENTED_TESTED | QGD **só Schneider**: iDPN N Vigi no setor monofásico, DPS Acti9 iPRD 1P e medidor Acti9 iEM3255 (tipos novos com GLB, serigrafia, bornes medidos e capas WebP) | idem; `test:qgd`, `smoke.ts`, `meters-schneider`, `device-lcd` |
+| ENGINE-SELECTOR-01 | Alta | IMPLEMENTED_TESTED | Seletor visual do **motor do simulador** (DC-Simu / TIA Portal) em cartões de rádio, com o estado real de quem comanda, no inspetor e no painel «Simulação» | idem; `test:tia-panel-ui` 15/15 |
+
 ## Seis refinamentos mecânicos — release r214
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
