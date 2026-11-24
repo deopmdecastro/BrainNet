@@ -10,6 +10,12 @@ tags: [brainet, dc-simu, backlog, ai]
 
 Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são propostas de atribuição, sem afirmar que receberam tarefas. Não há prazos acordados. DONE significa apenas o incremento descrito com a evidência indicada.
 
+## Fichas CEE encaixadas, cabo do compressor pelo bucim e bainha sem veias à vista — 2026-11-24
+
+| ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
+| --- | --- | --- | --- | --- |
+| PLUG-GLAND-01 | Alta | IMPLEMENTED_TESTED | Fichas **F-COMP/F-MAQ encaixadas** nas RoadEu (rodadas 180°, pinos nos alvéolos, tampa azul aberta, contactos interiores bloqueados); cabo revestido 3G2,5 **sai pelo bucim traseiro da ficha** e **entra pelo prensa-cabos no topo do compressor**; bornes L/N alinhados com o eixo do bucim (abrem só dentro da carenagem); bainha com **raio variável** que cobre sempre todas as veias | [[Validation-2026-11-24-Cabos-Tomadas-Bucim-Compressor]]; `ready-maquettes-smoke` 10/10; `test:sockets` 16/16 |
+
 ## Cabos nas calhas, X1 L/N/PE, anilhas IEC, bainha única, QGD Schneider e motor do simulador — 2026-11-23
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
