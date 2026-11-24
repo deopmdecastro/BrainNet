@@ -19,6 +19,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 | Cabo 3G2,5 QGD → tomada: L/N/PE dentro da bainha de bucim a bucim (terra verificada) | [[Validation-2026-11-24d-Cabo-3G-Terra-Bucins]] |
 | Fios pelas ranhuras das calhas · tubo pela face aberta das descidas · encaixar/desencaixar fichas CEE | [[Validation-2026-11-24e-Ranhuras-Tubo-Fichas-CEE]] |
 | Tubo de ar curvo · dois cabos lado a lado na subida · S7-300 com pinagem real do conector 40 pólos | [[Validation-2026-11-24f-Tubo-Curvas-Subida-S7-300]] |
+| Composição da maquete: rampas paralelas e alinhadas, motor M1 a engrenar no braço | [[Validation-2026-11-24g-Composicao-Rampas-Motor]] |
 | Fichas CEE encaixadas, cabo do compressor pelo bucim e bainha sem veias à vista | [[Validation-2026-11-24-Cabos-Tomadas-Bucim-Compressor]] |
 | Cabos nas calhas, X1 L/N/PE, anilhas IEC, bainha única, QGD só Schneider e seletor do motor do simulador | [[Task-2026-11-23-Cabos-Calhas-X1-Anilhas-Bainha-QGD-Schneider-Motor-Sim]] · [[Validation-2026-11-23-Cabos-Calhas-QGD-Schneider-Motor-Sim]] |
 | Fidelidade visual GEYA GRT8-M1/M2 e Schneider ATV320U04M2C | [[Validation-2026-11-20-GEYA-M1-M2-ATV320-Fidelidade]] |
