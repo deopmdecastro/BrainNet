@@ -14,6 +14,8 @@ Responsável de decisão: Deogracia de Castro. Papéis indicados abaixo são pro
 
 | ID | Prioridade | Estado | Trabalho e aceitação | Evidência |
 | --- | --- | --- | --- | --- |
+| CABLE-SHEATH-02 | Alta | IMPLEMENTED_TESTED | **Uma só bainha por cabo multicore**: a bainha passa a definir o traçado e as veias (3 fios do mesmo `bundleId`) são apertadas ao seu eixo (`snapCoreToJacket`); cada veia desenhada com diâmetro de **fio** (`coreDiameterMm`) e não de cabo; reamostragem por **estação física** (`resamplePolylineAligned`); bainha termina **no selo do bucim do QGD** (+3 mm) e **na boca do bucim da tomada** (+21 mm); **tubo de ar** com pista própria na esteira (`AIR_LANE_DZ = 70`, ≥55 mm dos 3G2,5) e entrada em três tramos; chicote `qe1-x1-ps1` próprio | [[Validation-2026-11-24b-Bainha-Veias-Tubo-Ar]]; `test:sockets` 16, `test:maquetes` 10, guião 76, `npm test` OK |
+
 | PLUG-GLAND-01 | Alta | IMPLEMENTED_TESTED | Fichas **F-COMP/F-MAQ encaixadas** nas RoadEu (rodadas 180°, pinos nos alvéolos, tampa azul aberta, contactos interiores bloqueados); cabo revestido 3G2,5 **sai pelo bucim traseiro da ficha** e **entra pelo prensa-cabos no topo do compressor**; bornes L/N alinhados com o eixo do bucim (abrem só dentro da carenagem); bainha com **raio variável** que cobre sempre todas as veias | [[Validation-2026-11-24-Cabos-Tomadas-Bucim-Compressor]]; `ready-maquettes-smoke` 10/10; `test:sockets` 16/16 |
 
 ## Cabos nas calhas, X1 L/N/PE, anilhas IEC, bainha única, QGD Schneider e motor do simulador — 2026-11-23

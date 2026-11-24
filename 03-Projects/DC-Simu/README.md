@@ -14,6 +14,7 @@ Simulador de comandos elétricos industriais para aprendizagem, experimentação
 
 | Conteúdo | Abrir |
 | --- | --- |
+| Bainha única por cabo multicore (veias apertadas ao eixo), pontas nos bucins e tubo de ar em pista própria | [[Validation-2026-11-24b-Bainha-Veias-Tubo-Ar]] |
 | Fichas CEE encaixadas, cabo do compressor pelo bucim e bainha sem veias à vista | [[Validation-2026-11-24-Cabos-Tomadas-Bucim-Compressor]] |
 | Cabos nas calhas, X1 L/N/PE, anilhas IEC, bainha única, QGD só Schneider e seletor do motor do simulador | [[Task-2026-11-23-Cabos-Calhas-X1-Anilhas-Bainha-QGD-Schneider-Motor-Sim]] · [[Validation-2026-11-23-Cabos-Calhas-QGD-Schneider-Motor-Sim]] |
 | Fidelidade visual GEYA GRT8-M1/M2 e Schneider ATV320U04M2C | [[Validation-2026-11-20-GEYA-M1-M2-ATV320-Fidelidade]] |
